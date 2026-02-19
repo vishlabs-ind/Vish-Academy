@@ -29,11 +29,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VishAcademyTheme {
+                val auth = com.google.firebase.auth.FirebaseAuth.getInstance()
+                val user = auth.currentUser
+
+                val isLoggedIn = user != null && user.isEmailVerified
+
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AuthApp()
+                    AuthApp(isLoggedIn=isLoggedIn)
                 }
             }
         }
@@ -42,9 +47,14 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun AuthApp(){
+fun AuthApp(
+    isLoggedIn: Boolean
+){
     val navController = rememberNavController()
-    NavHost(navController, startDestination = "login") {
+    NavHost(
+        navController,
+        startDestination = if(isLoggedIn) "home" else "login"
+    ) {
         composable("login") { LoginScreen(navController) }
         composable("signup") { SignupScreen(navController) }
         composable("home") { HomeScreen(navController) }
