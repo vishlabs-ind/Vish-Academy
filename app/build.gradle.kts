@@ -74,4 +74,6 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.57.2")
     ksp("com.google.dagger:hilt-compiler:2.57.2")
-}
+
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")}
