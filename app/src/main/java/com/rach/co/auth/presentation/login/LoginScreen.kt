@@ -1,5 +1,6 @@
 package com.rach.co.auth.presentation.login
 
+import com.rach.co.R
 import android.app.Activity
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,19 +17,33 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.VisualTransformation
 import com.google.android.gms.auth.api.signin.*
 import com.google.firebase.auth.GoogleAuthProvider
 import com.rach.co.utils.K
 
 @Composable
-fun LoginScreen(
-    navController: NavHostController,
-    viewModel: LoginViewModel = hiltViewModel()
+fun LoginScreen(navController: NavHostController
 ) {
+
+  val   viewModel: LoginViewModel = hiltViewModel()
 
     val state = viewModel.state
     val context = LocalContext.current
     var showForgotDialog by remember { mutableStateOf(false) }
+
+    var rememberMe by rememberSaveable { mutableStateOf(false) }
+
+    var passwordVisible by rememberSaveable { mutableStateOf(false) }
+
+
 
     val gso = remember {
         GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -67,25 +82,29 @@ fun LoginScreen(
 
 
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(horizontal = 24.dp)
-    ) {
+        modifier = Modifier.fillMaxSize().padding(24.dp)) {
 
-        Spacer(modifier = Modifier.weight(1f))
+        Spacer(modifier = Modifier.weight(0.4f))
 
-        Text(
-            text = "Login",
-            fontSize = 28.sp,
-            fontWeight = FontWeight.Bold
-        )
+        Image(painter = painterResource( id = R.drawable.app_logo), contentDescription = "app logo", modifier = Modifier.height(210.dp).align(alignment =Alignment.CenterHorizontally))
+
+
+        Text("Let's Sign In.!", fontWeight = FontWeight.Bold, fontSize = 22.sp)
+        Text("SignIn to Your Account to Continue your Courses", fontSize = 13.sp, color = Color.Gray,fontWeight =  FontWeight.SemiBold,modifier = Modifier.padding(top=10.dp))
+
 
         Spacer(modifier = Modifier.height(24.dp))
 
         OutlinedTextField(
             value = state.email,
             onValueChange = viewModel::onEmailChange,
-            label = { Text("Email") },
+
+
+            label = {
+                Icon(painter = painterResource(R.drawable.mail_24px), contentDescription = "mail")
+                Text(" Email", fontWeight = FontWeight.Medium, modifier = Modifier.padding(start = 22.dp))
+                    },
+
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
             shape = RoundedCornerShape(12.dp)
@@ -96,8 +115,23 @@ fun LoginScreen(
         OutlinedTextField(
             value = state.password,
             onValueChange = viewModel::onPasswordChange,
-            label = { Text("Password") },
-            visualTransformation = PasswordVisualTransformation(),
+
+
+            label = { Icon(painter = painterResource(R.drawable.lock_24px),
+                contentDescription = "null")
+                Text(" Password",
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.padding(start = 22.dp))
+            },
+            visualTransformation = if (passwordVisible){
+                VisualTransformation.None} else{ PasswordVisualTransformation() },
+
+            trailingIcon = {
+                IconButton({passwordVisible  =  !passwordVisible}) {
+                    Icon(painter = painterResource(if(passwordVisible){R.drawable.outline_visibility_24 }
+                    else{ R.drawable.outline_visibility_off_24}),contentDescription = null)
+                }
+            },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
             shape = RoundedCornerShape(12.dp)
@@ -105,12 +139,22 @@ fun LoginScreen(
 
         Spacer(modifier = Modifier.height(4.dp))
 
-        TextButton(
-            modifier = Modifier.align(Alignment.End),
-            onClick = { showForgotDialog = true }
-        ) {
-            Text("Forgot Password?")
+
+        Row(modifier = Modifier.fillMaxWidth() ,verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Start) {
+
+            Checkbox(checked = rememberMe, onCheckedChange = { rememberMe = it })
+
+            Text("Remember Me", fontWeight = FontWeight.Medium, fontSize = 13.sp)
+
+            TextButton(
+                modifier = Modifier.padding(start = 78.dp),
+                onClick = { showForgotDialog = true }
+            ) {
+                Text("Forgot Password?" ,fontWeight = FontWeight.Medium, fontSize = 13.sp)
+            }
+
         }
+
 
         Spacer(modifier = Modifier.height(4.dp))
 
@@ -130,27 +174,38 @@ fun LoginScreen(
             enabled = !state.loading,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp),
+                .height(50.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xED062AEF)),
             shape = RoundedCornerShape(30.dp)
         ) {
             Text("Login")
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(10.dp))
+        Text("Or Continue With", fontSize = 14.sp,fontWeight = FontWeight.Medium,modifier = Modifier.padding(top = 30.dp, start = 120.dp))
 
-        OutlinedButton(
-            onClick = {
+        Spacer(modifier = Modifier.height(15.dp))
+
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center ,modifier = Modifier.fillMaxWidth()) {
+
+
+            //Gmail Button
+            IconButton({
                 googleClient.signOut().addOnCompleteListener {
                     launcher.launch(googleClient.signInIntent)
                 }
-            },
-            enabled = !state.loading,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(54.dp),
-            shape = RoundedCornerShape(16.dp)
-        ) {
-            Text("Continue with Google")
+            }) {
+
+                Icon(painter = painterResource(R.drawable.google_icon),contentDescription = null)
+
+            }
+
+            //Apple Mail
+            IconButton({}) {
+
+                Icon(painter = painterResource(R.drawable.apple_icon),contentDescription = null)
+
+            }
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -166,14 +221,31 @@ fun LoginScreen(
 
         Spacer(modifier = Modifier.weight(0.6f))
 
-        TextButton(
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            onClick = {
-                navController.navigate("signup")
+
+
+
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()) {
+
+            TextButton({  navController.navigate("signup")}) {
+
+                Text(
+                    "Don't have an Account?",
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = Color.Black
+                )
+
+                Text(
+                    "  SIGN UP",
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 15.sp,
+                    color = Color(0xFF062AEF)
+                )
             }
-        ) {
-            Text("Don’t have an account? Register")
         }
+
+
+
 
         Spacer(modifier = Modifier.height(16.dp))
     }
