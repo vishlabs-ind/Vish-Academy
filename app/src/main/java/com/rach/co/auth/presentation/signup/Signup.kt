@@ -2,11 +2,32 @@ package com.rach.co.auth.presentation.signup
 
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -31,23 +52,35 @@ fun SignupScreen(
     var selectedTerms by rememberSaveable { mutableStateOf(false) }
     val state = viewModel.state
     var passwordVisible by rememberSaveable { mutableStateOf(false) }
+    val scrollState = rememberScrollState()
 
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(all = 24.dp)
+            .verticalScroll(state = scrollState)
     ) {
 
 
+        Image(
+            painter = painterResource(id = R.drawable.app_logo),
+            contentDescription = "app logo",
+            modifier = Modifier
+                .height(210.dp)
+                .align(alignment = Alignment.CenterHorizontally)
+        )
 
 
-            Image(painter = painterResource( id = R.drawable.app_logo), contentDescription = "app logo", modifier = Modifier.height(210.dp).align(alignment =Alignment.CenterHorizontally))
 
-
-
-            Text("Getting Started.!", fontWeight = FontWeight.Bold, fontSize = 22.sp)
-        Text("Create an Account to Continue your Courses", fontSize = 13.sp, color = Color.Gray,fontWeight =  FontWeight.SemiBold,modifier = Modifier.padding(top=10.dp))
+        Text("Getting Started.!", fontWeight = FontWeight.Bold, fontSize = 22.sp)
+        Text(
+            "Create an Account to Continue your Courses",
+            fontSize = 13.sp,
+            color = Color.Gray,
+            fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.padding(top = 10.dp)
+        )
 
         Spacer(modifier = Modifier.height(24.dp))
 
@@ -56,7 +89,11 @@ fun SignupScreen(
             onValueChange = viewModel::onEmailChange,
             label = {
                 Icon(painter = painterResource(R.drawable.mail_24px), contentDescription = "mail")
-                Text(" Email", fontWeight = FontWeight.Medium, modifier = Modifier.padding(start = 22.dp))
+                Text(
+                    " Email",
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.padding(start = 22.dp)
+                )
             },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
@@ -68,21 +105,35 @@ fun SignupScreen(
         OutlinedTextField(
             value = state.password,
             onValueChange = viewModel::onPasswordChange,
-            label = { Icon(painter = painterResource(R.drawable.lock_24px),
-                contentDescription = "null")
-                Text(" Password",
+            label = {
+                Icon(
+                    painter = painterResource(R.drawable.lock_24px),
+                    contentDescription = "null"
+                )
+                Text(
+                    " Password",
                     fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(start = 22.dp))
-            }
-            ,
+                    modifier = Modifier.padding(start = 22.dp)
+                )
+            },
 
-            visualTransformation = if (passwordVisible){
-                VisualTransformation.None} else{ PasswordVisualTransformation() },
+            visualTransformation = if (passwordVisible) {
+                VisualTransformation.None
+            } else {
+                PasswordVisualTransformation()
+            },
 
             trailingIcon = {
-                IconButton({passwordVisible  =  !passwordVisible}) {
-                    Icon(painter = painterResource(if(passwordVisible){R.drawable.outline_visibility_24 }
-                    else{ R.drawable.outline_visibility_off_24}),contentDescription = null)
+                IconButton({ passwordVisible = !passwordVisible }) {
+                    Icon(
+                        painter = painterResource(
+                            if (passwordVisible) {
+                                R.drawable.outline_visibility_24
+                            } else {
+                                R.drawable.outline_visibility_off_24
+                            }
+                        ), contentDescription = null
+                    )
                 }
             },
 
@@ -97,20 +148,35 @@ fun SignupScreen(
         OutlinedTextField(
             value = state.confirmPassword,
             onValueChange = viewModel::onConfirmPasswordChange,
-            label = { Icon(painter = painterResource(R.drawable.lock_24px),
-                contentDescription = "null")
-                Text(" Password",
+            label = {
+                Icon(
+                    painter = painterResource(R.drawable.lock_24px),
+                    contentDescription = "null"
+                )
+                Text(
+                    " Password",
                     fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(start = 22.dp))
+                    modifier = Modifier.padding(start = 22.dp)
+                )
             },
 
-            visualTransformation = if (passwordVisible){
-                VisualTransformation.None} else{ PasswordVisualTransformation() },
+            visualTransformation = if (passwordVisible) {
+                VisualTransformation.None
+            } else {
+                PasswordVisualTransformation()
+            },
 
             trailingIcon = {
-                IconButton({passwordVisible  =  !passwordVisible}) {
-                    Icon(painter = painterResource(if(passwordVisible){R.drawable.outline_visibility_24 }
-                    else{ R.drawable.outline_visibility_off_24}),contentDescription = null)
+                IconButton({ passwordVisible = !passwordVisible }) {
+                    Icon(
+                        painter = painterResource(
+                            if (passwordVisible) {
+                                R.drawable.outline_visibility_24
+                            } else {
+                                R.drawable.outline_visibility_off_24
+                            }
+                        ), contentDescription = null
+                    )
                 }
             },
             modifier = Modifier.fillMaxWidth(),
@@ -151,7 +217,7 @@ fun SignupScreen(
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xED062AEF)),
             shape = RoundedCornerShape(30.dp)
         ) {
-            Text("Create Account")
+            Text("Create Account", color = Color.White)
         }
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -168,16 +234,23 @@ fun SignupScreen(
         Spacer(modifier = Modifier.weight(0.6f))
 
 
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center,
+            modifier = Modifier.fillMaxWidth()
+        ) {
 
-            TextButton({      navController.navigate("login") {
-                popUpTo("signup") { inclusive = true } }}) {
+            TextButton({
+                navController.navigate("login") {
+                    popUpTo("signup") { inclusive = true }
+                }
+            }) {
 
                 Text(
                     "Already have an account?",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color.Black
+                    color = MaterialTheme.colorScheme.onBackground
                 )
 
                 Text(
@@ -190,7 +263,7 @@ fun SignupScreen(
         }
 
 
-       // Spacer(modifier = Modifier.height(16.dp))
+        // Spacer(modifier = Modifier.height(16.dp))
     }
 
     LaunchedEffect(state.success) {
