@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AuthApp(isLoggedIn = isLoggedIn)
+                    AuthApp()
                 }
             }
         }
