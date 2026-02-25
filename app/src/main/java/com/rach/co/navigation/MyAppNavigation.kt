@@ -1,7 +1,6 @@
 package com.rach.co.navigation
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.*
@@ -11,10 +10,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.*
 import com.google.firebase.auth.FirebaseAuth
 import com.rach.co.auth.presentation.onboard.OnboardScreen
-import com.rach.co.auth.presentation.home.HomeScreen
+import com.rach.co.homescreen.presentation.home.HomeScreen
 import com.rach.co.auth.presentation.login.LoginScreen
 import com.rach.co.auth.presentation.signup.SignupScreen
-import com.rach.co.ui.VideoPlayerScreen
 import com.rach.co.utils.OnboardingManager
 
 @Composable

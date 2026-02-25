@@ -1,4 +1,4 @@
-package com.rach.co.auth.presentation.home
+package com.rach.co.homescreen.presentation.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

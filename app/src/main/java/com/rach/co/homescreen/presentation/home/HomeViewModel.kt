@@ -1,4 +1,4 @@
-package com.rach.co.auth.presentation.home
+package com.rach.co.homescreen.presentation.home
 
 import androidx.lifecycle.ViewModel
 import com.rach.co.auth.domain.repository.AuthRepository
