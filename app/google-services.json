@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "1063321491270",
+    "project_id": "university-app-1",
+    "storage_bucket": "university-app-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063321491270:android:e5a6fbd1d039340f853747",
+        "android_client_info": {
+          "package_name": "com.rach.co"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063321491270-k9n25fkiac3qjl7ulu4vt7rfoh61ii7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxtGPPvjx3D9vdL1c1n51F1v3uQsIZmsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063321491270-k9n25fkiac3qjl7ulu4vt7rfoh61ii7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063321491270:android:0af1b136f50a1d53853747",
+        "android_client_info": {
+          "package_name": "com.rach.universityapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063321491270-7eptohej00a49i921volh74timm4f8ld.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rach.universityapp",
+            "certificate_hash": "e6a1656eefacad1a760b2476d86173c6e6e19b8c"
+          }
+        },
+        {
+          "client_id": "1063321491270-k9n25fkiac3qjl7ulu4vt7rfoh61ii7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxtGPPvjx3D9vdL1c1n51F1v3uQsIZmsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063321491270-k9n25fkiac3qjl7ulu4vt7rfoh61ii7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
