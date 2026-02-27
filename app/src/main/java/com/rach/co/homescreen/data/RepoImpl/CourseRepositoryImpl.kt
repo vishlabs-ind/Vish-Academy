@@ -1,6 +1,7 @@
 package com.rach.co.homescreen.data.RepoImpl
 
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.rach.co.homescreen.data.DataClass.Chapter
@@ -103,11 +104,31 @@ class CourseRepositoryImpl @Inject constructor(
                 .await()
 
             snapshot.documents.mapNotNull { doc ->
-                doc.toObject(Course::class.java)
-                    ?.copy(courseId = doc.id)
+                try {
+
+                    val course = doc.toObject(Course::class.java)
+                        ?.copy(courseId = doc.id)
+
+                    Log.d("FirestoreCourse", "Loaded Course: $course")
+
+                    course
+
+                } catch (e: Exception) {
+
+                    Log.e(
+                        "FirestoreCourseError",
+                        "Error parsing doc ${doc.id} -> ${doc.data}",
+                        e
+                    )
+
+                    null
+                }
             }
 
         } catch (e: Exception) {
+
+            Log.e("FirestoreCourseError", "Firestore fetch failed", e)
+
             emptyList()
         }
     }

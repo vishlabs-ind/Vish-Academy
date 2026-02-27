@@ -27,10 +27,6 @@ class HomeViewModel @Inject constructor(
     private val purchaseRepository: PurchaseRepository,
     private val savedStateHandle: SavedStateHandle,
 
-
-
-
-
 ) : ViewModel() {
 
     fun logout() {
