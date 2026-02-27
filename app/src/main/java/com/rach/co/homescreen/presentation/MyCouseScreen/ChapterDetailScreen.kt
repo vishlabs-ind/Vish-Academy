@@ -1,5 +1,7 @@
 package com.rach.co.homescreen.presentation.MyCouseScreen
 
+import android.net.Uri
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,6 +19,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -25,16 +28,21 @@ import androidx.navigation.NavHostController
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 
 @Composable
-fun ChapterDetailScreen(courseId: String, subjectName: String, navController: NavHostController,
-                        vm: HomeViewModel = hiltViewModel()) {
+fun ChapterDetailScreen(
+    courseId: String, subjectName: String, navController: NavHostController,
+    vm: HomeViewModel = hiltViewModel()
+) {
 
-
+    val context = LocalContext.current
     val chaptersS by vm.chaptersS.collectAsState()
 
     LaunchedEffect(Unit) {
         vm.loadChaptersS(courseId, subjectName)
     }
-    Column(Modifier.fillMaxSize().statusBarsPadding().padding(6.dp)) {
+    Column(Modifier
+        .fillMaxSize()
+        .statusBarsPadding()
+        .padding(6.dp)) {
         Text(
             text = subjectName,
             fontSize = 22.sp,
@@ -42,17 +50,37 @@ fun ChapterDetailScreen(courseId: String, subjectName: String, navController: Na
             modifier = Modifier.padding(16.dp)
         )
         Spacer(modifier = Modifier.height(5.dp))
-        LazyColumn {
 
+        LazyColumn {
             items(chaptersS) { chapterS ->
+
                 Card(
                     Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
-                        .clickable(onClick = {
+                        .clickable {
 
-                        })
-                ){
+                            if (chapterS.ytlink.isNotEmpty()) {
+
+                                val encodedLink =
+                                    Uri.encode(chapterS.ytlink)
+
+                                navController.navigate(
+                                    "videoplayscreen/$encodedLink"
+                                )
+
+                            } else {
+                                Toast
+                                    .makeText(
+                                        context,
+                                        "Video not available",
+                                        Toast.LENGTH_SHORT
+                                    )
+                                    .show()
+                            }
+                        }
+                ) {
+
                     Text(
                         text = chapterS.ChapterName,
                         modifier = Modifier.padding(8.dp)

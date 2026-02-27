@@ -1,113 +1,90 @@
 package com.rach.co.ui
 
+import android.util.Log
 import android.widget.Toast
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.net.toUri
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
 @Composable
-fun VideoPlayerScreen() {
-
-    var videoUrl by remember { mutableStateOf("") }
-    var videoId by remember { mutableStateOf<String?>(null) }
-
+fun VideoPlayerScreen(ytlink: String) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
+
+    // Video ID extract
+    val videoId = remember(ytlink) {
+        extractYoutubeVideoId(ytlink)
+    }
+
+    Log.d("YouTubePlayer", "Link: $ytlink | Extracted ID: $videoId")
+
+    if (videoId == null) {
+        LaunchedEffect(Unit) {
+            Toast.makeText(context, "Invalid YouTube link", Toast.LENGTH_SHORT).show()
+        }
+        return
+    }
+
+    // PlayerView create + listener turant add (timing fix yahin hai)
+    val playerView = remember {
+        YouTubePlayerView(context).apply {
+            addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+                override fun onReady(player: YouTubePlayer) {
+                    Log.d("YouTubePlayer", "Player Ready → Loading video: $videoId")
+                    player.loadVideo(videoId, 0f)
+                }
+            })
+        }
+    }
+
+    // Lifecycle (pause/resume ke liye zaroori)
+    DisposableEffect(playerView) {
+        lifecycleOwner.lifecycle.addObserver(playerView)
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(playerView)
+            playerView.release()
+        }
+    }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(12.dp)
     ) {
-
-        OutlinedTextField(
-            value = videoUrl,
-            onValueChange = { videoUrl = it },
-            label = { Text("Paste YouTube Link") },
-            modifier = Modifier.fillMaxWidth(),
-            singleLine = true
+        AndroidView(
+            modifier = Modifier
+                .fillMaxWidth(),
+            factory = { playerView }
         )
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        Button(
-            onClick = {
-
-                val id = extractYoutubeVideoId(videoUrl)
-
-                if (id == null) {
-                    Toast.makeText(context, "Invalid YouTube URL", Toast.LENGTH_SHORT).show()
-                } else {
-                    videoId = id
-                    Toast.makeText(context, "Video ID = $id", Toast.LENGTH_SHORT).show()
-                }
-            },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Play Video")
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        videoId?.let { id ->
-
-            val playerView = remember {
-                YouTubePlayerView(context)
-            }
-
-            DisposableEffect(playerView) {
-
-                lifecycleOwner.lifecycle.addObserver(playerView)
-
-                onDispose {
-                    lifecycleOwner.lifecycle.removeObserver(playerView)
-                    playerView.release()
-                }
-            }
-
-            AndroidView(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(220.dp),
-
-                factory = { playerView }
-            )
-
-            LaunchedEffect(id) {
-                playerView.addYouTubePlayerListener(
-                    object : AbstractYouTubePlayerListener() {
-                        override fun onReady(player: YouTubePlayer) {
-                            player.loadVideo(id, 0f)
-                        }
-                    }
-                )
-            }
-        }
     }
 }
 
 
 fun extractYoutubeVideoId(url: String): String? {
     return try {
-        val uri = android.net.Uri.parse(url)
-
+        val uri = url.toUri()
         when {
-            uri.host?.contains("youtu.be") == true ->
-                uri.lastPathSegment
-
-            uri.getQueryParameter("v") != null ->
-                uri.getQueryParameter("v")
-
-            uri.path?.contains("embed") == true ->
-                uri.lastPathSegment
+            uri.host?.contains("youtu.be") == true -> uri.lastPathSegment
+            uri.getQueryParameter("v") != null -> uri.getQueryParameter("v")
+            uri.path?.contains("/shorts/") == true ||
+                    uri.path?.contains("/embed/") == true -> {
+                uri.lastPathSegment?.takeIf { it.length > 8 } // shorts ID usually 11 chars
+            }
 
             else -> null
         }
@@ -115,3 +92,4 @@ fun extractYoutubeVideoId(url: String): String? {
         null
     }
 }
+

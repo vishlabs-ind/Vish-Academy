@@ -20,6 +20,7 @@ import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
 import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
+import com.rach.co.ui.VideoPlayerScreen
 import com.rach.co.utils.OnboardingManager
 
 @Composable
@@ -137,6 +138,18 @@ fun AuthApp() {
 
 
 
+        composable(
+            route = Routes.VIDEO_PLAYER_SCREEN,
+            arguments = listOf(
+                navArgument("ytlink") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+
+            val ytLink =
+                backStackEntry.arguments?.getString("ytlink") ?: ""
+
+            VideoPlayerScreen(ytLink)
+        }
 
     }
 }
@@ -155,5 +168,6 @@ object Routes {
     const val CHAPTER = "chapters/{courseId}"
     const val SUBJECT = "chapterDetails/{courseId}/{subjectName}"
 
+    const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}"
 
 }

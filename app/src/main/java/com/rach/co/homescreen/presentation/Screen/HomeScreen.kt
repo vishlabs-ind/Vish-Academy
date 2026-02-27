@@ -41,7 +41,7 @@ fun HomeScreen(
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
-        CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
+      //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
         CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES)
 
     )
@@ -134,10 +134,11 @@ fun CategoryCard(item: CategoryItem, navController: NavController) {
 fun ImageSlider() {
 
     val images = listOf(
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
-        "https://images.unsplash.com/photo-1588072432836-e10032774350",
-        "https://images.unsplash.com/photo-1513258496099-48168024aec0",
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7slm5D8eAWsQ5xIr2LjyTP430zUEKwhDMnqiX7",
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sFuZjnixUoHBEqXjkVvJsZDLCgAcin8eTPSwG",
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sVhxt2TFtoG4f3vP8xJWjHRuMmK5TbANDkYie",
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s5L6qxWqTwIlhWk0Ldz6QgPtBADpynqj19ar5",
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sNLtiEthtApfRXC7hJHMIGW31ZP8YxleTwrBm"
     )
 
     val pagerState = rememberPagerState(
