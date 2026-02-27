@@ -15,8 +15,8 @@ android {
         applicationId = "com.rach.co"
         minSdk = 25
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 15
+        versionName = "15.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -96,4 +96,7 @@ dependencies {
 
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:13.0.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
+
+    //Google admob 
+    implementation(libs.play.services.ads)
 }
