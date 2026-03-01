@@ -83,6 +83,8 @@ fun AuthApp() {
         composable("login") { LoginScreen(navController) }
         composable("signup") { SignupScreen(navController) }
         composable(Routes.HOME) { HomeScreen(navController) }
+
+
         composable(Routes.COURSES) {
             AllCourseScreen(navController= navController)
         }
