@@ -18,7 +18,7 @@ class AuthRepositoryImpl @Inject constructor(
         try {
             emit(Response.Success(source.login(email, password)))
         } catch (e: Exception) {
-            emit(Response.Error(e))
+            emit(Response.Error(Exception("Invalid email or password. Please try again.")))
         }
     }
 
