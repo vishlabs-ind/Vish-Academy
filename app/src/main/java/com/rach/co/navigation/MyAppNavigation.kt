@@ -11,10 +11,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
 import com.google.firebase.auth.FirebaseAuth
+import com.google.gson.Gson
 import com.rach.co.auth.presentation.onboard.OnboardScreen
 import com.rach.co.homescreen.presentation.home.presentation.Screen.HomeScreen
 import com.rach.co.auth.presentation.login.LoginScreen
 import com.rach.co.auth.presentation.signup.SignupScreen
+import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterDetailScreen
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
 import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
@@ -121,20 +123,23 @@ fun AuthApp() {
         }
 
         composable(
-            route = Routes.COURSE_PURCHASED,
+            route = "course_purchased/{course}",
             arguments = listOf(
-                navArgument("order") {
-                    type = NavType.IntType
+                navArgument("course") {
+                    type = NavType.StringType
                 }
             )
         ) { backStackEntry ->
 
-            val order =
-                backStackEntry.arguments
-                    ?.getInt("order") ?: 0
+            val courseJson =
+                backStackEntry.arguments?.getString("course")
+
+            val course =
+                Gson().fromJson(courseJson, Course::class.java)
 
             CoursePurchasedScreen(
-                order, navController = navController,
+                navController = navController,
+                course = course
             )
         }
 
@@ -163,9 +168,8 @@ object Routes {
     const val COURSES = "courses"
 
     const val My_COURSES = "my_courses"
-    const val COURSE_PURCHASED =
-        "course_purchased/{order}"
-
+    const val COURSE_PURCHASED = "course_purchased/{course}"
+    fun coursePurchased(course: String) = "course_purchased/$course"
 
     const val CHAPTER = "chapters/{courseId}"
     const val SUBJECT = "chapterDetails/{courseId}/{subjectName}"

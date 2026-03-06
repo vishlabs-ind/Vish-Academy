@@ -1,6 +1,6 @@
 package com.rach.co.homescreen.presentation.Screen
 
-import android.widget.Toast
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -44,6 +44,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
+import com.google.gson.Gson
 import com.rach.co.R
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
@@ -111,10 +112,9 @@ fun CourseShimmer() {
 }
 
 @Composable
-fun Coursecard(isMyCourse: Boolean = false, course: Course, NavController: NavController) {
+fun Coursecard(isMyCourse: Boolean = false, course: Course, navController: NavController) {
 
 
-    val order: Int = course.order
     Card(
         Modifier
             .fillMaxWidth()
@@ -122,18 +122,18 @@ fun Coursecard(isMyCourse: Boolean = false, course: Course, NavController: NavCo
             .padding(vertical = 8.dp)
             .clickable(onClick = {
                 if (isMyCourse) {
-                    NavController.navigate(
+
+                    navController.navigate(
                         "chapters/${course.courseId}"
                     )
-                    Toast.makeText(
-                        NavController.context,
-                        "This course is purchased",
-                        Toast.LENGTH_SHORT
-                    ).show()
 
                 } else {
-                    NavController.navigate(
-                        "course_purchased/$order"
+
+                    val courseJson =
+                        Uri.encode(Gson().toJson(course))
+
+                    navController.navigate(
+                        "course_purchased/$courseJson"
                     )
                 }
 

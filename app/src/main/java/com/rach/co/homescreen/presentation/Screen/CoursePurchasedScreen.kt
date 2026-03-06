@@ -37,43 +37,29 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.rach.co.R
+import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.valentinilk.shimmer.shimmer
-
 
 @SuppressLint("ContextCastToActivity")
 @Composable
 fun CoursePurchasedScreen(
-    order: Int?,
-//    vm: HomeViewModel = hiltViewModel(),
-    navController: NavController
+    navController: NavController,
+    course: Course
 ) {
+
     val activity = LocalContext.current as ComponentActivity
+    val vm: HomeViewModel = hiltViewModel(activity)
 
-    val vm: HomeViewModel =
-        hiltViewModel(activity)
-
-    val course by vm.courseP.collectAsState()
     val context = LocalContext.current
-    LaunchedEffect(order) {
-        order?.let {
-            vm.purchasecoursevm(it)
-        }
-    }
     val courses by vm.myCourses.collectAsState()
 
     LaunchedEffect(Unit) {
         vm.loadPurchasedCourses()
     }
 
-    if (course == null) {
-        CoursePurchasedShimmer()
-        return
-    }
-
-    val data = course!!
     val alreadyPurchased =
-        courses.any { it.courseId == data.courseId }
+        courses.any { it.courseId == course.courseId }
 
     Column(
         modifier = Modifier
@@ -83,7 +69,7 @@ fun CoursePurchasedScreen(
 
         Column(
             modifier = Modifier
-                .weight(1f)   // 👈 ye important hai
+                .weight(1f)
                 .verticalScroll(rememberScrollState())
                 .padding(top = 16.dp)
         ) {
@@ -95,9 +81,10 @@ fun CoursePurchasedScreen(
                     .fillMaxWidth()
                     .height(300.dp)
             ) {
+
                 AsyncImage(
-                    model = data.thumbnail.takeIf { it.isNotEmpty() } ?: R.drawable.learning,
-                    contentDescription = "image course",
+                    model = course.thumbnail.ifEmpty { R.drawable.learning },
+                    contentDescription = null,
                     modifier = Modifier
                         .fillMaxSize()
                         .clip(RoundedCornerShape(10.dp)),
@@ -115,25 +102,23 @@ fun CoursePurchasedScreen(
                     Column(modifier = Modifier.padding(8.dp)) {
 
                         Text(
-                            text = data.title,
+                            text = course.title,
                             fontSize = 24.sp,
-                            color = Color.Black,
                             fontWeight = FontWeight.Bold
                         )
 
                         Spacer(Modifier.height(8.dp))
 
                         Text(
-                            data.subtitle,
+                            course.subtitle,
                             fontSize = 16.sp,
-                            color = Color.Blue,
-                            fontWeight = FontWeight.Medium
+                            color = Color.Blue
                         )
 
                         Spacer(Modifier.height(9.dp))
 
                         Text(
-                            text = "Course: ${data.description}",
+                            text = "Course: ${course.description}",
                             fontSize = 11.sp
                         )
                     }
@@ -141,7 +126,6 @@ fun CoursePurchasedScreen(
             }
         }
 
-        // ✅ BUY CARD FIXED AT BOTTOM
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -160,111 +144,55 @@ fun CoursePurchasedScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
 
-                    Row {
-                        Text(
-                            text = "Course:",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-
-                        Text(
-                            text = " ${data.displayName}",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color.Blue
-                        )
-                    }
+                    Text(
+                        "Course: ${course.displayName}",
+                        fontWeight = FontWeight.Bold
+                    )
 
                     Spacer(modifier = Modifier.weight(1f))
 
-                    Row {
-                        Text(
-                            text = "Price:",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 18.sp
-                        )
-
-                        Text(
-                            text = " ₹ ${data.price}",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 18.sp,
-                            color = Color.Blue
-                        )
-                    }
+                    Text(
+                        "₹ ${course.price}",
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Blue
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
                     onClick = {
-                        if (!alreadyPurchased) {
 
-
-                        vm.startPurchase(data.courseId)
+                        vm.startPurchase(course.courseId)
 
                         vm.startPayment(
                             activity = context as Activity,
                             email = "",
-                            amountInRupees = data.price,
+                            amountInRupees = course.price,
                             keyId = "rzp_test_PCx5CdAmvXX78k",
                             appName = "Vish Academy",
-                            description = data.title,
+                            description = course.title,
                             userID = ""
                         )
-                    }
                     },
-                    enabled = !alreadyPurchased,   // ✅ disable button
-
+                    enabled = !alreadyPurchased,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(45.dp)
-                        .padding(bottom = 5.dp),
+                        .height(45.dp),
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFF3653F3)
                     )
                 ) {
+
                     Text(
-                        text =
-                            if (alreadyPurchased)
-                                "Already Purchased"
-                            else
-                                "Buy Now"
-                    )                }
+                        if (alreadyPurchased)
+                            "Already Purchased"
+                        else
+                            "Buy Now"
+                    )
+                }
             }
-        }
-    }
-
-
-}
-
-@Composable
-fun CoursePurchasedShimmer() {
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-            .shimmer()
-    ) {
-
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(220.dp)
-                .background(Color.LightGray)
-        )
-
-        Spacer(Modifier.height(20.dp))
-
-        repeat(4) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(20.dp)
-                    .padding(vertical = 6.dp)
-                    .background(Color.LightGray)
-            )
         }
     }
 }
