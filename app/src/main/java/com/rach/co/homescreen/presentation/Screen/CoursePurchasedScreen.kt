@@ -39,6 +39,7 @@ import coil.compose.AsyncImage
 import com.rach.co.R
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
+import com.rach.co.utils.K
 import com.valentinilk.shimmer.shimmer
 
 @SuppressLint("ContextCastToActivity")
@@ -169,7 +170,7 @@ fun CoursePurchasedScreen(
                             activity = context as Activity,
                             email = "",
                             amountInRupees = course.price,
-                            keyId = "rzp_test_PCx5CdAmvXX78k",
+                            keyId = K.RAZORPAY_KEY,
                             appName = "Vish Academy",
                             description = course.title,
                             userID = ""
