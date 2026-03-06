@@ -28,7 +28,7 @@ class CourseRepositoryImpl @Inject constructor(
                 .document(courseId)
                 .collection("chapters")
                 .document(subjectName)
-                .collection("Chapters")
+                .collection("Chapters").orderBy("order")
                 .get()
                 .await()
 
@@ -45,7 +45,7 @@ class CourseRepositoryImpl @Inject constructor(
             firestore
                 .collection("courses")
                 .document(courseId)
-                .collection("chapters")
+                .collection("chapters").orderBy("order")
                 .get()
                 .await()
 
@@ -138,7 +138,7 @@ class CourseRepositoryImpl @Inject constructor(
         return try {
 
             val snapshot = firestore
-                .collection("courses")
+                .collection("courses").orderBy("order")
                 .whereEqualTo("order", order)
                 .get()
                 .await()

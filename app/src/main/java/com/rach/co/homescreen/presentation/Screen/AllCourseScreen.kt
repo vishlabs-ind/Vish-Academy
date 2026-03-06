@@ -112,8 +112,9 @@ fun CourseShimmer() {
 
 @Composable
 fun Coursecard(isMyCourse: Boolean = false, course: Course, NavController: NavController) {
-    val order: Int = course.order
 
+
+    val order: Int = course.order
     Card(
         Modifier
             .fillMaxWidth()
