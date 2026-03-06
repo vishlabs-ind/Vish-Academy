@@ -37,6 +37,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -71,7 +72,17 @@ fun SignupScreen(
                 .align(alignment = Alignment.CenterHorizontally)
         )
 
+        if (state.success) {
 
+            Text(
+                text = "Email verification link sent to ${state.email}. If it doesn’t appear within a few minutes, check your spam folder.",
+                fontSize = 16.sp,
+                color = Color(0xFF2E7D32), // green success color
+                fontWeight = FontWeight.Medium,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+            )
+        }
 
         Text("Getting Started.!", fontWeight = FontWeight.Bold, fontSize = 22.sp)
         Text(
@@ -266,12 +277,12 @@ fun SignupScreen(
         // Spacer(modifier = Modifier.height(16.dp))
     }
 
-    LaunchedEffect(state.success) {
-        if (state.success) {
-            navController.navigate("login") {
-                popUpTo("signup") { inclusive = true }
-            }
-        }
-    }
+//    LaunchedEffect(state.success) {
+//        if (state.success) {
+//            navController.navigate("login") {
+//                popUpTo("signup") { inclusive = true }
+//            }
+//        }
+//    }
 
 }
