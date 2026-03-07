@@ -110,7 +110,11 @@ fun HomeScreen(
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ){
             items(categories) { item ->
-                CategoryCard(item, navController)
+                CategoryCard(
+                    item = item,
+                    navController = navController,
+                    quizViewModel = quizViewModel
+                )
             }
         }
     }
