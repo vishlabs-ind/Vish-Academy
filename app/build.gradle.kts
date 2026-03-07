@@ -99,4 +99,8 @@ dependencies {
 
     //Google admob 
     implementation(libs.play.services.ads)
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
 }

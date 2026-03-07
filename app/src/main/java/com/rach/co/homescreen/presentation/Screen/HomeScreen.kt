@@ -5,15 +5,18 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -30,20 +33,25 @@ import coil.compose.AsyncImage
 import com.rach.co.R
 import com.rach.co.homescreen.data.DataClass.CategoryItem
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
+import com.rach.co.homescreen.presentation.viewmodel.QuizCategoryViewModel
 import com.rach.co.navigation.Routes
 import kotlinx.coroutines.delay
 
 @Composable
 fun HomeScreen(
     navController: NavHostController,
-    viewModel: HomeViewModel = hiltViewModel()
+    viewModel: HomeViewModel = hiltViewModel(),
+    quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
+
+    val courses by quizViewModel.courseList
+    val isDialogOpen by quizViewModel.isDialogOpen
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
       //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
-        CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES)
-
+        CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES),
+        CategoryItem("Quiz", R.drawable.quiz_logo, "quiz_dialog")
     )
 
 
@@ -64,7 +72,8 @@ fun HomeScreen(
                 fontWeight = FontWeight.Bold
             )
             Spacer(Modifier.weight(1f))
-            Button(onClick = {
+            Button(
+                onClick = {
                 viewModel.logout()
                 navController.navigate("login") {
                     popUpTo("home") { inclusive = true }
@@ -80,6 +89,21 @@ fun HomeScreen(
 
         ImageSlider()
         Spacer(modifier = Modifier.height(20.dp))
+
+//        Button(
+//            onClick = {
+//                quizViewModel.loadCourses()
+//                quizViewModel.openDialog()
+//            },
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .height(50.dp)
+//        ) {
+//            Text("Start Quiz")
+//        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             verticalArrangement = Arrangement.spacedBy(20.dp),
@@ -89,45 +113,69 @@ fun HomeScreen(
                 CategoryCard(item, navController)
             }
         }
-
-
-
     }
-}
 
+    // QUIZ PopUp
+    if (isDialogOpen) {
+        AlertDialog(
+            onDismissRequest = { quizViewModel.closeDialog() },
+            confirmButton = {},
+            title = { Text("Select Course") },
+            text = {
+                LazyColumn {
+                    items(courses) { course ->
+                        TextButton(
+                            onClick = {
+                                quizViewModel.closeDialog()
 
-@Composable
-fun CategoryCard(item: CategoryItem, navController: NavController) {
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color(0xFFF5F5F5))
-            .padding(16.dp)
-            .clickable(onClick = {
-                navController.navigate(item.route)
-
-            }),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-
-        Image(
-            painter = painterResource(id = item.icon),
-            contentDescription = item.name,
-            modifier = Modifier
-                .size(80.dp)
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Text(
-            text = item.name,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Medium
+                                navController.navigate(
+                                    "quiz/${course.courseId}"
+                                )
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(course.courseTitle)
+                        }
+                    }
+                }
+            }
         )
     }
 }
+
+
+//@Composable
+//fun CategoryCard(item: CategoryItem, navController: NavController) {
+//
+//    Column(
+//        modifier = Modifier
+//            .fillMaxWidth()
+//            .clip(RoundedCornerShape(16.dp))
+//            .background(Color(0xFFF5F5F5))
+//            .padding(16.dp)
+//            .clickable(onClick = {
+//                navController.navigate(item.route)
+//
+//            }),
+//        horizontalAlignment = Alignment.CenterHorizontally
+//    ) {
+//
+//        Image(
+//            painter = painterResource(id = item.icon),
+//            contentDescription = item.name,
+//            modifier = Modifier
+//                .size(80.dp)
+//        )
+//
+//        Spacer(modifier = Modifier.height(8.dp))
+//
+//        Text(
+//            text = item.name,
+//            fontSize = 16.sp,
+//            fontWeight = FontWeight.Medium
+//        )
+//    }
+//}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -168,6 +216,53 @@ fun ImageSlider() {
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
+        )
+    }
+}
+@Composable
+fun CategoryCard(
+    item: CategoryItem,
+    navController: NavController,
+    quizViewModel: QuizCategoryViewModel
+) {
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .background(Color(0xFFF5F5F5))
+            .padding(16.dp)
+            .clickable {
+
+                if (item.route == "quiz_dialog") {
+
+                    // OPEN QUIZ POPUP
+                    quizViewModel.loadCourses()
+                    quizViewModel.openDialog()
+
+                } else {
+
+                    // NORMAL NAVIGATION
+                    navController.navigate(item.route)
+
+                }
+
+            },
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        Image(
+            painter = painterResource(id = item.icon),
+            contentDescription = item.name,
+            modifier = Modifier.size(80.dp)
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(
+            text = item.name,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Medium
         )
     }
 }

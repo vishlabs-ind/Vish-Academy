@@ -1,5 +1,6 @@
 package com.rach.co.navigation
 
+import QuizScreen
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -10,6 +11,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
+import com.example.oflinequizapp.uiCompose.ScoreScreen
 import com.google.firebase.auth.FirebaseAuth
 import com.rach.co.auth.presentation.onboard.OnboardScreen
 import com.rach.co.homescreen.presentation.home.presentation.Screen.HomeScreen
@@ -18,6 +20,7 @@ import com.rach.co.auth.presentation.signup.SignupScreen
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterDetailScreen
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
 import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
+import com.rach.co.homescreen.presentation.Screen.CategoryScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.ui.VideoPlayerScreen
@@ -85,9 +88,48 @@ fun AuthApp() {
         composable(Routes.HOME) { HomeScreen(navController) }
         composable(Routes.COURSES) {
             AllCourseScreen(navController= navController)
+            CategoryScreen()
         }
         composable(Routes.My_COURSES) {
             MyCourse(navController)
+        }
+// here
+        composable(
+            route = "${Routes.QUIZ}/{courseId}",
+            arguments = listOf(
+                navArgument("courseId") {
+                    type = NavType.StringType
+                }
+            )
+        ) { backStackEntry ->
+
+            val courseId = backStackEntry.arguments?.getString("courseId")!!
+
+            QuizScreen(
+                courseId = courseId,
+                navController = navController
+            )
+        }
+
+        // score
+        composable(
+            route = "${Routes.SCORE}/{score}/{total}",
+            arguments = listOf(
+                navArgument("score") { type = NavType.IntType },
+                navArgument("total") { type = NavType.IntType }
+            )
+        ) { backStackEntry ->
+
+            val score = backStackEntry.arguments?.getInt("score") ?: 0
+            val total = backStackEntry.arguments?.getInt("total") ?: 0
+
+            ScoreScreen(
+                score = score,
+                totalQuestions = total,
+                onRestartClick = {
+                    navController.popBackStack(Routes.HOME, false)
+                }
+            )
         }
 
         composable(
@@ -150,7 +192,6 @@ fun AuthApp() {
 
             VideoPlayerScreen(ytLink)
         }
-
     }
 }
 
@@ -161,13 +202,19 @@ object Routes {
     const val COURSES = "courses"
 
     const val My_COURSES = "my_courses"
-    const val COURSE_PURCHASED =
-        "course_purchased/{order}"
+
+    const val QUIZ = "quiz"
+    const val SCORE = "score"
+
+
+    const val COURSE_PURCHASED = "course_purchased/{order}"
 
 
     const val CHAPTER = "chapters/{courseId}"
     const val SUBJECT = "chapterDetails/{courseId}/{subjectName}"
 
     const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}"
+
+
 
 }

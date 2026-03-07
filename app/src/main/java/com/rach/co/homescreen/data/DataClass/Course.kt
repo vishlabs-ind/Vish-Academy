@@ -8,7 +8,9 @@ data class Course(
     val displayName: String = "",
     val price: Int = 0,
     val order: Int = 0,
-    val thumbnail: String = ""
+    val thumbnail: String = "",
+    val courseTitle: String,
+    val questions: List<Question>
 )
 
 data class Chapter(

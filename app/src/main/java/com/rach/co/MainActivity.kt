@@ -12,6 +12,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.google.firebase.Firebase
 import com.google.firebase.functions.functions
+import com.rach.co.homescreen.presentation.Screen.CategoryScreen
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.AuthApp
 import com.rach.co.ui.theme.VishAcademyTheme

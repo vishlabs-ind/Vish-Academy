@@ -6,19 +6,34 @@
 
     <application
         android:name=".UniversityApp"
-        android:hardwareAccelerated="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VishAcademy">
         <activity
+            android:name=".homescreen.presentation.Screen.ScoreScreen"
+            android:exported="false"
+            android:label="@string/title_activity_score_screen"
+            android:theme="@style/Theme.VishAcademy" />
+        <activity
+            android:name=".homescreen.presentation.Screen.QuizScreen"
+            android:exported="false"
+            android:label="@string/title_activity_quiz_screen"
+            android:theme="@style/Theme.VishAcademy" />
+        <activity
+            android:name=".homescreen.presentation.Screen.CategoryScreen"
+            android:exported="false"
+            android:label="@string/title_activity_category_screen"
+            android:theme="@style/Theme.VishAcademy" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.VishAcademy">
             <intent-filter>
@@ -30,8 +45,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2441322063617280~1783093563"/>
-
+            android:value="ca-app-pub-2441322063617280~1783093563" />
     </application>
 
 </manifest>
