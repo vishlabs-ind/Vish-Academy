@@ -335,228 +335,224 @@
           "correctAnswerIndex": 1
         },
         {
-          "questions": [
-            {
-              "id": 31,
-              "question": "Which device stores data permanently?",
-              "options": [
-                "RAM",
-                "Hard Disk",
-                "Cache",
-                "Register"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 32,
-              "question": "What is 30% of 150?",
-              "options": [
-                "35",
-                "40",
-                "45",
-                "50"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 33,
-              "question": "Which of the following is a web browser?",
-              "options": [
-                "Chrome",
-                "Linux",
-                "Windows",
-                "DOS"
-              ],
-              "correctAnswerIndex": 0
-            },
-            {
-              "id": 34,
-              "question": "Next number in series: 7, 14, 28, 56, ?",
-              "options": [
-                "84",
-                "98",
-                "112",
-                "120"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 35,
-              "question": "Find the next number: 8, 16, 32, 64, ?",
-              "options": [
-                "96",
-                "112",
-                "128",
-                "144"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 36,
-              "question": "What is the cube of 4?",
-              "options": [
-                "16",
-                "32",
-                "64",
-                "128"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 37,
-              "question": "Which number is a prime number?",
-              "options": [
-                "21",
-                "27",
-                "29",
-                "35"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 38,
-              "question": "Antonym of 'Ancient'?",
-              "options": [
-                "Modern",
-                "Old",
-                "Historic",
-                "Traditional"
-              ],
-              "correctAnswerIndex": 0
-            },
-            {
-              "id": 39,
-              "question": "Dry ice is?",
-              "options": [
-                "Solid ammonia",
-                "Solid sulphur dioxide",
-                "Solid carbon dioxide",
-                "Solid nitrogen"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 40,
-              "question": "If a car travels 60 km in 1 hour, what is its speed?",
-              "options": [
-                "50 km/h",
-                "60 km/h",
-                "70 km/h",
-                "80 km/h"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 41,
-              "question": "Which part of computer is known as brain?",
-              "options": [
-                "RAM",
-                "CPU",
-                "Hard Disk",
-                "Motherboard"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 42,
-              "question": "What is 7² ?",
-              "options": [
-                "42",
-                "49",
-                "56",
-                "64"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 43,
-              "question": "Boiling point of water in Kelvin scale?",
-              "options": [
-                "273 K",
-                "373 K",
-                "473 K",
-                "173 K"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 44,
-              "question": "Next number: 4, 9, 16, 25, ?",
-              "options": [
-                "30",
-                "34",
-                "36",
-                "40"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 45,
-              "question": "Heat from the Sun reaches the Earth by?",
-              "options": [
-                "Conduction",
-                "Convection",
-                "Radiation",
-                "All of these"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 46,
-              "question": "What is 18 ÷ 3?",
-              "options": [
-                "5",
-                "6",
-                "7",
-                "8"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 47,
-              "question": "Which of the following is an example of application software?",
-              "options": [
-                "Windows",
-                "Linux",
-                "MS Word",
-                "Android"
-              ],
-              "correctAnswerIndex": 2
-            },
-            {
-              "id": 48,
-              "question": "Next number in series: 11, 13, 17, 19, ?",
-              "options": [
-                "21",
-                "23",
-                "25",
-                "27"
-              ],
-              "correctAnswerIndex": 1
-            },
-            {
-              "id": 49,
-              "question": "What does LAN stand for?",
-              "options": [
-                "Local Area Network",
-                "Large Area Network",
-                "Light Area Network",
-                "Logical Area Network"
-              ],
-              "correctAnswerIndex": 0
-            },
-            {
-              "id": 50,
-              "question": "Which of the following is an input device?",
-              "options": [
-                "Printer",
-                "Monitor",
-                "Scanner",
-                "Speaker"
-              ],
-              "correctAnswerIndex": 2
-            }
-          ]
+          "id": 31,
+          "question": "Which device stores data permanently?",
+          "options": [
+            "RAM",
+            "Hard Disk",
+            "Cache",
+            "Register"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 32,
+          "question": "What is 30% of 150?",
+          "options": [
+            "35",
+            "40",
+            "45",
+            "50"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 33,
+          "question": "Which of the following is a web browser?",
+          "options": [
+            "Chrome",
+            "Linux",
+            "Windows",
+            "DOS"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 34,
+          "question": "Next number in series: 7, 14, 28, 56, ?",
+          "options": [
+            "84",
+            "98",
+            "112",
+            "120"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "Find the next number: 8, 16, 32, 64, ?",
+          "options": [
+            "96",
+            "112",
+            "128",
+            "144"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "What is the cube of 4?",
+          "options": [
+            "16",
+            "32",
+            "64",
+            "128"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "Which number is a prime number?",
+          "options": [
+            "21",
+            "27",
+            "29",
+            "35"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 38,
+          "question": "Antonym of 'Ancient'?",
+          "options": [
+            "Modern",
+            "Old",
+            "Historic",
+            "Traditional"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 39,
+          "question": "Dry ice is?",
+          "options": [
+            "Solid ammonia",
+            "Solid sulphur dioxide",
+            "Solid carbon dioxide",
+            "Solid nitrogen"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "If a car travels 60 km in 1 hour, what is its speed?",
+          "options": [
+            "50 km/h",
+            "60 km/h",
+            "70 km/h",
+            "80 km/h"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 41,
+          "question": "Which part of computer is known as brain?",
+          "options": [
+            "RAM",
+            "CPU",
+            "Hard Disk",
+            "Motherboard"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 42,
+          "question": "What is 7² ?",
+          "options": [
+            "42",
+            "49",
+            "56",
+            "64"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "Boiling point of water in Kelvin scale?",
+          "options": [
+            "273 K",
+            "373 K",
+            "473 K",
+            "173 K"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 44,
+          "question": "Next number: 4, 9, 16, 25, ?",
+          "options": [
+            "30",
+            "34",
+            "36",
+            "40"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 45,
+          "question": "Heat from the Sun reaches the Earth by?",
+          "options": [
+            "Conduction",
+            "Convection",
+            "Radiation",
+            "All of these"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 46,
+          "question": "What is 18 ÷ 3?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 47,
+          "question": "Which of the following is an example of application software?",
+          "options": [
+            "Windows",
+            "Linux",
+            "MS Word",
+            "Android"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 48,
+          "question": "Next number in series: 11, 13, 17, 19, ?",
+          "options": [
+            "21",
+            "23",
+            "25",
+            "27"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "What does LAN stand for?",
+          "options": [
+            "Local Area Network",
+            "Large Area Network",
+            "Light Area Network",
+            "Logical Area Network"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 50,
+          "question": "Which of the following is an input device?",
+          "options": [
+            "Printer",
+            "Monitor",
+            "Scanner",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 2
         }
       ]
     },
