@@ -1,0 +1,1676 @@
+{
+  "freeTestSeries": [
+    {
+      "courseId": "ddu_bca_free_test",
+      "courseTitle": "DDU BCA Test Series",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Binary equivalent of decimal 10?",
+          "options": [
+            "1010",
+            "1001",
+            "1100",
+            "1110"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "CPU stands for?",
+          "options": [
+            "Central Process Unit",
+            "Central Processing Unit",
+            "Computer Process Unit",
+            "Central Processor Utility"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Next number: 2,4,8,16,?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 4,
+          "question": "RAM stands for?",
+          "options": [
+            "Random Access Memory",
+            "Read Access Memory",
+            "Run Access Memory",
+            "Real Application Memory"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "15 × 12 = ?",
+          "options": [
+            "150",
+            "160",
+            "170",
+            "180"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 6,
+          "question": "Synonym of Rapid?",
+          "options": [
+            "Slow",
+            "Fast",
+            "Late",
+            "Calm"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Which is an operating system?",
+          "options": [
+            "Windows",
+            "MS Word",
+            "Excel",
+            "PowerPoint"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 8,
+          "question": "Binary of 5?",
+          "options": [
+            "101",
+            "100",
+            "110",
+            "111"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 9,
+          "question": "HTML stands for?",
+          "options": [
+            "Hyper Text Markup Language",
+            "High Text Machine Language",
+            "Hyper Tabular Markup Language",
+            "Home Tool Markup Language"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Simplify: 3/4 + 1/4",
+          "options": [
+            "1",
+            "1/2",
+            "3/2",
+            "0"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 11,
+          "question": "Which device is used to input data into a computer?",
+          "options": [
+            "Monitor",
+            "Keyboard",
+            "Printer",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "1 Kilobyte (KB) is equal to?",
+          "options": [
+            "1000 bytes",
+            "1024 bytes",
+            "512 bytes",
+            "2048 bytes"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Which number system uses only 0 and 1?",
+          "options": [
+            "Decimal",
+            "Binary",
+            "Octal",
+            "Hexadecimal"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "Next number in series: 3, 6, 12, 24, ?",
+          "options": [
+            "36",
+            "40",
+            "48",
+            "52"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Which colour of light has the highest frequency?",
+          "options": [
+            "Red",
+            "Green",
+            "Violet",
+            "Yellow"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "Antonym of 'Increase'?",
+          "options": [
+            "Expand",
+            "Grow",
+            "Decrease",
+            "Raise"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "What is 25% of 200?",
+          "options": [
+            "25",
+            "40",
+            "50",
+            "75"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which of the following is the SI unit of force?",
+          "options": [
+            "Newton",
+            "Joule",
+            "Watt",
+            "Pascal"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 19,
+          "question": "Next number: 5, 7, 11, 17, ?",
+          "options": [
+            "23",
+            "24",
+            "25",
+            "27"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 20,
+          "question": "Which of the following is an output device?",
+          "options": [
+            "Keyboard",
+            "Mouse",
+            "Monitor",
+            "Scanner"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is 9 × 8?",
+          "options": [
+            "64",
+            "72",
+            "81",
+            "96"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Full form of URL?",
+          "options": [
+            "Uniform Resource Locator",
+            "Universal Resource Locator",
+            "Uniform Reference Link",
+            "Universal Reference Link"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 23,
+          "question": "Next number in series: 2, 6, 7, 21, 23, ?",
+          "options": [
+            "46",
+            "48",
+            "50",
+            "52"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 24,
+          "question": "Which memory is temporary?",
+          "options": [
+            "ROM",
+            "RAM",
+            "Hard Disk",
+            "DVD"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "What is the square of 12?",
+          "options": [
+            "124",
+            "144",
+            "154",
+            "164"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 26,
+          "question": "Which protocol is used for web browsing?",
+          "options": [
+            "HTTP",
+            "FTP",
+            "SMTP",
+            "POP"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 27,
+          "question": "Synonym of 'Quick'?",
+          "options": [
+            "Slow",
+            "Fast",
+            "Lazy",
+            "Weak"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "What is 100 ÷ 4?",
+          "options": [
+            "20",
+            "25",
+            "30",
+            "40"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "Which company developed Windows OS?",
+          "options": [
+            "Apple",
+            "Google",
+            "Microsoft",
+            "IBM"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Next number: 1, 4, 9, 16, ?",
+          "options": [
+            "20",
+            "25",
+            "30",
+            "36"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questions": [
+            {
+              "id": 31,
+              "question": "Which device stores data permanently?",
+              "options": [
+                "RAM",
+                "Hard Disk",
+                "Cache",
+                "Register"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 32,
+              "question": "What is 30% of 150?",
+              "options": [
+                "35",
+                "40",
+                "45",
+                "50"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 33,
+              "question": "Which of the following is a web browser?",
+              "options": [
+                "Chrome",
+                "Linux",
+                "Windows",
+                "DOS"
+              ],
+              "correctAnswerIndex": 0
+            },
+            {
+              "id": 34,
+              "question": "Next number in series: 7, 14, 28, 56, ?",
+              "options": [
+                "84",
+                "98",
+                "112",
+                "120"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 35,
+              "question": "Find the next number: 8, 16, 32, 64, ?",
+              "options": [
+                "96",
+                "112",
+                "128",
+                "144"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 36,
+              "question": "What is the cube of 4?",
+              "options": [
+                "16",
+                "32",
+                "64",
+                "128"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 37,
+              "question": "Which number is a prime number?",
+              "options": [
+                "21",
+                "27",
+                "29",
+                "35"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 38,
+              "question": "Antonym of 'Ancient'?",
+              "options": [
+                "Modern",
+                "Old",
+                "Historic",
+                "Traditional"
+              ],
+              "correctAnswerIndex": 0
+            },
+            {
+              "id": 39,
+              "question": "Dry ice is?",
+              "options": [
+                "Solid ammonia",
+                "Solid sulphur dioxide",
+                "Solid carbon dioxide",
+                "Solid nitrogen"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 40,
+              "question": "If a car travels 60 km in 1 hour, what is its speed?",
+              "options": [
+                "50 km/h",
+                "60 km/h",
+                "70 km/h",
+                "80 km/h"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 41,
+              "question": "Which part of computer is known as brain?",
+              "options": [
+                "RAM",
+                "CPU",
+                "Hard Disk",
+                "Motherboard"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 42,
+              "question": "What is 7² ?",
+              "options": [
+                "42",
+                "49",
+                "56",
+                "64"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 43,
+              "question": "Boiling point of water in Kelvin scale?",
+              "options": [
+                "273 K",
+                "373 K",
+                "473 K",
+                "173 K"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 44,
+              "question": "Next number: 4, 9, 16, 25, ?",
+              "options": [
+                "30",
+                "34",
+                "36",
+                "40"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 45,
+              "question": "Heat from the Sun reaches the Earth by?",
+              "options": [
+                "Conduction",
+                "Convection",
+                "Radiation",
+                "All of these"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 46,
+              "question": "What is 18 ÷ 3?",
+              "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 47,
+              "question": "Which of the following is an example of application software?",
+              "options": [
+                "Windows",
+                "Linux",
+                "MS Word",
+                "Android"
+              ],
+              "correctAnswerIndex": 2
+            },
+            {
+              "id": 48,
+              "question": "Next number in series: 11, 13, 17, 19, ?",
+              "options": [
+                "21",
+                "23",
+                "25",
+                "27"
+              ],
+              "correctAnswerIndex": 1
+            },
+            {
+              "id": 49,
+              "question": "What does LAN stand for?",
+              "options": [
+                "Local Area Network",
+                "Large Area Network",
+                "Light Area Network",
+                "Logical Area Network"
+              ],
+              "correctAnswerIndex": 0
+            },
+            {
+              "id": 50,
+              "question": "Which of the following is an input device?",
+              "options": [
+                "Printer",
+                "Monitor",
+                "Scanner",
+                "Speaker"
+              ],
+              "correctAnswerIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_ba_free_test",
+      "courseTitle": "DDU BA Test Series",
+      "questions": [
+        {
+          "id": 1,
+          "question": "भारत की राजधानी क्या है?",
+          "options": [
+            "मुंबई",
+            "दिल्ली",
+            "कोलकाता",
+            "चेन्नई"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "महात्मा गांधी का जन्म कब हुआ?",
+          "options": [
+            "1869",
+            "1872",
+            "1880",
+            "1890"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 3,
+          "question": "भारत का राष्ट्रीय पशु कौन है?",
+          "options": [
+            "सिंह",
+            "बाघ",
+            "हाथी",
+            "घोड़ा"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "भारत का राष्ट्रीय पक्षी?",
+          "options": [
+            "मोर",
+            "तोता",
+            "कबूतर",
+            "हंस"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "भारत का संविधान कब लागू हुआ?",
+          "options": [
+            "1947",
+            "1950",
+            "1952",
+            "1960"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "अशुद्ध शब्द चुनिए",
+          "options": [
+            "विद्यालय",
+            "अध्यापक",
+            "विद्याल्य",
+            "छात्र"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "Synonym of Brave?",
+          "options": [
+            "Weak",
+            "Bold",
+            "Lazy",
+            "Slow"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "गंगा नदी कहाँ से निकलती है?",
+          "options": [
+            "गोमुख",
+            "केदारनाथ",
+            "यमुनोत्री",
+            "गंगोत्री"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 9,
+          "question": "Next number: 5,10,20,40,?",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "भारत के प्रथम प्रधानमंत्री?",
+          "options": [
+            "महात्मा गांधी",
+            "जवाहरलाल नेहरू",
+            "राजेन्द्र प्रसाद",
+            "सुभाष चन्द्र बोस"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "असहयोग आंदोलन कब शुरू किया गया था?",
+          "options": [
+            "1919",
+            "1920",
+            "1922",
+            "1930"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "'इंकलाब जिंदाबाद' का नारा किसने दिया?",
+          "options": [
+            "भगत सिंह",
+            "महात्मा गांधी",
+            "सुभाष चन्द्र बोस",
+            "बाल गंगाधर तिलक"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 13,
+          "question": "जलियांवाला बाग हत्याकांड कब हुआ था?",
+          "options": [
+            "1917",
+            "1919",
+            "1921",
+            "1930"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "1928 का बारदोली सत्याग्रह किसके नेतृत्व में हुआ?",
+          "options": [
+            "महात्मा गांधी",
+            "जवाहरलाल नेहरू",
+            "सरदार वल्लभभाई पटेल",
+            "राजेन्द्र प्रसाद"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "भारत छोड़ो आंदोलन कब शुरू हुआ?",
+          "options": [
+            "1940",
+            "1941",
+            "1942",
+            "1943"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "आजाद हिंद फौज (INA) के संस्थापक कौन थे?",
+          "options": [
+            "सुभाष चन्द्र बोस",
+            "रास बिहारी बोस",
+            "भगत सिंह",
+            "बाल गंगाधर तिलक"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "काकोरी कांड किस वर्ष हुआ था?",
+          "options": [
+            "1925",
+            "1927",
+            "1929",
+            "1931"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 18,
+          "question": "'हिंद स्वराज' पुस्तक के लेखक कौन हैं?",
+          "options": [
+            "महात्मा गांधी",
+            "जवाहरलाल नेहरू",
+            "सुभाष चन्द्र बोस",
+            "डॉ. भीमराव अंबेडकर"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 19,
+          "question": "भारतीय राष्ट्रीय कांग्रेस के प्रथम अध्यक्ष कौन थे?",
+          "options": [
+            "डब्ल्यू. सी. बनर्जी",
+            "दादाभाई नौरोजी",
+            "बाल गंगाधर तिलक",
+            "गोपाल कृष्ण गोखले"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 20,
+          "question": "सविनय अवज्ञा आंदोलन की शुरुआत किस घटना से हुई?",
+          "options": [
+            "दांडी मार्च",
+            "जलियांवाला बाग",
+            "साइमन कमीशन",
+            "रॉलेट एक्ट"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "भारत के राष्ट्रपति का चुनाव कौन करता है?",
+          "options": [
+            "संसद",
+            "जनता",
+            "निर्वाचन मंडल",
+            "सुप्रीम कोर्ट"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 22,
+          "question": "मौलिक अधिकार संविधान के किस भाग में दिए गए हैं?",
+          "options": [
+            "भाग II",
+            "भाग III",
+            "भाग IV",
+            "भाग V"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 23,
+          "question": "भारत सरकार का प्रमुख कौन होता है?",
+          "options": [
+            "राष्ट्रपति",
+            "प्रधानमंत्री",
+            "मुख्य न्यायाधीश",
+            "राज्यपाल"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "भारत का संविधान कब लागू हुआ?",
+          "options": [
+            "26 जनवरी 1950",
+            "15 अगस्त 1947",
+            "26 नवम्बर 1949",
+            "2 अक्टूबर 1950"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 25,
+          "question": "संविधान का अनुच्छेद 356 किससे संबंधित है?",
+          "options": [
+            "आपातकाल",
+            "राष्ट्रपति शासन",
+            "मौलिक अधिकार",
+            "नागरिकता"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 26,
+          "question": "भारतीय संविधान के जनक किसे कहा जाता है?",
+          "options": [
+            "महात्मा गांधी",
+            "जवाहरलाल नेहरू",
+            "डॉ. भीमराव अंबेडकर",
+            "राजेन्द्र प्रसाद"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 27,
+          "question": "भारतीय संसद किनसे मिलकर बनती है?",
+          "options": [
+            "केवल लोकसभा",
+            "केवल राज्यसभा",
+            "लोकसभा और राज्यसभा",
+            "राष्ट्रपति, लोकसभा और राज्यसभा"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 28,
+          "question": "लोकसभा का कार्यकाल कितना होता है?",
+          "options": [
+            "4 वर्ष",
+            "5 वर्ष",
+            "6 वर्ष",
+            "7 वर्ष"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "भारत का सर्वोच्च न्यायालय कहाँ स्थित है?",
+          "options": [
+            "मुंबई",
+            "दिल्ली",
+            "कोलकाता",
+            "चेन्नई"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "राज्यपाल की नियुक्ति कौन करता है?",
+          "options": [
+            "प्रधानमंत्री",
+            "राष्ट्रपति",
+            "मुख्य न्यायाधीश",
+            "संसद"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 31,
+          "question": "Choose the correct synonym of 'Brave'.",
+          "options": [
+            "Coward",
+            "Bold",
+            "Weak",
+            "Lazy"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 32,
+          "question": "Choose the correct antonym of 'Expand'.",
+          "options": [
+            "Increase",
+            "Extend",
+            "Contract",
+            "Grow"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 33,
+          "question": "Choose the correct spelling.",
+          "options": [
+            "Recieve",
+            "Receive",
+            "Receeve",
+            "Receve"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 34,
+          "question": "Choose the correct preposition: He is good ___ mathematics.",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "with"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 35,
+          "question": "Choose the correct meaning of the idiom 'Break the ice'.",
+          "options": [
+            "To start a conversation",
+            "To break something",
+            "To get angry",
+            "To stop talking"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 36,
+          "question": "‘विद्यालय’ शब्द में कौन सा उपसर्ग है?",
+          "options": [
+            "वि",
+            "आ",
+            "प्र",
+            "सम"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 37,
+          "question": "‘सूर्य’ का पर्यायवाची शब्द कौन सा है?",
+          "options": [
+            "चंद्र",
+            "रवि",
+            "मेघ",
+            "पवन"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "‘अंधकार’ का विलोम शब्द क्या है?",
+          "options": [
+            "प्रकाश",
+            "रात",
+            "धुंध",
+            "छाया"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 39,
+          "question": "‘जल’ का पर्यायवाची शब्द कौन सा है?",
+          "options": [
+            "अग्नि",
+            "पवन",
+            "नीर",
+            "धूल"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "‘बहादुर’ का विलोम शब्द क्या है?",
+          "options": [
+            "कायर",
+            "वीर",
+            "साहसी",
+            "बलवान"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 41,
+          "question": "अशोक किस वंश का शासक था?",
+          "options": [
+            "मौर्य वंश",
+            "गुप्त वंश",
+            "मुगल वंश",
+            "कुषाण वंश"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 42,
+          "question": "‘अर्थशास्त्र’ के लेखक कौन थे?",
+          "options": [
+            "कालिदास",
+            "कौटिल्य",
+            "बाणभट्ट",
+            "वाल्मीकि"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "गुप्त काल को किसका स्वर्ण युग कहा जाता है?",
+          "options": [
+            "भारत का",
+            "मुगल काल का",
+            "दिल्ली सल्तनत का",
+            "मराठा काल का"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 44,
+          "question": "बौद्ध धर्म के संस्थापक कौन थे?",
+          "options": [
+            "महावीर",
+            "गौतम बुद्ध",
+            "कबीर",
+            "शंकराचार्य"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "जैन धर्म के 24वें तीर्थंकर कौन थे?",
+          "options": [
+            "पार्श्वनाथ",
+            "ऋषभदेव",
+            "महावीर",
+            "अर्जुन"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 46,
+          "question": "अजंता की गुफाएँ किसके लिए प्रसिद्ध हैं?",
+          "options": [
+            "चित्रकला",
+            "किले",
+            "मंदिर",
+            "युद्ध"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 47,
+          "question": "‘गीत गोविंद’ के रचयिता कौन हैं?",
+          "options": [
+            "जयदेव",
+            "कालिदास",
+            "तुलसीदास",
+            "भास"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 48,
+          "question": "सिख धर्म के संस्थापक कौन थे?",
+          "options": [
+            "गुरु गोविंद सिंह",
+            "गुरु नानक देव",
+            "गुरु अर्जुन देव",
+            "गुरु तेग बहादुर"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "‘अभिज्ञान शाकुंतलम्’ के लेखक कौन हैं?",
+          "options": [
+            "कालिदास",
+            "भवभूति",
+            "बाणभट्ट",
+            "वाल्मीकि"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 50,
+          "question": "चार वेदों में सबसे प्राचीन वेद कौन सा है?",
+          "options": [
+            "ऋग्वेद",
+            "सामवेद",
+            "यजुर्वेद",
+            "अथर्ववेद"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_bsc_agriculture_free_test",
+      "courseTitle": "DDU BSc Agriculture Test Series",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Father of Botany?",
+          "options": [
+            "Aristotle",
+            "Theophrastus",
+            "Darwin",
+            "Linnaeus"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Night blindness is caused by deficiency of?",
+          "options": [
+            "Vitamin A",
+            "Vitamin B",
+            "Vitamin C",
+            "Vitamin D"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 3,
+          "question": "Which crop is known as Golden Fibre?",
+          "options": [
+            "Cotton",
+            "Jute",
+            "Wheat",
+            "Rice"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Photosynthesis occurs in?",
+          "options": [
+            "Root",
+            "Leaf",
+            "Stem",
+            "Flower"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "Scientific name of wheat?",
+          "options": [
+            "Triticum aestivum",
+            "Oryza sativa",
+            "Zea mays",
+            "Solanum tuberosum"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 6,
+          "question": "Green Revolution is related to?",
+          "options": [
+            "Agriculture production",
+            "Industrial growth",
+            "Medical science",
+            "Transport"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "Rice is mainly grown in which soil?",
+          "options": [
+            "Black soil",
+            "Alluvial soil",
+            "Red soil",
+            "Sandy soil"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Which insect is pest of paddy?",
+          "options": [
+            "Dacus",
+            "Leptocorisa",
+            "Termite",
+            "Bee"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Process of soil formation is called?",
+          "options": [
+            "Weathering",
+            "Irrigation",
+            "Fertilization",
+            "Ploughing"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Essential nutrient for plant growth?",
+          "options": [
+            "Nitrogen",
+            "Hydrogen",
+            "Oxygen",
+            "Carbon"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 11,
+          "question": "Which bacteria is responsible for nitrogen fixation in leguminous crops?",
+          "options": [
+            "Azotobacter",
+            "Rhizobium",
+            "Nitrobacter",
+            "E.coli"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "धान की फसल में 'खैरा रोग' किस तत्व की कमी से होता है?",
+          "options": [
+            "नाइट्रोजन",
+            "जिंक",
+            "फास्फोरस",
+            "पोटाश"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Which stage is most critical for irrigation in wheat?",
+          "options": [
+            "Tillering stage",
+            "Crown root initiation",
+            "Flowering",
+            "Milking"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "धान की नर्सरी की डापोग विधि किस देश में विकसित हुई?",
+          "options": [
+            "भारत",
+            "फिलिपींस",
+            "जापान",
+            "चीन"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 15,
+          "question": "Which crop belongs to family Gramineae?",
+          "options": [
+            "Wheat",
+            "Cotton",
+            "Mustard",
+            "Pea"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 16,
+          "question": "गाय का औसत गर्भकाल कितना होता है?",
+          "options": [
+            "200 दिन",
+            "284 दिन",
+            "310 दिन",
+            "350 दिन"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "Which breed of cattle is famous for milk production in India?",
+          "options": [
+            "Sahiwal",
+            "Gir",
+            "Hariana",
+            "Tharparkar"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 18,
+          "question": "भैंस में यौन परिपक्वता की आयु लगभग कितनी होती है?",
+          "options": [
+            "12 माह",
+            "18 माह",
+            "24 माह",
+            "36 माह"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 19,
+          "question": "बकरी के मांस को क्या कहा जाता है?",
+          "options": [
+            "बीफ",
+            "मटन",
+            "पोल्ट्री",
+            "बफन"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "Pashmina wool is obtained from which animal?",
+          "options": [
+            "Sheep",
+            "Merino sheep",
+            "Kashmiri goat",
+            "Camel"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "हल का फाल सामान्यतः किस धातु का बना होता है?",
+          "options": [
+            "कास्ट आयरन",
+            "माइल्ड स्टील",
+            "चिल्ड कास्ट आयरन",
+            "हाई कार्बन स्टील"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 22,
+          "question": "Which implement is used for primary tillage?",
+          "options": [
+            "Cultivator",
+            "Disc plough",
+            "Harrow",
+            "Hoe"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 23,
+          "question": "ऑर्चर्ड हैरो किस प्रकार का हैरो है?",
+          "options": [
+            "टैंडम हैरो",
+            "त्रिकोणीय हैरो",
+            "स्पाइक टूथ हैरो",
+            "ऑफसेट हैरो"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 24,
+          "question": "Seed rate is controlled by which device?",
+          "options": [
+            "Seed drill",
+            "Metering device",
+            "Plough",
+            "Cultivator"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "मिट्टी को पलटने वाला मुख्य कृषि उपकरण कौन सा है?",
+          "options": [
+            "हल",
+            "हैरो",
+            "कल्टीवेटर",
+            "सीड ड्रिल"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 26,
+          "question": "Who is known as the Father of Botany?",
+          "options": [
+            "Linnaeus",
+            "Theophrastus",
+            "Malpighi",
+            "Stephen Hales"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "कोशिका का ऊर्जा गृह किसे कहा जाता है?",
+          "options": [
+            "राइबोसोम",
+            "गोल्जी बॉडी",
+            "माइटोकॉन्ड्रिया",
+            "लाइसोसोम"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which light is most effective in photosynthesis?",
+          "options": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "टमाटर का लाल रंग किसके कारण होता है?",
+          "options": [
+            "कैरोटीन",
+            "लाइकोपीन",
+            "एंथोसाइनिन",
+            "क्लोरोफिल"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Which plant family does wheat belong to?",
+          "options": [
+            "Solanaceae",
+            "Cruciferae",
+            "Gramineae",
+            "Malvaceae"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Which organ is used for excretion in insects?",
+          "options": [
+            "Nephridia",
+            "Malpighian tubules",
+            "Kidney",
+            "Gills"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 32,
+          "question": "How many pairs of legs are present in insects?",
+          "options": [
+            "Two",
+            "Three",
+            "Four",
+            "Five"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "Which insect is commonly used in biological pest control?",
+          "options": [
+            "Ladybird beetle",
+            "Mosquito",
+            "Housefly",
+            "Termite"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 34,
+          "question": "Which nutrient provides maximum energy to animals?",
+          "options": [
+            "Protein",
+            "Vitamin",
+            "Fat",
+            "Minerals"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "Taenia takes food through which structure?",
+          "options": [
+            "Mouth",
+            "Body wall",
+            "Suckers",
+            "Gills"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "Which insect has chewing and lapping type mouth parts?",
+          "options": [
+            "Housefly",
+            "Honeybee",
+            "Mosquito",
+            "Aphids"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 37,
+          "question": "Agricultural production economics is considered as?",
+          "options": [
+            "Art",
+            "Science",
+            "Real science",
+            "All of these"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 38,
+          "question": "Average farm size in India is generally?",
+          "options": [
+            "Increasing",
+            "Decreasing",
+            "Constant",
+            "Very large"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 39,
+          "question": "How many types of farm budget are commonly used?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "Credit means?",
+          "options": [
+            "Saving money",
+            "Money owed",
+            "Borrowed money",
+            "Lost money"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "NABARD was established in which year?",
+          "options": [
+            "1980",
+            "1982",
+            "1984",
+            "1986"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 42,
+          "question": "Which bank supports rural development in India?",
+          "options": [
+            "RBI",
+            "NABARD",
+            "SBI",
+            "World Bank"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "Which law states that increasing inputs eventually leads to lower marginal returns?",
+          "options": [
+            "Law of demand",
+            "Law of diminishing returns",
+            "Law of supply",
+            "Law of production"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 44,
+          "question": "What is the atomic number of Carbon?",
+          "options": [
+            "4",
+            "6",
+            "8",
+            "12"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "Avogadro number is approximately equal to?",
+          "options": [
+            "6.02 × 10^23",
+            "6.02 × 10^22",
+            "6.00 × 10^23",
+            "6.12 × 10^23"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 46,
+          "question": "CuSO₄ solution is generally?",
+          "options": [
+            "Acidic",
+            "Neutral",
+            "Alkaline",
+            "Basic"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 47,
+          "question": "Which ore is the main source of iron?",
+          "options": [
+            "Bauxite",
+            "Magnetite",
+            "Feldspar",
+            "Cryolite"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 48,
+          "question": "Atomic weight is equal to?",
+          "options": [
+            "2 × atomic number",
+            "2.5 × vapour density",
+            "2.4 × vapour density",
+            "None of these"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "White phosphorus molecule exists as?",
+          "options": [
+            "P",
+            "P₂",
+            "P₃",
+            "P₄"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 50,
+          "question": "When magnesium carbonate is heated, which compound is formed?",
+          "options": [
+            "Magnesium oxide",
+            "Magnesium chloride",
+            "Magnesium sulphate",
+            "Magnesium nitrate"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    }
+  ]
+}

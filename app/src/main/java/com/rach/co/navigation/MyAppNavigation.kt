@@ -22,6 +22,8 @@ import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
 import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
+import com.rach.co.quiz.presentation.screen.QuizScreen
+import com.rach.co.quiz.presentation.screen.ScoreScreen
 import com.rach.co.ui.VideoPlayerScreen
 import com.rach.co.utils.OnboardingManager
 
@@ -92,6 +94,46 @@ fun AuthApp() {
         }
         composable(Routes.My_COURSES) {
             MyCourse(navController)
+        }
+
+        // here
+        composable(
+            route = "${Routes.QUIZ}/{courseId}",
+            arguments = listOf(
+                navArgument("courseId") {
+                    type = NavType.StringType
+                }
+            )
+        ) { backStackEntry ->
+
+            val courseId = backStackEntry.arguments?.getString("courseId")!!
+
+            QuizScreen(
+                courseId = courseId,
+                navController = navController
+            )
+        }
+
+        // score
+        composable(
+            route = "${Routes.SCORE}/{score}/{total}",
+            arguments = listOf(
+                navArgument("score") { type = NavType.IntType },
+                navArgument("total") { type = NavType.IntType }
+            )
+        ) { backStackEntry ->
+
+            val score = backStackEntry.arguments?.getInt("score") ?: 0
+            val total = backStackEntry.arguments?.getInt("total") ?: 0
+
+            ScoreScreen(
+                score = score,
+                totalQuestions = total,
+                onShareClick = { /* share result */ },
+                onRestartClick = {
+                    navController.popBackStack(Routes.HOME, false)
+                }
+            )
         }
 
         composable(
@@ -168,6 +210,8 @@ object Routes {
     const val COURSES = "courses"
 
     const val My_COURSES = "my_courses"
+    const val QUIZ = "quiz"
+    const val SCORE = "score"
     const val COURSE_PURCHASED = "course_purchased/{course}"
     fun coursePurchased(course: String) = "course_purchased/$course"
 

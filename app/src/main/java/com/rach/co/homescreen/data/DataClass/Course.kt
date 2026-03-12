@@ -1,5 +1,7 @@
 package com.rach.co.homescreen.data.DataClass
 
+import com.rach.co.quiz.data.dataClass.Question
+
 data class Course(
     val courseId: String = "",
     val title: String = "",
@@ -8,7 +10,9 @@ data class Course(
     val displayName: String = "",
     val price: Int = 0,
     val order: Int = 0,
-    val thumbnail: String = ""
+    val thumbnail: String = "",
+    val courseTitle: String = "",
+    val questions: List<Question> = emptyList()
 )
 
 data class Chapter(
