@@ -1667,6 +1667,562 @@
           "correctAnswerIndex": 0
         }
       ]
+    },
+    {
+      "courseId": "ddu_bcom_free_test",
+      "courseTitle": "DDU B.Com Test Series",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Antonym of 'Endure' is:",
+          "options": [
+            "Suffer",
+            "Worsen",
+            "Enlighten",
+            "Humiliate"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 2,
+          "question": "Synonym of 'Trusting' is:",
+          "options": [
+            "Faithful",
+            "Talented",
+            "Clever",
+            "Slow"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 3,
+          "question": "The 2010 Commonwealth Games were hosted by:",
+          "options": [
+            "India",
+            "Pakistan",
+            "Singapore",
+            "Japan"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 4,
+          "question": "Richter scale is used to measure:",
+          "options": [
+            "Temperature",
+            "Earthquake intensity",
+            "Rainfall",
+            "Wind speed"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "Who is known as the Father of White Revolution in India?",
+          "options": [
+            "M.S. Swaminathan",
+            "Dr. V. Kurien",
+            "C. Subramaniam",
+            "Verghese Kurien"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 6,
+          "question": "Where is Kanha Tiger Reserve located?",
+          "options": [
+            "Rajasthan",
+            "Madhya Pradesh",
+            "Gujarat",
+            "Maharashtra"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "If 759, 871, 647, 1095 ?",
+          "options": [
+            "100",
+            "1191",
+            "334",
+            "542"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "15, 7, 14, 60, 28, 120, ?",
+          "options": [
+            "10",
+            "20",
+            "30",
+            "45"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Capital account is a:",
+          "options": [
+            "Personal account",
+            "Real account",
+            "Nominal account",
+            "None of these"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Accounting principles are:",
+          "options": [
+            "Scientific principles",
+            "Verifiable through observations",
+            "Principles of Physics and Chemistry",
+            "None of the above"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "Management accounting is:",
+          "options": [
+            "Optional",
+            "Obligatory",
+            "Compulsory",
+            "None of these"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 12,
+          "question": "Depreciation is the process of:",
+          "options": [
+            "Allocation of cost of asset over useful life",
+            "Valuation of asset",
+            "Replacement of asset",
+            "Maintenance of asset"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 13,
+          "question": "Assets are equal to:",
+          "options": [
+            "Capital + Current assets",
+            "Capital + Liabilities",
+            "Capital - Liabilities",
+            "Assets - Capital"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "In perfect competition the entry of firms is:",
+          "options": [
+            "Difficult",
+            "Restricted",
+            "Free",
+            "Impossible"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Demand means:",
+          "options": [
+            "Consumer's desire",
+            "Consumer's willingness backed by ability to pay",
+            "Need for product",
+            "Government demand"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "The law of demand states:",
+          "options": [
+            "Demand increases with price",
+            "Demand decreases with price",
+            "Demand remains constant",
+            "None of these"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "The main motive of business is:",
+          "options": [
+            "Service",
+            "Profit",
+            "Social welfare",
+            "Charity"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "The agreement of partnership:",
+          "options": [
+            "Must be oral",
+            "Must be written",
+            "Can be oral or written",
+            "Must be on stamp paper"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Wholesale trade means:",
+          "options": [
+            "Buying and selling in small quantities",
+            "Buying and selling within the country",
+            "Buying and selling in large quantities",
+            "Selling directly to consumer"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Which of the following is not a type of speculator?",
+          "options": [
+            "Bull",
+            "Bear",
+            "Stag",
+            "Manager"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 21,
+          "question": "Synonym of 'Relentless' is:",
+          "options": [
+            "Merciful",
+            "Unyielding",
+            "Weak",
+            "Lazy"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Antonym of 'Scarcity' is:",
+          "options": [
+            "Abundance",
+            "Shortage",
+            "Lack",
+            "Deficit"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 23,
+          "question": "Which gas is most abundant in the Earth's atmosphere?",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon dioxide",
+            "Hydrogen"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "Who wrote the National Anthem of India?",
+          "options": [
+            "Rabindranath Tagore",
+            "Bankim Chandra Chatterjee",
+            "Subhash Chandra Bose",
+            "Sarojini Naidu"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 25,
+          "question": "If CAT = 24, BAT = 23 then RAT = ?",
+          "options": [
+            "41",
+            "43",
+            "44",
+            "45"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 26,
+          "question": "2, 6, 7, 21, 22, 66, ?",
+          "options": [
+            "67",
+            "68",
+            "70",
+            "72"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 27,
+          "question": "Which account is related to expenses and losses?",
+          "options": [
+            "Personal account",
+            "Real account",
+            "Nominal account",
+            "Capital account"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "The book in which all business transactions are first recorded is called:",
+          "options": [
+            "Ledger",
+            "Journal",
+            "Cash Book",
+            "Balance Sheet"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "Current assets include:",
+          "options": [
+            "Land",
+            "Machinery",
+            "Cash",
+            "Building"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Which statement is correct about Balance Sheet?",
+          "options": [
+            "Assets = Liabilities + Capital",
+            "Assets = Capital - Liabilities",
+            "Assets = Capital × Liabilities",
+            "Assets = Liabilities only"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 31,
+          "question": "Demand curve generally slopes:",
+          "options": [
+            "Upward from left to right",
+            "Downward from left to right",
+            "Vertically",
+            "Horizontally"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 32,
+          "question": "The place where buyers and sellers meet to exchange goods is called:",
+          "options": [
+            "Bank",
+            "Market",
+            "Warehouse",
+            "Industry"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "Which type of business is owned by a single person?",
+          "options": [
+            "Partnership",
+            "Company",
+            "Sole proprietorship",
+            "Cooperative"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "Maximum number of partners in a partnership firm (traditional rule) is:",
+          "options": [
+            "10",
+            "20",
+            "50",
+            "Unlimited"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 35,
+          "question": "Which trade involves buying and selling within a country?",
+          "options": [
+            "Foreign trade",
+            "External trade",
+            "Home trade",
+            "International trade"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "Which of the following is a feature of perfect competition?",
+          "options": [
+            "Single seller",
+            "Product differentiation",
+            "Free entry and exit",
+            "Government monopoly"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "If price increases, demand generally:",
+          "options": [
+            "Increases",
+            "Decreases",
+            "Remains same",
+            "Doubles"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "Which of the following is a current liability?",
+          "options": [
+            "Machinery",
+            "Building",
+            "Creditors",
+            "Land"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "The process of recording business transactions systematically is called:",
+          "options": [
+            "Auditing",
+            "Accounting",
+            "Marketing",
+            "Management"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Which organization regulates banks in India?",
+          "options": [
+            "SEBI",
+            "RBI",
+            "IRDA",
+            "NITI Aayog"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 41,
+          "question": "'प्रकाश' का विलोम शब्द क्या है?",
+          "options": [
+            "अंधकार",
+            "रोशनी",
+            "दिन",
+            "सूर्य"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 42,
+          "question": "'साहस' का पर्यायवाची शब्द क्या है?",
+          "options": [
+            "डर",
+            "वीरता",
+            "कमज़ोरी",
+            "शांति"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "'आँखों का तारा' मुहावरे का अर्थ क्या है?",
+          "options": [
+            "बहुत प्रिय व्यक्ति",
+            "गुस्सा करना",
+            "रोना",
+            "बीमार होना"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 44,
+          "question": "'कठिन' का विलोम शब्द क्या है?",
+          "options": [
+            "मजबूत",
+            "सरल",
+            "लंबा",
+            "गहरा"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "'जल' का पर्यायवाची शब्द क्या है?",
+          "options": [
+            "पानी",
+            "अग्नि",
+            "वायु",
+            "धूप"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 46,
+          "question": "'दिन-रात एक करना' मुहावरे का अर्थ क्या है?",
+          "options": [
+            "बहुत मेहनत करना",
+            "सोना",
+            "आराम करना",
+            "खेलना"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 47,
+          "question": "'मित्र' का विलोम शब्द क्या है?",
+          "options": [
+            "साथी",
+            "शत्रु",
+            "भाई",
+            "पड़ोसी"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 48,
+          "question": "'धन' का पर्यायवाची शब्द क्या है?",
+          "options": [
+            "सम्पत्ति",
+            "गरीबी",
+            "कष्ट",
+            "अभाव"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 49,
+          "question": "'निराश' का विलोम शब्द क्या है?",
+          "options": [
+            "उदास",
+            "आशावान",
+            "दुखी",
+            "कमज़ोर"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 50,
+          "question": "'घर का भेदी लंका ढाए' का अर्थ क्या है?",
+          "options": [
+            "अपना व्यक्ति ही नुकसान करता है",
+            "घर बनाना",
+            "युद्ध जीतना",
+            "दुश्मन को हराना"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
     }
   ]
 }
