@@ -53,10 +53,13 @@ fun CoursePurchasedScreen(
     val vm: HomeViewModel = hiltViewModel(activity)
 
     val context = LocalContext.current
-    val courses by vm.myCourses.collectAsState()
+    val courses by vm.coursesDbOffline.collectAsState()
 
     LaunchedEffect(Unit) {
-        vm.loadPurchasedCourses()
+        if (courses.isEmpty()){
+            vm.loadPurchasedCourses()
+
+        }
     }
 
     val alreadyPurchased =
