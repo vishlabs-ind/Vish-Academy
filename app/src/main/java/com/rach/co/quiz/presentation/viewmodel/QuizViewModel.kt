@@ -1,6 +1,7 @@
 package com.rach.co.quiz.presentation.viewmodel
 
 import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.rach.co.homescreen.data.DataClass.Course
@@ -22,6 +23,9 @@ class QuizViewModel @Inject constructor(
     private val _score = mutableStateOf(0)
     val score: State<Int> = _score
 
+    private val _selectedAnswers = mutableStateMapOf<Int, Int>()
+    val selectedAnswers: Map<Int, Int> = _selectedAnswers
+
     fun loadCourse(courseId: String) {
         _course.value = repository.getCourseById(courseId)
     }
@@ -33,15 +37,29 @@ class QuizViewModel @Inject constructor(
         }
     }
 
+    fun previousQuestion() {
+        if (_currentQuestionIndex.value > 0) {
+            _currentQuestionIndex.value = currentQuestionIndex.value - 1
+        }
+    }
+
     fun isLastQuestion(): Boolean {
         val total = _course.value?.questions?.size ?: 0
         return _currentQuestionIndex.value == total - 1
     }
     fun checkAnswer(selectedIndex: Int) {
 
-        val question = _course.value?.questions?.get(_currentQuestionIndex.value)
-        if (question?.correctAnswerIndex == selectedIndex) {
-            _score.value++
+        val questionIndex = currentQuestionIndex.value
+
+        _selectedAnswers[questionIndex] = selectedIndex
+
+        val correctIndex = course.value
+            ?.questions
+            ?.get(questionIndex)
+            ?.correctAnswerIndex
+
+        if (selectedIndex == correctIndex) {
+            _score.value = _score.value + 1
         }
     }
 }
