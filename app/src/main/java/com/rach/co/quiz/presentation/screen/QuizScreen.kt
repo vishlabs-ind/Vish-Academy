@@ -34,8 +34,8 @@ fun QuizScreen(
     val course by viewModel.course
     val questionIndex by viewModel.currentQuestionIndex
 
-    val selectedOptionIndex = viewModel.selectedAnswers[questionIndex]
-
+//    val selectedOptionIndex = viewModel.selectedAnswers[questionIndex]
+    val selectedOptions = viewModel.selectedAnswers[questionIndex]
     // 2. Load course once
     LaunchedEffect(Unit) {
         viewModel.loadCourse(courseId)
@@ -113,13 +113,11 @@ fun QuizScreen(
 
                 QuizOption(
                     text = optionText,
-                    isSelected = selectedOptionIndex == index,
-                    // Note: Your Question model needs a 'correctAnswerIndex' to show Green/Red
-                    isCorrect = index == question.correctAnswerIndex,
+                    isSelected = selectedOptions == index,
+                    // Question model class needs a 'correctAnswerIndex' to show Green/Red
+                    isCorrect = question.correctAnswerIndexs == index,
                     onClick = {
-                        if (selectedOptionIndex == null) {
-                            viewModel.checkAnswer(index)
-                        }
+                        viewModel.checkAnswer(index)
                     }
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -133,21 +131,27 @@ fun QuizScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             TextButton(onClick = { viewModel.previousQuestion()},
-                enabled = questionIndex > 0
+                enabled = questionIndex > 0,
+
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7C4DFF)),
+                shape = RoundedCornerShape(50)
                 ) {
-                Text("Back", color = Color.Gray, fontSize = 16.sp)
+                Text("Back", fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(8.dp))
+                Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(18.dp))
             }
 
             Button(
                 onClick = {
                     if (viewModel.isLastQuestion()) {
+                        viewModel.calculateScore()
                         val score = viewModel.score.value
                         navController.navigate("${Routes.SCORE}/$score/$totalQuestions")
                     } else {
                         viewModel.nextQuestion()
                     }
                 },
-                enabled = selectedOptionIndex != null, // Force user to answer before "Next"
+              //  enabled = selectedOptionIndex != null, // Force user to answer before "Next"
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7C4DFF)),
                 shape = RoundedCornerShape(50)
             ) {

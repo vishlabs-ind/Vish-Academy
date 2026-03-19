@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -113,18 +114,6 @@ fun ScoreScreen(
 
         Spacer(modifier = Modifier.weight(1.2f))
 
-        // Share Button
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Button(
-                onClick = onShareClick,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp),
-                shape = RoundedCornerShape(10.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = buttonBlue)
-            ) {
-                Text("Share", color = Color.White, fontSize = 18.sp)
-            }
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -133,7 +122,9 @@ fun ScoreScreen(
                 onClick = onRestartClick,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(50.dp),
+                    .height(50.dp)
+                    .navigationBarsPadding()   // pushes above nav bar
+                    .padding(bottom = 16.dp),  // extra space (important)
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = buttonBlue)
             ) {
@@ -141,5 +132,4 @@ fun ScoreScreen(
             }
         }
         Spacer(modifier = Modifier.height(24.dp))
-    }
 }
