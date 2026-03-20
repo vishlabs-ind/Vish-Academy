@@ -15,21 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VishAcademy">
-        <activity
-            android:name=".quiz.ScoreScreen"
-            android:exported="false"
-            android:label="@string/title_activity_score_screen"
-            android:theme="@style/Theme.VishAcademy" />
-        <activity
-            android:name=".quiz.QuizScreen"
-            android:exported="false"
-            android:label="@string/title_activity_quiz_screen"
-            android:theme="@style/Theme.VishAcademy" />
-        <activity
-            android:name=".quiz.CategoryScreen"
-            android:exported="false"
-            android:label="@string/title_activity_category_screen"
-            android:theme="@style/Theme.VishAcademy" />
+
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
