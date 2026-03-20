@@ -1,23 +1,23 @@
 package com.rach.co.quiz.presentation.screen
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material3.Button
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material3.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.rach.co.navigation.Routes
@@ -30,21 +30,25 @@ fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel()
 ) {
 
+    // 1. Collect States from ViewModel
     val course by viewModel.course
     val questionIndex by viewModel.currentQuestionIndex
 
+//    val selectedOptionIndex = viewModel.selectedAnswers[questionIndex]
+    val selectedOptions = viewModel.selectedAnswers[questionIndex]
+    // 2. Load course once
     LaunchedEffect(Unit) {
         viewModel.loadCourse(courseId)
     }
 
-    val question = course?.questions?.getOrNull(questionIndex)
 
+    val question = course?.questions?.getOrNull(questionIndex)
+    val totalQuestions = course?.questions?.size ?: 0
+
+    // Loading State
     if (question == null) {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-        ) {
-            CircularProgressIndicator()
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator(color = Color(0xFF7C4DFF))
         }
         return
     }
@@ -52,66 +56,138 @@ fun QuizScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(Color(0xFFF7F7FF))
             .statusBarsPadding()
-            .padding(16.dp)
+            .padding(24.dp)
     ) {
 
-        Text(
-            text = "Question ${questionIndex + 1}",
-            style = MaterialTheme.typography.headlineSmall
+
+        // --- Header ---
+        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+
+            IconButton(onClick = { navController.popBackStack() }) {
+                Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+
+            Text("Quiz Test", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // --- Progress ---
+        Text("Question ${questionIndex + 1} / $totalQuestions", fontSize = 16.sp, color = Color.DarkGray)
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        LinearProgressIndicator(
+            progress = {(questionIndex + 1).toFloat() / totalQuestions},
+            modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(10.dp)),
+            color = Color(0xFF7C4DFF),
+            trackColor = Color(0xFF7C4DFF).copy(alpha = 0.2f)
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        // --- Scrollable Content ---
+        Column(
+            modifier = Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(vertical = 24.dp)
+        ) {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+            ) {
+                Text(
+                    text = question.question, // DYNAMIC DATA
+                    modifier = Modifier.padding(20.dp),
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    lineHeight = 28.sp
+                )
+            }
 
-        Text(
-            text = question.question,
-            style = MaterialTheme.typography.bodyLarge
-        )
+            Spacer(modifier = Modifier.height(32.dp))
 
-        Spacer(modifier = Modifier.height(24.dp))
+            // Options List
+            question.options.forEachIndexed { index, optionText ->
 
-        question.options.forEachIndexed { index, option ->
+                QuizOption(
+                    text = optionText,
+                    isSelected = selectedOptions == index,
+                    // Question model class needs a 'correctAnswerIndex' to show Green/Red
+                    isCorrect = question.correctAnswerIndexs == index,
+                    onClick = {
+                        viewModel.checkAnswer(index)
+                    }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+        }
+
+        // --- Navigation Footer ---
+        Row(modifier = Modifier.fillMaxWidth()
+            .navigationBarsPadding(),   // adds space above navigation bar
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            TextButton(onClick = { viewModel.previousQuestion()},
+                enabled = questionIndex > 0,
+
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7C4DFF)),
+                shape = RoundedCornerShape(50)
+                ) {
+                Text("Back", fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(8.dp))
+                Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(18.dp))
+            }
+
             Button(
                 onClick = {
-
-                    viewModel.checkAnswer(index)
-
                     if (viewModel.isLastQuestion()) {
-
+                        viewModel.calculateScore()
                         val score = viewModel.score.value
-                        val total = viewModel.course.value?.questions?.size ?: 0
-
-                        navController.navigate("${Routes.SCORE}/$score/$total")
-
+                        navController.navigate("${Routes.SCORE}/$score/$totalQuestions")
                     } else {
                         viewModel.nextQuestion()
                     }
-
                 },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 6.dp)
+              //  enabled = selectedOptionIndex != null, // Force user to answer before "Next"
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7C4DFF)),
+                shape = RoundedCornerShape(50)
             ) {
-                Text(option)
+                Text("Next", fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(8.dp))
+                Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(18.dp))
             }
         }
     }
-//    Button(
-//        onClick = {
-//
-//            if (viewModel.isLastQuestion()) {
-//
-//                val score = viewModel.score.value
-//                val total = viewModel.course.value?.questions?.size ?: 0
-//
-//                navController.navigate("${Routes.SCORE}/$score/$total")
-//
-//            } else {
-//                viewModel.nextQuestion()
-//            }
-//
-//        }
-//    ) {
-//        Text("Next")
-//    }
+}
+
+@Composable
+fun QuizOption(
+    text: String,
+    isSelected: Boolean,
+    isCorrect: Boolean,
+    onClick: () -> Unit
+) {
+
+    val backgroundColor = when {
+        isSelected && isCorrect -> Color(0xFF4CAF50)   // Green if correct
+        isSelected && !isCorrect -> Color(0xFFF44336)  // Red if wrong
+        else -> Color.White
+    }
+
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() },
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(backgroundColor)
+    ) {
+
+        Text(
+            text = text,
+            modifier = Modifier.padding(16.dp)
+        )
+    }
 }

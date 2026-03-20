@@ -1,18 +1,26 @@
 package com.rach.co.quiz.presentation.screen
 
 import androidx.compose.foundation.background
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,18 +38,32 @@ import com.rach.co.quiz.presentation.screen.ui.outerCircleBlue
 fun ScoreScreen(
     score: Int,
     totalQuestions: Int,
-    onShareClick: () -> Unit,
-    onRestartClick: () -> Unit
+    onRestartClick: () -> Unit,
+    onBackClick: () -> Unit,
 ) {
 
-    // val percentage = (score * 100) / totalQuestions
+    BackHandler {
+        onBackClick()
+    }
 
+    // val percentage = (score * 100) / totalQuestions
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = { onBackClick() }) {
+                Icon(Icons.Default.ArrowBack, contentDescription = "Back to Home")
+            }
+            Text("Result", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        }
+
         Spacer(modifier = Modifier.weight(1f))
         // Score Circle
         Box(
@@ -79,66 +101,30 @@ fun ScoreScreen(
             fontWeight = FontWeight.Bold
         )
 
-//        Text(
-//            text = "Quiz Completed!",
-//            style = MaterialTheme.typography.headlineMedium
-//        )
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        Text(
-//            text = "Score: $score / $totalQuestions",
-//            style = MaterialTheme.typography.headlineSmall
-//        )
 
         Spacer(modifier = Modifier.height(12.dp))
 
-//        Text(
-//            text = "Percentage: $percentage%",
-//            style = MaterialTheme.typography.bodyLarge
-//        )
-//
-//        Spacer(modifier = Modifier.height(24.dp))
-//
-//        Button(onClick = onRestartClick) {
-//            Text("Restart Quiz")
-//        }
 
         Text(
-            text = "Great job, user name! You did it.",
+            text = "Great job",
             color = Color.White.copy(alpha = 0.9f),
             fontSize = 18.sp,
             textAlign = TextAlign.Center,
-            fontWeight = FontWeight.Medium        )
+            fontWeight = FontWeight.Medium
+        )
 
         Spacer(modifier = Modifier.weight(1.2f))
 
-        // Share Button
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Button(
-                onClick = onShareClick,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp),
-                shape = RoundedCornerShape(10.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = buttonBlue)
-            ) {
-                Text("Share", color = Color.White, fontSize = 18.sp)
-            }
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            // Back to Home Button
-            Button(
-                onClick = onRestartClick,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp),
-                shape = RoundedCornerShape(10.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = buttonBlue)
-            ) {
-                Text("Restart Quiz", color = Color.White, fontSize = 18.sp)
-            }
+        // Back to Home Button
+        Button(
+            onClick = onRestartClick,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),  // extra space (important)
+            shape = RoundedCornerShape(10.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = buttonBlue)
+        ) {
+            Text("Restart Quiz", color = Color.White, fontSize = 18.sp)
         }
         Spacer(modifier = Modifier.height(24.dp))
     }

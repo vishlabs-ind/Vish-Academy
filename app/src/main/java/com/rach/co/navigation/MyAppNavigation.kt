@@ -129,9 +129,13 @@ fun AuthApp() {
             ScoreScreen(
                 score = score,
                 totalQuestions = total,
-                onShareClick = { /* share result */ },
                 onRestartClick = {
                     navController.popBackStack(Routes.HOME, false)
+                },
+                onBackClick = {
+                    navController.navigate(Routes.HOME) {
+                        popUpTo(Routes.HOME) { inclusive = false }
+                    }
                 }
             )
         }
