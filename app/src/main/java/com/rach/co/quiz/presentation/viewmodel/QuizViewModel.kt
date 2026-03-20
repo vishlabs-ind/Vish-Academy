@@ -47,19 +47,35 @@ class QuizViewModel @Inject constructor(
         val total = _course.value?.questions?.size ?: 0
         return _currentQuestionIndex.value == total - 1
     }
-    fun checkAnswer(selectedIndex: Int) {
+    fun checkAnswer(optionIndex: Int) {
 
+//        val questionIndex = currentQuestionIndex.value
+//
+//        val selectedSet = _selectedAnswers.getOrPut(questionIndex) { mutableSetOf() }
+//
+//        if (selectedSet.contains(optionIndex)) {
+//            selectedSet.remove(optionIndex)
+//        } else {
+//            selectedSet.add(optionIndex)
+//        }
+//        // Force recomposition
+//        _selectedAnswers[questionIndex] = selectedSet.toMutableSet()
         val questionIndex = currentQuestionIndex.value
+        // Simply overwrite — no toggling, no sets
+        _selectedAnswers[questionIndex] = optionIndex
+    }
 
-        _selectedAnswers[questionIndex] = selectedIndex
+    fun calculateScore() {
+        val questions = _course.value?.questions ?: return
+        var count = 0
 
-        val correctIndex = course.value
-            ?.questions
-            ?.get(questionIndex)
-            ?.correctAnswerIndex
-
-        if (selectedIndex == correctIndex) {
-            _score.value = _score.value + 1
+        questions.forEachIndexed { index, question ->
+            val selectedAnswer = _selectedAnswers[index]  // Int?
+            if (selectedAnswer == question.correctAnswerIndexs) {
+                count++
+            }
         }
+
+        _score.value = count
     }
 }
