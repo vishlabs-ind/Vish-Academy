@@ -99,6 +99,7 @@ dependencies {
 
     //Google admob 
     implementation(libs.play.services.ads)
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
 
     implementation("com.google.android.play:app-update:2.1.0")
     implementation("com.google.android.play:app-update-ktx:2.1.0")

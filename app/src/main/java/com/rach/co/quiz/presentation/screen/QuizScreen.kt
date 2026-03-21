@@ -1,5 +1,7 @@
 package com.rach.co.quiz.presentation.screen
 
+import android.app.Activity
+import android.widget.Toast
 import androidx.compose.runtime.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -15,11 +17,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.google.android.gms.ads.AdSize
 import com.rach.co.navigation.Routes
 import com.rach.co.quiz.presentation.viewmodel.QuizViewModel
 
@@ -34,11 +39,16 @@ fun QuizScreen(
     val course by viewModel.course
     val questionIndex by viewModel.currentQuestionIndex
 
-//    val selectedOptionIndex = viewModel.selectedAnswers[questionIndex]
+    // ad's
+    val context = LocalContext.current
+    val activity = context as Activity
+
     val selectedOptions = viewModel.selectedAnswers[questionIndex]
+
     // 2. Load course once
     LaunchedEffect(Unit) {
         viewModel.loadCourse(courseId)
+        viewModel.loadAd(context)
     }
 
 
@@ -64,12 +74,10 @@ fun QuizScreen(
 
         // --- Header ---
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-
             IconButton(onClick = { navController.popBackStack() }) {
                 Icon(Icons.Default.ArrowBack, contentDescription = "Back")
             }
             Spacer(modifier = Modifier.width(8.dp))
-
             Text("Quiz Test", fontSize = 20.sp, fontWeight = FontWeight.Bold)
         }
 
@@ -77,7 +85,6 @@ fun QuizScreen(
 
         // --- Progress ---
         Text("Question ${questionIndex + 1} / $totalQuestions", fontSize = 16.sp, color = Color.DarkGray)
-
         Spacer(modifier = Modifier.height(8.dp))
 
         LinearProgressIndicator(
@@ -124,15 +131,26 @@ fun QuizScreen(
             }
         }
 
+        // --- Banner Ad Section ---
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            // Placeholder for AdView
+            BannerAdPlaceholder()
+        }
+
         // --- Navigation Footer ---
         Row(modifier = Modifier.fillMaxWidth()
             .navigationBarsPadding(),   // adds space above navigation bar
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            TextButton(onClick = { viewModel.previousQuestion()},
+            TextButton(
+                onClick = { viewModel.previousQuestion()},
                 enabled = questionIndex > 0,
-
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7C4DFF)),
                 shape = RoundedCornerShape(50)
                 ) {
@@ -144,9 +162,16 @@ fun QuizScreen(
             Button(
                 onClick = {
                     if (viewModel.isLastQuestion()) {
-                        viewModel.calculateScore()
-                        val score = viewModel.score.value
-                        navController.navigate("${Routes.SCORE}/$score/$totalQuestions")
+                        activity?.let {
+                            Toast.makeText(context, "Ad Loaded", Toast.LENGTH_SHORT).show()
+                            viewModel.showAd(it) {
+                                viewModel.calculateScore()
+
+                                val score = viewModel.score.value
+                                navController.navigate("${Routes.SCORE}/$score/$totalQuestions")
+                            }
+                        }
+
                     } else {
                         viewModel.nextQuestion()
                     }
@@ -190,4 +215,34 @@ fun QuizOption(
             modifier = Modifier.padding(16.dp)
         )
     }
+}
+
+@Composable
+fun BannerAdPlaceholder() {
+    // This uses AndroidView to host the legacy XML-based AdView
+    AndroidView(
+        modifier = Modifier.fillMaxWidth(),
+        factory = { context ->
+
+            com.google.android.gms.ads.AdView(context).apply {
+                    // 2. Calculate Adaptive Size(auto size)
+                val adSize = getAdaptiveSize(context)
+                setAdSize(adSize)
+
+                // set Ad
+                adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+                loadAd(com.google.android.gms.ads.AdRequest.Builder().build())
+            }
+        }
+    )
+}
+
+// Helper function to calculate the adaptive width
+private fun getAdaptiveSize(context: android.content.Context): AdSize {
+    val displayMetrics = context.resources.displayMetrics
+    val adWidthPixels = displayMetrics.widthPixels.toFloat()
+    val density = displayMetrics.density
+    val adWidth = (adWidthPixels / density).toInt()
+    return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, adWidth)
 }

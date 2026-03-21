@@ -1,9 +1,18 @@
 package com.rach.co.quiz.presentation.viewmodel
 
+import android.app.Activity
+import android.content.Context
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.FullScreenContentCallback
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.quiz.data.repository.QuizRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -26,6 +35,7 @@ class QuizViewModel @Inject constructor(
     private val _selectedAnswers = mutableStateMapOf<Int, Int>()
     val selectedAnswers: Map<Int, Int> = _selectedAnswers
 
+    var interstitialAd: InterstitialAd? = null
     fun loadCourse(courseId: String) {
         _course.value = repository.getCourseById(courseId)
     }
@@ -49,17 +59,7 @@ class QuizViewModel @Inject constructor(
     }
     fun checkAnswer(optionIndex: Int) {
 
-//        val questionIndex = currentQuestionIndex.value
-//
-//        val selectedSet = _selectedAnswers.getOrPut(questionIndex) { mutableSetOf() }
-//
-//        if (selectedSet.contains(optionIndex)) {
-//            selectedSet.remove(optionIndex)
-//        } else {
-//            selectedSet.add(optionIndex)
-//        }
-//        // Force recomposition
-//        _selectedAnswers[questionIndex] = selectedSet.toMutableSet()
+
         val questionIndex = currentQuestionIndex.value
         // Simply overwrite — no toggling, no sets
         _selectedAnswers[questionIndex] = optionIndex
@@ -77,5 +77,53 @@ class QuizViewModel @Inject constructor(
         }
 
         _score.value = count
+    }
+
+    // load Ad
+    fun loadAd(context: Context) {
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(
+            context,
+            "ca-app-pub-3940256099942544/1033173712", // TEST AD UNIT
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+
+                override fun onAdLoaded(ad: InterstitialAd) {
+                    Log.d("AdMob", "Ad Loaded Successfully")
+                    interstitialAd = ad
+                }
+
+                override fun onAdFailedToLoad(error: LoadAdError) {
+                    Log.d("AdMob", "Ad Failed: ${error.message}")
+                    interstitialAd = null
+                }
+            }
+        )
+    }
+
+    // show Ad
+    fun showAd(activity: Activity, onAdClosed: () -> Unit) {
+
+        if (interstitialAd != null) {
+
+            interstitialAd?.fullScreenContentCallback =
+                object : FullScreenContentCallback() {
+
+                    override fun onAdDismissedFullScreenContent() {
+                        interstitialAd = null
+                        onAdClosed()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(p0: AdError) {
+                        onAdClosed()
+                    }
+                }
+
+            interstitialAd?.show(activity)
+
+        } else {
+            onAdClosed()
+        }
     }
 }
