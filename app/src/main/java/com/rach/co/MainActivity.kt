@@ -38,8 +38,6 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
         appUpdateManager = AppUpdateManagerFactory.create(this)
         setContent {
             VishAcademyTheme {
-                val auth = com.google.firebase.auth.FirebaseAuth.getInstance()
-
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
