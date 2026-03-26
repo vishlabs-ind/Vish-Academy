@@ -102,31 +102,31 @@ fun HomeScreen(
             }
         }
     }
-    if (isDialogOpen) {
-        AlertDialog(
-            onDismissRequest = { quizViewModel.closeDialog() },
-            confirmButton = {},
-            title = { Text("Select Course") },
-            text = {
-                LazyColumn {
-                    items(courses) { course ->
-                        TextButton(
-                            onClick = {
-                                quizViewModel.closeDialog()
-
-                                navController.navigate(
-                                    "quiz/${course.courseId}"
-                                )
-                            },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(course.courseTitle)
-                        }
-                    }
-                }
-            }
-        )
-    }
+//    if (isDialogOpen) {
+//        AlertDialog(
+//            onDismissRequest = { quizViewModel.closeDialog() },
+//            confirmButton = {},
+//            title = { Text("Select Course") },
+//            text = {
+//                LazyColumn {
+//                    items(courses) { course ->
+//                        TextButton(
+//                            onClick = {
+//                                quizViewModel.closeDialog()
+//
+//                                navController.navigate(
+//                                    "quiz/${course.courseId}"
+//                                )
+//                            },
+//                            modifier = Modifier.fillMaxWidth()
+//                        ) {
+//                            Text(course.courseTitle)
+//                        }
+//                    }
+//                }
+//            }
+//        )
+//    }
 }
 
 
@@ -191,8 +191,9 @@ fun CategoryCard(
                 if (item.route == Routes.QUIZ) {
 
                     // OPEN QUIZ POPUP
-                    quizViewModel.loadCourses()
-                    quizViewModel.openDialog()
+//                    quizViewModel.loadCourses()
+//                    quizViewModel.openDialog()
+                    navController.navigate("quiz_course")
 
                 } else {
                     quizViewModel.closeDialog()   // ensure dialog is closed

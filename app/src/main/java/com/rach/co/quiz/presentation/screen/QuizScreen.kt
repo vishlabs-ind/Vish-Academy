@@ -2,6 +2,7 @@ package com.rach.co.quiz.presentation.screen
 
 import android.app.Activity
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -36,6 +37,12 @@ fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel(),
     viewModels: AdViewModel = hiltViewModel()
 ) {
+
+    BackHandler {
+        navController.navigate(Routes.HOME) {
+            popUpTo(Routes.HOME) { inclusive = true }
+        }
+    }
 
     // 1. Collect States from ViewModel
     val course by viewModel.course
