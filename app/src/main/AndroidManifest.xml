@@ -15,11 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VishAcademy">
-        <activity
-            android:name=".quiz.presentation.screen.QuizCourseScreen"
-            android:exported="false"
-            android:label="@string/title_activity_quiz_course_screen"
-            android:theme="@style/Theme.VishAcademy" />
+
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -35,7 +31,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~1783093563" />
+            android:value="ca-app-pub-2441322063617280~1783093563" />
     </application>
 
 </manifest>

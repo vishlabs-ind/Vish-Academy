@@ -1,8 +1,12 @@
 package com.rach.co.homescreen.data.DataClass
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.rach.co.quiz.data.dataClass.Question
 
+@Entity(tableName = "courses")
 data class Course(
+    @PrimaryKey
     val courseId: String = "",
     val title: String = "",
     val description: String = "",

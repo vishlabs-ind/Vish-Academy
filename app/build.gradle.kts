@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.gms.google.services)
-    id("com.google.devtools.ksp")
-    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -15,8 +15,8 @@ android {
         applicationId = "com.rach.co"
         minSdk = 25
         targetSdk = 36
-        versionCode = 17
-        versionName = "17.0"
+        versionCode = 20
+        versionName = "18.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,6 +45,13 @@ android {
 dependencies {
     implementation("com.razorpay:checkout:1.6.41")
 
+    val roomVersion = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+    ksp("androidx.room:room-compiler:$roomVersion")
 
 //images
     implementation("io.coil-kt:coil-compose:2.7.0")

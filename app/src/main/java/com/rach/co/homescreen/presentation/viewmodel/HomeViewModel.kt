@@ -14,6 +14,7 @@ import com.rach.co.homescreen.data.DataClass.Chapter
 import com.rach.co.homescreen.data.DataClass.ChapterDetail
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.data.Remote.PurchaseRepository
+import com.rach.co.homescreen.data.RepoImpl.CourseRepositoryDb
 import com.rach.co.homescreen.domain.Repo.CourseRepository
 
 import kotlinx.coroutines.flow.*
@@ -26,13 +27,31 @@ class HomeViewModel @Inject constructor(
     private val rzManager: RzManager,
     private val purchaseRepository: PurchaseRepository,
     private val savedStateHandle: SavedStateHandle,
+    private val repoDb: CourseRepositoryDb
+
 
 ) : ViewModel() {
 
     fun logout() {
+        viewModelScope.launch {
+            repoDb.clearCourses()
+        }
         repo.logout()
     }
 
+    val coursesDbOffline = repoDb.getCourses()
+        .stateIn(
+            viewModelScope,
+            SharingStarted.WhileSubscribed(),
+            emptyList()
+        )
+
+    fun saveCourses(list: List<Course>) {
+
+        viewModelScope.launch {
+            repoDb.saveCourses(list)
+        }
+    }
 
 
     private val _chaptersS =
@@ -84,6 +103,8 @@ class HomeViewModel @Inject constructor(
 
         viewModelScope.launch {
             val id = repository.getPurchasedCourseIds()
+            val coursesL = repository.getCoursesByIds(id)
+            repoDb.saveCourses(coursesL)
 
 
 
