@@ -10,6 +10,7 @@ import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.rach.co.utils.K
 import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
 
@@ -23,7 +24,7 @@ class AdViewModel @Inject constructor() : ViewModel(){
 
         InterstitialAd.load(
             context,
-            "ca-app-pub-3940256099942544/1033173712", // TEST AD UNIT
+            K.INTERSITIAL_ID, // TEST AD UNIT
             adRequest,
             object : InterstitialAdLoadCallback() {
 

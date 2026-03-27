@@ -29,6 +29,7 @@ import com.google.android.gms.ads.AdSize
 import com.rach.co.navigation.Routes
 import com.rach.co.ad.AdViewModel
 import com.rach.co.quiz.presentation.viewmodel.QuizViewModel
+import com.rach.co.utils.K
 
 @Composable
 fun QuizScreen(
@@ -247,7 +248,7 @@ fun BannerAdPlaceholder() {
                 setAdSize(adSize)
 
                 // set Ad
-                adUnitId = "ca-app-pub-3940256099942544/6300978111"
+                adUnitId = K.BANNER_ID
 
                 loadAd(com.google.android.gms.ads.AdRequest.Builder().build())
             }
