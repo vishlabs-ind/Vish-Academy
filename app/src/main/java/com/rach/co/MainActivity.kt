@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.google.android.gms.ads.MobileAds
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
@@ -37,8 +38,6 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
         appUpdateManager = AppUpdateManagerFactory.create(this)
         setContent {
             VishAcademyTheme {
-                val auth = com.google.firebase.auth.FirebaseAuth.getInstance()
-
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -48,6 +47,7 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
             }
         }
         checkForUpdate()
+        MobileAds.initialize(this)
     }
 
     override fun onPaymentSuccess(p0: String?, p1: PaymentData?) {

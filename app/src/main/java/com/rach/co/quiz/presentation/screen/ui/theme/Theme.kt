@@ -1,4 +1,4 @@
-package com.rach.co.ui.theme
+package com.rach.co.quiz.presentation.screen.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -45,6 +45,7 @@ fun VishAcademyTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
+
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }

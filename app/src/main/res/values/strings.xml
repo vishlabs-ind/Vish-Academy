@@ -3,4 +3,5 @@
     <string name="title_activity_category_screen">CategoryScreen</string>
     <string name="title_activity_quiz_screen">QuizScreen</string>
     <string name="title_activity_score_screen">ScoreScreen</string>
+    <string name="title_activity_quiz_course_screen">QuizCourseScreen</string>
 </resources>

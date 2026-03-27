@@ -1,5 +1,6 @@
 package com.rach.co.navigation
 
+import QuizCourseScreen
 import android.net.Uri
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -96,6 +97,10 @@ fun AuthApp() {
         }
         composable(Routes.My_COURSES) {
             MyCourse(navController)
+        }
+
+        composable("quiz_course") {
+            QuizCourseScreen(navController)
         }
 
         // here
