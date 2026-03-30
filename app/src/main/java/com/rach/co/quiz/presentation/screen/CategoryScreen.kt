@@ -25,6 +25,7 @@ fun CategoryScreen(
     val courses by viewModel.courseList
     val isDialogOpen by viewModel.isDialogOpen
 
+
     // Main Screen Layout
     Box(
         modifier = Modifier.fillMaxSize(),

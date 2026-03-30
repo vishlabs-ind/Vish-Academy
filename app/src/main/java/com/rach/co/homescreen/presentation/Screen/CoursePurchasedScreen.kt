@@ -19,6 +19,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -68,7 +69,7 @@ fun CoursePurchasedScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFE6E6EC))
+            .background(MaterialTheme.colorScheme.background)
     ) {
 
         Column(
@@ -100,10 +101,11 @@ fun CoursePurchasedScreen(
 
                 Card(
                     modifier = Modifier.padding(6.dp),
-                    elevation = CardDefaults.cardElevation(8.dp)
+                    elevation = CardDefaults.cardElevation(8.dp),
                 ) {
 
-                    Column(modifier = Modifier.padding(8.dp)) {
+                    Column(modifier = Modifier.padding(8.dp)
+                        ) {
 
                         Text(
                             text = course.title,
@@ -116,7 +118,7 @@ fun CoursePurchasedScreen(
                         Text(
                             course.subtitle,
                             fontSize = 16.sp,
-                            color = Color.Blue
+                            color = MaterialTheme.colorScheme.primary
                         )
 
                         Spacer(Modifier.height(9.dp))

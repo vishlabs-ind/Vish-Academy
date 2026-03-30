@@ -129,8 +129,7 @@ fun Coursecard(isMyCourse: Boolean = false, course: Course, navController: NavCo
 
                 } else {
 
-                    val courseJson =
-                        Uri.encode(Gson().toJson(course))
+                    val courseJson = Uri.encode(Gson().toJson(course))
 
                     navController.navigate(
                         "course_purchased/$courseJson"
@@ -186,7 +185,9 @@ fun Coursecard(isMyCourse: Boolean = false, course: Course, navController: NavCo
                 Text(
                     text = course.description,
                     maxLines = 2,
-                    fontSize = 10.sp
+                    fontSize = 10.sp,
+                    color = Color.DarkGray,
+                    lineHeight = 18.sp
                 )
 
                 if (!isMyCourse) {

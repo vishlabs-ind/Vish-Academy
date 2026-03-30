@@ -44,12 +44,9 @@ fun HomeScreen(
     quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
 
-    val courses by quizViewModel.courseList
-    val isDialogOpen by quizViewModel.isDialogOpen
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
-      //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
         CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES),
         CategoryItem("Quiz", R.drawable.quiz_logo, Routes.QUIZ)
 
@@ -62,8 +59,7 @@ fun HomeScreen(
             .fillMaxSize()
             .statusBarsPadding()
             .padding(16.dp)
-    )  {
-
+    ) {
 
 
         Row() {
@@ -73,14 +69,15 @@ fun HomeScreen(
                 fontWeight = FontWeight.Bold
             )
             Spacer(Modifier.weight(1f))
-            Button(onClick = {
-                viewModel.logout()
-                navController.navigate("login") {
-                    popUpTo("home") { inclusive = true }
-                }
-            },
+            Button(
+                onClick = {
+                    viewModel.logout()
+                    navController.navigate("login") {
+                        popUpTo("home") { inclusive = true }
+                    }
+                },
                 Modifier.wrapContentSize()
-                ) {
+            ) {
                 Text("Logout")
             }
         }
@@ -93,40 +90,16 @@ fun HomeScreen(
             columns = GridCells.Fixed(2),
             verticalArrangement = Arrangement.spacedBy(20.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp)
-        ){
+        ) {
             items(categories) { item ->
-                CategoryCard(item, navController,
+                CategoryCard(
+                    item, navController,
                     quizViewModel = quizViewModel
 
                 )
             }
         }
     }
-//    if (isDialogOpen) {
-//        AlertDialog(
-//            onDismissRequest = { quizViewModel.closeDialog() },
-//            confirmButton = {},
-//            title = { Text("Select Course") },
-//            text = {
-//                LazyColumn {
-//                    items(courses) { course ->
-//                        TextButton(
-//                            onClick = {
-//                                quizViewModel.closeDialog()
-//
-//                                navController.navigate(
-//                                    "quiz/${course.courseId}"
-//                                )
-//                            },
-//                            modifier = Modifier.fillMaxWidth()
-//                        ) {
-//                            Text(course.courseTitle)
-//                        }
-//                    }
-//                }
-//            }
-//        )
-//    }
 }
 
 
@@ -184,15 +157,11 @@ fun CategoryCard(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
-            .background(Color(0xFFF5F5F5))
+            .background(MaterialTheme.colorScheme.surface)
             .padding(16.dp)
             .clickable {
 
                 if (item.route == Routes.QUIZ) {
-
-                    // OPEN QUIZ POPUP
-//                    quizViewModel.loadCourses()
-//                    quizViewModel.openDialog()
                     navController.navigate("quiz_course")
 
                 } else {
@@ -204,19 +173,26 @@ fun CategoryCard(
             },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
-        Image(
-            painter = painterResource(id = item.icon),
-            contentDescription = item.name,
-            modifier = Modifier.size(80.dp)
-        )
-
+        Box(
+            modifier = Modifier
+                .size(80.dp)
+                .clip(RoundedCornerShape(12.dp)), // Clips the white background of the Quiz icon
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(id = item.icon),
+                contentDescription = item.name,
+                modifier = Modifier.size(80.dp),
+                contentScale = ContentScale.Fit
+            )
+        }
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
             text = item.name,
             fontSize = 16.sp,
-            fontWeight = FontWeight.Medium
+            fontWeight = FontWeight.Medium,
+            color = MaterialTheme.colorScheme.onSurface
         )
     }
 }
