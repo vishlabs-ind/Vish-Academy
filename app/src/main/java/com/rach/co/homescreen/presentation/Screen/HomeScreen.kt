@@ -17,6 +17,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -43,13 +46,14 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
+    val isLoading = false
 
     val courses by quizViewModel.courseList
     val isDialogOpen by quizViewModel.isDialogOpen
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
-      //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
+        //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
         CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES),
         CategoryItem("Quiz", R.drawable.quiz_logo, Routes.QUIZ)
 
@@ -62,8 +66,7 @@ fun HomeScreen(
             .fillMaxSize()
             .statusBarsPadding()
             .padding(16.dp)
-    )  {
-
+    ) {
 
 
         Row() {
@@ -73,29 +76,39 @@ fun HomeScreen(
                 fontWeight = FontWeight.Bold
             )
             Spacer(Modifier.weight(1f))
-            Button(onClick = {
-                viewModel.logout()
-                navController.navigate("login") {
-                    popUpTo("home") { inclusive = true }
-                }
-            },
+            Button(
+                onClick = {
+                    viewModel.logout()
+                    navController.navigate("login") {
+                        popUpTo("home") { inclusive = true }
+                    }
+                },
                 Modifier.wrapContentSize()
-                ) {
+            ) {
                 Text("Logout")
             }
         }
 
         Spacer(modifier = Modifier.height(24.dp))
+//ProgressBar
 
-        ImageSlider()
+        Box(contentAlignment = Alignment.Center) {
+
+            ImageSlider()
+        }
+
+
+
+
         Spacer(modifier = Modifier.height(20.dp))
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             verticalArrangement = Arrangement.spacedBy(20.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp)
-        ){
+        ) {
             items(categories) { item ->
-                CategoryCard(item, navController,
+                CategoryCard(
+                    item, navController,
                     quizViewModel = quizViewModel
 
                 )
@@ -134,6 +147,9 @@ fun HomeScreen(
 @Composable
 fun ImageSlider() {
 
+var isLoading by remember { mutableStateOf(true) }
+
+
     val images = listOf(
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7slm5D8eAWsQ5xIr2LjyTP430zUEKwhDMnqiX7",
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sFuZjnixUoHBEqXjkVvJsZDLCgAcin8eTPSwG",
@@ -150,11 +166,17 @@ fun ImageSlider() {
     LaunchedEffect(Unit) {
         while (true) {
             delay(2000)
+
             val nextPage =
                 (pagerState.currentPage + 1) % images.size
 
             pagerState.animateScrollToPage(nextPage)
         }
+    }
+
+
+    if (isLoading) {
+        CircularProgressIndicator()
     }
 
     HorizontalPager(
@@ -168,7 +190,8 @@ fun ImageSlider() {
             model = images[page],
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            onSuccess ={ isLoading =false}
         )
     }
 }
