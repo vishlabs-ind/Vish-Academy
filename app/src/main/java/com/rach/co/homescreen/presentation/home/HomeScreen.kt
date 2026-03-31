@@ -37,7 +37,7 @@ fun HomeScreen(
                 popUpTo("home") { inclusive = true }
             }
         }) {
-            Text("Logout")
+            Text("Logout") //log
         }
 
     }
