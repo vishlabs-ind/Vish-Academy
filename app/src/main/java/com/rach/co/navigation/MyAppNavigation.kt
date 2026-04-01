@@ -25,6 +25,7 @@ import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
+import com.rach.co.navigation.naviagtionDrawerItemPage.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
 import com.rach.co.quiz.presentation.screen.ScoreScreen
 import com.rach.co.ui.VideoPlayerScreen
@@ -212,7 +213,6 @@ fun AuthApp() {
             val pdfLink =
                 backStackEntry.arguments?.getString("pdflink") ?: ""
 
-
             VideoPlayerScreen(navController,ytLink, pdfLink)
         }
 
@@ -231,6 +231,8 @@ fun AuthApp() {
 
             PdfScreen(pdfLink)
         }
+        //Drawerbar navigation
+        composable(Routes.PROFILE) { Profile() }
 
     }
 }
@@ -251,5 +253,10 @@ object Routes {
     const val SUBJECT = "chapterDetails/{courseId}/{subjectName}"
 
     const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}/{pdflink}"
+
+
+    //Drawer items
+    const val PROFILE="profile"
+
 
 }

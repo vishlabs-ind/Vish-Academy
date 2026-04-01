@@ -1,5 +1,6 @@
 package com.rach.co.homescreen.presentation.home.presentation.Screen
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -11,6 +12,8 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -31,13 +34,9 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.rach.co.R
 import com.rach.co.homescreen.data.DataClass.CategoryItem
-import com.rach.co.homescreen.data.DataClass.Route
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.NavigationDrawer
 import com.rach.co.navigation.Routes
@@ -52,7 +51,6 @@ fun HomeScreen(
     quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
     val isLoading = false
-
     val courses by quizViewModel.courseList
     val isDialogOpen by quizViewModel.isDialogOpen
 
@@ -64,14 +62,11 @@ fun HomeScreen(
 
     )
 
-//
-    val drawerNavigationItemNavController=rememberNavController()
-    DrawerNavigation(drawerNavigationItemNavController)
 
     val coroutineScope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
-    NavigationDrawer(drawerNavigationItemNavController,drawerState) {
+    NavigationDrawer(navController,viewModel,drawerState) {
 
 
         Column(
@@ -87,6 +82,17 @@ fun HomeScreen(
                     text = "Vish Academy",
                     fontSize = 25.sp,
                     fontWeight = FontWeight.Bold,
+
+                )
+                Spacer(Modifier.weight(1f))
+
+                BackHandler(enabled = drawerState.isOpen) {
+                    coroutineScope.launch {
+                        drawerState.close()
+                    }
+                }
+
+                Icon(Icons.Default.Menu, contentDescription = null,
                     modifier = Modifier.clickable{
                         coroutineScope.launch {
                             if (drawerState.isClosed){
@@ -97,18 +103,6 @@ fun HomeScreen(
                         }
                     }
                 )
-                Spacer(Modifier.weight(1f))
-                Button(
-                    onClick = {
-                        viewModel.logout()
-                        navController.navigate("login") {
-                            popUpTo("home") { inclusive = true }
-                        }
-                    },
-                    Modifier.wrapContentSize()
-                ) {
-                    Text("Logout")
-                }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -270,21 +264,3 @@ fun CategoryCard(
 
 
 
-
-@Composable
-fun DrawerNavigation(drawerNavigationItemNavController: NavHostController) {
-
-    NavHost(navController=drawerNavigationItemNavController, startDestination = Route.deshboard.route) {
-        composable(Route.Share.route) {  }
-        composable(Route.Profile.route) {  }
-        composable(Route.deshboard.route) {  }
-        composable(Route.Wallet.route) { }
-        composable(Route.My_class.route) {  }
-        composable(Route.Privacy_Policy.route) {  }
-        composable(Route.Contact_Us.route) {  }
-
-
-
-    }
-
-}
