@@ -21,11 +21,15 @@ class PurchaseRepository @Inject constructor(
         val uid = auth.currentUser?.uid
             ?: throw Exception("User not logged in")
 
+        val email = auth.currentUser?.email
+
+
         firestore
             .collection("users")
             .document(uid)
             .set(
                 mapOf(
+                    "email" to email,
                     "coursePurchased"
                             to FieldValue.arrayUnion(courseId)
                 ),
