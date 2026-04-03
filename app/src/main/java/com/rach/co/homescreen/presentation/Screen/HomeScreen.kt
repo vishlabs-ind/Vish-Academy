@@ -132,31 +132,6 @@ fun HomeScreen(
             }
         }
     }
-//    if (isDialogOpen) {
-//        AlertDialog(
-//            onDismissRequest = { quizViewModel.closeDialog() },
-//            confirmButton = {},
-//            title = { Text("Select Course") },
-//            text = {
-//                LazyColumn {
-//                    items(courses) { course ->
-//                        TextButton(
-//                            onClick = {
-//                                quizViewModel.closeDialog()
-//
-//                                navController.navigate(
-//                                    "quiz/${course.courseId}"
-//                                )
-//                            },
-//                            modifier = Modifier.fillMaxWidth()
-//                        ) {
-//                            Text(course.courseTitle)
-//                        }
-//                    }
-//                }
-//            }
-//        )
-//    }
 }
 
 
