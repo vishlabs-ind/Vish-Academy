@@ -7,12 +7,6 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.google.android.gms.ads.AdError
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.FullScreenContentCallback
-import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.interstitial.InterstitialAd
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.quiz.data.repository.QuizRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -57,10 +51,9 @@ class QuizViewModel @Inject constructor(
         val total = _course.value?.questions?.size ?: 0
         return _currentQuestionIndex.value == total - 1
     }
-    fun checkAnswer(optionIndex: Int) {
+    fun checkAnswer(selectedIndex: Int) {
         val questionIndex = currentQuestionIndex.value
-        // Simply overwrite — no toggling, no sets
-        _selectedAnswers[questionIndex] = optionIndex
+        _selectedAnswers[questionIndex] = selectedIndex
     }
 
     fun calculateScore() {
@@ -69,11 +62,10 @@ class QuizViewModel @Inject constructor(
 
         questions.forEachIndexed { index, question ->
             val selectedAnswer = _selectedAnswers[index]  // Int?
-            if (selectedAnswer == question.correctAnswerIndexs) {
+            if (selectedAnswer == question.correctAnswerIndex) {
                 count++
             }
         }
-
         _score.value = count
     }
 }

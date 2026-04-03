@@ -53,7 +53,7 @@ fun QuizScreen(
     val context = LocalContext.current
     val activity = context as Activity
 
-    val selectedOptions = viewModel.selectedAnswers[questionIndex]
+    val selectedOptionIndex = viewModel.selectedAnswers[questionIndex]
 
     // 2. Load course once
     LaunchedEffect(Unit) {
@@ -133,11 +133,11 @@ fun QuizScreen(
             // Options List
             question.options.forEachIndexed { index, optionText ->
 
+                val hasAnswered = selectedOptionIndex != null
                 QuizOption(
                     text = optionText,
-                    isSelected = selectedOptions == index,
-                    // Question model class needs a 'correctAnswerIndex' to show Green/Red
-                    isCorrect = question.correctAnswerIndexs == index,
+                    isSelected = selectedOptionIndex == index,
+                    isCorrect = if (hasAnswered) question.correctAnswerIndex == index else false,
                     onClick = {
                         viewModel.checkAnswer(index)
                     }
