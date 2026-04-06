@@ -77,15 +77,7 @@ fun HomeScreen(
         ) {
 
 
-            Row() {
-                Text(
-                    text = "Vish Academy",
-                    fontSize = 25.sp,
-                    fontWeight = FontWeight.Bold,
-
-                )
-                Spacer(Modifier.weight(1f))
-
+            Row(verticalAlignment = Alignment.CenterVertically) {
                 BackHandler(enabled = drawerState.isOpen) {
                     coroutineScope.launch {
                         drawerState.close()
@@ -103,6 +95,16 @@ fun HomeScreen(
                         }
                     }
                 )
+                Spacer(modifier = Modifier.width(17.dp))
+
+                Text(
+                    text = "Vish Academy",
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+
+                )
+
+
             }
 
             Spacer(modifier = Modifier.height(24.dp))

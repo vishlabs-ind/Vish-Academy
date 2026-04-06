@@ -69,17 +69,17 @@ fun NavigationDrawer(
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = {
-            ModalDrawerSheet(drawerContainerColor = Color.Black) {
+            ModalDrawerSheet(drawerContainerColor = Color.White) {
                 Column(
                     modifier = Modifier
                         .fillMaxHeight()
                         .padding(horizontal = 16.dp)
-                        .background(Color.Black)
-                        .verticalScroll(rememberScrollState())
+                        .background(Color.White)
+
                 ) {
                     Text(
                         text = "Vish Acedmy",
-                        color = Color.White,
+                        color = Color.Black,
                         modifier = Modifier.padding(16.dp),
                         style = MaterialTheme.typography.titleLarge
                     )
@@ -87,13 +87,14 @@ fun NavigationDrawer(
 
                     navigationItemList.forEach {
                         NavigationDrawerItem(
-                            label = { Text(text = it.item) },
+                            label = { Text(text =it.item, fontSize = 16.sp,  color=if (it.item == "Log Out") Color.Red else Color.Black,) },
                             icon = {
                                 Image(
                                     painter = painterResource(id = it.icon),
                                     contentScale = ContentScale.Crop,
                                     contentDescription = null,
-                                    colorFilter = ColorFilter.tint(if (it.item == "Log Out") Color.Red else Color.White)
+                                    modifier = Modifier.size(20.dp),
+                                    colorFilter = ColorFilter.tint(if (it.item == "Log Out") Color.Red else Color.Black)
                                 )
                             },
 
@@ -108,17 +109,14 @@ fun NavigationDrawer(
                                     "Share" -> {
                                         val intent= Intent(Intent.ACTION_SEND).apply {
                                             type="text/plain"
-                                            putExtra(Intent.EXTRA_TEXT,"Hello my app")
+                                            putExtra(Intent.EXTRA_TEXT,"Check out this app:\nhttps://play.google.com/store/apps/details?id=com.rach.co")
                                         }
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                         context.startActivity(intent)
                                     }
 
                                     "Contact Us" ->{
-                                        val intent=Intent(Intent.ACTION_DIAL,
-                                            "tel:+919638521478".toUri())   //this number is  only  demo number
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                                        context.startActivity(intent)
+                                        drawerNavController.navigate(Routes.CONTACT_US)
                                     }
 
                                     "Log Out" -> isOpenDailog = true
@@ -168,14 +166,14 @@ fun LogOutButtonDailog(
             Text(
                 text = "Are you sure you want to log out?",
                 fontSize = 15.sp,
-                color = Color(0xFFB0BEC5)
+                color = Color(0xFF000000)
             )
         },
         confirmButton = {
             OutlinedButton(
                 onClick = onConfirm,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFD32F2F) // red confirm button
+                    containerColor = Color(0xFF000000) // red confirm button
                 ),
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.height(40.dp)

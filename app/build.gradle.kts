@@ -45,6 +45,8 @@ android {
 dependencies {
     implementation("com.razorpay:checkout:1.6.41")
     implementation(libs.androidx.tools.core)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.foundation)
 
     val roomVersion = "2.6.1"
 
@@ -111,4 +113,10 @@ dependencies {
     implementation("com.google.android.play:app-update:2.1.0")
     implementation("com.google.android.play:app-update-ktx:2.1.0")
     implementation("com.google.code.gson:gson:2.10.1")
+
+
+
+        // Icons dependency
+        implementation("androidx.compose.material:material-icons-extended:1.6.1")
+
 }
