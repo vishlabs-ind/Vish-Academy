@@ -12,16 +12,21 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -32,6 +37,7 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.rach.co.R
 import com.rach.co.homescreen.data.DataClass.CategoryItem
+import com.rach.co.homescreen.data.Model.ProfileManager
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.Routes
 import com.rach.co.quiz.presentation.viewmodel.QuizCategoryViewModel
@@ -43,7 +49,12 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
-
+    val context = LocalContext.current
+   // val profileManager = remember { ProfileManager(context) }
+// ✅ Fix — reads fresh value on every recomposition
+    val isProfileCreated = remember(navController.currentBackStackEntry) {
+        ProfileManager(context).isProfileCreated()
+    }
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
@@ -69,16 +80,39 @@ fun HomeScreen(
                 fontWeight = FontWeight.Bold
             )
             Spacer(Modifier.weight(1f))
-            Button(
+//            Button(
+//                onClick = {
+//                    viewModel.logout()
+//                    navController.navigate("login") {
+//                        popUpTo("home") { inclusive = true }
+//                    }
+//                },
+//                Modifier.wrapContentSize()
+//            ) {
+//                Text("Logout")
+//            }
+            // Profile Icon on Top Right
+
+            IconButton(
                 onClick = {
-                    viewModel.logout()
-                    navController.navigate("login") {
-                        popUpTo("home") { inclusive = true }
+                    if (isProfileCreated) {
+                        navController.navigate(Routes.PROFILE) {
+                            launchSingleTop = true
+                        }
+                    } else {
+                        navController.navigate(Routes.COMPLETE_PROFILE) {
+                            launchSingleTop = true
+                        }
                     }
-                },
-                Modifier.wrapContentSize()
+                }
             ) {
-                Text("Logout")
+                Icon(
+                    modifier = Modifier
+                    .size(50.dp),
+                    imageVector = Icons.Default.AccountCircle,
+                    contentDescription = "Profile",
+                    tint = MaterialTheme.colorScheme.primary
+                )
             }
         }
 

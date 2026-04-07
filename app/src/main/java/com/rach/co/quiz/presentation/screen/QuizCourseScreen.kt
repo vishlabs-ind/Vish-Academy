@@ -1,3 +1,4 @@
+import android.app.Activity
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -16,23 +17,29 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.rach.co.ad.AdViewModel
 import com.rach.co.quiz.presentation.viewmodel.QuizCategoryViewModel
 
 @Composable
 fun QuizCourseScreen(
     navController: NavController,
-    viewModel: QuizCategoryViewModel = hiltViewModel()
+    viewModel: QuizCategoryViewModel = hiltViewModel(),
+    adViewModel: AdViewModel = hiltViewModel()
 ) {
 
     val courses by viewModel.courseList
+    val context = LocalContext.current
+    val activity = context as Activity  // ✅ add this
 
     LaunchedEffect(Unit) {
         viewModel.loadCourses()
+        adViewModel.loadAd(context)  // ✅ preload ad when screen opens
     }
 
     Column(
@@ -58,7 +65,10 @@ fun QuizCourseScreen(
                         .fillMaxWidth()
                         .padding(vertical = 8.dp)
                         .clickable {
+                            // ✅ show ad first, then navigate
+                            adViewModel.showAd(activity) {
                             navController.navigate("quiz/${course.courseId}")
+                        }
                         },
                     shape = RoundedCornerShape(12.dp)
                 ) {

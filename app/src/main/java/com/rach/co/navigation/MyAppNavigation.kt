@@ -1,5 +1,6 @@
 package com.rach.co.navigation
 
+import CompleteProfileScreen
 import QuizCourseScreen
 import android.net.Uri
 import android.util.Log
@@ -13,6 +14,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
+import androidx.webkit.Profile
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import com.rach.co.auth.presentation.onboard.OnboardScreen
@@ -26,6 +28,7 @@ import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
+import com.rach.co.homescreen.presentation.Screen.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
 import com.rach.co.quiz.presentation.screen.ScoreScreen
 import com.rach.co.ui.VideoPlayerScreen
@@ -92,7 +95,8 @@ fun AuthApp() {
         composable("login") { LoginScreen(navController) }
         composable("signup") { SignupScreen(navController) }
         composable(Routes.HOME) { HomeScreen(navController) }
-
+        composable(Routes.PROFILE) { Profile(navController = navController) }
+        composable(Routes.COMPLETE_PROFILE) { CompleteProfileScreen(navController = navController) }
 
         composable(Routes.COURSES) {
             AllCourseScreen(navController= navController)
@@ -242,16 +246,15 @@ object Routes {
 
     const val HOME = "home"
     const val COURSES = "courses"
-
+    const val COMPLETE_PROFILE = "complete_profile"
+    const val PROFILE = "profile"
     const val My_COURSES = "my_courses"
     const val QUIZ = "quiz"
     const val SCORE = "score"
     const val COURSE_PURCHASED = "course_purchased/{course}"
     fun coursePurchased(course: String) = "course_purchased/$course"
-
     const val CHAPTER = "chapters/{courseId}"
     const val SUBJECT = "chapterDetails/{courseId}/{subjectName}"
-
     const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}/{pdflink}"
 
 }

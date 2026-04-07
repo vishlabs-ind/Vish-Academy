@@ -15,7 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VishAcademy">
-
+        <activity
+            android:name=".homescreen.presentation.Screen.CompleteProfileScreen"
+            android:exported="false"
+            android:label="@string/title_activity_complete_profile_screen"
+            android:theme="@style/Theme.VishAcademy" />
+        <activity
+            android:name=".homescreen.presentation.Screen.Profile"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.VishAcademy" />
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
