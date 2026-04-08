@@ -2,6 +2,7 @@ package com.rach.co.navigation
 
 import QuizCourseScreen
 import android.net.Uri
+import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -52,6 +53,7 @@ fun AuthApp() {
                     "login"
             }
     }
+
 
     if (startDestination == null) {
         // Splash / Loader
