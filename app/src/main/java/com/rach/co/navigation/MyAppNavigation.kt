@@ -26,6 +26,7 @@ import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
+import com.rach.co.navigation.naviagtionDrawerItemPage.HelpSupportScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
 import com.rach.co.quiz.presentation.screen.ScoreScreen
@@ -235,6 +236,7 @@ fun AuthApp() {
         }
         //Drawerbar navigation
         composable(Routes.PROFILE) { Profile() }
+        composable(Routes.CONTACT_US) { HelpSupportScreen() }
 
     }
 }
@@ -259,6 +261,7 @@ object Routes {
 
     //Drawer items
     const val PROFILE="profile"
+    const val CONTACT_US="contact_Us"
 
 
 }
