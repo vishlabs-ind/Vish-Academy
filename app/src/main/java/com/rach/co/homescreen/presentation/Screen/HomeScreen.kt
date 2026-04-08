@@ -143,7 +143,8 @@ var isLoading by remember { mutableStateOf(true) }
 
 
     val images = listOf(
-        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7slm5D8eAWsQ5xIr2LjyTP430zUEKwhDMnqiX7",
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s3i00uafpqWAOGLktVUbnzXyI5esdBYPr6M1C",
+//        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7slm5D8eAWsQ5xIr2LjyTP430zUEKwhDMnqiX7",
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sFuZjnixUoHBEqXjkVvJsZDLCgAcin8eTPSwG",
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sVhxt2TFtoG4f3vP8xJWjHRuMmK5TbANDkYie",
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s5L6qxWqTwIlhWk0Ldz6QgPtBADpynqj19ar5",
