@@ -65,13 +65,15 @@ fun AllCourseScreen(
     var loading by remember { mutableStateOf(true) }
     val adViewModel: AdViewModel = hiltViewModel()
 
-    LaunchedEffect(Unit) {
-        adViewModel.loadAd(context = context)
-    }
+
     LaunchedEffect(Unit) {
         viewModel.fetchCourse()
         delay(2500)
         loading = false
+    }
+
+    LaunchedEffect(Unit) {
+        adViewModel.loadAd(context = context)
     }
 
     Column(
