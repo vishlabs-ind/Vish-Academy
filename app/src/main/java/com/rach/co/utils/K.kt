@@ -5,5 +5,8 @@ object K {
     const val RAZORPAY_KEY = "rzp_test_PCx5CdAmvXX78k"
     const val BANNER_ID = "ca-app-pub-2441322063617280/9099838895"
     const val INTERSITIAL_ID = "ca-app-pub-2441322063617280/2899999969"
+    const val INTERSITIAL_ID_QUIZ_SECTION = "ca-app-pub-2441322063617280/2985391646"
+
+    const val NATIVE_ADVANCE_ID_1 = "ca-app-pub-2441322063617280/4699371522"
 
 }

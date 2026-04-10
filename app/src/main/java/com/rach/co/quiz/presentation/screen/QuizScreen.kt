@@ -58,7 +58,7 @@ fun QuizScreen(
     // 2. Load course once
     LaunchedEffect(Unit) {
         viewModel.loadCourse(courseId)
-        viewModels.loadAd(context)
+        viewModels.loadAd2(context)
     }
 
 
@@ -180,7 +180,7 @@ fun QuizScreen(
                     if (viewModel.isLastQuestion()) {
                         activity?.let {
                             Toast.makeText(context, "Ad Loaded", Toast.LENGTH_SHORT).show()
-                            viewModels.showAd(it) {
+                            viewModels.showAd2(it) {
                                 viewModel.calculateScore()
 
                                 val score = viewModel.score.value

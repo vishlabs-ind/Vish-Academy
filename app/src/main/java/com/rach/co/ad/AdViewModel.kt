@@ -15,7 +15,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
 
 @HiltViewModel
-class AdViewModel @Inject constructor() : ViewModel(){
+class AdViewModel @Inject constructor() : ViewModel() {
 
     var interstitialAd: InterstitialAd? = null
 
@@ -24,7 +24,7 @@ class AdViewModel @Inject constructor() : ViewModel(){
 
         InterstitialAd.load(
             context,
-            "ca-app-pub-3940256099942544/1033173712", // TEST AD UNIT
+            K.INTERSITIAL_ID,
             adRequest,
             object : InterstitialAdLoadCallback() {
 
@@ -43,6 +43,54 @@ class AdViewModel @Inject constructor() : ViewModel(){
 
     // show Ad
     fun showAd(activity: Activity, onAdClosed: () -> Unit) {
+
+        if (interstitialAd != null) {
+
+            interstitialAd?.fullScreenContentCallback =
+                object : FullScreenContentCallback() {
+
+                    override fun onAdDismissedFullScreenContent() {
+                        interstitialAd = null
+                        loadAd(activity)   // ✅ preload next ad
+                        onAdClosed()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(p0: AdError) {
+                        onAdClosed()
+                    }
+                }
+
+            interstitialAd?.show(activity)
+
+        } else {
+            onAdClosed()
+        }
+    }
+
+    fun loadAd2(context: Context) {
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(
+            context,
+            K.INTERSITIAL_ID_QUIZ_SECTION,
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+
+                override fun onAdLoaded(ad: InterstitialAd) {
+                    Log.d("AdMob", "Ad Loaded Successfully")
+                    interstitialAd = ad
+                }
+
+                override fun onAdFailedToLoad(error: LoadAdError) {
+                    Log.d("AdMob", "Ad Failed: ${error.message}")
+                    interstitialAd = null
+                }
+            }
+        )
+    }
+
+    // show Ad
+    fun showAd2(activity: Activity, onAdClosed: () -> Unit) {
 
         if (interstitialAd != null) {
 

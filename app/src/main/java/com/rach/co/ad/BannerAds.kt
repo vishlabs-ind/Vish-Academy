@@ -10,6 +10,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.rach.co.utils.K
 
 @Composable
 fun BannerAdView() {
@@ -26,7 +27,7 @@ fun BannerAdView() {
                 setAdSize(AdSize.BANNER)
 
                 // ✅ TEST Banner Ad ID
-                adUnitId = "ca-app-pub-3940256099942544/6300978111"
+                adUnitId = K.BANNER_ID
 
                 loadAd(AdRequest.Builder().build())
             }

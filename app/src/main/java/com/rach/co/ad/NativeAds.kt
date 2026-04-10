@@ -19,6 +19,7 @@ import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
+import com.rach.co.utils.K
 
 @Composable
 fun NativeAdView(
@@ -29,7 +30,7 @@ fun NativeAdView(
 
     DisposableEffect(Unit) {
 
-        val adLoader = AdLoader.Builder(context, "ca-app-pub-3940256099942544/2247696110")
+        val adLoader = AdLoader.Builder(context, K.NATIVE_ADVANCE_ID_1)
             .forNativeAd { ad: NativeAd ->
                 nativeAd = ad
             }
