@@ -91,7 +91,7 @@ fun AllCourseScreen(
         Spacer(Modifier.height(15.dp))
 
         LazyColumn {
-            if (loading || adViewModel.interstitialAd == null) {
+            if (loading ) {
                 items(5) {
                     CourseShimmer()
                 }
