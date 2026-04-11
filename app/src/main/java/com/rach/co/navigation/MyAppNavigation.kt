@@ -96,6 +96,7 @@ fun AuthApp() {
         composable("signup") { SignupScreen(navController) }
         composable(Routes.HOME) { HomeScreen(navController) }
         composable(Routes.PROFILE) { Profile(navController = navController) }
+        composable(Routes.EXAM_RESULT) { Profile(navController = navController) }
         composable(Routes.COMPLETE_PROFILE) { CompleteProfileScreen(navController = navController) }
 
         composable(Routes.COURSES) {
@@ -251,6 +252,7 @@ object Routes {
     const val My_COURSES = "my_courses"
     const val QUIZ = "quiz"
     const val SCORE = "score"
+    const val EXAM_RESULT = "exam_result"
     const val COURSE_PURCHASED = "course_purchased/{course}"
     fun coursePurchased(course: String) = "course_purchased/$course"
     const val CHAPTER = "chapters/{courseId}"

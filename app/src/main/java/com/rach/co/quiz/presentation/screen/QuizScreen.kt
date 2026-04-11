@@ -10,9 +10,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.*
@@ -28,8 +26,8 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.google.android.gms.ads.AdSize
-import com.rach.co.navigation.Routes
 import com.rach.co.ad.AdViewModel
+import com.rach.co.navigation.Routes
 import com.rach.co.quiz.presentation.viewmodel.QuizViewModel
 import com.rach.co.utils.K
 
@@ -60,7 +58,7 @@ fun QuizScreen(
     // 2. Load course once
     LaunchedEffect(Unit) {
         viewModel.loadCourse(courseId)
-        viewModels.loadAd(context)
+     //   viewModels.loadAd(context)
     }
 
 

@@ -80,18 +80,7 @@ fun HomeScreen(
                 fontWeight = FontWeight.Bold
             )
             Spacer(Modifier.weight(1f))
-//            Button(
-//                onClick = {
-//                    viewModel.logout()
-//                    navController.navigate("login") {
-//                        popUpTo("home") { inclusive = true }
-//                    }
-//                },
-//                Modifier.wrapContentSize()
-//            ) {
-//                Text("Logout")
-//            }
-            // Profile Icon on Top Right
+
 
             IconButton(
                 onClick = {

@@ -17,6 +17,7 @@ import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
+import com.rach.co.ad.AdViewModel
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.AuthApp
 import com.rach.co.ui.theme.VishAcademyTheme
@@ -24,6 +25,7 @@ import com.razorpay.Checkout
 import com.razorpay.PaymentData
 import com.razorpay.PaymentResultWithDataListener
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.getValue
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
@@ -31,12 +33,38 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
     private lateinit var appUpdateManager: AppUpdateManager
     private val updateRequestCode = 100
     val homeViewModel: HomeViewModel by viewModels()
+    private val adViewModel: AdViewModel by viewModels()
+
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        enableEdgeToEdge()
+//        Checkout.preload(applicationContext)
+//        appUpdateManager = AppUpdateManagerFactory.create(this)
+//        setContent {
+//            VishAcademyTheme {
+//                Surface(
+//                    modifier = Modifier.fillMaxSize(),
+//                    color = MaterialTheme.colorScheme.background
+//                ) {
+//                    AuthApp()
+//                }
+//            }
+//        }
+//        checkForUpdate()
+//        MobileAds.initialize(this)
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         Checkout.preload(applicationContext)
         appUpdateManager = AppUpdateManagerFactory.create(this)
+
+        MobileAds.initialize(this) {
+            Log.d("AdDebug", "✅ MobileAds initialized")
+            adViewModel.loadAd()  // ← load AFTER MobileAds is ready
+        }
+
         setContent {
             VishAcademyTheme {
                 Surface(
@@ -48,7 +76,6 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
             }
         }
         checkForUpdate()
-        MobileAds.initialize(this)
     }
 
     override fun onPaymentSuccess(p0: String?, p1: PaymentData?) {

@@ -6,4 +6,7 @@
     <string name="title_activity_quiz_course_screen">QuizCourseScreen</string>
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_complete_profile_screen">CompleteProfileScreen</string>
+    <string name="title_activity_exam_screen">ExamScreen</string>
+    <string name="title_activity_subject_selection_screen">SubjectSelectionScreen</string>
+    <string name="title_activity_exam_result_screen">ExamResultScreen</string>
 </resources>
