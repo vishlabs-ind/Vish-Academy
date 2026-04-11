@@ -5,7 +5,18 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -14,7 +25,11 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material3.*
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -50,9 +65,6 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
-    val isLoading = false
-    val courses by quizViewModel.courseList
-    val isDialogOpen by quizViewModel.isDialogOpen
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
@@ -66,7 +78,7 @@ fun HomeScreen(
     val coroutineScope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
-    NavigationDrawer(navController,viewModel,drawerState) {
+    NavigationDrawer(navController, viewModel, drawerState) {
 
 
         Column(
@@ -84,12 +96,13 @@ fun HomeScreen(
                     }
                 }
 
-                Icon(Icons.Default.Menu, contentDescription = null,
-                    modifier = Modifier.clickable{
+                Icon(
+                    Icons.Default.Menu, contentDescription = null,
+                    modifier = Modifier.clickable {
                         coroutineScope.launch {
-                            if (drawerState.isClosed){
+                            if (drawerState.isClosed) {
                                 drawerState.open()
-                            }else{
+                            } else {
                                 drawerState.close()
                             }
                         }
@@ -102,7 +115,7 @@ fun HomeScreen(
                     fontSize = 25.sp,
                     fontWeight = FontWeight.Bold,
 
-                )
+                    )
 
 
             }
@@ -141,16 +154,13 @@ fun HomeScreen(
 @Composable
 fun ImageSlider() {
 
-var isLoading by remember { mutableStateOf(true) }
+    var isLoading by remember { mutableStateOf(true) }
 
 
     val images = listOf(
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s3i00uafpqWAOGLktVUbnzXyI5esdBYPr6M1C",
-//        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7slm5D8eAWsQ5xIr2LjyTP430zUEKwhDMnqiX7",
-        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sFuZjnixUoHBEqXjkVvJsZDLCgAcin8eTPSwG",
-        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sVhxt2TFtoG4f3vP8xJWjHRuMmK5TbANDkYie",
-        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s5L6qxWqTwIlhWk0Ldz6QgPtBADpynqj19ar5",
-        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sNLtiEthtApfRXC7hJHMIGW31ZP8YxleTwrBm"
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7sFh76RMxUoHBEqXjkVvJsZDLCgAcin8eTPSwG",
+        "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s1hS7p40BDUgIT4rYjJ8PcKk3sFMoZqtHNbyh"
     )
 
     val pagerState = rememberPagerState(
@@ -186,7 +196,7 @@ var isLoading by remember { mutableStateOf(true) }
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop,
-            onSuccess ={ isLoading =false}
+            onSuccess = { isLoading = false }
         )
     }
 }
