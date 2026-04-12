@@ -33,26 +33,6 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
     private lateinit var appUpdateManager: AppUpdateManager
     private val updateRequestCode = 100
     val homeViewModel: HomeViewModel by viewModels()
-    private val adViewModel: AdViewModel by viewModels()
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-//        Checkout.preload(applicationContext)
-//        appUpdateManager = AppUpdateManagerFactory.create(this)
-//        setContent {
-//            VishAcademyTheme {
-//                Surface(
-//                    modifier = Modifier.fillMaxSize(),
-//                    color = MaterialTheme.colorScheme.background
-//                ) {
-//                    AuthApp()
-//                }
-//            }
-//        }
-//        checkForUpdate()
-//        MobileAds.initialize(this)
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,10 +40,7 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
         Checkout.preload(applicationContext)
         appUpdateManager = AppUpdateManagerFactory.create(this)
 
-        MobileAds.initialize(this) {
-            Log.d("AdDebug", "✅ MobileAds initialized")
-            adViewModel.loadAd()  // ← load AFTER MobileAds is ready
-        }
+        MobileAds.initialize(this)
 
         setContent {
             VishAcademyTheme {

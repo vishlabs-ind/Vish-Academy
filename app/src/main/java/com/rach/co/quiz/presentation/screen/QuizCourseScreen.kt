@@ -1,5 +1,7 @@
 import android.app.Activity
+import android.util.Log
 import androidx.activity.compose.BackHandler
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -54,87 +56,14 @@ fun QuizCourseScreen(
     viewModel: QuizCategoryViewModel = hiltViewModel(),
     adViewModel: AdViewModel = hiltViewModel()
 ) {
+    val activity = LocalActivity.current ?: return
     val courses by viewModel.courseList
-    val context = LocalContext.current
-    val activity = context as Activity
-    val isAdReady by adViewModel.isAdReady
+    val isRewardedAdReady by adViewModel.isRewardedAdReady
+    val scope = rememberCoroutineScope()
+
 
     // 1. Create a state to manage the "Waiting" period
     var isWaitingForAd by remember { mutableStateOf(false) }
-    val scope = rememberCoroutineScope()
-
-//    Box(modifier = Modifier.fillMaxSize()) {
-//        Column(
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .background(MaterialTheme.colorScheme.background)
-//                .statusBarsPadding()
-//                .padding(16.dp)
-//        ) {
-//            Text(
-//                text = "Select Course",
-//                style = MaterialTheme.typography.headlineMedium,
-//                fontWeight = FontWeight.Bold,
-//                color = MaterialTheme.colorScheme.onBackground
-//            )
-//
-//            Spacer(modifier = Modifier.height(16.dp))
-//
-//            LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-//                items(courses) { course ->
-//                    Card(
-//                        modifier = Modifier
-//                            .fillMaxWidth()
-//                            .clickable(enabled = !isWaitingForAd) { // 2. Disable clicks while waiting
-//                                scope.launch {
-//                                    isWaitingForAd = true
-//
-//                                    // 3. The 2.5 second wait logic
-//                                    delay(2500)
-//
-//                                    // 4. After wait, show Ad and navigate
-//                                    adViewModel.showAd(activity) {
-//                                        isWaitingForAd = false
-//                                        navController.navigate("quiz/${course.courseId}")
-//                                    }
-//                                }
-//                            },
-//                        shape = RoundedCornerShape(12.dp),
-//                        colors = CardDefaults.cardColors(
-//                            containerColor = MaterialTheme.colorScheme.surfaceVariant
-//                        )
-//                    ) {
-//                        Text(
-//                            text = course.courseTitle,
-//                            modifier = Modifier.padding(20.dp),
-//                            style = MaterialTheme.typography.titleMedium
-//                        )
-//                    }
-//                }
-//            }
-//        }
-//
-//        // 5. Full-screen Loading Overlay to block user interaction
-//        if (isWaitingForAd) {
-//            Box(
-//                modifier = Modifier
-//                    .fillMaxSize()
-//                    .background(Color.Black.copy(alpha = 0.5f)) // Dim the background
-//                    .clickable(enabled = false) { }, // Block clicks to background
-//                contentAlignment = Alignment.Center
-//            ) {
-//                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-//                    CircularProgressIndicator(color = Color.White)
-//                    Spacer(modifier = Modifier.height(12.dp))
-//                    Text(
-//                        "Preparing your quiz...",
-//                        color = Color.White,
-//                        fontWeight = FontWeight.Medium
-//                    )
-//                }
-//            }
-//        }
-//    }
 
     LaunchedEffect(Unit) {
         viewModel.loadCourses()
@@ -167,13 +96,30 @@ fun QuizCourseScreen(
             )
 
             // Ad Loading Indicator (Moved inside the header row)
-            if (!isAdReady) {
+//            if (!isAdReady) {
+//                Row(verticalAlignment = Alignment.CenterVertically) {
+//                    CircularProgressIndicator(
+//                        modifier = Modifier.size(16.dp),
+//                        strokeWidth = 2.dp,
+//                        color = MaterialTheme.colorScheme.primary
+//                    )
+//                    Spacer(modifier = Modifier.width(8.dp))
+//                    Text(
+//                        "Ad Loading...",
+//                        fontSize = 12.sp,
+//                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
+//                    )
+//                }
+//            }
+//        }
+
+            if (!isRewardedAdReady) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(16.dp),
                         strokeWidth = 2.dp,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                        color = MaterialTheme.colorScheme.primary                    )
+
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         "Ad Loading...",
@@ -203,21 +149,27 @@ fun QuizCourseScreen(
                         .fillMaxWidth()
                         .clickable(enabled = !isWaitingForAd) { // 2. Disable clicks while waiting
                             scope.launch {
-                                isWaitingForAd = true
-
-
-                                // Wait for 'isAdReady' to be true, max 2.5 seconds
-                                withTimeoutOrNull(2500) {
-                                    snapshotFlow { isAdReady }.first { it == true }
+                                isWaitingForAd = true                                // wait 1 second for ad                                //delay()                                // Wait for 'isAdReady' to be true, max 2.5 seconds
+                                withTimeoutOrNull(3000) {
+                                    snapshotFlow { isRewardedAdReady }.first { it == true }
                                 }
-
-                                // 4. After wait, show Ad and navigate
-                                adViewModel.showAd(activity) {
+                                if (isRewardedAdReady) {
+                                    adViewModel.showRewardedAd(
+                                        activity = activity,
+                                        onUserEarnedReward = {
+                                            Log.d("AdDebug", "Reward earned")
+                                        },
+                                        onAdDismissed = {
+                                            isWaitingForAd = false
+                                            navController.navigate("quiz/${course.courseId}")
+                                        })
+                                } else {
                                     isWaitingForAd = false
-                                    navController.navigate("quiz/${course.courseId}")
+                                    navController.navigate( "quiz/${course.courseId}")
                                 }
                             }
                         },
+
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.surfaceVariant,

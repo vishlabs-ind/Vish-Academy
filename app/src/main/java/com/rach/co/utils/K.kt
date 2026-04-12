@@ -6,5 +6,6 @@ object K {
     const val BANNER_ID = "ca-app-pub-2441322063617280/9099838895"
     const val INTERSITIAL_ID = "ca-app-pub-2441322063617280/2899999969"
     const val AD_ID = "ca-app-pub-3940256099942544/1033173712"
+    const val REWARDED_AD_ID = "ca-app-pub-3940256099942544/5224354917"
 
 }
