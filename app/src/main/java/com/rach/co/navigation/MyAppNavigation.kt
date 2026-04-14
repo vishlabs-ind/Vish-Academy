@@ -25,7 +25,9 @@ import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
 import com.rach.co.homescreen.presentation.Screen.AllCourseScreen
 import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
+import com.rach.co.homescreen.presentation.Screen.NoteScreen
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
+import com.rach.co.homescreen.presentation.Screen.PdfsScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.HelpSupportScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
@@ -106,6 +108,19 @@ fun AuthApp() {
         composable("quiz_course") {
             QuizCourseScreen(navController)
         }
+        composable("notes") {
+            NoteScreen(navController)
+        }
+        composable("allPdfs/{pdfName}",
+            arguments = listOf(
+                navArgument("pdfName"){type= NavType.StringType}
+            )
+        ) {backStack->
+            val name=backStack.arguments?.getString("pdfName")
+            PdfsScreen(name,navController)
+        }
+
+
 
         // here
         composable(
@@ -243,7 +258,7 @@ fun AuthApp() {
 
 
 object Routes {
-
+    const val Notes="notes"
     const val HOME = "home"
     const val COURSES = "courses"
 

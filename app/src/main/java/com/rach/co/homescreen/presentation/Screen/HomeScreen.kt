@@ -70,7 +70,8 @@ fun HomeScreen(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
         //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
         CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES),
-        CategoryItem("Quiz", R.drawable.quiz_logo, Routes.QUIZ)
+        CategoryItem("Quiz", R.drawable.quiz_logo, Routes.QUIZ),
+        CategoryItem("Notes", R.drawable.notes, Routes.Notes)
 
     )
 
