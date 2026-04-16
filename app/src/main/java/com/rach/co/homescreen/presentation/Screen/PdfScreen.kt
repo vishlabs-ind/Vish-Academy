@@ -16,9 +16,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 fun PdfScreen(pdfUrl: String) {
 
     val context = LocalContext.current
-
-
-
+    
     AndroidView(
         modifier = Modifier.fillMaxSize(),
         factory = {
