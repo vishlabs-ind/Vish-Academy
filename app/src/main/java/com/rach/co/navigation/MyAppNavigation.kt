@@ -1,6 +1,6 @@
 package com.rach.co.navigation
 
-import QuizCourseScreen
+import com.rach.co.quiz.presentation.screen.QuizCourseScreen
 import android.net.Uri
 import android.util.Log
 import androidx.compose.foundation.layout.Box

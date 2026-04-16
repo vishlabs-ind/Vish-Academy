@@ -1,7 +1,6 @@
 package com.rach.co.quiz.presentation.screen
 
 import android.app.Activity
-import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.*
 import androidx.compose.foundation.background
@@ -178,16 +177,11 @@ fun QuizScreen(
             Button(
                 onClick = {
                     if (viewModel.isLastQuestion()) {
-                        activity?.let {
-                            Toast.makeText(context, "Ad Loaded", Toast.LENGTH_SHORT).show()
-                            viewModels.showAd2(it) {
-                                viewModel.calculateScore()
-
-                                val score = viewModel.score.value
-                                navController.navigate("${Routes.SCORE}/$score/$totalQuestions")
-                            }
+                        viewModels.showAd2(activity) {
+                            viewModel.calculateScore()
+                            val score = viewModel.score.value
+                            navController.navigate("${Routes.SCORE}/$score/$totalQuestions")
                         }
-
                     } else {
                         viewModel.nextQuestion()
                     }

@@ -9,4 +9,5 @@ object K {
 
     const val NATIVE_ADVANCE_ID_1 = "ca-app-pub-2441322063617280/4699371522"
 
+    const val REWARDED_AD_ID = "ca-app-pub-3940256099942544/5224354917"
 }
