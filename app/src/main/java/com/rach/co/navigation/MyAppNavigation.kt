@@ -27,7 +27,6 @@ import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.homescreen.presentation.Screen.NoteScreen
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
-import com.rach.co.homescreen.presentation.Screen.PdfsScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.HelpSupportScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
@@ -111,14 +110,14 @@ fun AuthApp() {
         composable("notes") {
             NoteScreen(navController)
         }
-        composable("allPdfs/{pdfName}",
-            arguments = listOf(
-                navArgument("pdfName"){type= NavType.StringType}
-            )
-        ) {backStack->
-            val name=backStack.arguments?.getString("pdfName")
-            PdfsScreen(name,navController)
-        }
+//        composable("allPdfs/{pdfName}",
+//            arguments = listOf(
+//                navArgument("pdfName"){type= NavType.StringType}
+//            )
+//        ) {backStack->
+//            val foldeeName=backStack.arguments?.getString("pdfName")
+//            PdfsScreen(foldeeName,navController)
+//        }
 
 
 

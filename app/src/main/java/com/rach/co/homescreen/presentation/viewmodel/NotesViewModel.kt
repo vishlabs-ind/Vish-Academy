@@ -14,29 +14,51 @@ import javax.inject.Inject
 @HiltViewModel
 class NotesViewModel @Inject constructor( val noteRepository: NoteRepository): ViewModel(){
 
-    private val _notesPdf= MutableStateFlow<List<NotesItems>>(emptyList())
 
-    val notesPdf: StateFlow<List<NotesItems>> =_notesPdf
+    private val _notesPdf = MutableStateFlow<List<NotesItems>>(emptyList())
 
-    private val _notesPdfHindi= MutableStateFlow<List<NotesItems>>(emptyList())
+    val notesPdf: StateFlow<List<NotesItems>> = _notesPdf
 
-    val notesPdfHindi: StateFlow<List<NotesItems>> =_notesPdfHindi
 
-    fun viewNotes(){
+    fun viewAllNotes() {
+
         viewModelScope.launch {
-            val data=  noteRepository.getNotePdf()
-            _notesPdf.value=data
 
+            val folderList =
+                listOf(
+                    "Hindi PYQ",
+                    "Maths Youtube 1"
+                )
+
+            val allPdfList =
+                mutableListOf<NotesItems>()
+
+            for(folder in folderList){
+
+                val data =
+                    noteRepository.getNotePdf(folder)
+
+                allPdfList.addAll(data)
+
+            }
+
+            _notesPdf.value =
+                allPdfList
 
         }
+
     }
 
-    fun viewHindiNotes(){
-        viewModelScope.launch {
-            val data=  noteRepository.getHindiNotePdf()
-            _notesPdfHindi.value=data
-
-
-        }
-    }
+//    // single function for all folders
+//    fun viewNotes(folderName: String) {
+//
+//        viewModelScope.launch {
+//
+//            val data = noteRepository.getNotePdf(folderName)
+//
+//            _notesPdf.value = data
+//
+//            Log.d("PDF_DATA", data.toString())
+//        }
+//    }
 }

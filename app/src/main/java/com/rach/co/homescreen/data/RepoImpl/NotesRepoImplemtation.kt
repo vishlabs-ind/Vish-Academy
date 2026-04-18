@@ -1,43 +1,44 @@
 package com.rach.co.homescreen.data.RepoImpl
 
 
+import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.rach.co.homescreen.data.DataClass.NotesItems
 import com.rach.co.homescreen.domain.Repo.NoteRepository
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
-class NotesRepoImplemtation @Inject constructor( val firestore: FirebaseFirestore): NoteRepository {
-    override suspend fun getNotePdf(): List<NotesItems> {
+class NotesRepoImplemtation @Inject constructor(val firestore: FirebaseFirestore) : NoteRepository {
+    override suspend fun getNotePdf(
+        folderName: String
+    ): List<NotesItems> {
 
-        return try {
+        val result =
+            FirebaseFirestore.getInstance()
+                .collection("notes")
+                .document(folderName)
+                .get()
+                .await()
 
-            val snap = firestore.collection("notes").document("Maths Youtube 1").get().await()
-            val list = mutableListOf<NotesItems>()
-//            list = snap.toObject(NotesItems::class.java)
-            val data1 = snap.getString("chapterName") ?: "Character name is empty"
-            val data2 = snap.getString("pdflink") ?: "link name is empty"
-//            data
-            list.add(NotesItems(data1,data2))
-            list
-        } catch (e: Exception) {
-            emptyList<NotesItems>()
-        }
-    }
+        val list = mutableListOf<NotesItems>()
 
-    override suspend fun getHindiNotePdf(): List<NotesItems> {
-        return try {
-            val snap = firestore.collection("notes").document("Hindi PYQ").get().await()
-            val list = mutableListOf<NotesItems>()
-//            list = snap.toObject(NotesItems::class.java)
-            val data1 = snap.getString("chapterName") ?: "Character name is empty"
-            val data2 = snap.getString("pdflink") ?: "link name is empty"
-//            data
-            list.add(NotesItems(data1,data2))
-            list
-        } catch (e: Exception) {
-            emptyList<NotesItems>()
-        }
-    }
 
-}
+//        Log.d("FIRESTORE_DATA", doc.data.toString())
+
+
+        val chapterName = result.getString("chapterName") ?: ""
+        val link = result.getString("pdflink") ?: ""
+//        Log.d("FIRESTORE_DATA_NAME", chapterName)
+//        Log.d("FIRESTORE_DATA_LINK", link)
+        val item = NotesItems(
+            chapterName = chapterName,
+            pdflinkchapterName = link
+        )
+
+
+        list.add(item)
+
+
+    return list
+
+}}
