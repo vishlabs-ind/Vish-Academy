@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.quiz.data.dataClass.RootResponse
 import dagger.hilt.android.qualifiers.ApplicationContext
-import jakarta.inject.Inject
+import javax.inject.Inject
 
 class QuizLocalDataSource@Inject constructor(
     @ApplicationContext private val context: Context
