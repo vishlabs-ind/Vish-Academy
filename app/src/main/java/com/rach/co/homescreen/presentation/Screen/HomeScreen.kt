@@ -5,18 +5,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -25,18 +14,8 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
-import androidx.compose.material3.rememberDrawerState
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -68,19 +47,16 @@ fun HomeScreen(
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),
-        //  CategoryItem("PYQ", com.rach.co.R.drawable.exam, Routes.COURSES),
         CategoryItem("My Courses", R.drawable.mycourse, Routes.My_COURSES),
         CategoryItem("Quiz", R.drawable.quiz_logo, Routes.QUIZ),
-        CategoryItem("Notes", R.drawable.notes, Routes.Notes)
-
+        CategoryItem("Notes", R.drawable.notes, Routes.Notes),
+        CategoryItem("Exam", R.drawable.exam, Routes.SUBJECT_SELECTION)  // ← fix here
     )
-
 
     val coroutineScope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
     NavigationDrawer(navController, viewModel, drawerState) {
-
 
         Column(
             modifier = Modifier
@@ -89,50 +65,40 @@ fun HomeScreen(
                 .padding(16.dp)
         ) {
 
-
             Row(verticalAlignment = Alignment.CenterVertically) {
+
                 BackHandler(enabled = drawerState.isOpen) {
-                    coroutineScope.launch {
-                        drawerState.close()
-                    }
+                    coroutineScope.launch { drawerState.close() }
                 }
 
                 Icon(
-                    Icons.Default.Menu, contentDescription = null,
+                    Icons.Default.Menu,
+                    contentDescription = null,
                     modifier = Modifier.clickable {
                         coroutineScope.launch {
-                            if (drawerState.isClosed) {
-                                drawerState.open()
-                            } else {
-                                drawerState.close()
-                            }
+                            if (drawerState.isClosed) drawerState.open()
+                            else drawerState.close()
                         }
                     }
                 )
+
                 Spacer(modifier = Modifier.width(17.dp))
 
                 Text(
                     text = "Vish Academy",
                     fontSize = 25.sp,
-                    fontWeight = FontWeight.Bold,
-
-                    )
-
-
+                    fontWeight = FontWeight.Bold
+                )
             }
 
             Spacer(modifier = Modifier.height(24.dp))
-//ProgressBar
 
             Box(contentAlignment = Alignment.Center) {
-
                 ImageSlider()
             }
 
-
-
-
             Spacer(modifier = Modifier.height(20.dp))
+
             LazyVerticalGrid(
                 columns = GridCells.Fixed(2),
                 verticalArrangement = Arrangement.spacedBy(20.dp),
@@ -140,9 +106,9 @@ fun HomeScreen(
             ) {
                 items(categories) { item ->
                     CategoryCard(
-                        item, navController,
+                        item = item,
+                        navController = navController,
                         quizViewModel = quizViewModel
-
                     )
                 }
             }
@@ -150,13 +116,11 @@ fun HomeScreen(
     }
 }
 
-
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ImageSlider() {
 
     var isLoading by remember { mutableStateOf(true) }
-
 
     val images = listOf(
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s3i00uafpqWAOGLktVUbnzXyI5esdBYPr6M1C",
@@ -164,22 +128,15 @@ fun ImageSlider() {
         "https://ikm7674fcj.ufs.sh/f/ak9Yf1k7Pl7s1hS7p40BDUgIT4rYjJ8PcKk3sFMoZqtHNbyh"
     )
 
-    val pagerState = rememberPagerState(
-        pageCount = { images.size }
-    )
+    val pagerState = rememberPagerState(pageCount = { images.size })
 
-    // Auto Slide
     LaunchedEffect(Unit) {
         while (true) {
             delay(2000)
-
-            val nextPage =
-                (pagerState.currentPage + 1) % images.size
-
+            val nextPage = (pagerState.currentPage + 1) % images.size
             pagerState.animateScrollToPage(nextPage)
         }
     }
-
 
     if (isLoading) {
         CircularProgressIndicator()
@@ -191,7 +148,6 @@ fun ImageSlider() {
             .fillMaxWidth()
             .height(200.dp)
     ) { page ->
-
         AsyncImage(
             model = images[page],
             contentDescription = null,
@@ -208,7 +164,6 @@ fun CategoryCard(
     navController: NavController,
     quizViewModel: QuizCategoryViewModel
 ) {
-
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -216,24 +171,23 @@ fun CategoryCard(
             .background(Color(0xFFF5F5F5))
             .padding(16.dp)
             .clickable {
-
-                if (item.route == Routes.QUIZ) {
-
-                    // OPEN QUIZ POPUP
-//                    quizViewModel.loadCourses()
-//                    quizViewModel.openDialog()
-                    navController.navigate("quiz_course")
-
-                } else {
-                    quizViewModel.closeDialog()   // ensure dialog is closed
-                    navController.navigate(item.route) //
-
+                when (item.route) {
+                    Routes.QUIZ -> {
+                        // quiz goes to course selection
+                        navController.navigate("quiz_course")
+                    }
+                    Routes.SUBJECT_SELECTION -> {
+                        // exam goes to subject selection
+                        navController.navigate(Routes.SUBJECT_SELECTION)
+                    }
+                    else -> {
+                        quizViewModel.closeDialog()
+                        navController.navigate(item.route)
+                    }
                 }
-
             },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
         Image(
             painter = painterResource(id = item.icon),
             contentDescription = item.name,
@@ -249,7 +203,3 @@ fun CategoryCard(
         )
     }
 }
-
-
-
-

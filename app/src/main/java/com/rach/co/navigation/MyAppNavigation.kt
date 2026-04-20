@@ -1,6 +1,6 @@
 package com.rach.co.navigation
 
-import QuizCourseScreen
+import com.rach.co.quiz.presentation.screen.QuizCourseScreen
 import android.net.Uri
 import android.util.Log
 import androidx.compose.foundation.layout.Box
@@ -19,6 +19,9 @@ import com.rach.co.auth.presentation.onboard.OnboardScreen
 import com.rach.co.homescreen.presentation.home.presentation.Screen.HomeScreen
 import com.rach.co.auth.presentation.login.LoginScreen
 import com.rach.co.auth.presentation.signup.SignupScreen
+import com.rach.co.exam.presentation.screen.ExamResultScreen
+import com.rach.co.exam.presentation.screen.ExamScreen
+import com.rach.co.exam.presentation.screen.SubjectSelectionScreen
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterDetailScreen
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
@@ -119,7 +122,45 @@ fun AuthApp() {
 //            PdfsScreen(foldeeName,navController)
 //        }
 
+        composable(Routes.SUBJECT_SELECTION) {
+            SubjectSelectionScreen(navController = navController)
+        }
 
+        // add this after the EXAM composable
+
+        composable(
+            route = "${Routes.EXAM}/{subjectId}",
+            arguments = listOf(
+                navArgument("subjectId") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+            val subjectId = backStackEntry.arguments?.getString("subjectId") ?: ""
+            ExamScreen(
+                subjectId = subjectId,
+                navController = navController
+            )
+        }
+
+        composable(
+            route = "${Routes.EXAM_RESULT}/{score}/{totalQuestions}",
+            arguments = listOf(
+                navArgument("score") { type = NavType.IntType },
+                navArgument("totalQuestions") { type = NavType.IntType }
+            )
+        ) { backStackEntry ->
+            val score = backStackEntry.arguments?.getInt("score") ?: 0
+            val total = backStackEntry.arguments?.getInt("totalQuestions") ?: 0
+
+            ExamResultScreen(
+                score = score,
+                totalQuestions = total,
+                onBackClick = {
+                    navController.navigate(Routes.HOME) {
+                        popUpTo(Routes.HOME) { inclusive = false }
+                    }
+                }
+            )
+        }
 
         // here
         composable(
@@ -253,6 +294,7 @@ fun AuthApp() {
         composable(Routes.CONTACT_US) { HelpSupportScreen() }
 
     }
+
 }
 
 
@@ -272,6 +314,9 @@ object Routes {
 
     const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}/{pdflink}"
 
+    const val SUBJECT_SELECTION = "subject_selection"
+    const val EXAM = "exam"
+    const val EXAM_RESULT = "exam_result"
 
     //Drawer items
     const val PROFILE="profile"

@@ -87,11 +87,10 @@ fun ChapterDetailScreen(
                         .fillMaxWidth()
                         .padding(vertical = 6.dp)
                         .clickable {
-                            if (adViewModel.interstitialAd == null){
+                            if (!adViewModel.isAd1Ready.value) {
                                 Toast.makeText(context, "Please wait, Ads is loading", Toast.LENGTH_SHORT).show()
-                            }
-                            else{
-                                adViewModel.showAd(activity){
+                            } else {
+                                adViewModel.showAd(activity) {
                                     if (chapterS.ytlink.isNotEmpty()) {
 
                                         val encodedLink = Uri.encode(chapterS.ytlink)

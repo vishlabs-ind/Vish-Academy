@@ -178,11 +178,10 @@ fun CoursePurchasedScreen(
 
                 Button(
                     onClick = {
-                        if (adViewModel.interstitialAd == null){
+                        if (!adViewModel.isAd1Ready.value) {
                             Toast.makeText(context, "Please wait, ads loading", Toast.LENGTH_SHORT).show()
                             navController.popBackStack()
-                        }
-                        else{
+                        } else {
                             adViewModel.showAd(activity) {
 
                                 vm.startPurchase(course.courseId)
