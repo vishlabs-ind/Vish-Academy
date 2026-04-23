@@ -307,7 +307,7 @@ fun PremiumGradientButton(onClick: () -> Unit) {
                 Spacer(modifier = Modifier.width(3.dp))
 
                 Text(
-                    text = "No Ads $199",
+                    text = "No Ads ₹199",
                     color = Color.White,
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Bold
