@@ -16,10 +16,13 @@ import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.rach.co.utils.K
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject  // ✅ correct import
 
 @HiltViewModel
-class AdViewModel @Inject constructor() : ViewModel() {
+class AdViewModel @Inject constructor(
+    @ApplicationContext private val context: Context // ✅ Hilt provides this automatically
+) : ViewModel() {
 
     // --- Ad 1 — for Exam/Course section ---
     private var interstitialAd1: InterstitialAd? = null
@@ -38,6 +41,14 @@ class AdViewModel @Inject constructor() : ViewModel() {
     private var isRewardedLoading = false
     private val _isRewardedAdReady = mutableStateOf(false)
     val isRewardedAdReady: State<Boolean> = _isRewardedAdReady
+
+
+    init {
+        // ✅ Start loading everything immediately when the app starts
+        loadAd(context)
+        loadAd2(context)
+        loadRewardedAd(context)
+    }
 
 
     // ─────────────────────────────────────────
@@ -162,7 +173,7 @@ class AdViewModel @Inject constructor() : ViewModel() {
     // Rewarded Ad  (QuizCourseScreen)
     // ─────────────────────────────────────────
 
-    fun loadRewardedAd(context: Context) {
+    fun loadRewardedAd(ctx: Context = context) {
         if (isRewardedLoading || rewardedAd != null) {
             Log.d("AdDebug", "Rewarded ad already loading or loaded — skipping")
             return
@@ -172,7 +183,7 @@ class AdViewModel @Inject constructor() : ViewModel() {
         Log.d("AdDebug", "loadRewardedAd() called")
 
         RewardedAd.load(
-            context,
+            ctx,
             K.REWARDED_AD_ID,
             AdRequest.Builder().build(),
             object : RewardedAdLoadCallback() {

@@ -1,6 +1,7 @@
 package com.rach.co.quiz.presentation.screen
 
 import android.util.Log
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.background
@@ -52,10 +53,11 @@ import kotlinx.coroutines.withTimeoutOrNull
 fun QuizCourseScreen(
     navController: NavController,
     viewModel: QuizCategoryViewModel = hiltViewModel(),
-    adViewModel: AdViewModel = hiltViewModel()
+    //adViewModel: AdViewModel = hiltViewModel()
 ) {
     val activity = LocalActivity.current ?: return
     val courses by viewModel.courseList
+    val adViewModel: AdViewModel = hiltViewModel(activity as ComponentActivity)
     val isRewardedAdReady by adViewModel.isRewardedAdReady
     val scope = rememberCoroutineScope()
 

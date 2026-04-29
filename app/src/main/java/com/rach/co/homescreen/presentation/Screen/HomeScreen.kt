@@ -1,6 +1,8 @@
 package com.rach.co.homescreen.presentation.home.presentation.Screen
 
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -30,6 +32,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.rach.co.R
+import com.rach.co.ad.AdViewModel
 import com.rach.co.homescreen.data.DataClass.CategoryItem
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.NavigationDrawer
@@ -44,6 +47,24 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     quizViewModel: QuizCategoryViewModel = hiltViewModel()
 ) {
+
+    // 1. Get the activity safely
+    val activity = LocalActivity.current as? ComponentActivity
+
+    // 2. IMPORTANT: Scope this to the Activity so it survives navigation
+    val adViewModel: AdViewModel = if (activity != null) {
+        hiltViewModel(activity)
+    } else {
+        hiltViewModel()
+    }
+
+    LaunchedEffect(Unit) {
+        activity?.let {
+            adViewModel.loadAd(it)
+            adViewModel.loadAd2(it)
+            adViewModel.loadRewardedAd(it)
+        }
+    }
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.teach, Routes.COURSES),

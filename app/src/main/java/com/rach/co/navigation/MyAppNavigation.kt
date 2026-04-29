@@ -2,7 +2,6 @@ package com.rach.co.navigation
 
 import com.rach.co.quiz.presentation.screen.QuizCourseScreen
 import android.net.Uri
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
