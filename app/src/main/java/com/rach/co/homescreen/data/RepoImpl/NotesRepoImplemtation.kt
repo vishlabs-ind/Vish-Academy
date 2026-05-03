@@ -39,6 +39,37 @@ class NotesRepoImplemtation @Inject constructor(val firestore: FirebaseFirestore
         list.add(item)
 
 
-    return list
+        return list
 
-}}
+    }
+
+    override suspend fun pdfSearchBar(query: String): List<NotesItems> {
+        val list = mutableListOf<NotesItems>()
+
+        try {
+            val documents = FirebaseFirestore.getInstance()
+                .collection("notes")
+                .whereEqualTo("chapterName", query.trim())
+                .get()
+                .await()
+
+            if (documents.isEmpty) {
+                Log.d("EMPTY", "No documents found")
+                return emptyList()
+            }
+
+            Log.d("FIREBASE", "docs size = ${documents.size()}")
+
+            for (doc in documents) {
+                val data = doc.toObject(NotesItems::class.java)
+                Log.d("FIREBASE", "doc data = ${doc.data}")
+                list.add(data)
+            }
+
+        } catch (e: Exception) {
+            Log.d("ERROR", e.message.toString())
+        }
+
+        return list
+    }
+}

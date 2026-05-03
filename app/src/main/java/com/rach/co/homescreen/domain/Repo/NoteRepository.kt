@@ -7,4 +7,5 @@ interface NoteRepository {
 
     suspend fun getNotePdf(folderName: String):List<NotesItems>
 
+    suspend fun pdfSearchBar(query: String):List<NotesItems>
 }

@@ -113,7 +113,7 @@ dependencies {
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:13.0.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
 
-    //Google admob 
+    //Google admob
     implementation(libs.play.services.ads)
 
     implementation("com.google.android.play:app-update:2.1.0")

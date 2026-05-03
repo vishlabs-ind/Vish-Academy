@@ -19,6 +19,10 @@ class NotesViewModel @Inject constructor( val noteRepository: NoteRepository): V
 
     val notesPdf: StateFlow<List<NotesItems>> = _notesPdf
 
+    private val _pdfSearch = MutableStateFlow<List<NotesItems>>(emptyList())
+
+    val pdfSearch: StateFlow<List<NotesItems>> = _pdfSearch
+
 
     fun viewAllNotes() {
 
@@ -49,16 +53,14 @@ class NotesViewModel @Inject constructor( val noteRepository: NoteRepository): V
 
     }
 
-//    // single function for all folders
-//    fun viewNotes(folderName: String) {
-//
-//        viewModelScope.launch {
-//
-//            val data = noteRepository.getNotePdf(folderName)
-//
-//            _notesPdf.value = data
-//
-//            Log.d("PDF_DATA", data.toString())
-//        }
-//    }
+
+
+    fun pdfSearchBar(query: String) {
+        viewModelScope.launch {
+            val filteredList = _notesPdf.value.filter {
+                it.chapterName?.contains(query, ignoreCase = true) == true
+            }
+            _pdfSearch.value = filteredList
+        }
+    }
 }
