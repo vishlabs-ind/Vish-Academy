@@ -1,0 +1,93 @@
+{
+  "subjects": [
+    {
+      "subjectId": "ba",
+      "subjectTitle": "BA",
+      "examDurationMinutes": 1,
+      "questions": [
+        {
+          "id": 1,
+          "question": "भारत की राजधानी क्या है?",
+          "options": ["मुंबई", "दिल्ली", "कोलकाता", "चेन्नई"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "महात्मा गांधी का जन्म कब हुआ?",
+          "options": ["1869", "1872", "1880", "1890"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 3,
+          "question": "भारत का राष्ट्रीय पशु कौन है?",
+          "options": ["सिंह", "बाघ", "हाथी", "घोड़ा"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "भारत का राष्ट्रीय पक्षी?",
+          "options": ["मोर", "तोता", "कबूतर", "हंस"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "भारत का संविधान कब लागू हुआ?",
+          "options": ["1947", "1950", "1952", "1960"],
+          "correctAnswerIndex": 1
+        }
+      ]
+    },
+    {
+      "subjectId": "bca",
+      "subjectTitle": "BCA",
+      "examDurationMinutes": 1,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Binary equivalent of decimal 10?",
+          "options": ["1010", "1001", "1100", "1110"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "CPU stands for?",
+          "options": [
+            "Central Process Unit",
+            "Central Processing Unit",
+            "Computer Process Unit",
+            "Central Processor Utility"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "RAM stands for?",
+          "options": [
+            "Random Access Memory",
+            "Read Access Memory",
+            "Run Access Memory",
+            "Real Application Memory"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 4,
+          "question": "HTML stands for?",
+          "options": [
+            "Hyper Text Markup Language",
+            "High Text Machine Language",
+            "Hyper Tabular Markup Language",
+            "Home Tool Markup Language"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "Which is an operating system?",
+          "options": ["Windows", "MS Word", "Excel", "PowerPoint"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    }
+  ]
+}
