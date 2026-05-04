@@ -15,8 +15,8 @@ android {
         applicationId = "com.rach.co"
         minSdk = 25
         targetSdk = 36
-        versionCode = 30
-        versionName = "20.7"
+        versionCode = 31
+        versionName = "20.8"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
