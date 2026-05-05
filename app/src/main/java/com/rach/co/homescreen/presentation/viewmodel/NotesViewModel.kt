@@ -28,39 +28,35 @@ class NotesViewModel @Inject constructor( val noteRepository: NoteRepository): V
 
         viewModelScope.launch {
 
-            val folderList =
-                listOf(
-                    "Hindi PYQ",
-                    "Maths Youtube 1"
-                )
+            try {
 
-            val allPdfList =
-                mutableListOf<NotesItems>()
+                val data = noteRepository.getNotePdf()
 
-            for(folder in folderList){
+                _notesPdf.value = data
 
-                val data =
-                    noteRepository.getNotePdf(folder)
+            } catch (e: Exception) {
 
-                allPdfList.addAll(data)
+                Log.e("VIEWMODEL_ERROR", "Error fetching notes", e)
 
+                _notesPdf.value = emptyList() // fallback
+
+                // Optional: error state bhi bana sakte ho
+                // _errorState.value = "Something went wrong"
             }
-
-            _notesPdf.value =
-                allPdfList
-
         }
-
     }
-
 
 
     fun pdfSearchBar(query: String) {
-        viewModelScope.launch {
-            val filteredList = _notesPdf.value.filter {
-                it.chapterName?.contains(query, ignoreCase = true) == true
+
+        val searchText = query.trim()
+
+        _pdfSearch.value = if (searchText.isEmpty()) {
+            _notesPdf.value
+        } else {
+            _notesPdf.value.filter { item ->
+                item.chapterName
+                    ?.contains(searchText, ignoreCase = true) == true
             }
-            _pdfSearch.value = filteredList
         }
-    }
-}
+    }}

@@ -2223,6 +2223,102 @@
           "correctAnswerIndex": 0
         }
       ]
+    },
+    {
+      "courseId": "lucnkow_university_coding_decoding",
+      "courseTitle": "Lucknow University Reasoning Coding Decoding",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In a certain code language,\nCAT is written as DBU.\n\nHow will DOG be written in that code?",
+          "options": ["EPH", "DPH" , "EOG","EPG"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "In a certain code language, ‘FISHES’ is written as ‘69198519’. ‘BODY’ is written as 215425. What is the code for ‘LEAD’?",
+          "options": ["121514", "12514", "215412", "12511"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "In a certain code language, ‘PRO’ is written as ‘48’. ‘BAL’ is written as ‘14’. What is the code for ‘COH’?",
+          "options": ["26", "25", "24", "27"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "In a code language, ‘REASON’ is written as ‘SDBRPM’. What is the code for ‘NGLISH’?",
+          "options": ["OFMHTG", "XPGMUH", "YPGNIH", "OEMHTG"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "In a certain code language, ‘VERBAL’ is written as ‘225182112’. ‘CURANT’ is written as ‘321181420’. What is the code for ‘SOLVER’?",
+          "options": ["19152412518", "19151222518", "1915122518", "1915123518"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "In a code language, if ‘REPAIR’ is written as 18101621818, then how will ‘GALAXY’ be written?",
+          "options": ["721212425", "721222425", "711212425", "611212324"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "In a code language, if ‘CLASS’ is written as 24152688, then how will ‘MORPH’ be written?",
+          "options": ["15129119", "14129119", "131291018", "141181118"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "In a code language: ‘people are confident’ → lur bur duk, ‘we are helpful’ → kur duk sur, ‘we have cars’ → sur mur jur, ‘people have honesty’ → lur jur nur. What is the code for ‘confident’?",
+          "options": ["bur", "duk", "jur", "lur"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 9,
+          "question": "In a code language, if ‘SOLID’ is written as 8415323, then how will ‘LUCID’ be written?",
+          "options": ["14524323", "15524323", "15424322", "15423322"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "In a code language: ‘are you coming’ → gla pla sot, ‘they are right’ → kla sot pom, ‘are they coming’ → sot pla pom. What is the code for ‘right’?",
+          "options": ["pom", "sot", "kla", "gla"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "In a code language, if ‘BADGE’ is written as 4281410, then how will ‘NORMS’ be written?",
+          "options": ["2832362436", "2430362630", "141581320", "2830362638"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 12,
+          "question": "In a code language, if ‘HE’ = 40 and ‘GO’ = 105, then what will be the code for ‘BAND’?",
+          "options": ["52", "112", "21", "102"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "In a code language: ‘this is done’ → koj mor soi, ‘that is okay’ → loj roj mor, ‘you are okay’ → hok nok loj. What is the code for ‘that’?",
+          "options": ["mor", "loj", "koj", "roj"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 14,
+          "question": "In a code language, ‘KITE’ is written as ‘9’ and ‘MAGIC’ is written as ‘11’. How will ‘FELICITATION’ be written?",
+          "options": ["25", "22", "24", "12"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "In a code language: ‘dee duc tic’ → roses are red, ‘bil doe’ → yellow carnations, ‘tic dur doe’ → carnations are pink. What is the code for ‘pink’?",
+          "options": ["doe", "dee", "tic", "dur"],
+          "correctAnswerIndex": 3
+        }
+      ]
     }
   ]
 }

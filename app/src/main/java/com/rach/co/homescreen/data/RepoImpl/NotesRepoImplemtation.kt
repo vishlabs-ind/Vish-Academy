@@ -3,73 +3,54 @@ package com.rach.co.homescreen.data.RepoImpl
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.protobuf.LazyStringArrayList.emptyList
 import com.rach.co.homescreen.data.DataClass.NotesItems
 import com.rach.co.homescreen.domain.Repo.NoteRepository
 import kotlinx.coroutines.tasks.await
+import java.util.Collections.list
 import javax.inject.Inject
 
-class NotesRepoImplemtation @Inject constructor(val firestore: FirebaseFirestore) : NoteRepository {
-    override suspend fun getNotePdf(
-        folderName: String
-    ): List<NotesItems> {
+class NotesRepoImplemtation @Inject constructor(
+    private val firestore: FirebaseFirestore
+) : NoteRepository {
 
-        val result =
-            FirebaseFirestore.getInstance()
+    override suspend fun getNotePdf(): List<NotesItems> {
+
+        return try {
+
+            val result = firestore
                 .collection("notes")
-                .document(folderName)
                 .get()
                 .await()
 
-        val list = mutableListOf<NotesItems>()
+            val list = mutableListOf<NotesItems>()
 
+            for (doc in result.documents) {
 
-//        Log.d("FIRESTORE_DATA", doc.data.toString())
+                val chapterName = doc.getString("chapterName") ?: ""
+                val link = doc.getString("pdflink") ?: ""
 
+                // Invalid data skip
+                if (chapterName.isBlank() || link.isBlank()) continue
 
-        val chapterName = result.getString("chapterName") ?: ""
-        val link = result.getString("pdflink") ?: ""
-//        Log.d("FIRESTORE_DATA_NAME", chapterName)
-//        Log.d("FIRESTORE_DATA_LINK", link)
-        val item = NotesItems(
-            chapterName = chapterName,
-            pdflinkchapterName = link
-        )
+                val item = NotesItems(
+                    chapterName = chapterName,
+                    pdflinkchapterName = link
+                )
 
-
-        list.add(item)
-
-
-        return list
-
-    }
-
-    override suspend fun pdfSearchBar(query: String): List<NotesItems> {
-        val list = mutableListOf<NotesItems>()
-
-        try {
-            val documents = FirebaseFirestore.getInstance()
-                .collection("notes")
-                .whereEqualTo("chapterName", query.trim())
-                .get()
-                .await()
-
-            if (documents.isEmpty) {
-                Log.d("EMPTY", "No documents found")
-                return emptyList()
+                list.add(item)
             }
 
-            Log.d("FIREBASE", "docs size = ${documents.size()}")
-
-            for (doc in documents) {
-                val data = doc.toObject(NotesItems::class.java)
-                Log.d("FIREBASE", "doc data = ${doc.data}")
-                list.add(data)
-            }
+            list
 
         } catch (e: Exception) {
-            Log.d("ERROR", e.message.toString())
-        }
 
-        return list
+
+        return emptyList<NotesItems>()
+
     }
+
+    }
+
+
 }
