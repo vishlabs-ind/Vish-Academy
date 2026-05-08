@@ -44,6 +44,7 @@ android {
 
 dependencies {
     implementation("com.razorpay:checkout:1.6.41")
+    implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.tools.core)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.foundation)
@@ -124,5 +125,9 @@ dependencies {
 
         // Icons dependency
         implementation("androidx.compose.material:material-icons-extended:1.6.1")
+
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
 }
