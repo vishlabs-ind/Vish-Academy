@@ -20,6 +20,7 @@ import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
+import com.rach.co.ad.AdViewModel
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.AuthApp
 import com.rach.co.quiz.presentation.screen.NoInternetScreen
@@ -36,6 +37,7 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
     private lateinit var appUpdateManager: AppUpdateManager
     private val updateRequestCode = 100
     val homeViewModel: HomeViewModel by viewModels()
+    private val adViewModel: AdViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +46,21 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
 
         Checkout.preload(applicationContext)
         appUpdateManager = AppUpdateManagerFactory.create(this)
+
+        MobileAds.setRequestConfiguration(
+            RequestConfiguration.Builder()
+                .setTestDeviceIds(listOf("C6C9AED3199668D27D180B653D29B3ED"))
+                .build()
+        )
+
+        MobileAds.initialize(this) {
+            Log.d("AdDebug", "✅ MobileAds initialized")
+            adViewModel.loadAd()          // ← interstitial
+            adViewModel.loadAd2()          // ← interstitial
+            adViewModel.loadRewardedAd()  // ← rewarded
+        }
+
+
         setContent {
 
             val isConnected by networkMonitor.isConnected()
@@ -65,14 +82,6 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
             }
         }
         checkForUpdate()
-        MobileAds.initialize(this)
-        MobileAds.setRequestConfiguration(
-            RequestConfiguration.Builder()
-                .setTestDeviceIds(
-                    listOf("C6C9AED3199668D27D180B653D29B3ED")
-                )
-                .build()
-        )
     }
 
     override fun onPaymentSuccess(p0: String?, p1: PaymentData?) {

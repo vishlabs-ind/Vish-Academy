@@ -1,0 +1,251 @@
+{
+  "subjects": [
+    {
+      "subjectId": "english",
+      "subjectTitle": "English",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a noun?",
+          "options": ["A naming word", "An action word", "A describing word", "A joining word"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "Which of the following is a pronoun?",
+          "options": ["Beautiful", "He", "Quickly", "School"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Choose the correct verb in the sentence: She ___ to school daily.",
+          "options": ["go", "goes", "gone", "going"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Which of the following is an adjective?",
+          "options": ["Run", "Slowly", "Beautiful", "They"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "Choose the correct plural form of 'Child'.",
+          "options": ["Childs", "Children", "Childes", "Childrens"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "Which sentence is in present tense?",
+          "options": ["He played football", "He is playing football", "He will play football", "He had played football"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
+          "options": ["A", "An", "The", "No article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Which of the following is a conjunction?",
+          "options": ["And", "Quickly", "Happy", "Boy"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 9,
+          "question": "Choose the synonym of 'Happy'.",
+          "options": ["Sad", "Angry", "Joyful", "Tired"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "Choose the antonym of 'Hot'.",
+          "options": ["Warm", "Boiling", "Cool", "Heat"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "Which punctuation mark is used to ask a question?",
+          "options": [".", ",", "?", "!"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "Identify the adverb in the sentence: He runs fast.",
+          "options": ["He", "Runs", "Fast", "None"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Choose the correct spelling.",
+          "options": ["Recieve", "Receive", "Receeve", "Receve"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "What is the opposite of 'Begin'?",
+          "options": ["Open", "Start", "Close", "End"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 15,
+          "question": "Choose the correct sentence.",
+          "options": ["She go to school.", "She goes to school.", "She going to school.", "She gone to school."],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Which word is a preposition?",
+          "options": ["Under", "Beautiful", "Jump", "Softly"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "Choose the correct past tense of 'Write'.",
+          "options": ["Writed", "Writing", "Wrote", "Writes"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which of the following is an interrogative sentence?",
+          "options": ["I am happy.", "Please help me.", "Where are you going?", "What a beautiful day!"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Choose the correct form: They ___ playing cricket.",
+          "options": ["is", "am", "are", "was"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Which part of speech is the word 'Quickly'?",
+          "options": ["Noun", "Verb", "Adjective", "Adverb"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 21,
+          "question": "Choose the correct synonym of 'Brave'.",
+          "options": ["Coward", "Fearless", "Weak", "Lazy"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Choose the correct antonym of 'Ancient'.",
+          "options": ["Old", "Historic", "Modern", "Traditional"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which sentence is grammatically correct?",
+          "options": ["He do his homework.", "He does his homework.", "He doing his homework.", "He done his homework."],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "Identify the noun in the sentence: The cat is sleeping.",
+          "options": ["Sleeping", "Is", "Cat", "The"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "Choose the correct comparative form of 'Good'.",
+          "options": ["Gooder", "Best", "Better", "More good"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which word is a verb?",
+          "options": ["Dance", "Blue", "Chair", "Slow"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 27,
+          "question": "Choose the correct spelling.",
+          "options": ["Definately", "Definitely", "Definetly", "Definatly"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "Which sentence is in future tense?",
+          "options": ["She sang a song.", "She sings a song.", "She will sing a song.", "She is singing a song."],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "Choose the correct article: ___ umbrella is useful in rain.",
+          "options": ["A", "An", "The", "No article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Identify the adjective in the sentence: She wore a red dress.",
+          "options": ["She", "Wore", "Red", "Dress"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Which word is a pronoun?",
+          "options": ["Teacher", "Beautiful", "They", "Quickly"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "Choose the correct meaning of the idiom 'Break the ice'.",
+          "options": ["To shatter ice", "To start a conversation", "To feel cold", "To stop talking"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "Which sentence is an exclamatory sentence?",
+          "options": ["Please open the door.", "Where are you going?", "What a wonderful view!", "I am reading a book."],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "Choose the correct plural form of 'Mouse'.",
+          "options": ["Mouses", "Mousees", "Mice", "Mices"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "Identify the preposition in the sentence: The book is on the table.",
+          "options": ["Book", "On", "Table", "The"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Choose the correct passive voice: 'She writes a letter.'",
+          "options": ["A letter is written by her.", "A letter was written by her.", "A letter writes her.", "She is written a letter."],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 37,
+          "question": "Which word is an adverb?",
+          "options": ["Quickly", "Honest", "Table", "Teacher"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 38,
+          "question": "Choose the correct sentence.",
+          "options": ["I has a pen.", "I have a pen.", "I having a pen.", "I hading a pen."],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 39,
+          "question": "What is the opposite of 'Victory'?",
+          "options": ["Success", "Defeat", "Achievement", "Prize"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Choose the correct question tag: 'You are coming, ___?'",
+          "options": ["aren't you", "are you", "don't you", "won't you"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    }
+  ]
+}

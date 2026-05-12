@@ -1,4 +1,5 @@
-package com.rach.co.exam.data.dataClass
+package com.rach.co.mock.data.dataClass
+
 
 data class Subject (
     val subjectId: String = " ",

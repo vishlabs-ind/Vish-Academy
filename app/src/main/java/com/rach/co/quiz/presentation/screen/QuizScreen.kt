@@ -57,7 +57,7 @@ fun QuizScreen(
     // 2. Load course once
     LaunchedEffect(Unit) {
         viewModel.loadCourse(courseId)
-        viewModels.loadAd2(context)
+        viewModels.loadAd2()
     }
 
 

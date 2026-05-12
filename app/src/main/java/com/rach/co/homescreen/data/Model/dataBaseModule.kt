@@ -3,6 +3,7 @@ package com.rach.co.homescreen.data.Model
 import android.content.Context
 import androidx.room.Room
 import com.rach.co.homescreen.domain.Repo.CourseDao
+import com.rach.co.mock.data.room.MockDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,5 +32,9 @@ object DatabaseModule {
     @Provides
     fun provideCourseDao(db: AppDatabase): CourseDao {
         return db.courseDao()
+    }
+    @Provides
+    fun provideMockDao(db: AppDatabase): MockDao {
+        return db.mockDao()
     }
 }

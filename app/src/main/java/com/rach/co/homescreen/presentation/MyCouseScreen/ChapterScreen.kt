@@ -55,7 +55,7 @@ fun ChapterScreen(
 
     LaunchedEffect(Unit) {
         vm.loadChapters(courseId)
-        adViewModel.loadAd(context = context)
+        adViewModel.loadAd()
 
     }
 

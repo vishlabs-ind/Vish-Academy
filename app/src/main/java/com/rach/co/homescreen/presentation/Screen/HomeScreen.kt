@@ -36,6 +36,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.rach.co.R
+import com.rach.co.ad.AdViewModel
 import com.rach.co.homescreen.data.DataClass.CategoryItem
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.NavigationDrawer
@@ -49,15 +50,19 @@ import kotlinx.coroutines.launch
 fun HomeScreen(
     navController: NavHostController,
     viewModel: HomeViewModel = hiltViewModel(),
-    quizViewModel: QuizCategoryViewModel = hiltViewModel()
+    quizViewModel: QuizCategoryViewModel = hiltViewModel(),
+    adViewModel: AdViewModel
 ) {
+    LaunchedEffect(Unit) {
+        adViewModel.loadRewardedAd()  // ← preload here
+    }
 
     val categories = listOf(
         CategoryItem("Courses", R.drawable.open_book_study_svgrepo_com, Routes.COURSES),
         CategoryItem("My Courses", R.drawable.course_form, Routes.My_COURSES),
         CategoryItem("Quiz", R.drawable.test_svgrepo_com, Routes.QUIZ),
         CategoryItem("Notes", R.drawable.notes_notepad_svgrepo_com, Routes.Notes),
-        CategoryItem("Exam", R.drawable.exam_svgrepo_com, Routes.SUBJECT_SELECTION)  // ← fix here
+        CategoryItem("Mock Test", R.drawable.exam_svgrepo_com, Routes.MOCK_SUBJECT_SELECTION)  // ← fix here
     )
 
     val coroutineScope = rememberCoroutineScope()

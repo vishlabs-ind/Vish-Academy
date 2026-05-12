@@ -52,7 +52,7 @@ import kotlinx.coroutines.withTimeoutOrNull
 fun QuizCourseScreen(
     navController: NavController,
     viewModel: QuizCategoryViewModel = hiltViewModel(),
-    adViewModel: AdViewModel = hiltViewModel()
+    adViewModel: AdViewModel
 ) {
     val activity = LocalActivity.current ?: return
     val courses by viewModel.courseList
@@ -64,7 +64,7 @@ fun QuizCourseScreen(
 
     LaunchedEffect(Unit) {
         viewModel.loadCourses()
-        adViewModel.loadRewardedAd(activity)  // preload rewarded ad on screen entry
+        // adViewModel.loadRewardedAd(activity)  // preload rewarded ad on screen entry
     }
 
     BackHandler {

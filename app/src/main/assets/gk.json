@@ -1,0 +1,251 @@
+{
+  "subjects": [
+    {
+      "subjectId": "gk",
+      "subjectTitle": "GK",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the capital of India?",
+          "options": ["Mumbai", "Kolkata", "New Delhi", "Chennai"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "Who is known as the Father of the Nation in India?",
+          "options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhash Chandra Bose", "Bhagat Singh"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Earth", "Mars", "Jupiter", "Venus"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "How many continents are there in the world?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "Which is the largest ocean in the world?",
+          "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 6,
+          "question": "Who wrote the National Anthem of India?",
+          "options": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Sarojini Naidu", "Premchand"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "Which gas do plants absorb from the atmosphere?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "What is the national animal of India?",
+          "options": ["Lion", "Tiger", "Elephant", "Peacock"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Which is the smallest state in India by area?",
+          "options": ["Goa", "Sikkim", "Tripura", "Nagaland"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Who invented the telephone?",
+          "options": ["Thomas Edison", "Alexander Graham Bell", "Newton", "Einstein"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "Which is the longest river in the world?",
+          "options": ["Amazon", "Ganga", "Nile", "Yamuna"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "Which country is known as the Land of Rising Sun?",
+          "options": ["China", "Japan", "Thailand", "Nepal"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "What is the currency of India?",
+          "options": ["Dollar", "Euro", "Rupee", "Yen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Who was the first Prime Minister of India?",
+          "options": ["Indira Gandhi", "Rajendra Prasad", "Jawaharlal Nehru", "Sardar Patel"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Which organ purifies blood in the human body?",
+          "options": ["Heart", "Lungs", "Kidney", "Brain"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "How many players are there in a cricket team?",
+          "options": ["9", "10", "11", "12"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Which festival is known as the Festival of Lights?",
+          "options": ["Holi", "Diwali", "Eid", "Christmas"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "What is the national flower of India?",
+          "options": ["Rose", "Lotus", "Sunflower", "Lily"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "Which is the largest planet in the solar system?",
+          "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Who discovered gravity?",
+          "options": ["Newton", "Galileo", "Einstein", "Edison"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "Which is the national bird of India?",
+          "options": ["Parrot", "Peacock", "Crow", "Sparrow"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "How many states are there in India?",
+          "options": ["26", "27", "28", "29"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which blood group is called universal donor?",
+          "options": ["A", "B", "AB", "O negative"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 24,
+          "question": "Which day is celebrated as Independence Day in India?",
+          "options": ["26 January", "15 August", "2 October", "14 November"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "What is the boiling point of water?",
+          "options": ["50°C", "75°C", "100°C", "150°C"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which is the fastest land animal?",
+          "options": ["Lion", "Tiger", "Cheetah", "Horse"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 27,
+          "question": "Who wrote Ramayana?",
+          "options": ["Tulsidas", "Kalidas", "Valmiki", "Ved Vyas"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which is the tallest mountain in the world?",
+          "options": ["K2", "Mount Everest", "Kanchenjunga", "Alps"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "Which metal is liquid at room temperature?",
+          "options": ["Iron", "Copper", "Mercury", "Silver"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Which planet is closest to the Sun?",
+          "options": ["Venus", "Earth", "Mercury", "Mars"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Who is known as the Missile Man of India?",
+          "options": ["A.P.J. Abdul Kalam", "Vikram Sarabhai", "Homi Bhabha", "C.V. Raman"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 32,
+          "question": "Which is the largest desert in the world?",
+          "options": ["Sahara Desert", "Thar Desert", "Gobi Desert", "Kalahari Desert"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 33,
+          "question": "Which vitamin is obtained from sunlight?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 34,
+          "question": "Who was the first President of India?",
+          "options": ["Dr. Rajendra Prasad", "S. Radhakrishnan", "Zakir Hussain", "Jawaharlal Nehru"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 35,
+          "question": "Which is the largest mammal in the world?",
+          "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Which Indian city is known as the Pink City?",
+          "options": ["Udaipur", "Jodhpur", "Jaipur", "Ajmer"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "What is the chemical symbol of gold?",
+          "options": ["Go", "Au", "Ag", "Gd"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "Which country gifted the Statue of Liberty to the USA?",
+          "options": ["France", "Germany", "Canada", "Italy"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 39,
+          "question": "Which is the smallest planet in the solar system?",
+          "options": ["Mars", "Mercury", "Venus", "Pluto"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Who invented the bulb?",
+          "options": ["Newton", "Einstein", "Thomas Edison", "Bell"],
+          "correctAnswerIndex": 2
+        }
+      ]
+    }
+  ]
+}

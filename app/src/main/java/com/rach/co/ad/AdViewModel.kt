@@ -18,12 +18,14 @@ import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.rach.co.auth.data.Model.UserPrefs
 import com.rach.co.utils.K
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.launch
 import javax.inject.Inject  // ✅ correct import
 
 @HiltViewModel
 class AdViewModel @Inject constructor(
-    private val userPrefs: UserPrefs
+    private val userPrefs: UserPrefs,
+    @ApplicationContext private val context: Context
 
 ) : ViewModel() {
 
@@ -66,7 +68,7 @@ class AdViewModel @Inject constructor(
     // Ad 1  (Exam / Course section)
     // ─────────────────────────────────────────
 
-    fun loadAd(context: Context) {
+    fun loadAd() {
         if (isAd1Loading || interstitialAd1 != null) {
             Log.d("AdMob", "Ad1 already loading or loaded — skipping")
             return
@@ -115,7 +117,7 @@ class AdViewModel @Inject constructor(
                 interstitialAd1 = null
                 _isAd1Ready.value = false
                 onAdClosed()
-                loadAd(activity)  // ✅ reload Ad1 for next time
+                loadAd()  // ✅ reload Ad1 for next time
             }
             override fun onAdFailedToShowFullScreenContent(error: AdError) {
                 Log.e("AdMob", "❌ Ad1 failed to show: ${error.message}")
@@ -130,7 +132,7 @@ class AdViewModel @Inject constructor(
     // Ad 2  (Quiz section)
     // ─────────────────────────────────────────
 
-    fun loadAd2(context: Context) {
+    fun loadAd2() {
         if (isAd2Loading || interstitialAd2 != null) {
             Log.d("AdMob", "Ad2 already loading or loaded — skipping")
             return
@@ -180,7 +182,7 @@ class AdViewModel @Inject constructor(
                 interstitialAd2 = null
                 _isAd2Ready.value = false
                 onAdClosed()
-                loadAd2(activity)  // ✅ reload Ad2 for next time
+                loadAd2()  // ✅ reload Ad2 for next time
             }
             override fun onAdFailedToShowFullScreenContent(error: AdError) {
                 Log.e("AdMob", "❌ Ad2 failed to show: ${error.message}")
@@ -195,7 +197,7 @@ class AdViewModel @Inject constructor(
     // Rewarded Ad  (QuizCourseScreen)
     // ─────────────────────────────────────────
 
-    fun loadRewardedAd(context: Context) {
+    fun loadRewardedAd() {
         if (isRewardedLoading || rewardedAd != null) {
             Log.d("AdDebug", "Rewarded ad already loading or loaded — skipping")
             return
@@ -247,13 +249,13 @@ class AdViewModel @Inject constructor(
                 rewardedAd = null
                 _isRewardedAdReady.value = false
                 onAdDismissed()
-                loadRewardedAd(activity)  // ✅ reload for next time
+                loadRewardedAd()  // ✅ reload for next time
             }
             override fun onAdFailedToShowFullScreenContent(error: AdError) {
                 Log.e("AdDebug", "❌ Rewarded ad failed to show: ${error.message}")
                 rewardedAd = null
                 _isRewardedAdReady.value = false
-                loadRewardedAd(activity)
+                loadRewardedAd()
                 onAdDismissed()
             }
         }

@@ -1,4 +1,5 @@
-package com.rach.co.exam.presentation.screen
+package com.rach.co.mock.presentation.screen
+
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
@@ -14,15 +15,28 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.rach.co.navigation.Routes
 
 @Composable
-fun ExamResultScreen(
+fun MockResultScreen(
+    resultId: Int,
     score: Int,
     totalQuestions: Int,
-    onBackClick: () -> Unit
+    timeTakenSeconds: Long,
+    navController: NavController
 ) {
     // back press → home
-    BackHandler { onBackClick() }
+    BackHandler {
+        navController.navigate(Routes.HOME) {
+            popUpTo(Routes.HOME) { inclusive = false }
+        }
+    }
+
+    // format time taken
+    val minutes = timeTakenSeconds / 60
+    val seconds = timeTakenSeconds % 60
+    val timeTakenText = "%02d:%02d".format(minutes, seconds)
 
     Column(
         modifier = Modifier
@@ -37,14 +51,17 @@ fun ExamResultScreen(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            IconButton(onClick = { onBackClick() }) {
-                Icon(
-                    Icons.Default.ArrowBack,
-                    contentDescription = "Back"
-                )
+            IconButton(
+                onClick = {
+                    navController.navigate(Routes.HOME) {
+                        popUpTo(Routes.HOME) { inclusive = false }
+                    }
+                }
+            ) {
+                Icon(Icons.Default.ArrowBack, contentDescription = "Back")
             }
             Text(
-                text = "Exam Result",
+                text = "Mock Result",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold
             )
@@ -85,11 +102,71 @@ fun ExamResultScreen(
             }
         }
 
+        Spacer(modifier = Modifier.height(32.dp))
+
+        // --- Time Taken ---
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant
+            )
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Time Taken",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Text(
+                    text = timeTakenText,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
+        }
+
         Spacer(modifier = Modifier.weight(1f))
+
+        // --- Review Button ---
+        OutlinedButton(
+            onClick = {
+                navController.navigate(
+                    "${Routes.MOCK_REVIEW}/$resultId"
+                )
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.outlinedButtonColors(
+                contentColor = MaterialTheme.colorScheme.primary
+            )
+        ) {
+            Text(
+                text = "Review Answers",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
 
         // --- Back to Home Button ---
         Button(
-            onClick = { onBackClick() },
+            onClick = {
+                navController.navigate(Routes.HOME) {
+                    popUpTo(Routes.HOME) { inclusive = false }
+                }
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),

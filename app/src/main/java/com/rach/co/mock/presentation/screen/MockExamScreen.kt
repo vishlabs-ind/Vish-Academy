@@ -1,6 +1,8 @@
-package com.rach.co.exam.presentation.screen
+package com.rach.co.mock.presentation.screen
 
-import android.util.Log
+
+import com.rach.co.mock.presentation.viewModel.MockScreenState
+import com.rach.co.mock.presentation.viewModel.MockViewModel
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -21,16 +23,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.rach.co.exam.presentation.viewmodel.ExamScreenState
-import com.rach.co.exam.presentation.viewmodel.ExamViewModel
+
 import com.rach.co.navigation.Routes
 import kotlinx.coroutines.launch
 
 @Composable
-fun ExamScreen(
+fun MockExamScreen(
     subjectId: String,
     navController: NavController,
-    viewModel: ExamViewModel = hiltViewModel()
+    viewModel: MockViewModel = hiltViewModel()
 ) {
     val subject by viewModel.subject
     val currentIndex by viewModel.currentIndex
@@ -41,32 +42,30 @@ fun ExamScreen(
     val examLoadState by viewModel.examLoadState
     val selectedAnswers = viewModel.selectedAnswers
     val showWarningDialog by viewModel.showWarningDialog
+    val savedResultId by viewModel.savedResultId
 
     val scope = rememberCoroutineScope()
-
-    // back press exit dialog
     var showExitDialog by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
-        Log.d("ExamTest", "subjectId received: $subjectId")
         viewModel.loadSubject(subjectId)
     }
 
-    // navigate to result when submitted successfully
-    LaunchedEffect(isSubmitted) {
-        if (isSubmitted) {
+    // navigate to result when submitted
+    LaunchedEffect(savedResultId) {
+        savedResultId?.let { id ->
             val score = viewModel.calculateScore()
-            val total = subject?.questions?.size ?: 0
-            navController.navigate("${Routes.EXAM_RESULT}/$score/$total") {
-                popUpTo(Routes.SUBJECT_SELECTION) { inclusive = false }
+            val timeTaken = viewModel.timeTakenSeconds.value
+            navController.navigate(
+                "${Routes.MOCK_RESULT}/$id/$score/${subject?.questions?.size ?: 0}/$timeTaken"
+            ) {
+                popUpTo(Routes.MOCK_SUBJECT_SELECTION) { inclusive = false }
             }
         }
     }
 
     // intercept back press
-    BackHandler {
-        showExitDialog = true
-    }
+    BackHandler { showExitDialog = true }
 
     // --- 30 Second Warning Dialog ---
     if (showWarningDialog) {
@@ -75,11 +74,12 @@ fun ExamScreen(
             title = {
                 Text(
                     text = "⚠️ Time Running Out!",
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Red
                 )
             },
             text = {
-                Text("30 seconds remaining! Please submit your response or it will be auto submitted.")
+                Text("30 seconds remaining! Your mock will be auto saved.")
             },
             confirmButton = {
                 TextButton(onClick = { viewModel.dismissWarningDialog() }) {
@@ -95,31 +95,19 @@ fun ExamScreen(
             onDismissRequest = { showExitDialog = false },
             title = {
                 Text(
-                    text = "Exit Exam?",
+                    text = "Exit Mock?",
                     fontWeight = FontWeight.Bold
                 )
             },
             text = {
-                Text("Are you sure you want to exit? Your progress will be lost.")
+                Text("Are you sure you want to exit? Your progress will be saved.")
             },
             confirmButton = {
                 Button(
                     onClick = {
                         showExitDialog = false
                         scope.launch {
-                            val result = viewModel.submitExam()
-                            result.fold(
-                                onSuccess = { examResult ->
-                                    val score = examResult.score
-                                    val total = examResult.totalQuestions
-                                    navController.navigate("${Routes.EXAM_RESULT}/$score/$total") {
-                                        popUpTo(Routes.HOME) { inclusive = false }
-                                    }
-                                },
-                                onFailure = {
-                                    // error handled by submitError state
-                                }
-                            )
+                            viewModel.submitMock()
                         }
                     },
                     enabled = !isSubmitting,
@@ -152,13 +140,17 @@ fun ExamScreen(
             onDismissRequest = { },
             title = {
                 Text(
-                    text = "Submit Failed",
+                    text = "Save Failed",
                     fontWeight = FontWeight.Bold
                 )
             },
             text = { Text(error) },
             confirmButton = {
-                TextButton(onClick = { }) {
+                TextButton(
+                    onClick = {
+                        scope.launch { viewModel.submitMock() }
+                    }
+                ) {
                     Text("Try Again")
                 }
             }
@@ -167,7 +159,7 @@ fun ExamScreen(
 
     // --- Loading State ---
     when (examLoadState) {
-        is ExamScreenState.Loading -> {
+        is MockScreenState.Loading -> {
             Box(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
@@ -176,21 +168,19 @@ fun ExamScreen(
             }
             return
         }
-
-        is ExamScreenState.Error -> {
+        is MockScreenState.Error -> {
             Box(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = (examLoadState as ExamScreenState.Error).message,
+                    text = (examLoadState as MockScreenState.Error).message,
                     fontSize = 16.sp,
                     color = Color.Gray
                 )
             }
             return
         }
-
         else -> {}
     }
 
@@ -203,7 +193,9 @@ fun ExamScreen(
     val minutes = timeLeftSeconds / 60
     val seconds = timeLeftSeconds % 60
     val timerText = "%02d:%02d".format(minutes, seconds)
-    val timerColor = if (timeLeftSeconds <= 300) Color.Red
+
+    // timer color — red when 30 seconds or less
+    val timerColor = if (timeLeftSeconds <= 30) Color.Red
     else MaterialTheme.colorScheme.onBackground
 
     Column(
@@ -222,7 +214,8 @@ fun ExamScreen(
             Text(
                 text = subject?.subjectTitle ?: "",
                 fontSize = 20.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onBackground
             )
 
             // Timer
@@ -276,7 +269,8 @@ fun ExamScreen(
                     modifier = Modifier.padding(20.dp),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.SemiBold,
-                    lineHeight = 26.sp
+                    lineHeight = 26.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
@@ -286,7 +280,7 @@ fun ExamScreen(
             val selectedOption = selectedAnswers[currentIndex]
 
             question.options.forEachIndexed { index, optionText ->
-                ExamOptionCard(
+                MockOptionCard(
                     text = optionText,
                     isSelected = selectedOption == index,
                     onClick = { viewModel.selectAnswer(index) }
@@ -309,7 +303,7 @@ fun ExamScreen(
             // Back Button
             TextButton(
                 onClick = { viewModel.previousQuestion() },
-                enabled = currentIndex > 0,
+                enabled = currentIndex > 0 && !isSubmitting,
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant,
                     disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)
@@ -326,19 +320,7 @@ fun ExamScreen(
                 onClick = {
                     if (viewModel.isLastQuestion()) {
                         scope.launch {
-                            val result = viewModel.submitExam()
-                            result.fold(
-                                onSuccess = { examResult ->
-                                    val score = examResult.score
-                                    val total = examResult.totalQuestions
-                                    navController.navigate("${Routes.EXAM_RESULT}/$score/$total") {
-                                        popUpTo(Routes.SUBJECT_SELECTION) { inclusive = false }
-                                    }
-                                },
-                                onFailure = {
-                                    // error handled by submitError state
-                                }
-                            )
+                            viewModel.submitMock()
                         }
                     } else {
                         viewModel.nextQuestion()
@@ -376,9 +358,9 @@ fun ExamScreen(
 }
 
 // --- Option Card ---
-// No green/red — only blue highlight on selection
+// Gray highlight on selection — no green/red during mock
 @Composable
-fun ExamOptionCard(
+fun MockOptionCard(
     text: String,
     isSelected: Boolean,
     onClick: () -> Unit
@@ -390,22 +372,22 @@ fun ExamOptionCard(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (isSelected)
-                MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)
+                Color.Gray.copy(alpha = 0.3f)
             else
                 MaterialTheme.colorScheme.surfaceVariant
         ),
-        border = if (isSelected) CardDefaults.outlinedCardBorder().copy(
-            width = 2.dp
-        ) else null
+        border = if (isSelected)
+            androidx.compose.foundation.BorderStroke(
+                2.dp,
+                Color.Gray
+            )
+        else null
     ) {
         Text(
             text = text,
             modifier = Modifier.padding(16.dp),
             fontSize = 15.sp,
-            color = if (isSelected)
-                MaterialTheme.colorScheme.primary
-            else
-                MaterialTheme.colorScheme.onSurfaceVariant
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
     }
 }

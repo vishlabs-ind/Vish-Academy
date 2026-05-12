@@ -70,7 +70,7 @@ fun CoursePurchasedScreen(
         }
     }
     LaunchedEffect(Unit) {
-        adViewModel.loadAd(context = context)
+        adViewModel.loadAd()
 
     }
 

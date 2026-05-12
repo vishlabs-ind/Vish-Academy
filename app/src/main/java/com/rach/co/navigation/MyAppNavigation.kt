@@ -3,6 +3,7 @@ package com.rach.co.navigation
 import com.rach.co.quiz.presentation.screen.QuizCourseScreen
 import android.net.Uri
 import android.util.Log
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -10,18 +11,17 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
+import com.rach.co.ad.AdViewModel
 import com.rach.co.auth.presentation.onboard.OnboardScreen
 import com.rach.co.homescreen.presentation.home.presentation.Screen.HomeScreen
 import com.rach.co.auth.presentation.login.LoginScreen
 import com.rach.co.auth.presentation.signup.SignupScreen
-import com.rach.co.exam.presentation.screen.ExamResultScreen
-import com.rach.co.exam.presentation.screen.ExamScreen
-import com.rach.co.exam.presentation.screen.SubjectSelectionScreen
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterDetailScreen
 import com.rach.co.homescreen.presentation.MyCouseScreen.ChapterScreen
@@ -30,6 +30,10 @@ import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.homescreen.presentation.Screen.NoteScreen
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
+import com.rach.co.mock.presentation.screen.MockExamScreen
+import com.rach.co.mock.presentation.screen.MockResultScreen
+import com.rach.co.mock.presentation.screen.MockReviewScreen
+import com.rach.co.mock.presentation.screen.MockSubjectSelectionScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.HelpSupportScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
@@ -44,6 +48,9 @@ fun AuthApp() {
     val onboardingManager = remember { OnboardingManager(context) }
 
     var startDestination by remember { mutableStateOf<String?>(null) }
+
+    val activity = androidx.activity.compose.LocalActivity.current as? ComponentActivity ?: return
+    val adViewModel: AdViewModel = viewModel(viewModelStoreOwner = activity)
 
     LaunchedEffect(Unit) {
 
@@ -97,7 +104,7 @@ fun AuthApp() {
 
         composable("login") { LoginScreen(navController) }
         composable("signup") { SignupScreen(navController) }
-        composable(Routes.HOME) { HomeScreen(navController) }
+        composable(Routes.HOME) { HomeScreen(navController, adViewModel = adViewModel) }
 
 
         composable(Routes.COURSES) {
@@ -108,52 +115,48 @@ fun AuthApp() {
         }
 
         composable("quiz_course") {
-            QuizCourseScreen(navController)
+            QuizCourseScreen(navController, adViewModel = adViewModel)
         }
         composable("notes") {
             NoteScreen(navController)
         }
-//        composable("allPdfs/{pdfName}",
-//            arguments = listOf(
-//                navArgument("pdfName"){type= NavType.StringType}
-//            )
-//        ) {backStack->
-//            val foldeeName=backStack.arguments?.getString("pdfName")
-//            PdfsScreen(foldeeName,navController)
-//        }
 
-        composable(Routes.SUBJECT_SELECTION) {
-            SubjectSelectionScreen(navController = navController)
-        }
-
-        // add this after the EXAM composable
-
+        // here
         composable(
-            route = "${Routes.EXAM}/{subjectId}",
+            route = "${Routes.QUIZ}/{courseId}",
             arguments = listOf(
-                navArgument("subjectId") { type = NavType.StringType }
+                navArgument("courseId") {
+                    type = NavType.StringType
+                }
             )
         ) { backStackEntry ->
-            val subjectId = backStackEntry.arguments?.getString("subjectId") ?: ""
-            ExamScreen(
-                subjectId = subjectId,
+
+            val courseId = backStackEntry.arguments?.getString("courseId")!!
+
+            QuizScreen(
+                courseId = courseId,
                 navController = navController
             )
         }
 
+        // score
         composable(
-            route = "${Routes.EXAM_RESULT}/{score}/{totalQuestions}",
+            route = "${Routes.SCORE}/{score}/{total}",
             arguments = listOf(
                 navArgument("score") { type = NavType.IntType },
-                navArgument("totalQuestions") { type = NavType.IntType }
+                navArgument("total") { type = NavType.IntType }
             )
-        ) { backStackEntry ->
-            val score = backStackEntry.arguments?.getInt("score") ?: 0
-            val total = backStackEntry.arguments?.getInt("totalQuestions") ?: 0
+        ){ backStackEntry ->
 
-            ExamResultScreen(
+            val score = backStackEntry.arguments?.getInt("score") ?: 0
+            val total = backStackEntry.arguments?.getInt("total") ?: 0
+
+            ScoreScreen(
                 score = score,
                 totalQuestions = total,
+                onRestartClick = {
+                    navController.popBackStack(Routes.HOME, false)
+                },
                 onBackClick = {
                     navController.navigate(Routes.HOME) {
                         popUpTo(Routes.HOME) { inclusive = false }
@@ -161,6 +164,34 @@ fun AuthApp() {
                 }
             )
         }
+        composable(
+            Routes.SUBJECT
+        ) { backStackEntry ->
+
+            val courseId =
+                backStackEntry.arguments?.getString("courseId")!!
+
+            val subjectName =
+                backStackEntry.arguments?.getString("subjectName")!!
+
+            ChapterDetailScreen(
+                courseId,
+                subjectName,
+                navController = navController
+            )
+        }
+
+        composable(
+            Routes.CHAPTER
+        ) { backStackEntry ->
+
+            val courseId =
+                backStackEntry.arguments
+                    ?.getString("courseId")!!
+
+            ChapterScreen(courseId, navController = navController)
+        }
+
 
         // here
         composable(
@@ -224,7 +255,7 @@ fun AuthApp() {
         }
 
         composable(
-           Routes.CHAPTER
+            Routes.CHAPTER
         ) { backStackEntry ->
 
             val courseId =
@@ -261,7 +292,7 @@ fun AuthApp() {
             route = Routes.VIDEO_PLAYER_SCREEN,
             arguments = listOf(
                 navArgument("ytlink") { type = NavType.StringType },
-                        navArgument("pdflink") { type = NavType.StringType }   // 👈 new argument
+                navArgument("pdflink") { type = NavType.StringType }   // 👈 new argument
 
             )
         ) { backStackEntry ->
@@ -293,6 +324,57 @@ fun AuthApp() {
         composable(Routes.PROFILE) { Profile() }
         composable(Routes.CONTACT_US) { HelpSupportScreen() }
 
+        composable(Routes.MOCK_SUBJECT_SELECTION) {
+            MockSubjectSelectionScreen(navController = navController)
+        }
+
+        composable(
+            route = "${Routes.MOCK_EXAM}/{subjectId}",
+            arguments = listOf(
+                navArgument("subjectId") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+            val subjectId = backStackEntry.arguments?.getString("subjectId") ?: ""
+            MockExamScreen(
+                subjectId = subjectId,
+                navController = navController
+            )
+        }
+        composable(
+            route = "${Routes.MOCK_RESULT}/{id}/{score}/{totalQuestions}/{timeTaken}",
+            arguments = listOf(
+                navArgument("id") { type = NavType.IntType },
+                navArgument("score") { type = NavType.IntType },
+                navArgument("totalQuestions") { type = NavType.IntType },
+                navArgument("timeTaken") { type = NavType.LongType }
+            )
+        ) { backStackEntry ->
+            val id = backStackEntry.arguments?.getInt("id") ?: 0
+            val score = backStackEntry.arguments?.getInt("score") ?: 0
+            val total = backStackEntry.arguments?.getInt("totalQuestions") ?: 0
+            val timeTaken = backStackEntry.arguments?.getLong("timeTaken") ?: 0L
+
+            MockResultScreen(
+                resultId = id,
+                score = score,
+                totalQuestions = total,
+                timeTakenSeconds = timeTaken,
+                navController = navController
+            )
+        }
+        composable(
+            route = "${Routes.MOCK_REVIEW}/{resultId}",
+            arguments = listOf(
+                navArgument("resultId") { type = NavType.IntType }
+            )
+        ) { backStackEntry ->
+            val resultId = backStackEntry.arguments?.getInt("resultId") ?: 0
+            MockReviewScreen(
+                resultId = resultId,
+                navController = navController
+            )
+        }
+
     }
 
 }
@@ -315,8 +397,12 @@ object Routes {
     const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}/{pdflink}"
 
     const val SUBJECT_SELECTION = "subject_selection"
-    const val EXAM = "exam"
-    const val EXAM_RESULT = "exam_result"
+
+    // Mock
+    const val MOCK_SUBJECT_SELECTION = "mock_subject_selection"
+    const val MOCK_EXAM = "mock_exam"
+    const val MOCK_RESULT = "mock_result"
+    const val MOCK_REVIEW = "mock_review"
 
     //Drawer items
     const val PROFILE="profile"

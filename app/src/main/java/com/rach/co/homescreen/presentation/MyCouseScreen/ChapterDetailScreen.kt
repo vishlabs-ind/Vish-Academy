@@ -59,7 +59,7 @@ fun ChapterDetailScreen(
 
     LaunchedEffect(Unit) {
         vm.loadChaptersS(courseId, subjectName)
-        adViewModel.loadAd(context = context)
+        adViewModel.loadAd()
 
     }
 
@@ -132,7 +132,7 @@ fun ChapterDetailScreen(
                                     }
                                 }
 
-                                adViewModel.loadAd(context = context)
+                                adViewModel.loadAd()
 
                             }
 

@@ -1,0 +1,131 @@
+{
+  "subjects": [
+    {
+      "subjectId": "computer",
+      "subjectTitle": "Computer",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a computer?",
+          "options": ["An electronic device that processes data", "A mechanical calculator", "A storage device only", "An input device"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "What is a variable in C?",
+          "options": ["A fixed value", "A memory location used to store data", "An operator", "A keyword"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Which of the following is a logical operator?",
+          "options": ["&&", "+", "%", "="],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 4,
+          "question": "Which is an unconditional control statement?",
+          "options": ["if", "switch", "goto", "while"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is a two-dimensional array?",
+          "options": ["A single variable", "An array with one row", "An array with rows and columns", "A pointer"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "What does an assembler do?",
+          "options": ["Converts assembly language to machine language", "Converts C program to Java", "Executes HTML code", "Stores files"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "What does a compiler do?",
+          "options": ["Runs programs directly", "Converts high-level language into machine language", "Stores variables", "Creates folders"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Which of the following is a valid data type in C?",
+          "options": ["integer", "real", "int", "number"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "What is type conversion?",
+          "options": ["Changing one data type into another", "Deleting a variable", "Creating an array", "Writing comments"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Which symbol is used for explicit type casting in C?",
+          "options": ["()", "{}", "[]", "<>"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 11,
+          "question": "Which loop executes at least once?",
+          "options": ["for", "while", "do-while", "if"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "What is a string in C?",
+          "options": ["A group of integers", "A sequence of characters ending with null character", "A floating value", "A keyword"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Which syntax is correct for string declaration?",
+          "options": ["char str[20];", "string str;", "int str;", "float str;"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 14,
+          "question": "Which type of computer is used for scientific calculations?",
+          "options": ["Microcomputer", "Supercomputer", "Laptop", "Tablet"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 15,
+          "question": "Which function is used to display output in C?",
+          "options": ["scanf()", "main()", "printf()", "display()"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "Which function is used to take input in C?",
+          "options": ["printf()", "scanf()", "input()", "read()"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "Which statement is used for multiple choices in C?",
+          "options": ["if", "for", "switch", "goto"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which symbol is used to end a statement in C?",
+          "options": [":", ".", ";", ","],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Which function is the starting point of a C program?",
+          "options": ["start()", "run()", "main()", "init()"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Which header file is required for printf() and scanf()?",
+          "options": ["math.h", "string.h", "conio.h", "stdio.h"],
+          "correctAnswerIndex": 3
+        }
+      ]
+    }
+  ]
+}
