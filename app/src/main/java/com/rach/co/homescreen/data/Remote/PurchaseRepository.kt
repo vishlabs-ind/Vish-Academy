@@ -40,8 +40,7 @@ class PurchaseRepository @Inject constructor(
 
 
     suspend fun addpremiumtouser(){
-        val uid = auth.currentUser?.uid
-            ?: throw Exception("User not logged in")
+        val uid = auth.currentUser?.uid ?: throw Exception("User not logged in")
         val email = auth.currentUser?.email
 
         firestore

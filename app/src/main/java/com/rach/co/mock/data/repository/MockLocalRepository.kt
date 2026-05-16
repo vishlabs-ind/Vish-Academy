@@ -11,11 +11,10 @@ import javax.inject.Inject
 class MockLocalRepository @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
-    // default 2 hours if not set in JSON
     private val defaultDurationMinutes = 120
-    private val jsonFiles = listOf("gk.json", "english.json", "computer.json")
+    private val fileName = "mock.json"  // ← single String not List
 
-    private fun readSubjectsFromFile(fileName: String): List<Subject> {
+    private fun readAllSubjects(): List<Subject> {
         return try {
             val jsonString = context.assets
                 .open(fileName)
@@ -40,20 +39,14 @@ class MockLocalRepository @Inject constructor(
     }
 
     fun getAllSubjects(): List<Subject> {
-        // read all files and merge all subjects into one list
-        return jsonFiles.flatMap { fileName ->
-            readSubjectsFromFile(fileName)
-        }.also {
-            Log.d("MockLocal", "✅ Total subjects loaded: ${it.size}")
+        return readAllSubjects().also {
+            Log.d("MockLocal", "✅ Total subjects: ${it.size}")
         }
     }
 
     fun getSubjectById(subjectId: String): Subject? {
-        // search across all files
-        return jsonFiles.firstNotNullOfOrNull { fileName ->
-            readSubjectsFromFile(fileName).find { it.subjectId == subjectId }
-        }.also {
-            if (it == null) Log.e("MockLocal", "❌ Subject not found: $subjectId")
+        return readAllSubjects().find { it.subjectId == subjectId }.also {
+            if (it == null) Log.e("MockLocal", "❌ Not found: $subjectId")
             else Log.d("MockLocal", "✅ Found: ${it.subjectTitle}")
         }
     }

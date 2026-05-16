@@ -1,0 +1,625 @@
+{
+  "subjects": [
+    {
+      "subjectId": "computer",
+      "subjectTitle": "Computer",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a computer?",
+          "options": ["An electronic device that processes data", "A mechanical calculator", "A storage device only", "An input device"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "What is a variable in C?",
+          "options": ["A fixed value", "A memory location used to store data", "An operator", "A keyword"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Which of the following is a logical operator?",
+          "options": ["&&", "+", "%", "="],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 4,
+          "question": "Which is an unconditional control statement?",
+          "options": ["if", "switch", "goto", "while"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is a two-dimensional array?",
+          "options": ["A single variable", "An array with one row", "An array with rows and columns", "A pointer"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "What does an assembler do?",
+          "options": ["Converts assembly language to machine language", "Converts C program to Java", "Executes HTML code", "Stores files"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "What does a compiler do?",
+          "options": ["Runs programs directly", "Converts high-level language into machine language", "Stores variables", "Creates folders"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Which of the following is a valid data type in C?",
+          "options": ["integer", "real", "int", "number"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "What is type conversion?",
+          "options": ["Changing one data type into another", "Deleting a variable", "Creating an array", "Writing comments"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Which symbol is used for explicit type casting in C?",
+          "options": ["()", "{}", "[]", "<>"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 11,
+          "question": "Which loop executes at least once?",
+          "options": ["for", "while", "do-while", "if"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "What is a string in C?",
+          "options": ["A group of integers", "A sequence of characters ending with null character", "A floating value", "A keyword"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Which syntax is correct for string declaration?",
+          "options": ["char str[20];", "string str;", "int str;", "float str;"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 14,
+          "question": "Which type of computer is used for scientific calculations?",
+          "options": ["Microcomputer", "Supercomputer", "Laptop", "Tablet"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 15,
+          "question": "Which function is used to display output in C?",
+          "options": ["scanf()", "main()", "printf()", "display()"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "Which function is used to take input in C?",
+          "options": ["printf()", "scanf()", "input()", "read()"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "Which statement is used for multiple choices in C?",
+          "options": ["if", "for", "switch", "goto"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which symbol is used to end a statement in C?",
+          "options": [":", ".", ";", ","],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Which function is the starting point of a C program?",
+          "options": ["start()", "run()", "main()", "init()"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Which header file is required for printf() and scanf()?",
+          "options": ["math.h", "string.h", "conio.h", "stdio.h"],
+          "correctAnswerIndex": 3
+        }
+      ]
+    },
+     {
+      "subjectId": "english",
+      "subjectTitle": "English",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a noun?",
+          "options": ["A naming word", "An action word", "A describing word", "A joining word"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "Which of the following is a pronoun?",
+          "options": ["Beautiful", "He", "Quickly", "School"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Choose the correct verb in the sentence: She ___ to school daily.",
+          "options": ["go", "goes", "gone", "going"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Which of the following is an adjective?",
+          "options": ["Run", "Slowly", "Beautiful", "They"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "Choose the correct plural form of 'Child'.",
+          "options": ["Childs", "Children", "Childes", "Childrens"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "Which sentence is in present tense?",
+          "options": ["He played football", "He is playing football", "He will play football", "He had played football"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
+          "options": ["A", "An", "The", "No article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Which of the following is a conjunction?",
+          "options": ["And", "Quickly", "Happy", "Boy"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 9,
+          "question": "Choose the synonym of 'Happy'.",
+          "options": ["Sad", "Angry", "Joyful", "Tired"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "Choose the antonym of 'Hot'.",
+          "options": ["Warm", "Boiling", "Cool", "Heat"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "Which punctuation mark is used to ask a question?",
+          "options": [".", ",", "?", "!"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "Identify the adverb in the sentence: He runs fast.",
+          "options": ["He", "Runs", "Fast", "None"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Choose the correct spelling.",
+          "options": ["Recieve", "Receive", "Receeve", "Receve"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "What is the opposite of 'Begin'?",
+          "options": ["Open", "Start", "Close", "End"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 15,
+          "question": "Choose the correct sentence.",
+          "options": ["She go to school.", "She goes to school.", "She going to school.", "She gone to school."],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Which word is a preposition?",
+          "options": ["Under", "Beautiful", "Jump", "Softly"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "Choose the correct past tense of 'Write'.",
+          "options": ["Writed", "Writing", "Wrote", "Writes"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which of the following is an interrogative sentence?",
+          "options": ["I am happy.", "Please help me.", "Where are you going?", "What a beautiful day!"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Choose the correct form: They ___ playing cricket.",
+          "options": ["is", "am", "are", "was"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Which part of speech is the word 'Quickly'?",
+          "options": ["Noun", "Verb", "Adjective", "Adverb"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 21,
+          "question": "Choose the correct synonym of 'Brave'.",
+          "options": ["Coward", "Fearless", "Weak", "Lazy"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Choose the correct antonym of 'Ancient'.",
+          "options": ["Old", "Historic", "Modern", "Traditional"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which sentence is grammatically correct?",
+          "options": ["He do his homework.", "He does his homework.", "He doing his homework.", "He done his homework."],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "Identify the noun in the sentence: The cat is sleeping.",
+          "options": ["Sleeping", "Is", "Cat", "The"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "Choose the correct comparative form of 'Good'.",
+          "options": ["Gooder", "Best", "Better", "More good"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which word is a verb?",
+          "options": ["Dance", "Blue", "Chair", "Slow"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 27,
+          "question": "Choose the correct spelling.",
+          "options": ["Definately", "Definitely", "Definetly", "Definatly"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "Which sentence is in future tense?",
+          "options": ["She sang a song.", "She sings a song.", "She will sing a song.", "She is singing a song."],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "Choose the correct article: ___ umbrella is useful in rain.",
+          "options": ["A", "An", "The", "No article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Identify the adjective in the sentence: She wore a red dress.",
+          "options": ["She", "Wore", "Red", "Dress"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Which word is a pronoun?",
+          "options": ["Teacher", "Beautiful", "They", "Quickly"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "Choose the correct meaning of the idiom 'Break the ice'.",
+          "options": ["To shatter ice", "To start a conversation", "To feel cold", "To stop talking"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "Which sentence is an exclamatory sentence?",
+          "options": ["Please open the door.", "Where are you going?", "What a wonderful view!", "I am reading a book."],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "Choose the correct plural form of 'Mouse'.",
+          "options": ["Mouses", "Mousees", "Mice", "Mices"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "Identify the preposition in the sentence: The book is on the table.",
+          "options": ["Book", "On", "Table", "The"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Choose the correct passive voice: 'She writes a letter.'",
+          "options": ["A letter is written by her.", "A letter was written by her.", "A letter writes her.", "She is written a letter."],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 37,
+          "question": "Which word is an adverb?",
+          "options": ["Quickly", "Honest", "Table", "Teacher"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 38,
+          "question": "Choose the correct sentence.",
+          "options": ["I has a pen.", "I have a pen.", "I having a pen.", "I hading a pen."],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 39,
+          "question": "What is the opposite of 'Victory'?",
+          "options": ["Success", "Defeat", "Achievement", "Prize"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Choose the correct question tag: 'You are coming, ___?'",
+          "options": ["aren't you", "are you", "don't you", "won't you"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+     {
+      "subjectId": "gk",
+      "subjectTitle": "GK",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the capital of India?",
+          "options": ["Mumbai", "Kolkata", "New Delhi", "Chennai"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "Who is known as the Father of the Nation in India?",
+          "options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhash Chandra Bose", "Bhagat Singh"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Earth", "Mars", "Jupiter", "Venus"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "How many continents are there in the world?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "Which is the largest ocean in the world?",
+          "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 6,
+          "question": "Who wrote the National Anthem of India?",
+          "options": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Sarojini Naidu", "Premchand"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "Which gas do plants absorb from the atmosphere?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "What is the national animal of India?",
+          "options": ["Lion", "Tiger", "Elephant", "Peacock"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Which is the smallest state in India by area?",
+          "options": ["Goa", "Sikkim", "Tripura", "Nagaland"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Who invented the telephone?",
+          "options": ["Thomas Edison", "Alexander Graham Bell", "Newton", "Einstein"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "Which is the longest river in the world?",
+          "options": ["Amazon", "Ganga", "Nile", "Yamuna"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "Which country is known as the Land of Rising Sun?",
+          "options": ["China", "Japan", "Thailand", "Nepal"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "What is the currency of India?",
+          "options": ["Dollar", "Euro", "Rupee", "Yen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Who was the first Prime Minister of India?",
+          "options": ["Indira Gandhi", "Rajendra Prasad", "Jawaharlal Nehru", "Sardar Patel"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Which organ purifies blood in the human body?",
+          "options": ["Heart", "Lungs", "Kidney", "Brain"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "How many players are there in a cricket team?",
+          "options": ["9", "10", "11", "12"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Which festival is known as the Festival of Lights?",
+          "options": ["Holi", "Diwali", "Eid", "Christmas"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "What is the national flower of India?",
+          "options": ["Rose", "Lotus", "Sunflower", "Lily"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "Which is the largest planet in the solar system?",
+          "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Who discovered gravity?",
+          "options": ["Newton", "Galileo", "Einstein", "Edison"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "Which is the national bird of India?",
+          "options": ["Parrot", "Peacock", "Crow", "Sparrow"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "How many states are there in India?",
+          "options": ["26", "27", "28", "29"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which blood group is called universal donor?",
+          "options": ["A", "B", "AB", "O negative"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 24,
+          "question": "Which day is celebrated as Independence Day in India?",
+          "options": ["26 January", "15 August", "2 October", "14 November"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "What is the boiling point of water?",
+          "options": ["50°C", "75°C", "100°C", "150°C"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which is the fastest land animal?",
+          "options": ["Lion", "Tiger", "Cheetah", "Horse"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 27,
+          "question": "Who wrote Ramayana?",
+          "options": ["Tulsidas", "Kalidas", "Valmiki", "Ved Vyas"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which is the tallest mountain in the world?",
+          "options": ["K2", "Mount Everest", "Kanchenjunga", "Alps"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "Which metal is liquid at room temperature?",
+          "options": ["Iron", "Copper", "Mercury", "Silver"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Which planet is closest to the Sun?",
+          "options": ["Venus", "Earth", "Mercury", "Mars"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Who is known as the Missile Man of India?",
+          "options": ["A.P.J. Abdul Kalam", "Vikram Sarabhai", "Homi Bhabha", "C.V. Raman"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 32,
+          "question": "Which is the largest desert in the world?",
+          "options": ["Sahara Desert", "Thar Desert", "Gobi Desert", "Kalahari Desert"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 33,
+          "question": "Which vitamin is obtained from sunlight?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 34,
+          "question": "Who was the first President of India?",
+          "options": ["Dr. Rajendra Prasad", "S. Radhakrishnan", "Zakir Hussain", "Jawaharlal Nehru"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 35,
+          "question": "Which is the largest mammal in the world?",
+          "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Which Indian city is known as the Pink City?",
+          "options": ["Udaipur", "Jodhpur", "Jaipur", "Ajmer"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "What is the chemical symbol of gold?",
+          "options": ["Go", "Au", "Ag", "Gd"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "Which country gifted the Statue of Liberty to the USA?",
+          "options": ["France", "Germany", "Canada", "Italy"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 39,
+          "question": "Which is the smallest planet in the solar system?",
+          "options": ["Mars", "Mercury", "Venus", "Pluto"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Who invented the bulb?",
+          "options": ["Newton", "Einstein", "Thomas Edison", "Bell"],
+          "correctAnswerIndex": 2
+        }
+      ]
+    }
+  ]
+}

@@ -30,12 +30,7 @@ class HomeViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
     private val repoDb: CourseRepositoryDb,
     private val userPrefs: UserPrefs
-
-
 ) : ViewModel() {
-
-
-
 
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore
