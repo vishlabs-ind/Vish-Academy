@@ -189,7 +189,6 @@ fun CoursePurchasedScreen(
                         else{
                             if  (!adViewModel.isAd1Ready.value) {
                                 Toast.makeText(context, "Please wait, ads loading", Toast.LENGTH_SHORT).show()
-                                navController.popBackStack()
                             } else {
                                 adViewModel.showAd(activity) {
 
