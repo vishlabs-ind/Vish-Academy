@@ -1,11 +1,13 @@
 package com.rach.co.mock.presentation.screen
 
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Clear
@@ -21,6 +23,7 @@ import androidx.navigation.NavController
 import com.rach.co.navigation.Routes
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.ui.platform.LocalContext
 import com.rach.co.mock.presentation.viewModel.MockScreenState
 import com.rach.co.mock.presentation.viewModel.MockViewModel
 
@@ -32,6 +35,8 @@ fun MockSubjectSelectionScreen(
     val subjects by viewModel.subjects
     val screenState by viewModel.subjectLoadState
     val searchQuery by viewModel.searchQuery
+    val isPremium by viewModel.isPremium.collectAsState(initial = false)  // ← collect premium state
+    val context = LocalContext.current
 
     LaunchedEffect(Unit) {
         viewModel.loadAllSubjects()
@@ -50,7 +55,10 @@ fun MockSubjectSelectionScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(onClick = { navController.popBackStack() }) {
-                Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                Icon(
+                    Icons.Default.ArrowBack,
+                    contentDescription = "Back"
+                )
             }
             Spacer(modifier = Modifier.width(8.dp))
             Text(
@@ -73,9 +81,7 @@ fun MockSubjectSelectionScreen(
 
         OutlinedTextField(
             value = searchQuery,
-            onValueChange = {
-                viewModel.onSearchQueryChanged(it)
-            },
+            onValueChange = { viewModel.onSearchQueryChanged(it) },
             modifier = Modifier.fillMaxWidth(),
             placeholder = {
                 Text("Search mock course...")
@@ -137,62 +143,105 @@ fun MockSubjectSelectionScreen(
 
             // --- Success ---
             is MockScreenState.Success -> {
-                LazyColumn(
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
-                ) {
-                    items(subjects) { subject ->
-                        Card(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    navController.navigate(
-                                        "${Routes.MOCK_EXAM}/${subject.subjectId}"
-                                    )
-                                },
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceVariant
-                            ),
-                            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-                        ) {
-                            Row(
+
+                // no results found
+                if (subjects.isEmpty()) {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "No subjects found for \"$searchQuery\"",
+                            fontSize = 15.sp,
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
+                        )
+                    }
+                } else {
+                    LazyColumn(
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        items(subjects) { subject ->
+                            Card(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(20.dp),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.SpaceBetween
+                                    .clickable {
+                                        if (isPremium) {
+                                            // premium user → navigate to exam
+                                            navController.navigate(
+                                                "${Routes.MOCK_EXAM}/${subject.subjectId}"
+                                            )
+                                        } else {
+                                            // non premium → show toast
+                                            Toast.makeText(
+                                                context,
+                                                "Premium required to access Mock Test",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
+                                    },
+                                shape = RoundedCornerShape(16.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceVariant
+                                ),
+                                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                             ) {
-                                Column {
-                                    Text(
-                                        text = subject.subjectTitle,
-                                        fontSize = 18.sp,
-                                        fontWeight = FontWeight.SemiBold,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
-                                    Spacer(modifier = Modifier.height(4.dp))
-                                    Text(
-                                        text = "${subject.questions.size} Questions • ${subject.examDurationMinutes} min",
-                                        fontSize = 13.sp,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
-                                    )
-                                }
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(20.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Column {
+                                        Text(
+                                            text = subject.subjectTitle,
+                                            fontSize = 18.sp,
+                                            fontWeight = FontWeight.SemiBold,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                        Spacer(modifier = Modifier.height(4.dp))
+                                        Text(
+                                            text = "${subject.questions.size} Questions • ${subject.examDurationMinutes} min",
+                                            fontSize = 13.sp,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(
+                                                alpha = 0.7f
+                                            )
+                                        )
+                                    }
 
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    // 1. Lock Icon (New)
-                                    Icon(
-                                        imageVector = Icons.Default.Lock, // Or Icons.Default.Lock
-                                        contentDescription = "Locked",
-                                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-                                        modifier = Modifier.size(20.dp)
-                                    )
+//                                Row(verticalAlignment = Alignment.CenterVertically) {
+//                                    // 1. Lock Icon (New)
+//                                    Icon(
+//                                        imageVector = Icons.Default.Lock, // Or Icons.Default.Lock
+//                                        contentDescription = "Locked",
+//                                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
+//                                        modifier = Modifier.size(20.dp)
+//                                    )
+//
+//                                    Spacer(modifier = Modifier.width(12.dp))
+//
+//                                    Icon(
+//                                        imageVector = Icons.Default.ArrowForward,
+//                                        contentDescription = null,
+//                                        tint = MaterialTheme.colorScheme.primary
+//                                    )
+//                                }
+                                    // ← show lock or arrow based on premium status
+                                    if (isPremium) {
+                                        Icon(
+                                            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.primary
+                                        )
+                                    } else {
+                                        Icon(
+                                            imageVector = Icons.Default.Lock,
+                                            contentDescription = "Locked",
+                                            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
+                                            modifier = Modifier.size(20.dp)
+                                        )
+                                    }
 
-                                    Spacer(modifier = Modifier.width(12.dp))
-
-                                    Icon(
-                                        imageVector = Icons.Default.ArrowForward,
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.primary
-                                    )
                                 }
                             }
                         }

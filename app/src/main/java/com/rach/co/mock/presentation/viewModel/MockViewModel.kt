@@ -7,6 +7,7 @@ import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.rach.co.auth.data.Model.UserPrefs
 import com.rach.co.mock.data.AnswerUtils
 import com.rach.co.mock.data.dataClass.Subject
 import com.rach.co.mock.data.repository.MockLocalRepository
@@ -28,7 +29,9 @@ sealed class MockScreenState {
 @HiltViewModel
 class MockViewModel @Inject constructor(
     private val localRepository: MockLocalRepository,
-    private val roomRepository: MockRoomRepository
+    private val roomRepository: MockRoomRepository,
+    private val userPrefs: UserPrefs
+
 ) : ViewModel() {
 
     // --- Subject Selection States ---
@@ -87,6 +90,9 @@ class MockViewModel @Inject constructor(
     // search query
     private val _searchQuery = mutableStateOf("")
     val searchQuery: State<String> = _searchQuery
+
+    //  expose isPremium flow directly
+    val isPremium = userPrefs.isPremium
 
     // SUBJECT SELECTION SCREEN
 

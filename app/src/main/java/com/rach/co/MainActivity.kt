@@ -20,7 +20,9 @@ import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
+import com.google.firebase.auth.FirebaseAuth
 import com.rach.co.ad.AdViewModel
+import com.rach.co.auth.presentation.login.LoginViewModel
 import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.navigation.AuthApp
 import com.rach.co.quiz.presentation.screen.NoInternetScreen
@@ -30,6 +32,7 @@ import com.razorpay.Checkout
 import com.razorpay.PaymentData
 import com.razorpay.PaymentResultWithDataListener
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.getValue
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
@@ -38,6 +41,7 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
     private val updateRequestCode = 100
     val homeViewModel: HomeViewModel by viewModels()
     private val adViewModel: AdViewModel by viewModels()
+    private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +50,12 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
 
         Checkout.preload(applicationContext)
         appUpdateManager = AppUpdateManagerFactory.create(this)
+
+        // ← refresh premium status on every app open
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            loginViewModel.savedatastorepremium {}
+        }
 
         MobileAds.setRequestConfiguration(
             RequestConfiguration.Builder()
