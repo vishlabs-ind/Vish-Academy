@@ -1,18 +1,17 @@
 package com.rach.co.homescreen.data.RepoImpl
 
-
-import android.util.Log
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.protobuf.LazyStringArrayList.emptyList
 import com.rach.co.homescreen.data.DataClass.NotesItems
 import com.rach.co.homescreen.domain.Repo.NoteRepository
 import kotlinx.coroutines.tasks.await
-import java.util.Collections.list
 import javax.inject.Inject
 
 class NotesRepoImplemtation @Inject constructor(
     private val firestore: FirebaseFirestore
 ) : NoteRepository {
+
+    private var lastDocument: DocumentSnapshot? = null
 
     override suspend fun getNotePdf(): List<NotesItems> {
 
@@ -20,37 +19,56 @@ class NotesRepoImplemtation @Inject constructor(
 
             val result = firestore
                 .collection("notes")
+                .limit(10)
                 .get()
                 .await()
 
-            val list = mutableListOf<NotesItems>()
+            lastDocument = result.documents.lastOrNull()
 
-            for (doc in result.documents) {
+            result.documents.mapNotNull { doc ->
 
-                val chapterName = doc.getString("chapterName") ?: ""
-                val link = doc.getString("pdflink") ?: ""
+                val chapterName = doc.getString("chapterName") ?: return@mapNotNull null
+                val link = doc.getString("pdflink") ?: return@mapNotNull null
 
-                // Invalid data skip
-                if (chapterName.isBlank() || link.isBlank()) continue
-
-                val item = NotesItems(
+                NotesItems(
                     chapterName = chapterName,
                     pdflinkchapterName = link
                 )
-
-                list.add(item)
             }
 
-            list
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    override suspend fun loadNextPage(): List<NotesItems> {
+
+        return try {
+
+            val lastDoc = lastDocument ?: return emptyList()
+
+            val result = firestore
+                .collection("notes")
+                .startAfter(lastDoc)
+                .limit(10)
+                .get()
+                .await()
+
+            lastDocument = result.documents.lastOrNull()
+
+            result.documents.mapNotNull { doc ->
+
+                val chapterName = doc.getString("chapterName") ?: return@mapNotNull null
+                val link = doc.getString("pdflink") ?: return@mapNotNull null
+
+                NotesItems(
+                    chapterName = chapterName,
+                    pdflinkchapterName = link
+                )
+            }
 
         } catch (e: Exception) {
-
-
-        return emptyList<NotesItems>()
-
+            emptyList()
+        }
     }
-
-    }
-
-
 }

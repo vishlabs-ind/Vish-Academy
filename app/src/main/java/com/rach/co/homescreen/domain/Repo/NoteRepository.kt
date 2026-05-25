@@ -7,5 +7,5 @@ interface NoteRepository {
 
     suspend fun getNotePdf():List<NotesItems>
 
-
+    suspend fun loadNextPage(): List<NotesItems>
 }

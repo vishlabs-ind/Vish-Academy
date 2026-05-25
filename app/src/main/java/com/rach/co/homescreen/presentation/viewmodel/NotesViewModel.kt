@@ -59,4 +59,32 @@ class NotesViewModel @Inject constructor( val noteRepository: NoteRepository): V
                     ?.contains(searchText, ignoreCase = true) == true
             }
         }
-    }}
+    }
+    fun loadMoreNotes() {
+
+        viewModelScope.launch {
+
+            try {
+
+                val nextPage =
+                    noteRepository.loadNextPage()
+
+                _notesPdf.value += nextPage
+
+                _pdfSearch.value =
+                    _notesPdf.value
+
+            } catch (e: Exception) {
+
+                Log.e(
+                    "PAGINATION_ERROR",
+                    "Error loading next page",
+                    e
+                )
+            }
+        }
+    }
+
+}
+
+
