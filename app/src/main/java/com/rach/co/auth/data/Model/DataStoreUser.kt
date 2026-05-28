@@ -19,9 +19,13 @@ class UserPrefs @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
 
+
     // 🔑 Keys
     private val EMAIL_KEY = stringPreferencesKey("email")
     private val PREMIUM_KEY = booleanPreferencesKey("is_premium")
+
+    private val MOCKUSER_KEY = booleanPreferencesKey("is_mock_user")
+
 
     // ✅ Save Email
     suspend fun saveEmail(email: String) {
@@ -37,6 +41,12 @@ class UserPrefs @Inject constructor(
         }
     }
 
+    suspend fun saveMockAccess(hasAccess: Boolean) {
+        context.dataStore.edit { prefs ->
+            prefs[MOCKUSER_KEY] = hasAccess
+        }
+    }
+
     // ✅ Get Email
     val email: Flow<String?> = context.dataStore.data.map { prefs ->
         prefs[EMAIL_KEY]
@@ -46,6 +56,10 @@ class UserPrefs @Inject constructor(
     val isPremium: Flow<Boolean> = context.dataStore.data.map { prefs ->
         prefs[PREMIUM_KEY] ?: false
     }
+
+    val hasMockAccess: Flow<Boolean> = context.dataStore.data.map { prefs ->
+            prefs[MOCKUSER_KEY] ?: false
+        }
 
     // ✅ Clear (logout)
     suspend fun clear() {

@@ -10,51 +10,18 @@ import javax.inject.Singleton
 @Singleton
 class RzManager @Inject constructor() {
 
-    fun Adfreepayment(  activity: Activity,
-                        keyId: String,
-                        appName: String,
-                        description: String,
-                        amountInRupees: Int,
-                        userEmail: String  ){
-
-        val checkout = Checkout()
-        checkout.setKeyID(keyId)
-
-        try {
-
-            val options = JSONObject().apply {
-
-                put("name", appName)
-                put("description", description)
-                put("amount", amountInRupees * 100)
-                put("currency", "INR")
-
-                put(
-                    "prefill",
-                    JSONObject().apply {
-                        put("email", userEmail)
-                    }
-                )
-            }
-
-            checkout.open(activity, options)
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-
-    }
-
+    // Track the currently running checkout plan
+    var pendingPlanType: String? = null
     fun startPayment(
         activity: Activity,
         keyId: String,
         appName: String,
         description: String,
         amountInRupees: Int,
-        userEmail: String
+        userEmail: String,
+        planType: String
     ) {
-
+        pendingPlanType = planType
         val checkout = Checkout()
         checkout.setKeyID(keyId)
 
@@ -67,14 +34,22 @@ class RzManager @Inject constructor() {
                 put("amount", amountInRupees * 100)
                 put("currency", "INR")
 
+                // IMPORTANT
+                put("notes",
+                    JSONObject().apply {
+
+                        put("planType", planType)
+                    }
+                )
+
                 put(
                     "prefill",
                     JSONObject().apply {
+
                         put("email", userEmail)
                     }
                 )
             }
-
             checkout.open(activity, options)
 
         } catch (e: Exception) {

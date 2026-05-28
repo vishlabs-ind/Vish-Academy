@@ -94,14 +94,16 @@ class LoginViewModel @Inject constructor(
         )
     }
 
-
-    fun savedatastorepremium(onDone: () -> Unit){
+    fun savedatastorepremium(onDone: () -> Unit) {
         viewModelScope.launch {
-            val res =  authRepository.isPremium()
-            userPrefs.savePremium(res)
+            val isPremium = authRepository.isPremium()
+            val isMockUser = authRepository.isMockUser()  // ← add
+            userPrefs.savePremium(isPremium)
+            userPrefs.saveMockAccess(isMockUser)           // ← add
             onDone()
         }
     }
+
 
     fun login() {
         viewModelScope.launch {

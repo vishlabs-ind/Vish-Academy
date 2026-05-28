@@ -1,6 +1,7 @@
 package com.rach.co.homescreen.presentation.home.presentation.viewmodelHome
 
 import android.app.Activity
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.rach.co.auth.domain.repository.AuthRepository
@@ -17,31 +18,57 @@ import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.data.Remote.PurchaseRepository
 import com.rach.co.homescreen.data.RepoImpl.CourseRepositoryDb
 import com.rach.co.homescreen.domain.Repo.CourseRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.NonCancellable
 
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repo: AuthRepository,
     private val repository: CourseRepository,
-    private val rzManager: RzManager,
+    val rzManager: RzManager,
     private val purchaseRepository: PurchaseRepository,
     private val savedStateHandle: SavedStateHandle,
     private val repoDb: CourseRepositoryDb,
     private val userPrefs: UserPrefs
 ) : ViewModel() {
 
+    private val _paymentSuccessEvent = MutableSharedFlow<String>(extraBufferCapacity = 1)
+    val paymentSuccessEvent = _paymentSuccessEvent.asSharedFlow()
+
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore
 
 
     val isPremium = userPrefs.isPremium
-
     fun onadspaymentsuccess(){
         viewModelScope.launch {
-            userPrefs.savePremium(true)
-            purchaseRepository.addpremiumtouser()
+            try {
+                userPrefs.savePremium(true)
+                withContext(Dispatchers.IO + NonCancellable) {
+                    purchaseRepository.addpremiumtouser()
+                }
+                _paymentSuccessEvent.emit("PREMIUM")
+            } catch (e: Exception) {
+                Log.e("HomeViewModel", "Error updating premium in Firestore: ${e.message}", e)
+            }
+        }
+    }
+
+    fun onMockPaymentSuccess() {
+        viewModelScope.launch {
+            try {
+                userPrefs.saveMockAccess(true)
+                withContext(Dispatchers.IO + NonCancellable) {
+                    purchaseRepository.addMockAccessToUser()
+                }
+                _paymentSuccessEvent.emit("MOCK_ONLY")
+            } catch (e: Exception) {
+                Log.e("HomeViewModel", "Error updating mock access in Firestore: ${e.message}", e)
+            }
         }
     }
 
@@ -50,15 +77,17 @@ class HomeViewModel @Inject constructor(
                             amountInRupees: Int,
                             keyId: String,
                             appName: String,
-                            description: String,){
-
-        rzManager.Adfreepayment(
+                            description: String,
+                            planType: String = "PREMIUM"
+                            ){
+        rzManager.startPayment(
             activity = activity,
             keyId = keyId,
             appName = appName,
             description = description,
             amountInRupees = amountInRupees,
-            userEmail = email
+            userEmail = email,
+            planType = planType
         )
 
     }
@@ -84,13 +113,12 @@ class HomeViewModel @Inject constructor(
             repoDb.saveCourses(list)
         }
     }
+    val pendingPlanType: String?
+        get() = rzManager.pendingPlanType
 
+    private val _chaptersS = MutableStateFlow<List<ChapterDetail>>(emptyList())
 
-    private val _chaptersS =
-        MutableStateFlow<List<ChapterDetail>>(emptyList())
-
-    val chaptersS: StateFlow<List<ChapterDetail>>
-            = _chaptersS
+    val chaptersS: StateFlow<List<ChapterDetail>> = _chaptersS
 
     fun loadChaptersS(
         courseId: String,
@@ -108,11 +136,9 @@ class HomeViewModel @Inject constructor(
     }
 
 
-    private val _chapters =
-        MutableStateFlow<List<Chapter>>(emptyList())
+    private val _chapters = MutableStateFlow<List<Chapter>>(emptyList())
 
-    val chapters: StateFlow<List<Chapter>>
-            = _chapters
+    val chapters: StateFlow<List<Chapter>> = _chapters
 
     fun loadChapters(courseId: String) {
 
@@ -125,11 +151,9 @@ class HomeViewModel @Inject constructor(
 
 
 
-    private val _myCourses =
-        MutableStateFlow<List<Course>>(emptyList())
+    private val _myCourses = MutableStateFlow<List<Course>>(emptyList())
 
-    val myCourses: StateFlow<List<Course>>
-            = _myCourses
+    val myCourses: StateFlow<List<Course>> = _myCourses
 
     fun loadPurchasedCourses() {
 
@@ -140,18 +164,10 @@ class HomeViewModel @Inject constructor(
 
 
 
-            _myCourses.value =
-                repository.getCoursesByIds(id)
+            _myCourses.value = repository.getCoursesByIds(id)
         }
     }
 
-
-
-
-//    private val _courses =
-//        MutableStateFlow<List<Course>>(emptyList())
-//
-//    val courses: StateFlow<List<Course>> = _courses
 
     private val _courses = MutableStateFlow<List<Course>>(emptyList())
     val courses: StateFlow<List<Course>> = _courses
@@ -184,8 +200,7 @@ class HomeViewModel @Inject constructor(
 
             _isLoadingMore.value = true
 
-            val (newCourses, last) =
-                repository.getCoursesPaginated(lastCourse)
+            val (newCourses, last) = repository.getCoursesPaginated(lastCourse)
 
             _courses.value = _courses.value + newCourses
             lastCourse = last
@@ -223,34 +238,9 @@ class HomeViewModel @Inject constructor(
                 ?: return
 
         viewModelScope.launch {
-
-            purchaseRepository
-                .addCourseToUser(courseId)
-
+            purchaseRepository.addCourseToUser(courseId)
             println("COURSE SAVED = $courseId")
         }
-    }
-
-
-    fun startPayment(
-        activity: Activity,
-        email: String,
-        amountInRupees: Int,
-        keyId: String,
-        appName: String,
-        description: String,
-        userID: String
-    ) {
-
-        rzManager.startPayment(
-            activity = activity,
-            keyId = keyId,
-            appName = appName,
-            description = description,
-            amountInRupees = amountInRupees,
-            userEmail = email
-        )
-
     }
 
 }

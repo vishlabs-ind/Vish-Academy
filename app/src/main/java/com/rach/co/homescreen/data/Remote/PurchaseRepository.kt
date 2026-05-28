@@ -57,4 +57,20 @@ class PurchaseRepository @Inject constructor(
 
 
     }
+    suspend fun addMockAccessToUser() {
+        val uid = auth.currentUser?.uid ?: throw Exception("User not logged in")
+        val email = auth.currentUser?.email
+
+        firestore
+            .collection("users")
+            .document(uid)
+            .set(
+                mapOf(
+                    "email" to email,
+                    "mockAccess" to true  // ← saves mockAccess field to Firestore
+                ),
+                com.google.firebase.firestore.SetOptions.merge()
+            )
+            .await()
+    }
 }

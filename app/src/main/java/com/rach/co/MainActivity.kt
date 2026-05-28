@@ -95,12 +95,18 @@ class MainActivity : ComponentActivity(), PaymentResultWithDataListener {
     }
 
     override fun onPaymentSuccess(p0: String?, p1: PaymentData?) {
-//        homeViewModel.onPaymentSuccess()
-        homeViewModel.onadspaymentsuccess()
+        // read planType from payment notes
+        val planType = homeViewModel.pendingPlanType ?: "PREMIUM"
 
+        if (planType == "PREMIUM") {
+            homeViewModel.onadspaymentsuccess()   // ← save isPremium = true
+        } else if (planType == "MOCK_ONLY") {
+            homeViewModel.onMockPaymentSuccess()  // ← save isMockAccess = true
+        }
+
+        // Reset the pending plan
+        homeViewModel.rzManager.pendingPlanType = null
         Toast.makeText(this, "Payment Successful", Toast.LENGTH_LONG).show()
-
-
     }
 
     override fun onPaymentError(p0: Int, p1: String?, p2: PaymentData?) {

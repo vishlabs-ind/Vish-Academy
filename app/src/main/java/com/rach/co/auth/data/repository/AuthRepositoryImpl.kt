@@ -1,6 +1,5 @@
 package com.rach.co.auth.data.repository
 
-
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -73,6 +72,17 @@ class AuthRepositoryImpl @Inject constructor(
             .await()
 
         return doc.getBoolean("premium") ?: false
+    }
+
+    override suspend fun isMockUser(): Boolean {
+        val user = FirebaseAuth.getInstance().currentUser
+            ?: return false
+        val doc = FirebaseFirestore.getInstance()
+            .collection("users")
+            .document(user.uid)
+            .get()
+            .await()
+        return doc.getBoolean("mockAccess") ?: false
     }
 
     override suspend fun isEmailVerified(): Boolean {

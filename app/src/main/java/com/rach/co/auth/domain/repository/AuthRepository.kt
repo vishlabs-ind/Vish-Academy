@@ -23,6 +23,7 @@ interface AuthRepository {
 
     suspend fun isPremium(): Boolean
 
+    suspend fun isMockUser(): Boolean
 
     suspend fun isEmailVerified(): Boolean
 

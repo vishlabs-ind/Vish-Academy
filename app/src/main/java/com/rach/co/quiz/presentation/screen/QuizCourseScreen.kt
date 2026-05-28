@@ -29,6 +29,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -57,6 +58,7 @@ fun QuizCourseScreen(
     val activity = LocalActivity.current ?: return
     val courses by viewModel.courseList
     val isRewardedAdReady by adViewModel.isRewardedAdReady
+    val isPremium by viewModel.isPremium.collectAsState(initial = false)
     val scope = rememberCoroutineScope()
 
     // Prevents duplicate taps while waiting for ad
@@ -91,8 +93,8 @@ fun QuizCourseScreen(
                 modifier = Modifier.weight(1f)
             )
 
-            // Loading spinner shown while rewarded ad is not yet ready
-            if (!isRewardedAdReady) {
+            // ← only show loading spinner for non premium users
+            if (!isPremium && !isRewardedAdReady) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(16.dp),
@@ -127,27 +129,33 @@ fun QuizCourseScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable(enabled = !isWaitingForAd) {  // disabled while ad tap is in progress
-                            scope.launch {
-                                isWaitingForAd = true
-                                // Wait up to 3 s for rewarded ad to be ready
-                                withTimeoutOrNull(3000) {
-                                    snapshotFlow { isRewardedAdReady }.first { it }
-                                }
-                                if (isRewardedAdReady) {
-                                    adViewModel.showRewardedAd(
-                                        activity = activity,
-                                        onUserEarnedReward = { amount ->
-                                            Log.d("AdDebug", "Reward earned — amount: $amount")
-                                        },
-                                        onAdDismissed = {
-                                            isWaitingForAd = false
-                                            navController.navigate("quiz/${course.courseId}")
-                                        }
-                                    )
-                                } else {
-                                    // Ad not ready — navigate directly
-                                    isWaitingForAd = false
-                                    navController.navigate("quiz/${course.courseId}")
+                            if (isPremium) {
+                                // ← premium user — skip ad, navigate directly
+                                navController.navigate("quiz/${course.courseId}")
+                            } else {
+                                // ← non premium — show rewarded ad
+                                scope.launch {
+                                    isWaitingForAd = true
+                                    // Wait up to 3 s for rewarded ad to be ready
+                                    withTimeoutOrNull(3000) {
+                                        snapshotFlow { isRewardedAdReady }.first { it }
+                                    }
+                                    if (isRewardedAdReady) {
+                                        adViewModel.showRewardedAd(
+                                            activity = activity,
+                                            onUserEarnedReward = { amount ->
+                                                Log.d("AdDebug", "Reward earned — amount: $amount")
+                                            },
+                                            onAdDismissed = {
+                                                isWaitingForAd = false
+                                                navController.navigate("quiz/${course.courseId}")
+                                            }
+                                        )
+                                    } else {
+                                        // Ad not ready — navigate directly
+                                        isWaitingForAd = false
+                                        navController.navigate("quiz/${course.courseId}")
+                                    }
                                 }
                             }
                         },

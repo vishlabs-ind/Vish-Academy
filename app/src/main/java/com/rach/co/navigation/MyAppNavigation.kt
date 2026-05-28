@@ -11,6 +11,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
@@ -30,10 +31,12 @@ import com.rach.co.homescreen.presentation.Screen.CoursePurchasedScreen
 import com.rach.co.homescreen.presentation.Screen.MyCourse
 import com.rach.co.homescreen.presentation.Screen.NoteScreen
 import com.rach.co.homescreen.presentation.Screen.PdfScreen
+import com.rach.co.homescreen.presentation.home.presentation.viewmodelHome.HomeViewModel
 import com.rach.co.mock.presentation.screen.MockExamScreen
 import com.rach.co.mock.presentation.screen.MockResultScreen
 import com.rach.co.mock.presentation.screen.MockReviewScreen
 import com.rach.co.mock.presentation.screen.MockSubjectSelectionScreen
+import com.rach.co.mock.presentation.screen.SubscriptionScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.HelpSupportScreen
 import com.rach.co.navigation.naviagtionDrawerItemPage.Profile
 import com.rach.co.quiz.presentation.screen.QuizScreen
@@ -374,7 +377,14 @@ fun AuthApp() {
                 navController = navController
             )
         }
-
+        composable("subscription_screen") {
+            val activity = LocalContext.current as ComponentActivity
+            val homeViewModel: HomeViewModel = hiltViewModel(activity)
+            SubscriptionScreen(
+                navController = navController,
+                viewModel = homeViewModel
+            )
+        }
     }
 
 }
@@ -384,7 +394,6 @@ object Routes {
     const val Notes="notes"
     const val HOME = "home"
     const val COURSES = "courses"
-
     const val My_COURSES = "my_courses"
     const val QUIZ = "quiz"
     const val SCORE = "score"
@@ -393,7 +402,6 @@ object Routes {
 
     const val CHAPTER = "chapters/{courseId}"
     const val SUBJECT = "chapterDetails/{courseId}/{subjectName}"
-
     const val VIDEO_PLAYER_SCREEN = "videoplayscreen/{ytlink}/{pdflink}"
 
     const val SUBJECT_SELECTION = "subject_selection"

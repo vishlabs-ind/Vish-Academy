@@ -117,7 +117,7 @@ fun HomeScreen(
                     PremiumGradientButton {
 
                         viewModel.goadsfreepaymentvm(
-                            context as Activity,
+                            activity = context as Activity,
                             email = "",
                             amountInRupees = 199,
                             keyId = K.RAZORPAY_KEY ,

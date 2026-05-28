@@ -3,6 +3,7 @@ package com.rach.co.quiz.presentation.viewmodel
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import com.rach.co.auth.data.Model.UserPrefs
 import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.quiz.data.repository.QuizRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,9 +11,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class QuizCategoryViewModel @Inject constructor(
-    private val repository: QuizRepository
+    private val repository: QuizRepository,
+    private val userPrefs: UserPrefs
 ) : ViewModel() {
 
+    val isPremium = userPrefs.isPremium
     // UI States
     private val _courseList = mutableStateOf<List<Course>>(emptyList())
     val courseList: State<List<Course>> = _courseList

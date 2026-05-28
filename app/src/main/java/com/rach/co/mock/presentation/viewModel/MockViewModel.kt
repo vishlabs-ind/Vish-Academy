@@ -16,6 +16,8 @@ import com.rach.co.mock.data.room.MockRoomRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -93,6 +95,15 @@ class MockViewModel @Inject constructor(
 
     //  expose isPremium flow directly
     val isPremium = userPrefs.isPremium
+    val isMockUser = userPrefs.hasMockAccess
+
+    // combined — true if either is true
+    val hasMockAccess: Flow<Boolean> = combine(
+        userPrefs.isPremium,
+        userPrefs.hasMockAccess
+    ) { isPremium, isMockUser ->
+        isPremium || isMockUser
+    }
 
     // SUBJECT SELECTION SCREEN
 

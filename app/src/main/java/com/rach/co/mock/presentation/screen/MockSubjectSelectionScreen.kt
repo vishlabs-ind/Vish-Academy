@@ -35,7 +35,7 @@ fun MockSubjectSelectionScreen(
     val subjects by viewModel.subjects
     val screenState by viewModel.subjectLoadState
     val searchQuery by viewModel.searchQuery
-    val isPremium by viewModel.isPremium.collectAsState(initial = false)  // ← collect premium state
+    val hasMockAccess by viewModel.hasMockAccess.collectAsState(initial = false)  // ← collect premium state
     val context = LocalContext.current
 
     LaunchedEffect(Unit) {
@@ -165,7 +165,7 @@ fun MockSubjectSelectionScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clickable {
-                                        if (isPremium) {
+                                        if (hasMockAccess) {
                                             // premium user → navigate to exam
                                             navController.navigate(
                                                 "${Routes.MOCK_EXAM}/${subject.subjectId}"
@@ -177,6 +177,7 @@ fun MockSubjectSelectionScreen(
                                                 "Premium required to access Mock Test",
                                                 Toast.LENGTH_SHORT
                                             ).show()
+                                            navController.navigate("subscription_screen")
                                         }
                                     },
                                 shape = RoundedCornerShape(16.dp),
@@ -209,25 +210,8 @@ fun MockSubjectSelectionScreen(
                                         )
                                     }
 
-//                                Row(verticalAlignment = Alignment.CenterVertically) {
-//                                    // 1. Lock Icon (New)
-//                                    Icon(
-//                                        imageVector = Icons.Default.Lock, // Or Icons.Default.Lock
-//                                        contentDescription = "Locked",
-//                                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-//                                        modifier = Modifier.size(20.dp)
-//                                    )
-//
-//                                    Spacer(modifier = Modifier.width(12.dp))
-//
-//                                    Icon(
-//                                        imageVector = Icons.Default.ArrowForward,
-//                                        contentDescription = null,
-//                                        tint = MaterialTheme.colorScheme.primary
-//                                    )
-//                                }
                                     // ← show lock or arrow based on premium status
-                                    if (isPremium) {
+                                    if (hasMockAccess ) {
                                         Icon(
                                             imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                             contentDescription = null,
