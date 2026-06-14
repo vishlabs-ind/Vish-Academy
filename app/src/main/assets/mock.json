@@ -8,126 +8,226 @@
         {
           "id": 1,
           "question": "What is a computer?",
-          "options": ["An electronic device that processes data", "A mechanical calculator", "A storage device only", "An input device"],
+          "options": [
+            "An electronic device that processes data",
+            "A mechanical calculator",
+            "A storage device only",
+            "An input device"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 2,
           "question": "What is a variable in C?",
-          "options": ["A fixed value", "A memory location used to store data", "An operator", "A keyword"],
+          "options": [
+            "A fixed value",
+            "A memory location used to store data",
+            "An operator",
+            "A keyword"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 3,
           "question": "Which of the following is a logical operator?",
-          "options": ["&&", "+", "%", "="],
+          "options": [
+            "&&",
+            "+",
+            "%",
+            "="
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 4,
           "question": "Which is an unconditional control statement?",
-          "options": ["if", "switch", "goto", "while"],
+          "options": [
+            "if",
+            "switch",
+            "goto",
+            "while"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 5,
           "question": "What is a two-dimensional array?",
-          "options": ["A single variable", "An array with one row", "An array with rows and columns", "A pointer"],
+          "options": [
+            "A single variable",
+            "An array with one row",
+            "An array with rows and columns",
+            "A pointer"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 6,
           "question": "What does an assembler do?",
-          "options": ["Converts assembly language to machine language", "Converts C program to Java", "Executes HTML code", "Stores files"],
+          "options": [
+            "Converts assembly language to machine language",
+            "Converts C program to Java",
+            "Executes HTML code",
+            "Stores files"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 7,
           "question": "What does a compiler do?",
-          "options": ["Runs programs directly", "Converts high-level language into machine language", "Stores variables", "Creates folders"],
+          "options": [
+            "Runs programs directly",
+            "Converts high-level language into machine language",
+            "Stores variables",
+            "Creates folders"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 8,
           "question": "Which of the following is a valid data type in C?",
-          "options": ["integer", "real", "int", "number"],
+          "options": [
+            "integer",
+            "real",
+            "int",
+            "number"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 9,
           "question": "What is type conversion?",
-          "options": ["Changing one data type into another", "Deleting a variable", "Creating an array", "Writing comments"],
+          "options": [
+            "Changing one data type into another",
+            "Deleting a variable",
+            "Creating an array",
+            "Writing comments"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 10,
           "question": "Which symbol is used for explicit type casting in C?",
-          "options": ["()", "{}", "[]", "<>"],
+          "options": [
+            "()",
+            "{}",
+            "[]",
+            "<>"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 11,
           "question": "Which loop executes at least once?",
-          "options": ["for", "while", "do-while", "if"],
+          "options": [
+            "for",
+            "while",
+            "do-while",
+            "if"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 12,
           "question": "What is a string in C?",
-          "options": ["A group of integers", "A sequence of characters ending with null character", "A floating value", "A keyword"],
+          "options": [
+            "A group of integers",
+            "A sequence of characters ending with null character",
+            "A floating value",
+            "A keyword"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 13,
           "question": "Which syntax is correct for string declaration?",
-          "options": ["char str[20];", "string str;", "int str;", "float str;"],
+          "options": [
+            "char str[20];",
+            "string str;",
+            "int str;",
+            "float str;"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 14,
           "question": "Which type of computer is used for scientific calculations?",
-          "options": ["Microcomputer", "Supercomputer", "Laptop", "Tablet"],
+          "options": [
+            "Microcomputer",
+            "Supercomputer",
+            "Laptop",
+            "Tablet"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 15,
           "question": "Which function is used to display output in C?",
-          "options": ["scanf()", "main()", "printf()", "display()"],
+          "options": [
+            "scanf()",
+            "main()",
+            "printf()",
+            "display()"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 16,
           "question": "Which function is used to take input in C?",
-          "options": ["printf()", "scanf()", "input()", "read()"],
+          "options": [
+            "printf()",
+            "scanf()",
+            "input()",
+            "read()"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 17,
           "question": "Which statement is used for multiple choices in C?",
-          "options": ["if", "for", "switch", "goto"],
+          "options": [
+            "if",
+            "for",
+            "switch",
+            "goto"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 18,
           "question": "Which symbol is used to end a statement in C?",
-          "options": [":", ".", ";", ","],
+          "options": [
+            ":",
+            ".",
+            ";",
+            ","
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 19,
           "question": "Which function is the starting point of a C program?",
-          "options": ["start()", "run()", "main()", "init()"],
+          "options": [
+            "start()",
+            "run()",
+            "main()",
+            "init()"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 20,
           "question": "Which header file is required for printf() and scanf()?",
-          "options": ["math.h", "string.h", "conio.h", "stdio.h"],
+          "options": [
+            "math.h",
+            "string.h",
+            "conio.h",
+            "stdio.h"
+          ],
           "correctAnswerIndex": 3
         }
       ]
     },
-     {
+    {
       "subjectId": "english",
       "subjectTitle": "English",
       "examDurationMinutes": 60,
@@ -135,74 +235,1741 @@
         {
           "id": 1,
           "question": "What is a noun?",
-          "options": ["A naming word", "An action word", "A describing word", "A joining word"],
+          "options": [
+            "A naming word",
+            "An action word",
+            "A describing word",
+            "A joining word"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 2,
           "question": "Which of the following is a pronoun?",
-          "options": ["Beautiful", "He", "Quickly", "School"],
+          "options": [
+            "Beautiful",
+            "He",
+            "Quickly",
+            "School"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 3,
           "question": "Choose the correct verb in the sentence: She ___ to school daily.",
-          "options": ["go", "goes", "gone", "going"],
+          "options": [
+            "go",
+            "goes",
+            "gone",
+            "going"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 4,
           "question": "Which of the following is an adjective?",
-          "options": ["Run", "Slowly", "Beautiful", "They"],
+          "options": [
+            "Run",
+            "Slowly",
+            "Beautiful",
+            "They"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 5,
           "question": "Choose the correct plural form of 'Child'.",
-          "options": ["Childs", "Children", "Childes", "Childrens"],
+          "options": [
+            "Childs",
+            "Children",
+            "Childes",
+            "Childrens"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 6,
           "question": "Which sentence is in present tense?",
-          "options": ["He played football", "He is playing football", "He will play football", "He had played football"],
+          "options": [
+            "He played football",
+            "He is playing football",
+            "He will play football",
+            "He had played football"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 7,
           "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
-          "options": ["A", "An", "The", "No article"],
+          "options": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 8,
           "question": "Which of the following is a conjunction?",
-          "options": ["And", "Quickly", "Happy", "Boy"],
+          "options": [
+            "And",
+            "Quickly",
+            "Happy",
+            "Boy"
+          ],
           "correctAnswerIndex": 0
         },
         {
           "id": 9,
           "question": "Choose the synonym of 'Happy'.",
-          "options": ["Sad", "Angry", "Joyful", "Tired"],
+          "options": [
+            "Sad",
+            "Angry",
+            "Joyful",
+            "Tired"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 10,
           "question": "Choose the antonym of 'Hot'.",
-          "options": ["Warm", "Boiling", "Cool", "Heat"],
+          "options": [
+            "Warm",
+            "Boiling",
+            "Cool",
+            "Heat"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 11,
           "question": "Which punctuation mark is used to ask a question?",
-          "options": [".", ",", "?", "!"],
+          "options": [
+            ".",
+            ",",
+            "?",
+            "!"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 12,
           "question": "Identify the adverb in the sentence: He runs fast.",
-          "options": ["He", "Runs", "Fast", "None"],
+          "options": [
+            "He",
+            "Runs",
+            "Fast",
+            "None"
+          ],
           "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Choose the correct spelling.",
+          "options": [
+            "Recieve",
+            "Receive",
+            "Receeve",
+            "Receve"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "What is the opposite of 'Begin'?",
+          "options": [
+            "Open",
+            "Start",
+            "Close",
+            "End"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 15,
+          "question": "Choose the correct sentence.",
+          "options": [
+            "She go to school.",
+            "She goes to school.",
+            "She going to school.",
+            "She gone to school."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Which word is a preposition?",
+          "options": [
+            "Under",
+            "Beautiful",
+            "Jump",
+            "Softly"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "Choose the correct past tense of 'Write'.",
+          "options": [
+            "Writed",
+            "Writing",
+            "Wrote",
+            "Writes"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which of the following is an interrogative sentence?",
+          "options": [
+            "I am happy.",
+            "Please help me.",
+            "Where are you going?",
+            "What a beautiful day!"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Choose the correct form: They ___ playing cricket.",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "was"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Which part of speech is the word 'Quickly'?",
+          "options": [
+            "Noun",
+            "Verb",
+            "Adjective",
+            "Adverb"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 21,
+          "question": "Choose the correct synonym of 'Brave'.",
+          "options": [
+            "Coward",
+            "Fearless",
+            "Weak",
+            "Lazy"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Choose the correct antonym of 'Ancient'.",
+          "options": [
+            "Old",
+            "Historic",
+            "Modern",
+            "Traditional"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which sentence is grammatically correct?",
+          "options": [
+            "He do his homework.",
+            "He does his homework.",
+            "He doing his homework.",
+            "He done his homework."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "Identify the noun in the sentence: The cat is sleeping.",
+          "options": [
+            "Sleeping",
+            "Is",
+            "Cat",
+            "The"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "Choose the correct comparative form of 'Good'.",
+          "options": [
+            "Gooder",
+            "Best",
+            "Better",
+            "More good"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which word is a verb?",
+          "options": [
+            "Dance",
+            "Blue",
+            "Chair",
+            "Slow"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 27,
+          "question": "Choose the correct spelling.",
+          "options": [
+            "Definately",
+            "Definitely",
+            "Definetly",
+            "Definatly"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "Which sentence is in future tense?",
+          "options": [
+            "She sang a song.",
+            "She sings a song.",
+            "She will sing a song.",
+            "She is singing a song."
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "Choose the correct article: ___ umbrella is useful in rain.",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Identify the adjective in the sentence: She wore a red dress.",
+          "options": [
+            "She",
+            "Wore",
+            "Red",
+            "Dress"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Which word is a pronoun?",
+          "options": [
+            "Teacher",
+            "Beautiful",
+            "They",
+            "Quickly"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "Choose the correct meaning of the idiom 'Break the ice'.",
+          "options": [
+            "To shatter ice",
+            "To start a conversation",
+            "To feel cold",
+            "To stop talking"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "Which sentence is an exclamatory sentence?",
+          "options": [
+            "Please open the door.",
+            "Where are you going?",
+            "What a wonderful view!",
+            "I am reading a book."
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "Choose the correct plural form of 'Mouse'.",
+          "options": [
+            "Mouses",
+            "Mousees",
+            "Mice",
+            "Mices"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "Identify the preposition in the sentence: The book is on the table.",
+          "options": [
+            "Book",
+            "On",
+            "Table",
+            "The"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Choose the correct passive voice: 'She writes a letter.'",
+          "options": [
+            "A letter is written by her.",
+            "A letter was written by her.",
+            "A letter writes her.",
+            "She is written a letter."
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 37,
+          "question": "Which word is an adverb?",
+          "options": [
+            "Quickly",
+            "Honest",
+            "Table",
+            "Teacher"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 38,
+          "question": "Choose the correct sentence.",
+          "options": [
+            "I has a pen.",
+            "I have a pen.",
+            "I having a pen.",
+            "I hading a pen."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 39,
+          "question": "What is the opposite of 'Victory'?",
+          "options": [
+            "Success",
+            "Defeat",
+            "Achievement",
+            "Prize"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Choose the correct question tag: 'You are coming, ___?'",
+          "options": [
+            "aren't you",
+            "are you",
+            "don't you",
+            "won't you"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "subjectId": "gk",
+      "subjectTitle": "GK",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the capital of India?",
+          "options": [
+            "Mumbai",
+            "Kolkata",
+            "New Delhi",
+            "Chennai"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "Who is known as the Father of the Nation in India?",
+          "options": [
+            "Jawaharlal Nehru",
+            "Mahatma Gandhi",
+            "Subhash Chandra Bose",
+            "Bhagat Singh"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Which planet is known as the Red Planet?",
+          "options": [
+            "Earth",
+            "Mars",
+            "Jupiter",
+            "Venus"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "How many continents are there in the world?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "Which is the largest ocean in the world?",
+          "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 6,
+          "question": "Who wrote the National Anthem of India?",
+          "options": [
+            "Rabindranath Tagore",
+            "Bankim Chandra Chatterjee",
+            "Sarojini Naidu",
+            "Premchand"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "Which gas do plants absorb from the atmosphere?",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon Dioxide",
+            "Hydrogen"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "What is the national animal of India?",
+          "options": [
+            "Lion",
+            "Tiger",
+            "Elephant",
+            "Peacock"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Which is the smallest state in India by area?",
+          "options": [
+            "Goa",
+            "Sikkim",
+            "Tripura",
+            "Nagaland"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Who invented the telephone?",
+          "options": [
+            "Thomas Edison",
+            "Alexander Graham Bell",
+            "Newton",
+            "Einstein"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "Which is the longest river in the world?",
+          "options": [
+            "Amazon",
+            "Ganga",
+            "Nile",
+            "Yamuna"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "Which country is known as the Land of Rising Sun?",
+          "options": [
+            "China",
+            "Japan",
+            "Thailand",
+            "Nepal"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "What is the currency of India?",
+          "options": [
+            "Dollar",
+            "Euro",
+            "Rupee",
+            "Yen"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Who was the first Prime Minister of India?",
+          "options": [
+            "Indira Gandhi",
+            "Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Sardar Patel"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Which organ purifies blood in the human body?",
+          "options": [
+            "Heart",
+            "Lungs",
+            "Kidney",
+            "Brain"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "How many players are there in a cricket team?",
+          "options": [
+            "9",
+            "10",
+            "11",
+            "12"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Which festival is known as the Festival of Lights?",
+          "options": [
+            "Holi",
+            "Diwali",
+            "Eid",
+            "Christmas"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "What is the national flower of India?",
+          "options": [
+            "Rose",
+            "Lotus",
+            "Sunflower",
+            "Lily"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "Which is the largest planet in the solar system?",
+          "options": [
+            "Earth",
+            "Mars",
+            "Jupiter",
+            "Saturn"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Who discovered gravity?",
+          "options": [
+            "Newton",
+            "Galileo",
+            "Einstein",
+            "Edison"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "Which is the national bird of India?",
+          "options": [
+            "Parrot",
+            "Peacock",
+            "Crow",
+            "Sparrow"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "How many states are there in India?",
+          "options": [
+            "26",
+            "27",
+            "28",
+            "29"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which blood group is called universal donor?",
+          "options": [
+            "A",
+            "B",
+            "AB",
+            "O negative"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 24,
+          "question": "Which day is celebrated as Independence Day in India?",
+          "options": [
+            "26 January",
+            "15 August",
+            "2 October",
+            "14 November"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "What is the boiling point of water?",
+          "options": [
+            "50°C",
+            "75°C",
+            "100°C",
+            "150°C"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which is the fastest land animal?",
+          "options": [
+            "Lion",
+            "Tiger",
+            "Cheetah",
+            "Horse"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 27,
+          "question": "Who wrote Ramayana?",
+          "options": [
+            "Tulsidas",
+            "Kalidas",
+            "Valmiki",
+            "Ved Vyas"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which is the tallest mountain in the world?",
+          "options": [
+            "K2",
+            "Mount Everest",
+            "Kanchenjunga",
+            "Alps"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "Which metal is liquid at room temperature?",
+          "options": [
+            "Iron",
+            "Copper",
+            "Mercury",
+            "Silver"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Which planet is closest to the Sun?",
+          "options": [
+            "Venus",
+            "Earth",
+            "Mercury",
+            "Mars"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Who is known as the Missile Man of India?",
+          "options": [
+            "A.P.J. Abdul Kalam",
+            "Vikram Sarabhai",
+            "Homi Bhabha",
+            "C.V. Raman"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 32,
+          "question": "Which is the largest desert in the world?",
+          "options": [
+            "Sahara Desert",
+            "Thar Desert",
+            "Gobi Desert",
+            "Kalahari Desert"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 33,
+          "question": "Which vitamin is obtained from sunlight?",
+          "options": [
+            "Vitamin A",
+            "Vitamin B",
+            "Vitamin C",
+            "Vitamin D"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 34,
+          "question": "Who was the first President of India?",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "S. Radhakrishnan",
+            "Zakir Hussain",
+            "Jawaharlal Nehru"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 35,
+          "question": "Which is the largest mammal in the world?",
+          "options": [
+            "Elephant",
+            "Blue Whale",
+            "Giraffe",
+            "Hippopotamus"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Which Indian city is known as the Pink City?",
+          "options": [
+            "Udaipur",
+            "Jodhpur",
+            "Jaipur",
+            "Ajmer"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "What is the chemical symbol of gold?",
+          "options": [
+            "Go",
+            "Au",
+            "Ag",
+            "Gd"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "Which country gifted the Statue of Liberty to the USA?",
+          "options": [
+            "France",
+            "Germany",
+            "Canada",
+            "Italy"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 39,
+          "question": "Which is the smallest planet in the solar system?",
+          "options": [
+            "Mars",
+            "Mercury",
+            "Venus",
+            "Pluto"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Who invented the bulb?",
+          "options": [
+            "Newton",
+            "Einstein",
+            "Thomas Edison",
+            "Bell"
+          ],
+          "correctAnswerIndex": 2
+        }
+      ]
+    },
+    {
+      "subjectId": "Current_affair",
+      "subjectTitle": "Current Affair",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "भारत का राष्ट्रीय पशु कौन सा है?",
+          "options": ["शेर", "हाथी", "बाघ", "गैंडा"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "भारत की वर्तमान राष्ट्रपति (2026) कौन हैं?",
+          "options": ["द्रौपदी मुर्मू", "रामनाथ कोविंद", "जगदीप धनखड़", "नरेंद्र मोदी"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 3,
+          "question": "महाकुंभ मेला 2025 का आयोजन किस शहर में हुआ था?",
+          "options": ["वाराणसी", "हरिद्वार", "प्रयागराज", "नासिक"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 4,
+          "question": "यूक्रेन की राजधानी क्या है?",
+          "options": ["मॉस्को", "कीव", "वारसॉ", "मिंस्क"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "भारत का राष्ट्रीय वृक्ष कौन सा है?",
+          "options": ["नीम", "पीपल", "बरगद", "सागौन"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "‘वन डिस्ट्रिक्ट वन प्रोडक्ट (ODOP)’ योजना किस राज्य से शुरू हुई थी?",
+          "options": ["बिहार", "उत्तर प्रदेश", "राजस्थान", "पंजाब"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "ICC Champions Trophy 2025 की मेजबानी किस देश ने की थी?",
+          "options": ["भारत", "इंग्लैंड", "पाकिस्तान", "ऑस्ट्रेलिया"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "जापान की मुद्रा क्या है?",
+          "options": ["वॉन", "डॉलर", "युआन", "येन"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 9,
+          "question": "चंद्रयान मिशनों का प्रक्षेपण भारत की किस संस्था द्वारा किया जाता है?",
+          "options": ["DRDO", "ISRO", "BARC", "HAL"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 10,
+          "question": "चंद्रमा के दक्षिणी ध्रुव के निकट सफलतापूर्वक उतरने वाला मिशन कौन सा था?",
+          "options": ["चंद्रयान-1", "चंद्रयान-2", "चंद्रयान-3", "मंगलयान"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "G20 का पूर्ण रूप क्या है?",
+          "options": [
+            "Group of 20 Countries",
+            "Global 20 Nations",
+            "General 20 Members",
+            "Government 20 Alliance"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 12,
+          "question": "विश्व का सबसे बड़ा लोकतंत्र कौन सा देश है?",
+          "options": ["अमेरिका", "भारत", "ब्राजील", "इंडोनेशिया"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "उत्तर प्रदेश के वर्तमान मुख्यमंत्री (2026) कौन हैं?",
+          "options": ["अखिलेश यादव", "मायावती", "योगी आदित्यनाथ", "केशव प्रसाद मौर्य"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "भारत की राष्ट्रीय नदी किसे कहा जाता है?",
+          "options": ["यमुना", "गोदावरी", "ब्रह्मपुत्र", "गंगा"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 15,
+          "question": "‘उगते सूरज की भूमि’ किस देश को कहा जाता है?",
+          "options": ["चीन", "थाईलैंड", "जापान", "दक्षिण कोरिया"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "भारत का सिलिकॉन वैली किस शहर को कहा जाता है?",
+          "options": ["हैदराबाद", "पुणे", "बेंगलुरु", "चेन्नई"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "संयुक्त राष्ट्र (UN) के वर्तमान महासचिव कौन हैं?",
+          "options": ["बान की मून", "एंटोनियो गुटेरेस", "टेड्रोस अधानोम", "जेन्स स्टोल्टेनबर्ग"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "ICC पुरुष क्रिकेट विश्व कप 2023 किस देश ने जीता था?",
+          "options": ["भारत", "इंग्लैंड", "ऑस्ट्रेलिया", "न्यूजीलैंड"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "भारत का सर्वोच्च नागरिक सम्मान कौन सा है?",
+          "options": ["पद्म श्री", "पद्म भूषण", "पद्म विभूषण", "भारत रत्न"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 20,
+          "question": "ISRO के प्रथम सौर मिशन का नाम क्या है?",
+          "options": ["आदित्य-L1", "सूर्य-1", "सोलर भारत", "चंद्रयान सोलर"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "subjectId": "Current_affairPart2",
+      "subjectTitle": "Current Affair Part 2",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "भारत का राष्ट्रीय पशु कौन है?",
+          "options": ["शेर", "हाथी", "बाघ", "चीता"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "भारत का राष्ट्रीय पक्षी कौन है?",
+          "options": ["तोता", "मोर", "कबूतर", "हंस"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "भारत की राष्ट्रीय नदी कौन सी है?",
+          "options": ["यमुना", "गंगा", "गोदावरी", "नर्मदा"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "भारतीय संविधान कब लागू हुआ था?",
+          "options": ["15 अगस्त 1947", "26 जनवरी 1950", "26 नवंबर 1949", "2 अक्टूबर 1950"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "भारत का राष्ट्रीय वृक्ष कौन सा है?",
+          "options": ["नीम", "बरगद", "पीपल", "आम"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "भारत का राष्ट्रीय फूल कौन सा है?",
+          "options": ["गुलाब", "कमल", "गेंदा", "चमेली"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "भारत का राष्ट्रीय गान किसने लिखा था?",
+          "options": ["बंकिम चंद्र चट्टोपाध्याय", "महात्मा गांधी", "रवीन्द्रनाथ टैगोर", "सुभाष चंद्र बोस"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "विश्व का सबसे ऊँचा पर्वत कौन सा है?",
+          "options": ["K2", "कंचनजंगा", "माउंट एवरेस्ट", "नंगा पर्वत"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "सूर्य के सबसे निकट कौन सा ग्रह है?",
+          "options": ["शुक्र", "पृथ्वी", "बुध", "मंगल"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "भारत की राजधानी क्या है?",
+          "options": ["मुंबई", "कोलकाता", "नई दिल्ली", "चेन्नई"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "भारत में कुल कितने राज्य हैं?",
+          "options": ["26", "27", "28", "29"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "भारतीय संविधान के निर्माता किसे कहा जाता है?",
+          "options": ["महात्मा गांधी", "डॉ. बी.आर. अंबेडकर", "जवाहरलाल नेहरू", "सरदार पटेल"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "भारत छोड़ो आंदोलन कब शुरू हुआ था?",
+          "options": ["1942", "1930", "1919", "1947"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 14,
+          "question": "ताजमहल किस शहर में स्थित है?",
+          "options": ["दिल्ली", "जयपुर", "आगरा", "लखनऊ"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "भारत का सर्वोच्च नागरिक सम्मान कौन सा है?",
+          "options": ["पद्म श्री", "पद्म भूषण", "पद्म विभूषण", "भारत रत्न"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 16,
+          "question": "कंप्यूटर का जनक किसे कहा जाता है?",
+          "options": ["चार्ल्स बैबेज", "एलन ट्यूरिंग", "बिल गेट्स", "स्टीव जॉब्स"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "मानव शरीर में रक्त को शुद्ध करने का कार्य कौन सा अंग करता है?",
+          "options": ["हृदय", "फेफड़ा", "यकृत", "गुर्दा"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 18,
+          "question": "ओलंपिक खेलों का आयोजन कितने वर्षों के अंतराल पर होता है?",
+          "options": ["2 वर्ष", "3 वर्ष", "4 वर्ष", "5 वर्ष"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "भारत का राष्ट्रीय खेल पारंपरिक रूप से किसे माना जाता है?",
+          "options": ["क्रिकेट", "हॉकी", "कबड्डी", "फुटबॉल"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "जलियांवाला बाग हत्याकांड किस वर्ष हुआ था?",
+          "options": ["1917", "1918", "1919", "1920"],
+          "correctAnswerIndex": 2
+        }
+      ]
+    },
+    {
+      "subjectId": "computer_binary",
+      "subjectTitle": "Computer Number System",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Binary 1010 ka Decimal value kya hai?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Decimal 15 ka Binary value kya hai?",
+          "options": [
+            "1110",
+            "1111",
+            "1011",
+            "1101"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Binary 1101 ka Decimal value kya hai?",
+          "options": [
+            "11",
+            "12",
+            "13",
+            "14"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 4,
+          "question": "Decimal 20 ka Binary value kya hai?",
+          "options": [
+            "10100",
+            "10010",
+            "11000",
+            "11100"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "Decimal 26 ka Hexadecimal value kya hai?",
+          "options": [
+            "1A",
+            "1B",
+            "2A",
+            "2B"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 6,
+          "question": "Hexadecimal 1F ka Decimal value kya hai?",
+          "options": [
+            "30",
+            "31",
+            "32",
+            "33"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Decimal 255 ka Hexadecimal value kya hai?",
+          "options": [
+            "EF",
+            "FF",
+            "FE",
+            "AF"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Hexadecimal A ka Decimal value kya hai?",
+          "options": [
+            "8",
+            "9",
+            "10",
+            "11"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "Decimal 17 ka Octal value kya hai?",
+          "options": [
+            "20",
+            "21",
+            "22",
+            "23"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Octal 25 ka Decimal value kya hai?",
+          "options": [
+            "19",
+            "20",
+            "21",
+            "22"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "Decimal 64 ka Octal value kya hai?",
+          "options": [
+            "100",
+            "101",
+            "102",
+            "110"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 12,
+          "question": "Octal 77 ka Decimal value kya hai?",
+          "options": [
+            "61",
+            "62",
+            "63",
+            "64"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Binary 11111111 ka Decimal value kya hai?",
+          "options": [
+            "254",
+            "255",
+            "256",
+            "257"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "Decimal 100 ka Binary value kya hai?",
+          "options": [
+            "1100100",
+            "1100010",
+            "1010100",
+            "1110100"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 15,
+          "question": "Decimal 32 ka Hexadecimal value kya hai?",
+          "options": [
+            "1F",
+            "20",
+            "21",
+            "22"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Hexadecimal 2A ka Decimal value kya hai?",
+          "options": [
+            "40",
+            "41",
+            "42",
+            "43"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Decimal 50 ka Octal value kya hai?",
+          "options": [
+            "60",
+            "61",
+            "62",
+            "63"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Octal 100 ka Decimal value kya hai?",
+          "options": [
+            "64",
+            "72",
+            "80",
+            "100"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 19,
+          "question": "Binary 100000 ka Decimal value kya hai?",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "64"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "Decimal 128 ka Binary value kya hai?",
+          "options": [
+            "10000000",
+            "1000000",
+            "11111111",
+            "10000001"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "subjectId": "computer_advanced_mix",
+      "subjectTitle": "Computer Advance Mix Mock",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What does URL stand for?",
+          "options": [
+            "Uniform Resource Locator",
+            "Universal Resource Link",
+            "Uniform Reference Link",
+            "Universal Routing Locator"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "What is the full form of WWW?",
+          "options": [
+            "World Wide Web",
+            "World Web Window",
+            "Wide World Web",
+            "Web World Wide"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 3,
+          "question": "Which protocol is commonly used to access websites?",
+          "options": [
+            "FTP",
+            "HTTP",
+            "SMTP",
+            "POP3"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Which device is used to connect to the Internet?",
+          "options": [
+            "Scanner",
+            "Printer",
+            "Modem",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "Which of the following is a web browser?",
+          "options": [
+            "Windows",
+            "Linux",
+            "Chrome",
+            "Android"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "What does ISP stand for?",
+          "options": [
+            "Internet Service Provider",
+            "Internet Security Program",
+            "Internal Service Provider",
+            "Internet Source Program"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "What is an IP Address?",
+          "options": [
+            "A web page",
+            "A unique address of a device on a network",
+            "A browser",
+            "An email account"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Which symbol is used in an email address?",
+          "options": [
+            "#",
+            "&",
+            "@",
+            "%"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "What is the full form of HTML?",
+          "options": [
+            "Hyper Text Markup Language",
+            "High Text Machine Language",
+            "Hyper Tool Markup Language",
+            "Home Text Markup Language"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Which company developed the Chrome browser?",
+          "options": [
+            "Microsoft",
+            "Apple",
+            "Google",
+            "IBM"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "Convert Binary 1010 to Decimal.",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "Convert Decimal 15 to Binary.",
+          "options": [
+            "1110",
+            "1111",
+            "1011",
+            "1101"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Convert Binary 1101 to Decimal.",
+          "options": [
+            "11",
+            "12",
+            "13",
+            "14"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Convert Decimal 20 to Binary.",
+          "options": [
+            "10100",
+            "10010",
+            "11000",
+            "11100"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 15,
+          "question": "Convert Binary 11111111 to Decimal.",
+          "options": [
+            "254",
+            "255",
+            "256",
+            "257"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Convert Decimal 100 to Binary.",
+          "options": [
+            "1100100",
+            "1100010",
+            "1010100",
+            "1110100"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "Convert Decimal 26 to Hexadecimal.",
+          "options": [
+            "1A",
+            "1B",
+            "2A",
+            "2B"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 18,
+          "question": "Convert Hexadecimal 1F to Decimal.",
+          "options": [
+            "30",
+            "31",
+            "32",
+            "33"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "Convert Decimal 255 to Hexadecimal.",
+          "options": [
+            "EF",
+            "FF",
+            "FE",
+            "AF"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "Convert Hexadecimal A to Decimal.",
+          "options": [
+            "8",
+            "9",
+            "10",
+            "11"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "Convert Decimal 32 to Hexadecimal.",
+          "options": [
+            "1F",
+            "20",
+            "21",
+            "22"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Convert Hexadecimal 2A to Decimal.",
+          "options": [
+            "40",
+            "41",
+            "42",
+            "43"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Convert Decimal 17 to Octal.",
+          "options": [
+            "20",
+            "21",
+            "22",
+            "23"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 24,
+          "question": "Convert Octal 25 to Decimal.",
+          "options": [
+            "19",
+            "20",
+            "21",
+            "22"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "Convert Decimal 64 to Octal.",
+          "options": [
+            "110",
+            "101",
+            "102",
+            "100"
+          ],
+          "correctAnswerIndex": 3
+        }
+      ]
+    },
+    {
+      "subjectId": "english_basic",
+      "subjectTitle": "English Basics",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Choose the correct synonym of 'Happy'.",
+          "options": ["Sad", "Joyful", "Angry", "Weak"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Choose the correct antonym of 'Hot'.",
+          "options": ["Warm", "Cold", "Boiling", "Heat"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "Fill in the blank: She ___ to school every day.",
+          "options": ["go", "goes", "going", "gone"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Choose the correct spelling.",
+          "options": ["Beautifull", "Beutiful", "Beautiful", "Beautifal"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is the plural of 'Child'?",
+          "options": ["Childs", "Children", "Childes", "Childrens"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
+          "options": ["A", "An", "The", "No article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Choose the correct synonym of 'Begin'.",
+          "options": ["End", "Start", "Stop", "Close"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Choose the correct antonym of 'Strong'.",
+          "options": ["Powerful", "Active", "Weak", "Brave"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "Fill in the blank: They ___ playing cricket.",
+          "options": ["is", "am", "are", "be"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "Choose the correctly punctuated sentence.",
+          "options": [
+            "How are you",
+            "How are you?",
+            "How are you.",
+            "How are you!"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "What is the opposite of 'Day'?",
+          "options": ["Morning", "Night", "Evening", "Sun"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "Choose the correct form: I ___ a book yesterday.",
+          "options": ["read", "reads", "reading", "will read"],
+          "correctAnswerIndex": 0
         },
         {
           "id": 13,
@@ -212,412 +1979,457 @@
         },
         {
           "id": 14,
-          "question": "What is the opposite of 'Begin'?",
-          "options": ["Open", "Start", "Close", "End"],
-          "correctAnswerIndex": 3
+          "question": "Fill in the blank: The sun ___ in the east.",
+          "options": ["rise", "rises", "rising", "rose"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 15,
-          "question": "Choose the correct sentence.",
-          "options": ["She go to school.", "She goes to school.", "She going to school.", "She gone to school."],
+          "question": "Choose the synonym of 'Quick'.",
+          "options": ["Slow", "Fast", "Weak", "Late"],
           "correctAnswerIndex": 1
         },
         {
           "id": 16,
-          "question": "Which word is a preposition?",
-          "options": ["Under", "Beautiful", "Jump", "Softly"],
+          "question": "Choose the antonym of 'Early'.",
+          "options": ["Late", "Fast", "Soon", "Quick"],
           "correctAnswerIndex": 0
         },
         {
           "id": 17,
-          "question": "Choose the correct past tense of 'Write'.",
-          "options": ["Writed", "Writing", "Wrote", "Writes"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 18,
-          "question": "Which of the following is an interrogative sentence?",
-          "options": ["I am happy.", "Please help me.", "Where are you going?", "What a beautiful day!"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 19,
-          "question": "Choose the correct form: They ___ playing cricket.",
+          "question": "Fill in the blank: We ___ watching a movie.",
           "options": ["is", "am", "are", "was"],
           "correctAnswerIndex": 2
         },
         {
-          "id": 20,
-          "question": "Which part of speech is the word 'Quickly'?",
-          "options": ["Noun", "Verb", "Adjective", "Adverb"],
-          "correctAnswerIndex": 3
-        },
-        {
-          "id": 21,
-          "question": "Choose the correct synonym of 'Brave'.",
-          "options": ["Coward", "Fearless", "Weak", "Lazy"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 22,
-          "question": "Choose the correct antonym of 'Ancient'.",
-          "options": ["Old", "Historic", "Modern", "Traditional"],
+          "id": 18,
+          "question": "Which word is a noun?",
+          "options": ["Run", "Beautiful", "School", "Quickly"],
           "correctAnswerIndex": 2
         },
         {
-          "id": 23,
-          "question": "Which sentence is grammatically correct?",
-          "options": ["He do his homework.", "He does his homework.", "He doing his homework.", "He done his homework."],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 24,
-          "question": "Identify the noun in the sentence: The cat is sleeping.",
-          "options": ["Sleeping", "Is", "Cat", "The"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 25,
-          "question": "Choose the correct comparative form of 'Good'.",
-          "options": ["Gooder", "Best", "Better", "More good"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 26,
-          "question": "Which word is a verb?",
-          "options": ["Dance", "Blue", "Chair", "Slow"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 27,
-          "question": "Choose the correct spelling.",
-          "options": ["Definately", "Definitely", "Definetly", "Definatly"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 28,
-          "question": "Which sentence is in future tense?",
-          "options": ["She sang a song.", "She sings a song.", "She will sing a song.", "She is singing a song."],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 29,
-          "question": "Choose the correct article: ___ umbrella is useful in rain.",
-          "options": ["A", "An", "The", "No article"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 30,
-          "question": "Identify the adjective in the sentence: She wore a red dress.",
-          "options": ["She", "Wore", "Red", "Dress"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 31,
-          "question": "Which word is a pronoun?",
-          "options": ["Teacher", "Beautiful", "They", "Quickly"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 32,
-          "question": "Choose the correct meaning of the idiom 'Break the ice'.",
-          "options": ["To shatter ice", "To start a conversation", "To feel cold", "To stop talking"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 33,
-          "question": "Which sentence is an exclamatory sentence?",
-          "options": ["Please open the door.", "Where are you going?", "What a wonderful view!", "I am reading a book."],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 34,
-          "question": "Choose the correct plural form of 'Mouse'.",
-          "options": ["Mouses", "Mousees", "Mice", "Mices"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 35,
-          "question": "Identify the preposition in the sentence: The book is on the table.",
-          "options": ["Book", "On", "Table", "The"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 36,
-          "question": "Choose the correct passive voice: 'She writes a letter.'",
-          "options": ["A letter is written by her.", "A letter was written by her.", "A letter writes her.", "She is written a letter."],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 37,
-          "question": "Which word is an adverb?",
-          "options": ["Quickly", "Honest", "Table", "Teacher"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 38,
+          "id": 19,
           "question": "Choose the correct sentence.",
-          "options": ["I has a pen.", "I have a pen.", "I having a pen.", "I hading a pen."],
+          "options": [
+            "He go to school.",
+            "He goes to school.",
+            "He going to school.",
+            "He gone to school."
+          ],
           "correctAnswerIndex": 1
         },
         {
-          "id": 39,
-          "question": "What is the opposite of 'Victory'?",
-          "options": ["Success", "Defeat", "Achievement", "Prize"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 40,
-          "question": "Choose the correct question tag: 'You are coming, ___?'",
-          "options": ["aren't you", "are you", "don't you", "won't you"],
+          "id": 20,
+          "question": "Choose the correct preposition: The book is ___ the table.",
+          "options": ["on", "at", "for", "with"],
           "correctAnswerIndex": 0
         }
       ]
-    },
-     {
-      "subjectId": "gk",
-      "subjectTitle": "GK",
+    },{
+      "subjectId": "english_medium",
+      "subjectTitle": "English Medium",
       "examDurationMinutes": 60,
       "questions": [
         {
           "id": 1,
-          "question": "What is the capital of India?",
-          "options": ["Mumbai", "Kolkata", "New Delhi", "Chennai"],
-          "correctAnswerIndex": 2
+          "question": "Choose the synonym of 'Abundant'.",
+          "options": ["Scarce", "Plentiful", "Small", "Limited"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 2,
-          "question": "Who is known as the Father of the Nation in India?",
-          "options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhash Chandra Bose", "Bhagat Singh"],
-          "correctAnswerIndex": 1
+          "question": "Choose the antonym of 'Ancient'.",
+          "options": ["Old", "Historic", "Modern", "Traditional"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 3,
-          "question": "Which planet is known as the Red Planet?",
-          "options": ["Earth", "Mars", "Jupiter", "Venus"],
-          "correctAnswerIndex": 1
+          "question": "Fill in the blank: Neither of the boys ___ present today.",
+          "options": ["are", "were", "is", "have"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 4,
-          "question": "How many continents are there in the world?",
-          "options": ["5", "6", "7", "8"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 5,
-          "question": "Which is the largest ocean in the world?",
-          "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
-          "correctAnswerIndex": 3
-        },
-        {
-          "id": 6,
-          "question": "Who wrote the National Anthem of India?",
-          "options": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Sarojini Naidu", "Premchand"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 7,
-          "question": "Which gas do plants absorb from the atmosphere?",
-          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 8,
-          "question": "What is the national animal of India?",
-          "options": ["Lion", "Tiger", "Elephant", "Peacock"],
+          "question": "Choose the correctly spelled word.",
+          "options": ["Occassion", "Occasion", "Ocassion", "Occassionn"],
           "correctAnswerIndex": 1
         },
         {
+          "id": 5,
+          "question": "Identify the noun in the sentence: 'Honesty is the best policy.'",
+          "options": ["Best", "Policy", "Honesty", "Is"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "Choose the correct article: He is ___ honest man.",
+          "options": ["a", "an", "the", "no article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Choose the synonym of 'Diligent'.",
+          "options": ["Lazy", "Hardworking", "Careless", "Weak"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Choose the antonym of 'Expand'.",
+          "options": ["Increase", "Stretch", "Contract", "Develop"],
+          "correctAnswerIndex": 2
+        },
+        {
           "id": 9,
-          "question": "Which is the smallest state in India by area?",
-          "options": ["Goa", "Sikkim", "Tripura", "Nagaland"],
-          "correctAnswerIndex": 0
+          "question": "Fill in the blank: If I ___ rich, I would travel the world.",
+          "options": ["am", "was", "were", "be"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 10,
-          "question": "Who invented the telephone?",
-          "options": ["Thomas Edison", "Alexander Graham Bell", "Newton", "Einstein"],
+          "question": "Choose the correct passive form: 'They built a bridge.'",
+          "options": [
+            "A bridge is built by them.",
+            "A bridge was built by them.",
+            "A bridge has built by them.",
+            "A bridge had built by them."
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 11,
-          "question": "Which is the longest river in the world?",
-          "options": ["Amazon", "Ganga", "Nile", "Yamuna"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 12,
-          "question": "Which country is known as the Land of Rising Sun?",
-          "options": ["China", "Japan", "Thailand", "Nepal"],
+          "question": "Choose the meaning of the idiom 'A blessing in disguise'.",
+          "options": [
+            "A hidden problem",
+            "A bad situation that turns out well",
+            "A visible blessing",
+            "An unexpected failure"
+          ],
           "correctAnswerIndex": 1
         },
         {
+          "id": 12,
+          "question": "Choose the correct preposition: She is fond ___ music.",
+          "options": ["of", "with", "for", "at"],
+          "correctAnswerIndex": 0
+        },
+        {
           "id": 13,
-          "question": "What is the currency of India?",
-          "options": ["Dollar", "Euro", "Rupee", "Yen"],
-          "correctAnswerIndex": 2
+          "question": "Select the sentence with correct grammar.",
+          "options": [
+            "Each of the students have a book.",
+            "Each of the students has a book.",
+            "Each students has a book.",
+            "Each student have a book."
+          ],
+          "correctAnswerIndex": 1
         },
         {
           "id": 14,
-          "question": "Who was the first Prime Minister of India?",
-          "options": ["Indira Gandhi", "Rajendra Prasad", "Jawaharlal Nehru", "Sardar Patel"],
+          "question": "Choose the antonym of 'Generous'.",
+          "options": ["Kind", "Helpful", "Selfish", "Polite"],
           "correctAnswerIndex": 2
         },
         {
           "id": 15,
-          "question": "Which organ purifies blood in the human body?",
-          "options": ["Heart", "Lungs", "Kidney", "Brain"],
-          "correctAnswerIndex": 2
+          "question": "Choose the synonym of 'Reluctant'.",
+          "options": ["Eager", "Unwilling", "Ready", "Happy"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 16,
-          "question": "How many players are there in a cricket team?",
-          "options": ["9", "10", "11", "12"],
-          "correctAnswerIndex": 2
+          "question": "Fill in the blank: By next year, she ___ her degree.",
+          "options": ["completes", "completed", "will complete", "will have completed"],
+          "correctAnswerIndex": 3
         },
         {
           "id": 17,
-          "question": "Which festival is known as the Festival of Lights?",
-          "options": ["Holi", "Diwali", "Eid", "Christmas"],
+          "question": "Choose the correct indirect speech: He said, 'I am busy.'",
+          "options": [
+            "He said that he is busy.",
+            "He said that he was busy.",
+            "He says that he was busy.",
+            "He said he busy."
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 18,
-          "question": "What is the national flower of India?",
-          "options": ["Rose", "Lotus", "Sunflower", "Lily"],
+          "question": "What is the plural of 'Criterion'?",
+          "options": ["Criterions", "Criteria", "Criterions", "Criteriones"],
           "correctAnswerIndex": 1
         },
         {
           "id": 19,
-          "question": "Which is the largest planet in the solar system?",
-          "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+          "question": "Choose the correctly punctuated sentence.",
+          "options": [
+            "Lets eat, Grandma!",
+            "Let's eat Grandma!",
+            "Let's eat, Grandma!",
+            "Lets eat Grandma!"
+          ],
           "correctAnswerIndex": 2
         },
         {
           "id": 20,
-          "question": "Who discovered gravity?",
-          "options": ["Newton", "Galileo", "Einstein", "Edison"],
-          "correctAnswerIndex": 0
+          "question": "Choose the word that best completes the sentence: The manager appreciated her ___ approach.",
+          "options": ["profession", "professional", "professionally", "professor"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 21,
-          "question": "Which is the national bird of India?",
-          "options": ["Parrot", "Peacock", "Crow", "Sparrow"],
-          "correctAnswerIndex": 1
+          "question": "Choose the antonym of 'Optimistic'.",
+          "options": ["Hopeful", "Positive", "Pessimistic", "Cheerful"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 22,
-          "question": "How many states are there in India?",
-          "options": ["26", "27", "28", "29"],
-          "correctAnswerIndex": 2
+          "question": "Fill in the blank: Hardly had he arrived ___ it started raining.",
+          "options": ["when", "than", "then", "that"],
+          "correctAnswerIndex": 0
         },
         {
           "id": 23,
-          "question": "Which blood group is called universal donor?",
-          "options": ["A", "B", "AB", "O negative"],
-          "correctAnswerIndex": 3
+          "question": "Choose the synonym of 'Commence'.",
+          "options": ["Finish", "Delay", "Begin", "Stop"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 24,
-          "question": "Which day is celebrated as Independence Day in India?",
-          "options": ["26 January", "15 August", "2 October", "14 November"],
-          "correctAnswerIndex": 1
+          "question": "Identify the part of speech of the word 'Quickly'.",
+          "options": ["Noun", "Verb", "Adjective", "Adverb"],
+          "correctAnswerIndex": 3
         },
         {
           "id": 25,
-          "question": "What is the boiling point of water?",
-          "options": ["50°C", "75°C", "100°C", "150°C"],
+          "question": "Choose the correct sentence.",
+          "options": [
+            "One of my friends are coming.",
+            "One of my friends is coming.",
+            "One of my friend is coming.",
+            "One of my friends were coming."
+          ],
+          "correctAnswerIndex": 1
+        }
+      ]
+    },
+    {"subjectId": "english_Advance",
+      "subjectTitle": "English Advance For Lucknow ",
+      "examDurationMinutes": 60,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Choose the synonym of 'Abundant'.",
+          "options": ["Scarce", "Plentiful", "Rare", "Limited"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Choose the antonym of 'Optimistic'.",
+          "options": ["Hopeful", "Positive", "Pessimistic", "Cheerful"],
           "correctAnswerIndex": 2
+        },
+        {
+          "id": 3,
+          "question": "Fill in the blank: She ___ to school every day.",
+          "options": ["go", "goes", "gone", "going"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Choose the correctly spelled word.",
+          "options": ["Recieve", "Receive", "Receeve", "Receve"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "What is the plural of 'Child'?",
+          "options": ["Childs", "Children", "Childes", "Childrens"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "Choose the correct article: He is ___ honest man.",
+          "options": ["a", "an", "the", "no article"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Choose the synonym of 'Diligent'.",
+          "options": ["Lazy", "Hardworking", "Careless", "Weak"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Choose the antonym of 'Expand'.",
+          "options": ["Increase", "Develop", "Contract", "Stretch"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "Fill in the blank: Neither of the boys ___ present.",
+          "options": ["are", "were", "is", "have"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "Choose the correct preposition: She is fond ___ music.",
+          "options": ["of", "with", "for", "at"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 11,
+          "question": "Choose the meaning of the idiom 'A blessing in disguise'.",
+          "options": [
+            "A hidden danger",
+            "A bad situation that turns out well",
+            "A visible reward",
+            "A surprising failure"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "Choose the correct passive voice: 'They built a bridge.'",
+          "options": [
+            "A bridge is built by them.",
+            "A bridge was built by them.",
+            "A bridge has built by them.",
+            "A bridge had built by them."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Choose the synonym of 'Commence'.",
+          "options": ["End", "Stop", "Begin", "Delay"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Fill in the blank: If I ___ rich, I would travel the world.",
+          "options": ["am", "was", "were", "be"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Choose the antonym of 'Generous'.",
+          "options": ["Kind", "Helpful", "Selfish", "Polite"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "Choose the correct indirect speech: He said, 'I am busy.'",
+          "options": [
+            "He said that he is busy.",
+            "He said that he was busy.",
+            "He says that he was busy.",
+            "He said he busy."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "Identify the part of speech of 'Quickly'.",
+          "options": ["Noun", "Verb", "Adjective", "Adverb"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 18,
+          "question": "Choose the correctly punctuated sentence.",
+          "options": [
+            "Lets eat Grandma!",
+            "Let's eat Grandma!",
+            "Let's eat, Grandma!",
+            "Lets eat, Grandma!"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "What is the plural of 'Criterion'?",
+          "options": ["Criterions", "Criteria", "Criterions", "Criterias"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "Choose the word closest in meaning to 'Reluctant'.",
+          "options": ["Eager", "Unwilling", "Ready", "Interested"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 21,
+          "question": "Fill in the blank: By next year, she ___ her degree.",
+          "options": ["completes", "completed", "will complete", "will have completed"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 22,
+          "question": "Hardly had he arrived ___ it started raining.",
+          "options": ["when", "than", "then", "that"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 23,
+          "question": "Choose the correct sentence.",
+          "options": [
+            "One of my friends are coming.",
+            "One of my friends is coming.",
+            "One of my friend is coming.",
+            "One of my friends were coming."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "Choose the antonym of 'Transparent'.",
+          "options": ["Clear", "Visible", "Opaque", "Bright"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "Choose the synonym of 'Meticulous'.",
+          "options": ["Careless", "Detailed", "Rough", "Lazy"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 26,
-          "question": "Which is the fastest land animal?",
-          "options": ["Lion", "Tiger", "Cheetah", "Horse"],
-          "correctAnswerIndex": 2
+          "question": "The manager appreciated her ___ approach.",
+          "options": ["profession", "professional", "professionally", "professor"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 27,
-          "question": "Who wrote Ramayana?",
-          "options": ["Tulsidas", "Kalidas", "Valmiki", "Ved Vyas"],
-          "correctAnswerIndex": 2
+          "question": "Choose the correct sentence.",
+          "options": [
+            "Each of the students have a book.",
+            "Each of the students has a book.",
+            "Each students has a book.",
+            "Each student have a book."
+          ],
+          "correctAnswerIndex": 1
         },
         {
           "id": 28,
-          "question": "Which is the tallest mountain in the world?",
-          "options": ["K2", "Mount Everest", "Kanchenjunga", "Alps"],
+          "question": "Choose the meaning of the idiom 'Hit the nail on the head'.",
+          "options": [
+            "To make a mistake",
+            "To speak exactly right",
+            "To hit someone",
+            "To work hard"
+          ],
           "correctAnswerIndex": 1
         },
         {
           "id": 29,
-          "question": "Which metal is liquid at room temperature?",
-          "options": ["Iron", "Copper", "Mercury", "Silver"],
-          "correctAnswerIndex": 2
+          "question": "Choose the synonym of 'Benevolent'.",
+          "options": ["Cruel", "Kind", "Angry", "Selfish"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 30,
-          "question": "Which planet is closest to the Sun?",
-          "options": ["Venus", "Earth", "Mercury", "Mars"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 31,
-          "question": "Who is known as the Missile Man of India?",
-          "options": ["A.P.J. Abdul Kalam", "Vikram Sarabhai", "Homi Bhabha", "C.V. Raman"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 32,
-          "question": "Which is the largest desert in the world?",
-          "options": ["Sahara Desert", "Thar Desert", "Gobi Desert", "Kalahari Desert"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 33,
-          "question": "Which vitamin is obtained from sunlight?",
-          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
-          "correctAnswerIndex": 3
-        },
-        {
-          "id": 34,
-          "question": "Who was the first President of India?",
-          "options": ["Dr. Rajendra Prasad", "S. Radhakrishnan", "Zakir Hussain", "Jawaharlal Nehru"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 35,
-          "question": "Which is the largest mammal in the world?",
-          "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+          "question": "No sooner had the train left ___ the rain started.",
+          "options": ["when", "than", "then", "that"],
           "correctAnswerIndex": 1
-        },
-        {
-          "id": 36,
-          "question": "Which Indian city is known as the Pink City?",
-          "options": ["Udaipur", "Jodhpur", "Jaipur", "Ajmer"],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 37,
-          "question": "What is the chemical symbol of gold?",
-          "options": ["Go", "Au", "Ag", "Gd"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 38,
-          "question": "Which country gifted the Statue of Liberty to the USA?",
-          "options": ["France", "Germany", "Canada", "Italy"],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 39,
-          "question": "Which is the smallest planet in the solar system?",
-          "options": ["Mars", "Mercury", "Venus", "Pluto"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 40,
-          "question": "Who invented the bulb?",
-          "options": ["Newton", "Einstein", "Thomas Edison", "Bell"],
-          "correctAnswerIndex": 2
         }
       ]
     }
