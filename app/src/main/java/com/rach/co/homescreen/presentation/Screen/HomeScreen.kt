@@ -43,6 +43,17 @@ import com.rach.co.navigation.NavigationDrawer
 import com.rach.co.navigation.Routes
 import com.rach.co.quiz.presentation.viewmodel.QuizCategoryViewModel
 import com.rach.co.utils.K
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.text.style.TextOverflow
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -69,7 +80,7 @@ fun HomeScreen(
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val context = LocalContext.current
     val isPremium by viewModel.isPremium.collectAsState(initial = false)
-
+    val liveClass by viewModel.liveClass.collectAsState()
 
     NavigationDrawer(navController, viewModel, drawerState) {
 
@@ -124,12 +135,23 @@ fun HomeScreen(
                             appName = "Vish Academy",
                             description = "go ads free with 199 only",
                         )
-
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
+          //  Spacer(modifier = Modifier.height(6.dp))
+
+            // LIVE CLASS BANNER
+            if (liveClass?.isLive == true) {
+
+                LiveClassBanner(
+                    title = liveClass!!.title,
+                    thumbnail = liveClass!!.thumbnail,
+                    youtubeLink = liveClass!!.link
+                )
+
+                Spacer(modifier = Modifier.height(6.dp))
+            }
 
             Box(contentAlignment = Alignment.Center) {
                 ImageSlider()
@@ -153,6 +175,170 @@ fun HomeScreen(
         }
     }
 }
+
+// ✅ FIXED: EXTRACTED STANDALONE LIVE BANNER UI COMPOSABLE
+//@Composable
+//fun LiveClassBanner(
+//    title: String,
+//    thumbnail: String,
+//    youtubeLink: String
+//) {
+//    val context = LocalContext.current
+//
+//    Card(
+//        modifier = Modifier
+//            .fillMaxWidth()
+//            .clickable {
+//                if (youtubeLink.isNotBlank()) {
+//                    val intent = Intent(
+//                        Intent.ACTION_VIEW,
+//                        Uri.parse(youtubeLink)
+//                    )
+//                    context.startActivity(intent)
+//                }
+//            },
+//        shape = RoundedCornerShape(16.dp),
+//        colors = CardDefaults.cardColors(
+//            containerColor = Color(0xFF1E1E1E)
+//        )
+//    ) {
+//        Row(
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .padding(12.dp),
+//            verticalAlignment = Alignment.CenterVertically
+//        ) {
+//            AsyncImage(
+//                model = thumbnail,
+//                contentDescription = null,
+//                modifier = Modifier
+//                    .size(90.dp)
+//                    .clip(RoundedCornerShape(12.dp)),
+//                contentScale = ContentScale.Crop
+//            )
+//
+//            Spacer(modifier = Modifier.width(12.dp))
+//
+//            Column(modifier = Modifier.weight(1f)) {
+//                Text(
+//                    text = "🔴 LIVE NOW",
+//                    color = Color.Red,
+//                    fontWeight = FontWeight.Bold,
+//                    fontSize = 14.sp
+//                )
+//
+//                Spacer(modifier = Modifier.height(4.dp))
+//
+//                Text(
+//                    text = title,
+//                    color = Color.White,
+//                    fontWeight = FontWeight.SemiBold,
+//                    fontSize = 16.sp
+//                )
+//
+//                Spacer(modifier = Modifier.height(6.dp))
+//
+//                Text(
+//                    text = "Tap to join live class",
+//                    color = Color.LightGray,
+//                    fontSize = 12.sp
+//                )
+//            }
+//        }
+//    }
+//}
+
+@Composable
+fun LiveClassBanner(
+    title: String,
+    youtubeLink: String,
+    thumbnail: String,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+
+    // Infinite transition for the blinking effect
+    val infiniteTransition = rememberInfiniteTransition(label = "LiveBlink")
+    val alpha by infiniteTransition.animateFloat(
+        initialValue = 1f,
+        targetValue = 0.2f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(durationMillis = 800, easing = LinearEasing),
+            repeatMode = RepeatMode.Reverse
+        ),
+        label = "AlphaAnimation"
+    )
+
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(vertical = 1.dp)
+            .clickable {
+                if (youtubeLink.isNotBlank()) {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(youtubeLink))
+                    context.startActivity(intent)
+                }
+            },
+        shape = RoundedCornerShape(10.dp), // Set to 0.dp to seamlessly touch left/right edges
+        colors = CardDefaults.cardColors(
+            containerColor = Color(0xFFD32F2F) // Classic Accent Red Background
+        )
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 3.dp, horizontal = 10.dp), // Thin vertical padding
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            // Left Side: Blinking Dot + LIVE NOW
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.wrapContentWidth()
+            ) {
+                // Real Blinking Red Dot (Using white or light grey dot here since background is red)
+                Box(
+                    modifier = Modifier
+                        .size(12.dp)
+                        .alpha(alpha)
+                        .clip(CircleShape)
+                        .background(Color.White) // White dot pops brilliantly on red background
+                )
+
+                Spacer(modifier = Modifier.width(6.dp))
+
+                Text(
+                    text = "LIVE NOW:",
+                    color = Color.White,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 10.sp
+                )
+            }
+
+            // Center: Title (Flexible to avoid pushing items out)
+            Text(
+                text = title,
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 8.dp)
+            )
+
+            // Right Side: Action Hint
+            Text(
+                text = "Tap to Join Live Now",
+                color = Color.White.copy(alpha = 0.8f),
+                fontSize = 10.sp,
+                fontWeight = FontWeight.Medium
+            )
+        }
+    }
+}
+
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

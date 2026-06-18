@@ -18,6 +18,8 @@ import com.rach.co.homescreen.data.DataClass.Course
 import com.rach.co.homescreen.data.Remote.PurchaseRepository
 import com.rach.co.homescreen.data.RepoImpl.CourseRepositoryDb
 import com.rach.co.homescreen.domain.Repo.CourseRepository
+import com.rach.co.ytLive.LiveClass
+import com.rach.co.ytLive.LiveClassRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.NonCancellable
 
@@ -31,6 +33,7 @@ class HomeViewModel @Inject constructor(
     private val repository: CourseRepository,
     val rzManager: RzManager,
     private val purchaseRepository: PurchaseRepository,
+    private val liveRepository: LiveClassRepository,
     private val savedStateHandle: SavedStateHandle,
     private val repoDb: CourseRepositoryDb,
     private val userPrefs: UserPrefs
@@ -41,6 +44,20 @@ class HomeViewModel @Inject constructor(
 
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore
+
+    // ytLive
+    private val _liveClass = MutableStateFlow<LiveClass?>(null)
+    val liveClass = _liveClass.asStateFlow()
+
+
+    init {
+
+        liveRepository.observeLiveClass {
+            Log.d("LIVE_CLASS_VM", "Received from Repository = $it")
+            _liveClass.value = it
+        }
+    }
+
 
 
     val isPremium = userPrefs.isPremium

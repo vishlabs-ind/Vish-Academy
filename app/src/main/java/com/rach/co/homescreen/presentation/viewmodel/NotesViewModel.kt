@@ -41,17 +41,4 @@ class NotesViewModel @Inject constructor( val noteRepository: NoteRepository): V
             }
         }
     }
-
-//    // single function for all folders
-//    fun viewNotes(folderName: String) {
-//
-//        viewModelScope.launch {
-//
-//            val data = noteRepository.getNotePdf(folderName)
-//
-//            _notesPdf.value = data
-//
-//            Log.d("PDF_DATA", data.toString())
-//        }
-//    }
 }
