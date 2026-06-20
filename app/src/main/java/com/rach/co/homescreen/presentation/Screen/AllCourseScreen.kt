@@ -4,6 +4,7 @@ import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -28,6 +29,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -46,6 +48,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -83,11 +86,6 @@ fun AllCourseScreen(
     val isLoadingMore by viewModel.isLoadingMore.collectAsState()
 
 
-//    LaunchedEffect(Unit) {
-//        viewModel.fetchCourse()
-//        delay(2500)
-//        loading = false
-//    }
 
     LaunchedEffect(Unit) {
         viewModel.fetchInitialCourses()
@@ -139,6 +137,7 @@ fun AllCourseScreen(
                 }
             }
 
+
             // ✅ Shimmer only for pagination
             if (!isSearching && isLoadingMore) {
                 items(3) {
@@ -163,6 +162,7 @@ fun CourseShimmer() {
             .height(100.dp)
     ) {}
 }
+
 
 @Composable
 fun Coursecard(isMyCourse: Boolean = false, course: Course, navController: NavController) {
@@ -259,22 +259,6 @@ fun Coursecard(isMyCourse: Boolean = false, course: Course, navController: NavCo
                             textDecoration = TextDecoration.LineThrough
                         )
 
-
-
-//                        Button(
-//                            {},
-//                            modifier = Modifier
-//                                .padding(start = 52.dp)
-//                                .height(34.dp),
-//                            colors = ButtonDefaults.buttonColors(
-//                                containerColor = Color(
-//                                    0xFF2A53EE
-//                                )
-//                            )
-//                        ) {
-//
-//                            Text("Enroll Now", fontSize = 10.sp, color = Color.White)
-//                        }
                     }
                 }
 

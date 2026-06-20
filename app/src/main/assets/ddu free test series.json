@@ -2,7 +2,7 @@
   "freeTestSeries": [
     {
       "courseId": "ddu_bca_free_test",
-      "courseTitle": "DDU BCA Test Series",
+      "courseTitle": "DDU BCA Test Series 1",
       "questions": [
         {
           "id": 1,
@@ -552,6 +552,1542 @@
             "Scanner",
             "Speaker"
           ],
+          "correctAnswerIndex": 2
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_bca_computer_awareness_test",
+      "courseTitle": "BCA Computer Awareness Test",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What does CPU stand for?",
+          "options": [
+            "Central Process Unit",
+            "Central Processing Unit",
+            "Computer Processing Unit",
+            "Control Processing Unit"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Which device is used to input data into a computer?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Keyboard",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 3,
+          "question": "Which of the following is an output device?",
+          "options": [
+            "Mouse",
+            "Scanner",
+            "Keyboard",
+            "Monitor"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 4,
+          "question": "What is the brain of the computer?",
+          "options": [
+            "RAM",
+            "CPU",
+            "Hard Disk",
+            "Monitor"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "Which memory is temporary in nature?",
+          "options": [
+            "ROM",
+            "RAM",
+            "Hard Disk",
+            "DVD"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "What does WWW stand for?",
+          "options": [
+            "World Wide Web",
+            "World Web Wide",
+            "Wide World Web",
+            "Web World Wide"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "Which software is used for typing documents?",
+          "options": [
+            "MS Word",
+            "MS Paint",
+            "VLC Media Player",
+            "Photoshop"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 8,
+          "question": "Which key is used to delete characters to the left of the cursor?",
+          "options": [
+            "Shift",
+            "Delete",
+            "Backspace",
+            "Ctrl"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "Which of the following is a programming language?",
+          "options": [
+            "Python",
+            "Windows",
+            "Google",
+            "Linux"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Which company developed Windows OS?",
+          "options": [
+            "Apple",
+            "Google",
+            "Microsoft",
+            "IBM"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "What is the full form of USB?",
+          "options": [
+            "Universal Serial Bus",
+            "United Serial Bus",
+            "Universal System Bus",
+            "Unique Serial Bus"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 12,
+          "question": "Which device prints documents on paper?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Scanner",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Which storage device has the highest capacity?",
+          "options": [
+            "CD",
+            "DVD",
+            "Blu-ray Disc",
+            "Floppy Disk"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Which of the following is an operating system?",
+          "options": [
+            "Windows",
+            "Python",
+            "HTML",
+            "Java"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 15,
+          "question": "Binary numbers use which two digits?",
+          "options": [
+            "1 and 2",
+            "0 and 1",
+            "0 and 9",
+            "2 and 3"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Which part of the computer stores files permanently?",
+          "options": [
+            "RAM",
+            "Cache",
+            "Hard Disk",
+            "Register"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Which shortcut key is used to copy text?",
+          "options": [
+            "Ctrl + X",
+            "Ctrl + V",
+            "Ctrl + C",
+            "Ctrl + Z"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which shortcut key is used to paste text?",
+          "options": [
+            "Ctrl + V",
+            "Ctrl + C",
+            "Ctrl + X",
+            "Ctrl + P"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 19,
+          "question": "Which of the following is used to browse the internet?",
+          "options": [
+            "MS Excel",
+            "Google Chrome",
+            "MS Paint",
+            "Notepad"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "What is the full form of HTML?",
+          "options": [
+            "Hyper Text Markup Language",
+            "High Text Markup Language",
+            "Hyper Tool Markup Language",
+            "Home Text Markup Language"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "Which of the following is not an input device?",
+          "options": [
+            "Mouse",
+            "Keyboard",
+            "Scanner",
+            "Projector"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 22,
+          "question": "Which file extension is used for MS Word files?",
+          "options": [
+            ".jpg",
+            ".mp3",
+            ".docx",
+            ".png"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which key is used to refresh a webpage?",
+          "options": [
+            "F1",
+            "F5",
+            "F10",
+            "F12"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "What does ALU stand for?",
+          "options": [
+            "Arithmetic Logic Unit",
+            "Advanced Logic Unit",
+            "Arithmetic Local Unit",
+            "Automatic Logic Unit"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 25,
+          "question": "Which generation of computers used vacuum tubes?",
+          "options": [
+            "First Generation",
+            "Second Generation",
+            "Third Generation",
+            "Fourth Generation"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 26,
+          "question": "Which of the following is an antivirus software?",
+          "options": [
+            "Photoshop",
+            "Quick Heal",
+            "MS Word",
+            "Chrome"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "Which network covers the largest geographical area?",
+          "options": [
+            "LAN",
+            "MAN",
+            "WAN",
+            "PAN"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "What is the full form of PDF?",
+          "options": [
+            "Portable Document Format",
+            "Public Document File",
+            "Portable Data File",
+            "Printed Document Format"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 29,
+          "question": "Which of the following is used for calculations in computers?",
+          "options": [
+            "ALU",
+            "CU",
+            "RAM",
+            "ROM"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 30,
+          "question": "Which of the following is a search engine?",
+          "options": [
+            "Google",
+            "Windows",
+            "Linux",
+            "Python"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "general_english_test_ddu",
+      "courseTitle": "General English Test DDU",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Choose the correct synonym of 'Happy'.",
+          "options": [
+            "Sad",
+            "Joyful",
+            "Angry",
+            "Tired"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Choose the correct antonym of 'Fast'.",
+          "options": [
+            "Quick",
+            "Rapid",
+            "Slow",
+            "Speedy"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 3,
+          "question": "Fill in the blank: She ___ to school every day.",
+          "options": [
+            "go",
+            "goes",
+            "gone",
+            "going"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Choose the correctly spelled word.",
+          "options": [
+            "Recieve",
+            "Receive",
+            "Receeve",
+            "Receve"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "What is the plural of 'Child'?",
+          "options": [
+            "Childs",
+            "Children",
+            "Childrens",
+            "Childes"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "Choose the correct tense: I ___ my homework yesterday.",
+          "options": [
+            "do",
+            "did",
+            "done",
+            "doing"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "Choose the synonym of 'Big'.",
+          "options": [
+            "Tiny",
+            "Large",
+            "Short",
+            "Weak"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Choose the antonym of 'Hot'.",
+          "options": [
+            "Warm",
+            "Boiling",
+            "Cold",
+            "Heat"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "Fill in the blank: They ___ playing cricket now.",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "was"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "Choose the correct spelling.",
+          "options": [
+            "Beautifull",
+            "Beautiful",
+            "Beutiful",
+            "Beautifool"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "What is the opposite of 'Early'?",
+          "options": [
+            "Late",
+            "Soon",
+            "Fast",
+            "Quick"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 13,
+          "question": "Choose the correct pronoun: Rahul and ___ are friends.",
+          "options": [
+            "me",
+            "I",
+            "mine",
+            "my"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 14,
+          "question": "Fill in the blank: He has been working ___ morning.",
+          "options": [
+            "for",
+            "since",
+            "from",
+            "at"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 15,
+          "question": "Choose the correct sentence.",
+          "options": [
+            "She do not like tea.",
+            "She does not likes tea.",
+            "She does not like tea.",
+            "She not like tea."
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "Choose the synonym of 'Smart'.",
+          "options": [
+            "Intelligent",
+            "Dull",
+            "Lazy",
+            "Weak"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "Choose the antonym of 'Rich'.",
+          "options": [
+            "Wealthy",
+            "Poor",
+            "Strong",
+            "Healthy"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "Fill in the blank: We ___ dinner at 9 PM yesterday.",
+          "options": [
+            "have",
+            "had",
+            "has",
+            "having"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "Choose the correct preposition: The book is ___ the table.",
+          "options": [
+            "on",
+            "at",
+            "under",
+            "into"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 20,
+          "question": "Identify the noun in the sentence: 'Riya sings beautifully.'",
+          "options": [
+            "Riya",
+            "sings",
+            "beautifully",
+            "none"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "Choose the correct spelling.",
+          "options": [
+            "Enviroment",
+            "Environment",
+            "Envirnment",
+            "Enviornment"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Choose the correct form: If I ___ rich, I would help the poor.",
+          "options": [
+            "am",
+            "was",
+            "were",
+            "be"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Choose the synonym of 'Brave'.",
+          "options": [
+            "Coward",
+            "Fearful",
+            "Courageous",
+            "Weak"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "Choose the antonym of 'Open'.",
+          "options": [
+            "Start",
+            "Close",
+            "Wide",
+            "Free"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "Fill in the blank: She is good ___ mathematics.",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "for"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 26,
+          "question": "Choose the correct sentence.",
+          "options": [
+            "He can sings well.",
+            "He can sing well.",
+            "He can sung well.",
+            "He can singing well."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "What is the past tense of 'Write'?",
+          "options": [
+            "Written",
+            "Wrote",
+            "Writes",
+            "Writing"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "Choose the correct conjunction: I was tired, ___ I continued working.",
+          "options": [
+            "but",
+            "because",
+            "or",
+            "so"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 29,
+          "question": "Choose the correctly punctuated sentence.",
+          "options": [
+            "What is your name.",
+            "What is your name?",
+            "What is your name!",
+            "What is your name,"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Choose the correct passive voice: 'The teacher teaches English.'",
+          "options": [
+            "English is taught by the teacher.",
+            "English taught by the teacher.",
+            "English was taught by the teacher.",
+            "Teacher teaches English."
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "ddu22_coding_decoding",
+      "courseTitle": "Reasoning Coding Decoding",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In a certain code language,\nCAT is written as DBU.\n\nHow will DOG be written in that code?",
+          "options": ["EPH", "DPH" , "EOG","EPG"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 2,
+          "question": "In a certain code language, ‘FISHES’ is written as ‘69198519’. ‘BODY’ is written as 215425. What is the code for ‘LEAD’?",
+          "options": ["121514", "12514", "215412", "12511"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "In a certain code language, ‘PRO’ is written as ‘48’. ‘BAL’ is written as ‘14’. What is the code for ‘COH’?",
+          "options": ["26", "25", "24", "27"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "In a code language, ‘REASON’ is written as ‘SDBRPM’. What is the code for ‘NGLISH’?",
+          "options": ["OFMHTG", "XPGMUH", "YPGNIH", "OEMHTG"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 5,
+          "question": "In a certain code language, ‘VERBAL’ is written as ‘225182112’. ‘CURANT’ is written as ‘321181420’. What is the code for ‘SOLVER’?",
+          "options": ["19152412518", "19151222518", "1915122518", "1915123518"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "In a code language, if ‘REPAIR’ is written as 18101621818, then how will ‘GALAXY’ be written?",
+          "options": ["721212425", "721222425", "711212425", "611212324"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "In a code language, if ‘CLASS’ is written as 24152688, then how will ‘MORPH’ be written?",
+          "options": ["15129119", "14129119", "131291018", "141181118"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 8,
+          "question": "In a code language: ‘people are confident’ → lur bur duk, ‘we are helpful’ → kur duk sur, ‘we have cars’ → sur mur jur, ‘people have honesty’ → lur jur nur. What is the code for ‘confident’?",
+          "options": ["bur", "duk", "jur", "lur"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 9,
+          "question": "In a code language, if ‘SOLID’ is written as 8415323, then how will ‘LUCID’ be written?",
+          "options": ["14524323", "15524323", "15424322", "15423322"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "In a code language: ‘are you coming’ → gla pla sot, ‘they are right’ → kla sot pom, ‘are they coming’ → sot pla pom. What is the code for ‘right’?",
+          "options": ["pom", "sot", "kla", "gla"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "In a code language, if ‘BADGE’ is written as 4281410, then how will ‘NORMS’ be written?",
+          "options": ["2832362436", "2430362630", "141581320", "2830362638"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 12,
+          "question": "In a code language, if ‘HE’ = 40 and ‘GO’ = 105, then what will be the code for ‘BAND’?",
+          "options": ["52", "112", "21", "102"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "In a code language: ‘this is done’ → koj mor soi, ‘that is okay’ → loj roj mor, ‘you are okay’ → hok nok loj. What is the code for ‘that’?",
+          "options": ["mor", "loj", "koj", "roj"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 14,
+          "question": "In a code language, ‘KITE’ is written as ‘9’ and ‘MAGIC’ is written as ‘11’. How will ‘FELICITATION’ be written?",
+          "options": ["25", "22", "24", "12"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "In a code language: ‘dee duc tic’ → roses are red, ‘bil doe’ → yellow carnations, ‘tic dur doe’ → carnations are pink. What is the code for ‘pink’?",
+          "options": ["doe", "dee", "tic", "dur"],
+          "correctAnswerIndex": 3
+        }
+      ]
+    },
+    {
+      "courseId": "bca_computer_awareness_test",
+      "courseTitle": "BCA Computer Awareness Test 02",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What does CPU stand for?",
+          "options": [
+            "Central Process Unit",
+            "Central Processing Unit",
+            "Computer Processing Unit",
+            "Control Processing Unit"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Which device is used to input data into a computer?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Keyboard",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 3,
+          "question": "Which of the following is an output device?",
+          "options": [
+            "Mouse",
+            "Scanner",
+            "Keyboard",
+            "Monitor"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 4,
+          "question": "What is the brain of the computer?",
+          "options": [
+            "RAM",
+            "CPU",
+            "Hard Disk",
+            "Monitor"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "Which memory is temporary in nature?",
+          "options": [
+            "ROM",
+            "RAM",
+            "Hard Disk",
+            "DVD"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "What does WWW stand for?",
+          "options": [
+            "World Wide Web",
+            "World Web Wide",
+            "Wide World Web",
+            "Web World Wide"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 7,
+          "question": "Which software is used for typing documents?",
+          "options": [
+            "MS Word",
+            "MS Paint",
+            "VLC Media Player",
+            "Photoshop"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 8,
+          "question": "Which key is used to delete characters to the left of the cursor?",
+          "options": [
+            "Shift",
+            "Delete",
+            "Backspace",
+            "Ctrl"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "Which of the following is a programming language?",
+          "options": [
+            "Python",
+            "Windows",
+            "Google",
+            "Linux"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 10,
+          "question": "Which company developed Windows OS?",
+          "options": [
+            "Apple",
+            "Google",
+            "Microsoft",
+            "IBM"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "What is the full form of USB?",
+          "options": [
+            "Universal Serial Bus",
+            "United Serial Bus",
+            "Universal System Bus",
+            "Unique Serial Bus"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 12,
+          "question": "Which device prints documents on paper?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Scanner",
+            "Speaker"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "Which storage device has the highest capacity?",
+          "options": [
+            "CD",
+            "DVD",
+            "Blu-ray Disc",
+            "Floppy Disk"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Which of the following is an operating system?",
+          "options": [
+            "Windows",
+            "Python",
+            "HTML",
+            "Java"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 15,
+          "question": "Binary numbers use which two digits?",
+          "options": [
+            "1 and 2",
+            "0 and 1",
+            "0 and 9",
+            "2 and 3"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "Which part of the computer stores files permanently?",
+          "options": [
+            "RAM",
+            "Cache",
+            "Hard Disk",
+            "Register"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Which shortcut key is used to copy text?",
+          "options": [
+            "Ctrl + X",
+            "Ctrl + V",
+            "Ctrl + C",
+            "Ctrl + Z"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Which shortcut key is used to paste text?",
+          "options": [
+            "Ctrl + V",
+            "Ctrl + C",
+            "Ctrl + X",
+            "Ctrl + P"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 19,
+          "question": "Which of the following is used to browse the internet?",
+          "options": [
+            "MS Excel",
+            "Google Chrome",
+            "MS Paint",
+            "Notepad"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "What is the full form of HTML?",
+          "options": [
+            "Hyper Text Markup Language",
+            "High Text Markup Language",
+            "Hyper Tool Markup Language",
+            "Home Text Markup Language"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 21,
+          "question": "Which of the following is not an input device?",
+          "options": [
+            "Mouse",
+            "Keyboard",
+            "Scanner",
+            "Projector"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 22,
+          "question": "Which file extension is used for MS Word files?",
+          "options": [
+            ".jpg",
+            ".mp3",
+            ".docx",
+            ".png"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Which key is used to refresh a webpage?",
+          "options": [
+            "F1",
+            "F5",
+            "F10",
+            "F12"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "What does ALU stand for?",
+          "options": [
+            "Arithmetic Logic Unit",
+            "Advanced Logic Unit",
+            "Arithmetic Local Unit",
+            "Automatic Logic Unit"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 25,
+          "question": "Which generation of computers used vacuum tubes?",
+          "options": [
+            "First Generation",
+            "Second Generation",
+            "Third Generation",
+            "Fourth Generation"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 26,
+          "question": "Which of the following is an antivirus software?",
+          "options": [
+            "Photoshop",
+            "Quick Heal",
+            "MS Word",
+            "Chrome"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "Which network covers the largest geographical area?",
+          "options": [
+            "LAN",
+            "MAN",
+            "WAN",
+            "PAN"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "What is the full form of PDF?",
+          "options": [
+            "Portable Document Format",
+            "Public Document File",
+            "Portable Data File",
+            "Printed Document Format"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 29,
+          "question": "Which of the following is used for calculations in computers?",
+          "options": [
+            "ALU",
+            "CU",
+            "RAM",
+            "ROM"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 30,
+          "question": "Which of the following is a search engine?",
+          "options": [
+            "Google",
+            "Windows",
+            "Linux",
+            "Python"
+          ],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_bca_entrance_mock_series_1",
+      "courseTitle": "DDU BCA Entrance Test Series 2",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Choose the correct spelling. सही वर्तनी चुनिए।",
+          "options": ["Accomodation", "Accommodation", "Acommodation", "Acomodation"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "The synonym of 'DILIGENT' is: 'DILIGENT' का समानार्थी शब्द है:",
+          "options": ["Lazy", "Hardworking", "Careless", "Reckless"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "The antonym of 'ANCIENT' is: 'ANCIENT' का विलोम शब्द है:",
+          "options": ["Old", "Vintage", "Modern", "Historical"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 4,
+          "question": "Fill in the blank: She ______ to school every day. रिक्त स्थान भरिए: वह प्रतिदिन स्कूल ______ है।",
+          "options": ["go", "goes", "going", "gone"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "The plural of 'CHILD' is: 'CHILD' का बहुवचन है:",
+          "options": ["Childs", "Childes", "Children", "Childrens"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "Which sentence is grammatically correct? कौन सा वाक्य व्याकरणिक दृष्टि से सही है?",
+          "options": ["She don't like coffee.", "She doesn't likes coffee.", "She doesn't like coffee.", "She not like coffee."],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "The passive voice of 'Ram wrote a letter' is: 'Ram wrote a letter' का कर्मवाच्य रूप है:",
+          "options": ["A letter was written by Ram.", "A letter is written by Ram.", "A letter has been written by Ram.", "A letter were written by Ram."],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 8,
+          "question": "The word 'BENEVOLENT' means: 'BENEVOLENT' शब्द का अर्थ है:",
+          "options": ["Cruel", "Kind and generous", "Selfish", "Angry"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Synonym of the word 'UNIFORMITY' is: 'UNIFORMITY' का समानार्थी शब्द है:",
+          "options": ["Assertion", "Stupidity", "Consistency", "Continuously"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "The singular of 'DATA' is: 'DATA' का एकवचन है:",
+          "options": ["Datas", "Datum", "Dataes", "Dat"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "Who is known as the 'Father of the Indian Constitution'? 'भारतीय संविधान के पिता' के रूप में किसे जाना जाता है?",
+          "options": ["Mahatma Gandhi", "Jawaharlal Nehru", "B.R. Ambedkar", "Sardar Patel"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "Which planet is known as the Red Planet? किस ग्रह को लाल ग्रह के नाम से जाना जाता है?",
+          "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "The headquarters of the United Nations is located in: संयुक्त राष्ट्र का मुख्यालय कहाँ स्थित है?",
+          "options": ["London", "Paris", "New York", "Geneva"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Which is the national animal of India? भारत का राष्ट्रीय पशु कौन सा है?",
+          "options": ["Lion", "Elephant", "Bengal Tiger", "Leopard"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "Which river is called the 'Ganga of South India'? किस नदी को 'दक्षिण भारत की गंगा' कहा जाता है?",
+          "options": ["Krishna", "Cauvery", "Godavari", "Mahanadi"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "Who invented the telephone? टेलीफोन का आविष्कार किसने किया?",
+          "options": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "James Watt"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 17,
+          "question": "The Indian Parliament consists of how many houses? भारतीय संसद में कितने सदन हैं?",
+          "options": ["1", "2", "3", "4"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "Which is the longest river in India? भारत की सबसे लंबी नदी कौन सी है?",
+          "options": ["Yamuna", "Brahmaputra", "Ganga", "Godavari"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "In which state is the famous 'Golconda Fort' located? प्रसिद्ध 'गोलकोण्डा किला' किस राज्य में स्थित है?",
+          "options": ["Telangana", "Punjab", "Rajasthan", "Goa"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 20,
+          "question": "In which year was the Telangana State formed? तेलंगाना राज्य का गठन किस वर्ष में हुआ?",
+          "options": ["2012", "2013", "2014", "2015"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "In a row of boys, Ravi is 7th from the left and 13th from the right. How many boys are in the row? लड़कों की एक पंक्ति में रवि बाएं से 7वें और दाएं से 13वें स्थान पर है। पंक्ति में कुल कितने लड़के हैं?",
+          "options": ["18", "19", "20", "21"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Find the odd one out: विषम को पहचानिए: 5, 10, 15, 21, 25",
+          "options": ["10", "15", "21", "25"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "Complete the series: अनुक्रम पूरा करिए: 2, 4, 8, 16, ?",
+          "options": ["24", "28", "32", "36"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "A is the sister of B. B is the brother of C. C is the son of D. How is D related to A? A, B की बहन है। B, C का भाई है। C, D का पुत्र है। D का A से क्या संबंध है?",
+          "options": ["Mother", "Father", "Mother or Father", "Uncle"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "Pointing to a photograph, Rohan says, 'She is the daughter of my grandfather's only son.' How is the girl related to Rohan? एक तस्वीर की ओर इशारा करते हुए रोहन कहता है, 'वह मेरे दादाजी के इकलौते पुत्र की पुत्री है।' तस्वीर में लड़की का रोहन से क्या संबंध है?",
+          "options": ["Sister", "Cousin", "Niece", "Daughter"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 26,
+          "question": "Which number is missing? कौन सी संख्या लुप्त है? 3, 6, 11, 18, 27, ?",
+          "options": ["36", "38", "39", "40"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "If '-' is used for '×', '+' is used for '+', '÷' stands for '-' and '×' is used for '+', then: 26 + 74 - 4 × 5 ÷ 2 = ? यदि '-' का अर्थ '×', '+' का अर्थ '+', '÷' का अर्थ '-' और '×' का अर्थ '+' है, तो: 26 + 74 - 4 × 5 ÷ 2 = ?",
+          "options": ["90", "376", "478", "488"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Riya goes 30 km North, then turns right and goes 15 km, then turns right and goes 30 km. How far and in what direction is she from the starting point? रिया 30 किमी उत्तर जाती है, फिर दाएं मुड़कर 15 किमी जाती है, फिर दाएं मुड़कर 30 किमी जाती है। वह शुरुआती बिंदु से कितनी दूर और किस दिशा में है?",
+          "options": ["10 km East", "15 km East", "20 km North", "15 km West"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "If E = 5 and HEN = 27, then PEN = ? यदि E = 5 और HEN = 27 तो PEN = ?",
+          "options": ["29", "35", "53", "36"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Identify the incorrect number in the series: अनुक्रम में गलत संख्या बताइए: 12, 28, 30, 39, 48",
+          "options": ["28", "39", "30", "48"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 31,
+          "question": "Which gas is used in fire extinguishers? अग्निशामक यंत्रों में कौन सी गैस प्रयुक्त होती है?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "The unit of electric current is: विद्युत धारा की इकाई है:",
+          "options": ["Volt", "Watt", "Ampere", "Ohm"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 33,
+          "question": "Which vitamin is produced when skin is exposed to sunlight? सूर्य के प्रकाश के संपर्क में आने पर त्वचा में कौन सा विटामिन उत्पन्न होता है?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 34,
+          "question": "Dry Ice is: शुष्क बर्फ है:",
+          "options": ["Solid Ammonia", "Solid Sulphur Dioxide", "Dry Carbon Dioxide Gas", "Solid Carbon Dioxide"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 35,
+          "question": "Which colour of light is deviated the most? सबसे ज्यादा विचलित होने वाला प्रकाश का वर्ण कौन सा है?",
+          "options": ["Red", "Blue", "Green", "Violet"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 36,
+          "question": "Heat from the Sun comes to Earth by: सूर्य से ऊष्मा पृथ्वी पर किससे आती है?",
+          "options": ["Conduction", "Convection", "Radiation", "All of the above"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "Which blood group is known as the 'Universal Donor'? कौन सा रक्त समूह 'सार्वभौमिक दाता' के रूप में जाना जाता है?",
+          "options": ["A", "B", "AB", "O"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 38,
+          "question": "The main constituent of Biogas is: बायोगैस का प्रमुख अवयव है:",
+          "options": ["Methane", "Ozone", "Carbon Dioxide", "Sulphur Dioxide"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 39,
+          "question": "Penicillin is extracted from: पेनिसिलिन निकाला जाता है:",
+          "options": ["Yeast", "Algae", "Fungus", "Lichen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "Scurvy Disease is caused by the deficiency of: स्कर्वी किसकी कमी से होने वाला रोग है?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin K"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "If 2x + 5 = 17, then x = ? यदि 2x + 5 = 17, तो x = ?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 42,
+          "question": "The LCM of 12 and 18 is: 12 और 18 का LCM है:",
+          "options": ["6", "24", "36", "72"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 43,
+          "question": "What is 15% of 200? 200 का 15% क्या है?",
+          "options": ["25", "30", "35", "40"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 44,
+          "question": "If the length of a room is twice its breadth and the area is 242 m², the breadth of the room is: यदि किसी कमरे की लम्बाई उसकी चौड़ाई की दुगुनी हो तथा कमरे का क्षेत्रफल 242 वर्ग मीटर हो, तो कमरे की चौड़ाई है:",
+          "options": ["22 m", "11 m", "1000 cm", "1100 cm"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "A father is now three times as old as his son. Five years back he was four times as old as his son. The present age of the son is: एक पिता अपने बेटे से तीन गुना बड़ा है, पाँच साल पहले वह अपने बेटे से चार गुना बड़ा था। बेटे की वर्तमान उम्र है:",
+          "options": ["12", "15", "14", "16"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 46,
+          "question": "The value of sin 150° is: sin 150° का मान है:",
+          "options": ["1", "1/2", "√3/2", "-1/2"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 47,
+          "question": "The roots of the equation x² - 4x + 4 = 0 are: समीकरण x² - 4x + 4 = 0 के मूल हैं:",
+          "options": ["Real and repeated", "Real and distinct", "Imaginary", "None of these"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 48,
+          "question": "150% of Rs 30,000 is: ₹30,000 का 150% है:",
+          "options": ["₹4,500", "₹45,000", "₹15,000", "₹20,000"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "The middle point of the line joining the points (-1, 7) and (3, -11) is: बिन्दुओं (-1, 7) और (3, -11) को मिलाने वाली रेखा का मध्य बिन्दु है:",
+          "options": ["(2, -7)", "(-1, 2)", "(1, -2)", "(1, 2)"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 50,
+          "question": "Out of 1/2, 2/3, 3/4 and 4/5, which fraction is the greatest? 1/2, 2/3, 3/4 तथा 4/5 में कौन सी भिन्न सबसे बड़ी है?",
+          "options": ["4/5", "3/4", "2/3", "1/2"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "GK_imp",
+      "courseTitle": "GK Important",
+      "questions": [
+        {
+          "id": 1,
+          "question": "भारत का राष्ट्रीय पशु कौन है?",
+          "options": ["शेर", "हाथी", "बाघ", "चीता"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "भारत का राष्ट्रीय पक्षी कौन है?",
+          "options": ["तोता", "मोर", "कबूतर", "हंस"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "भारत की राष्ट्रीय नदी कौन सी है?",
+          "options": ["यमुना", "गंगा", "गोदावरी", "नर्मदा"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "भारतीय संविधान कब लागू हुआ था?",
+          "options": ["15 अगस्त 1947", "26 जनवरी 1950", "26 नवंबर 1949", "2 अक्टूबर 1950"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 5,
+          "question": "भारत का राष्ट्रीय वृक्ष कौन सा है?",
+          "options": ["नीम", "बरगद", "पीपल", "आम"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 6,
+          "question": "भारत का राष्ट्रीय फूल कौन सा है?",
+          "options": ["गुलाब", "कमल", "गेंदा", "चमेली"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 7,
+          "question": "भारत का राष्ट्रीय गान किसने लिखा था?",
+          "options": ["बंकिम चंद्र चट्टोपाध्याय", "महात्मा गांधी", "रवीन्द्रनाथ टैगोर", "सुभाष चंद्र बोस"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "विश्व का सबसे ऊँचा पर्वत कौन सा है?",
+          "options": ["K2", "कंचनजंगा", "माउंट एवरेस्ट", "नंगा पर्वत"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "सूर्य के सबसे निकट कौन सा ग्रह है?",
+          "options": ["शुक्र", "पृथ्वी", "बुध", "मंगल"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "भारत की राजधानी क्या है?",
+          "options": ["मुंबई", "कोलकाता", "नई दिल्ली", "चेन्नई"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "भारत में कुल कितने राज्य हैं?",
+          "options": ["26", "27", "28", "29"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "भारतीय संविधान के निर्माता किसे कहा जाता है?",
+          "options": ["महात्मा गांधी", "डॉ. बी.आर. अंबेडकर", "जवाहरलाल नेहरू", "सरदार पटेल"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 13,
+          "question": "भारत छोड़ो आंदोलन कब शुरू हुआ था?",
+          "options": ["1942", "1930", "1919", "1947"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 14,
+          "question": "ताजमहल किस शहर में स्थित है?",
+          "options": ["दिल्ली", "जयपुर", "आगरा", "लखनऊ"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "भारत का सर्वोच्च नागरिक सम्मान कौन सा है?",
+          "options": ["पद्म श्री", "पद्म भूषण", "पद्म विभूषण", "भारत रत्न"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 16,
+          "question": "कंप्यूटर का जनक किसे कहा जाता है?",
+          "options": ["चार्ल्स बैबेज", "एलन ट्यूरिंग", "बिल गेट्स", "स्टीव जॉब्स"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 17,
+          "question": "मानव शरीर में रक्त को शुद्ध करने का कार्य कौन सा अंग करता है?",
+          "options": ["हृदय", "फेफड़ा", "यकृत", "गुर्दा"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 18,
+          "question": "ओलंपिक खेलों का आयोजन कितने वर्षों के अंतराल पर होता है?",
+          "options": ["2 वर्ष", "3 वर्ष", "4 वर्ष", "5 वर्ष"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "भारत का राष्ट्रीय खेल पारंपरिक रूप से किसे माना जाता है?",
+          "options": ["क्रिकेट", "हॉकी", "कबड्डी", "फुटबॉल"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "जलियांवाला बाग हत्याकांड किस वर्ष हुआ था?",
+          "options": ["1917", "1918", "1919", "1920"],
           "correctAnswerIndex": 2
         }
       ]
@@ -1109,6 +2645,538 @@
             "अथर्ववेद"
           ],
           "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_maths_series_1",
+      "courseTitle": "DDU Maths Only Mock All Entrance",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the value of lim(x→0) sinx/x? lim(x→0) sinx/x का मान क्या है?",
+          "options": ["0", "∞", "1", "x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "What is the derivative of ln(x)? ln(x) का अवकलज क्या है?",
+          "options": ["ln(x)", "1/x", "x", "eˣ"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "What is ∫eˣ dx? ∫eˣ dx का मान क्या है?",
+          "options": ["eˣ⁻¹ + C", "eˣ + C", "xeˣ + C", "eˣ/x + C"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "What is the value of d/dx (tan x)? d/dx (tan x) का मान क्या है?",
+          "options": ["sin x", "cos x", "sec²x", "cosec²x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is the integral ∫(1/x)dx? ∫(1/x)dx का मान क्या है?",
+          "options": ["x + C", "x² + C", "ln|x| + C", "1/x² + C"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "What is the value of d/dx (sin²x)? d/dx (sin²x) का मान क्या है?",
+          "options": ["2sinx", "2cosx", "sin2x", "cos2x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "What is the determinant of matrix [[2,3],[1,4]]? आव्यूह [[2,3],[1,4]] का सारणिक क्या है?",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "If A is a 2×2 matrix, what is the order of A²? यदि A एक 2×2 आव्यूह है, तो A² की कोटि क्या होगी?",
+          "options": ["1×1", "2×2", "4×4", "2×4"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "What is the value of i² where i = √(-1)? i² का मान क्या है जहाँ i = √(-1)?",
+          "options": ["1", "-1", "i", "-i"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 10,
+          "question": "What is the modulus of complex number 3 + 4i? सम्मिश्र संख्या 3 + 4i का मापांक क्या है?",
+          "options": ["3", "4", "5", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "What is the sum of an infinite GP with first term 1 and common ratio 1/2? पहले पद 1 और सार्वअनुपात 1/2 वाले अनंत GP का योग क्या है?",
+          "options": ["1", "1.5", "2", "3"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "What is the equation of a circle with centre (0,0) and radius r? केंद्र (0,0) और त्रिज्या r वाले वृत्त का समीकरण क्या है?",
+          "options": ["x + y = r", "x² + y² = r", "x² + y² = r²", "x² - y² = r²"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "What is the value of sin(A+B)? sin(A+B) का मान क्या है?",
+          "options": ["sinA + sinB", "sinA cosB - cosA sinB", "sinA cosB + cosA sinB", "cosA cosB - sinA sinB"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "What is the value of cos(2A)? cos(2A) का मान क्या है?",
+          "options": ["2sinA cosA", "sin²A - cos²A", "cos²A - sin²A", "1 - sinA"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "What is the number of ways to choose 2 items from 6 distinct items? 6 वस्तुओं में से 2 वस्तुएँ चुनने के तरीकों की संख्या क्या है?",
+          "options": ["12", "15", "18", "30"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 16,
+          "question": "What is the value of ⁸P₃? ⁸P₃ का मान क्या है?",
+          "options": ["56", "168", "336", "512"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "What is the general term of binomial expansion (a+b)ⁿ? द्विपद प्रसार (a+b)ⁿ का व्यापक पद क्या है?",
+          "options": ["ⁿCr aⁿ⁻ʳ bʳ", "ⁿCr aʳ bⁿ⁻ʳ", "ⁿCr aⁿ bʳ", "ⁿCr aʳ bʳ"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 18,
+          "question": "What is the middle term of (x+y)⁴? (x+y)⁴ का मध्य पद क्या है?",
+          "options": ["2nd term", "3rd term", "4th term", "5th term"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "What is the value of lim(x→∞) (1 + 1/x)ˣ? lim(x→∞) (1 + 1/x)ˣ का मान क्या है?",
+          "options": ["0", "1", "e", "∞"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "What is the area under the curve y = x² from x = 0 to x = 3? y = x² वक्र के नीचे x = 0 से x = 3 तक का क्षेत्रफल क्या है?",
+          "options": ["6", "7", "9", "27"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is the probability of getting a sum of 7 when two dice are thrown? दो पासे फेंकने पर योग 7 आने की प्रायिकता क्या है?",
+          "options": ["1/6", "5/36", "6/36", "7/36"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 22,
+          "question": "What is the variance if standard deviation is 4? यदि मानक विचलन 4 है तो विचरण क्या है?",
+          "options": ["2", "8", "16", "64"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "What is the equation of a line passing through origin with slope m? ढाल m के साथ मूलबिंदु से गुजरने वाली रेखा का समीकरण क्या है?",
+          "options": ["y = mx + c", "y = mx", "x = my", "y = m + x"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 24,
+          "question": "What is the eccentricity of a circle? वृत्त की उत्केंद्रता क्या होती है?",
+          "options": ["0", "0.5", "1", ">1"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 25,
+          "question": "What is the value of d/dx (log₁₀ x)? d/dx (log₁₀ x) का मान क्या है?",
+          "options": ["1/x", "log₁₀e / x", "1/(x ln10)", "10/x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "What is the transpose of matrix [[1,2],[3,4]]? आव्यूह [[1,2],[3,4]] का परिवर्त क्या है?",
+          "options": ["[[1,3],[2,4]]", "[[4,3],[2,1]]", "[[1,2],[3,4]]", "[[2,1],[4,3]]"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 27,
+          "question": "What is Euler's formula? ऑयलर का सूत्र क्या है?",
+          "options": ["eⁱᶿ = cosθ + i sinθ", "eⁱᶿ = sinθ + i cosθ", "eⁱᶿ = cosθ - i sinθ", "eⁱᶿ = cosθ × sinθ"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 28,
+          "question": "What is the value of sin²x + cos²x? sin²x + cos²x का मान क्या है?",
+          "options": ["0", "1/2", "1", "2"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "How many terms are there in the expansion of (a+b)¹⁰? (a+b)¹⁰ के प्रसार में कितने पद होते हैं?",
+          "options": ["9", "10", "11", "20"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "What is the sum of first n natural numbers? पहले n प्राकृतिक संख्याओं का योग क्या है?",
+          "options": ["n(n+1)", "n(n-1)/2", "n(n+1)/2", "n²(n+1)"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "If f(x) = x³, what is f'(x)? यदि f(x) = x³ है, तो f'(x) क्या है?",
+          "options": ["x²", "2x²", "3x²", "3x³"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "What is the value of ∫₀¹ x dx? ∫₀¹ x dx का मान क्या है?",
+          "options": ["1/4", "1/3", "1/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 33,
+          "question": "What is the product of roots of quadratic equation ax² + bx + c = 0? द्विघात समीकरण ax² + bx + c = 0 के मूलों का गुणनफल क्या है?",
+          "options": ["b/a", "-b/a", "c/a", "-c/a"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "What is the sum of roots of quadratic equation ax² + bx + c = 0? द्विघात समीकरण ax² + bx + c = 0 के मूलों का योग क्या है?",
+          "options": ["b/a", "-b/a", "c/a", "-c/a"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 35,
+          "question": "What is the distance of point (3, 4) from the origin? बिंदु (3, 4) की मूलबिंदु से दूरी क्या है?",
+          "options": ["3", "4", "5", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "What is the angle between two lines with slopes m₁ and m₂? ढाल m₁ और m₂ वाली दो रेखाओं के बीच का कोण क्या है?",
+          "options": ["tan θ = (m₁+m₂)/(1-m₁m₂)", "tan θ = (m₁-m₂)/(1+m₁m₂)", "tan θ = m₁×m₂", "tan θ = m₁/m₂"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 37,
+          "question": "What is the value of ∫sin x dx? ∫sin x dx का मान क्या है?",
+          "options": ["cos x + C", "-cos x + C", "sin x + C", "-sin x + C"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "What is the second derivative of x⁴? x⁴ का द्वितीय अवकलज क्या है?",
+          "options": ["4x³", "8x²", "12x²", "16x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "What is the value of log(ab)? log(ab) का मान क्या है?",
+          "options": ["log a × log b", "log a - log b", "log a + log b", "log a / log b"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "What is the range of function f(x) = sin x? फलन f(x) = sin x का परिसर क्या है?",
+          "options": ["[0, 1]", "[-1, 0]", "[-1, 1]", "[0, ∞]"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "In how many ways can 5 people be seated in a row? 5 लोगों को एक पंक्ति में कितने तरीकों से बैठाया जा सकता है?",
+          "options": ["60", "100", "120", "150"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 42,
+          "question": "What is the formula for compound interest? चक्रवृद्धि ब्याज का सूत्र क्या है?",
+          "options": ["A = P(1 + r/n)ⁿᵗ", "A = P + PRT", "A = P(1 - r)ᵗ", "A = P × R × T"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 43,
+          "question": "What is the value of sin(2A)? sin(2A) का मान क्या है?",
+          "options": ["sin²A + cos²A", "2sinA cosA", "cos²A - sin²A", "1 - 2sin²A"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 44,
+          "question": "What is the vertex of the parabola y = x² - 4x + 4? परवलय y = x² - 4x + 4 का शीर्ष क्या है?",
+          "options": ["(0, 4)", "(2, 0)", "(4, 0)", "(-2, 0)"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "What is the value of ¹⁰C₀? ¹⁰C₀ का मान क्या है?",
+          "options": ["0", "1", "10", "100"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 46,
+          "question": "What does the discriminant b² - 4ac < 0 indicate? b² - 4ac < 0 क्या दर्शाता है?",
+          "options": ["Two real roots", "One real root", "No real roots", "Infinite roots"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 47,
+          "question": "What is the value of d/dx (xⁿ)? d/dx (xⁿ) का मान क्या है?",
+          "options": ["xⁿ⁻¹", "nxⁿ", "nxⁿ⁻¹", "nxⁿ⁺¹"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 48,
+          "question": "What is the probability of getting at least one head when two coins are tossed? दो सिक्के उछालने पर कम से कम एक चित आने की प्रायिकता क्या है?",
+          "options": ["1/4", "1/2", "3/4", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 49,
+          "question": "What is the sum of squares of first n natural numbers? पहले n प्राकृतिक संख्याओं के वर्गों का योग क्या है?",
+          "options": ["n(n+1)/2", "n(n+1)(2n+1)/6", "n²(n+1)²/4", "n(2n+1)/3"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 50,
+          "question": "What is the area of an ellipse with semi-axes a and b? अर्ध-अक्षों a और b वाले दीर्घवृत्त का क्षेत्रफल क्या है?",
+          "options": ["πab", "2πab", "πa²b", "π(a+b)"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_numerical_aptitude_test",
+      "courseTitle": "Aptitude Test",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is 25% of 480?",
+          "options": [
+            "100",
+            "120",
+            "140",
+            "160"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 2,
+          "question": "Simplify: 15 + 5 × 4",
+          "options": [
+            "80",
+            "35",
+            "40",
+            "20"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "The average of 10, 20, 30, 40 is?",
+          "options": [
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 4,
+          "question": "Find the simple interest on ₹2000 at 5% for 2 years.",
+          "options": [
+            "100",
+            "150",
+            "200",
+            "250"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "If x = 5, then value of 2x + 3 is?",
+          "options": [
+            "10",
+            "12",
+            "13",
+            "15"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "A train travels 120 km in 2 hours. Its speed is?",
+          "options": [
+            "40 km/h",
+            "50 km/h",
+            "60 km/h",
+            "70 km/h"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "What is the HCF of 12 and 18?",
+          "options": [
+            "2",
+            "3",
+            "6",
+            "9"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "Find the next number: 2, 4, 8, 16, ?",
+          "options": [
+            "18",
+            "24",
+            "32",
+            "64"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "What is 3/4 of 200?",
+          "options": [
+            "100",
+            "120",
+            "150",
+            "180"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "If the cost price is ₹500 and selling price is ₹600, profit is?",
+          "options": [
+            "₹50",
+            "₹75",
+            "₹100",
+            "₹120"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "Simplify: 81 ÷ 9 × 2",
+          "options": [
+            "9",
+            "12",
+            "16",
+            "18"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 12,
+          "question": "The perimeter of a square with side 8 cm is?",
+          "options": [
+            "16 cm",
+            "24 cm",
+            "32 cm",
+            "64 cm"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Find the value of √144.",
+          "options": [
+            "10",
+            "11",
+            "12",
+            "14"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "A shopkeeper gives 10% discount on ₹500. Final price is?",
+          "options": [
+            "₹400",
+            "₹450",
+            "₹475",
+            "₹480"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 15,
+          "question": "What is the LCM of 4 and 6?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "24"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "If 5 pens cost ₹100, cost of 1 pen is?",
+          "options": [
+            "₹10",
+            "₹15",
+            "₹20",
+            "₹25"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Find the missing number: 5, 10, 20, 40, ?",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Area of a rectangle with length 10 cm and breadth 5 cm is?",
+          "options": [
+            "15 cm²",
+            "30 cm²",
+            "50 cm²",
+            "60 cm²"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "What is 40% of 250?",
+          "options": [
+            "80",
+            "90",
+            "100",
+            "120"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "A number divided by 5 gives quotient 6 and remainder 2. The number is?",
+          "options": [
+            "28",
+            "30",
+            "32",
+            "35"
+          ],
+          "correctAnswerIndex": 2
         }
       ]
     },
@@ -2225,1121 +4293,2388 @@
       ]
     },
     {
-      "courseId": "lucnkow_university_coding_decoding",
-      "courseTitle": "Lucknow University Reasoning Coding Decoding",
+      "courseId": "ddu_dpharma_free_test",
+      "courseTitle": "DDU D.Pharma (Bio)Entrance Test Series",
       "questions": [
         {
           "id": 1,
-          "question": "In a certain code language,\nCAT is written as DBU.\n\nHow will DOG be written in that code?",
-          "options": ["EPH", "DPH" , "EOG","EPG"],
+          "question": "How many bones are there in the adult human body? मानव शरीर में कितनी हड्डियाँ होती हैं?",
+          "options": ["206", "212", "198", "220"],
           "correctAnswerIndex": 0
         },
         {
           "id": 2,
-          "question": "In a certain code language, ‘FISHES’ is written as ‘69198519’. ‘BODY’ is written as 215425. What is the code for ‘LEAD’?",
-          "options": ["121514", "12514", "215412", "12511"],
-          "correctAnswerIndex": 1
+          "question": "Which gas is released during photosynthesis? प्रकाश संश्लेषण में कौन सी गैस निकलती है?",
+          "options": ["Carbon Dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 3,
-          "question": "In a certain code language, ‘PRO’ is written as ‘48’. ‘BAL’ is written as ‘14’. What is the code for ‘COH’?",
-          "options": ["26", "25", "24", "27"],
+          "question": "What is the normal pH of human blood? मानव रक्त का सामान्य pH कितना होता है?",
+          "options": ["6.4", "7.4", "8.0", "5.8"],
           "correctAnswerIndex": 1
         },
         {
           "id": 4,
-          "question": "In a code language, ‘REASON’ is written as ‘SDBRPM’. What is the code for ‘NGLISH’?",
-          "options": ["OFMHTG", "XPGMUH", "YPGNIH", "OEMHTG"],
-          "correctAnswerIndex": 0
+          "question": "Which gland secretes insulin? इंसुलिन हार्मोन कौन सी ग्रंथि से स्रावित होता है?",
+          "options": ["Thyroid", "Adrenal", "Pancreas", "Pituitary"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 5,
-          "question": "In a certain code language, ‘VERBAL’ is written as ‘225182112’. ‘CURANT’ is written as ‘321181420’. What is the code for ‘SOLVER’?",
-          "options": ["19152412518", "19151222518", "1915122518", "1915123518"],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 6,
-          "question": "In a code language, if ‘REPAIR’ is written as 18101621818, then how will ‘GALAXY’ be written?",
-          "options": ["721212425", "721222425", "711212425", "611212324"],
+          "question": "What is the full form of DNA? DNA का पूरा नाम क्या है?",
+          "options": ["Deoxyribonucleic Acid", "Diribonucleic Acid", "Deoxyribose Nucleic Atom", "Dioxy Nucleic Acid"],
           "correctAnswerIndex": 0
         },
         {
+          "id": 6,
+          "question": "What is the smallest cell in the human body? मानव शरीर का सबसे छोटा कोशिका कौन सी है?",
+          "options": ["Liver cell", "Red Blood Cell", "Sperm cell", "Neuron"],
+          "correctAnswerIndex": 2
+        },
+        {
           "id": 7,
-          "question": "In a code language, if ‘CLASS’ is written as 24152688, then how will ‘MORPH’ be written?",
-          "options": ["15129119", "14129119", "131291018", "141181118"],
+          "question": "Mitochondria is known as? माइटोकॉन्ड्रिया को क्या कहा जाता है?",
+          "options": ["Control center of cell", "Powerhouse of cell", "Protein factory", "Storage unit"],
           "correctAnswerIndex": 1
         },
         {
           "id": 8,
-          "question": "In a code language: ‘people are confident’ → lur bur duk, ‘we are helpful’ → kur duk sur, ‘we have cars’ → sur mur jur, ‘people have honesty’ → lur jur nur. What is the code for ‘confident’?",
-          "options": ["bur", "duk", "jur", "lur"],
-          "correctAnswerIndex": 0
+          "question": "What is the chemical name of Vitamin C? विटामिन C का रासायनिक नाम क्या है?",
+          "options": ["Retinol", "Ascorbic Acid", "Calciferol", "Tocopherol"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 9,
-          "question": "In a code language, if ‘SOLID’ is written as 8415323, then how will ‘LUCID’ be written?",
-          "options": ["14524323", "15524323", "15424322", "15423322"],
-          "correctAnswerIndex": 2
+          "question": "Which is the largest organ of the human body? मानव शरीर का सबसे बड़ा अंग कौन सा है?",
+          "options": ["Liver", "Skin", "Lung", "Heart"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 10,
-          "question": "In a code language: ‘are you coming’ → gla pla sot, ‘they are right’ → kla sot pom, ‘are they coming’ → sot pla pom. What is the code for ‘right’?",
-          "options": ["pom", "sot", "kla", "gla"],
-          "correctAnswerIndex": 2
+          "question": "What is the full form of RBC? RBC का पूरा नाम क्या है?",
+          "options": ["Red Blood Cell", "Ribose Blood Cell", "Red Bone Cell", "Retinal Blood Cell"],
+          "correctAnswerIndex": 0
         },
         {
           "id": 11,
-          "question": "In a code language, if ‘BADGE’ is written as 4281410, then how will ‘NORMS’ be written?",
-          "options": ["2832362436", "2430362630", "141581320", "2830362638"],
+          "question": "Which vitamin is obtained from sunlight? सूर्य की रोशनी से कौन सा विटामिन मिलता है?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
           "correctAnswerIndex": 3
         },
         {
           "id": 12,
-          "question": "In a code language, if ‘HE’ = 40 and ‘GO’ = 105, then what will be the code for ‘BAND’?",
-          "options": ["52", "112", "21", "102"],
-          "correctAnswerIndex": 1
+          "question": "Which element is present in haemoglobin? हीमोग्लोबिन में कौन सा तत्व पाया जाता है?",
+          "options": ["Copper", "Zinc", "Iron", "Magnesium"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 13,
-          "question": "In a code language: ‘this is done’ → koj mor soi, ‘that is okay’ → loj roj mor, ‘you are okay’ → hok nok loj. What is the code for ‘that’?",
-          "options": ["mor", "loj", "koj", "roj"],
-          "correctAnswerIndex": 3
+          "question": "Where does peristalsis occur? पेरिस्टाल्सिस कहाँ होती है?",
+          "options": ["Kidney", "Liver", "Alimentary canal", "Heart"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 14,
-          "question": "In a code language, ‘KITE’ is written as ‘9’ and ‘MAGIC’ is written as ‘11’. How will ‘FELICITATION’ be written?",
-          "options": ["25", "22", "24", "12"],
+          "question": "Which blood group is the universal donor? कौन सा ब्लड ग्रुप यूनिवर्सल डोनर है?",
+          "options": ["A+", "B-", "O-", "AB+"],
           "correctAnswerIndex": 2
         },
         {
           "id": 15,
-          "question": "In a code language: ‘dee duc tic’ → roses are red, ‘bil doe’ → yellow carnations, ‘tic dur doe’ → carnations are pink. What is the code for ‘pink’?",
-          "options": ["doe", "dee", "tic", "dur"],
-          "correctAnswerIndex": 3
-        }
-      ]
-    },
-    {
-      "courseId": "lu_numerical_aptitude_test",
-      "courseTitle": "Lucknow University Aptitude Test",
-      "questions": [
+          "question": "Where is nephron found? नेफ्रॉन कहाँ पाया जाता है?",
+          "options": ["Liver", "Brain", "Kidney", "Lung"],
+          "correctAnswerIndex": 2
+        },
         {
-          "id": 1,
-          "question": "What is 25% of 480?",
+          "id": 16,
+          "question": "What is the chemical formula of water? पानी का रासायनिक सूत्र क्या है?",
+          "options": ["H₂O₂", "HO", "H₂O", "H₃O"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "What is the common name of NaCl? NaCl का सामान्य नाम क्या है?",
+          "options": ["Baking Soda", "Common Salt", "Bleaching Powder", "Washing Soda"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "Where are electrons located in an atom? परमाणु में इलेक्ट्रॉन कहाँ होते हैं?",
+          "options": ["Inside nucleus", "With protons", "In shells outside nucleus", "With neutrons"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "Which element is most abundant on Earth? पृथ्वी पर सबसे अधिक कौन सा तत्व पाया जाता है?",
+          "options": ["Silicon", "Oxygen", "Iron", "Nitrogen"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 20,
+          "question": "How many elements are in the periodic table? आवर्त सारणी में कितने तत्व हैं?",
+          "options": ["108", "112", "118", "124"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is the approximate speed of sound in air? हवा में ध्वनि की गति लगभग कितनी होती है?",
+          "options": ["300 m/s", "343 m/s", "500 m/s", "150 m/s"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "What is the speed of light in vacuum? निर्वात में प्रकाश की गति कितनी होती है?",
+          "options": ["3×10⁶ m/s", "3×10⁷ m/s", "3×10⁸ m/s", "3×10⁹ m/s"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "What is the SI unit of force? बल की SI इकाई क्या है?",
+          "options": ["Joule", "Watt", "Newton", "Pascal"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "According to Ohm's Law, V = ? ओम के नियम के अनुसार V = ?",
+          "options": ["I/R", "IR", "I+R", "I²R"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 25,
+          "question": "Which gas is most abundant in the atmosphere? वायुमंडल में सबसे अधिक कौन सी गैस पाई जाती है?",
+          "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 26,
+          "question": "Which part of the cell controls all activities? कोशिका का कौन सा भाग सभी गतिविधियों को नियंत्रित करता है?",
           "options": [
-            "100",
-            "120",
-            "140",
-            "160"
+            "Mitochondria",
+            "Nucleus",
+            "Ribosome",
+            "Cytoplasm"
           ],
           "correctAnswerIndex": 1
         },
         {
-          "id": 2,
-          "question": "Simplify: 15 + 5 × 4",
-          "options": [
-            "80",
-            "35",
-            "40",
-            "20"
-          ],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 3,
-          "question": "The average of 10, 20, 30, 40 is?",
-          "options": [
-            "20",
-            "25",
-            "30",
-            "35"
-          ],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 4,
-          "question": "Find the simple interest on ₹2000 at 5% for 2 years.",
-          "options": [
-            "100",
-            "150",
-            "200",
-            "250"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 5,
-          "question": "If x = 5, then value of 2x + 3 is?",
-          "options": [
-            "10",
-            "12",
-            "13",
-            "15"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 6,
-          "question": "A train travels 120 km in 2 hours. Its speed is?",
-          "options": [
-            "40 km/h",
-            "50 km/h",
-            "60 km/h",
-            "70 km/h"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 7,
-          "question": "What is the HCF of 12 and 18?",
+          "id": 27,
+          "question": "How many chambers are there in the human heart? मानव हृदय में कितने कक्ष होते हैं?",
           "options": [
             "2",
             "3",
+            "4",
+            "5"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which vitamin is essential for blood clotting? रक्त का थक्का जमाने के लिए कौन सा विटामिन आवश्यक है?",
+          "options": [
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin K",
+            "Vitamin E"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "What is the functional unit of kidney? गुर्दे की कार्यात्मक इकाई क्या है?",
+          "options": [
+            "Neuron",
+            "Nephron",
+            "Alveoli",
+            "Villus"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "Which blood cells help in fighting infection? कौन सी रक्त कोशिकाएँ संक्रमण से लड़ने में मदद करती हैं?",
+          "options": [
+            "RBC",
+            "Platelets",
+            "WBC",
+            "Plasma"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Where does digestion of protein begin? प्रोटीन का पाचन कहाँ से शुरू होता है?",
+          "options": [
+            "Mouth",
+            "Stomach",
+            "Small intestine",
+            "Large intestine"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 32,
+          "question": "Which hormone controls blood sugar level? कौन सा हार्मोन रक्त शर्करा स्तर को नियंत्रित करता है?",
+          "options": [
+            "Thyroxine",
+            "Adrenaline",
+            "Insulin",
+            "Estrogen"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 33,
+          "question": "What is the largest gland in the human body? मानव शरीर की सबसे बड़ी ग्रंथि कौन सी है?",
+          "options": [
+            "Pancreas",
+            "Liver",
+            "Thyroid",
+            "Adrenal"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 34,
+          "question": "Which part of the brain controls balance and coordination? मस्तिष्क का कौन सा भाग संतुलन और समन्वय को नियंत्रित करता है?",
+          "options": [
+            "Cerebrum",
+            "Medulla",
+            "Cerebellum",
+            "Hypothalamus"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "What is the normal body temperature of a human? मानव शरीर का सामान्य तापमान कितना होता है?",
+          "options": [
+            "35°C",
+            "37°C",
+            "39°C",
+            "41°C"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "Which acid is present in the stomach? पेट में कौन सा अम्ल पाया जाता है?",
+          "options": [
+            "Sulphuric Acid",
+            "Acetic Acid",
+            "Hydrochloric Acid",
+            "Nitric Acid"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "What is the chemical formula of Carbon Dioxide? कार्बन डाइऑक्साइड का रासायनिक सूत्र क्या है?",
+          "options": [
+            "CO",
+            "CO₂",
+            "C₂O",
+            "C₂O₂"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "Which gas is used in fire extinguishers? अग्निशामक यंत्र में कौन सी गैस उपयोग की जाती है?",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon Dioxide",
+            "Hydrogen"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "What is the atomic number of Carbon? कार्बन की परमाणु संख्या क्या है?",
+          "options": [
+            "4",
             "6",
-            "9"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 8,
-          "question": "Find the next number: 2, 4, 8, 16, ?",
-          "options": [
-            "18",
-            "24",
-            "32",
-            "64"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 9,
-          "question": "What is 3/4 of 200?",
-          "options": [
-            "100",
-            "120",
-            "150",
-            "180"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 10,
-          "question": "If the cost price is ₹500 and selling price is ₹600, profit is?",
-          "options": [
-            "₹50",
-            "₹75",
-            "₹100",
-            "₹120"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 11,
-          "question": "Simplify: 81 ÷ 9 × 2",
-          "options": [
-            "9",
-            "12",
-            "16",
-            "18"
-          ],
-          "correctAnswerIndex": 3
-        },
-        {
-          "id": 12,
-          "question": "The perimeter of a square with side 8 cm is?",
-          "options": [
-            "16 cm",
-            "24 cm",
-            "32 cm",
-            "64 cm"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 13,
-          "question": "Find the value of √144.",
-          "options": [
-            "10",
-            "11",
-            "12",
-            "14"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 14,
-          "question": "A shopkeeper gives 10% discount on ₹500. Final price is?",
-          "options": [
-            "₹400",
-            "₹450",
-            "₹475",
-            "₹480"
-          ],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 15,
-          "question": "What is the LCM of 4 and 6?",
-          "options": [
             "8",
-            "10",
-            "12",
-            "24"
+            "12"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "Which is the most reactive metal? सबसे अधिक क्रियाशील धातु कौन सी है?",
+          "options": [
+            "Gold",
+            "Iron",
+            "Sodium",
+            "Copper"
           ],
           "correctAnswerIndex": 2
         },
         {
-          "id": 16,
-          "question": "If 5 pens cost ₹100, cost of 1 pen is?",
+          "id": 41,
+          "question": "What is the pH of pure water? शुद्ध जल का pH कितना होता है?",
           "options": [
-            "₹10",
-            "₹15",
-            "₹20",
-            "₹25"
+            "5",
+            "6",
+            "7",
+            "8"
           ],
           "correctAnswerIndex": 2
         },
         {
-          "id": 17,
-          "question": "Find the missing number: 5, 10, 20, 40, ?",
+          "id": 42,
+          "question": "Which metal is liquid at room temperature? कमरे के तापमान पर कौन सी धातु तरल अवस्था में होती है?",
           "options": [
-            "60",
-            "70",
-            "80",
-            "90"
+            "Aluminium",
+            "Mercury",
+            "Lead",
+            "Zinc"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "What is the full form of ATP? ATP का पूरा नाम क्या है?",
+          "options": [
+            "Adenosine Triphosphate",
+            "Adenine Triphosphate",
+            "Adenosine Triprotein",
+            "Amino Triphosphate"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 44,
+          "question": "Newton's First Law is also known as? न्यूटन का प्रथम नियम किस नाम से भी जाना जाता है?",
+          "options": [
+            "Law of Acceleration",
+            "Law of Inertia",
+            "Law of Gravitation",
+            "Law of Action"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "What is the SI unit of electric current? विद्युत धारा की SI इकाई क्या है?",
+          "options": [
+            "Volt",
+            "Watt",
+            "Ampere",
+            "Ohm"
           ],
           "correctAnswerIndex": 2
         },
         {
-          "id": 18,
-          "question": "Area of a rectangle with length 10 cm and breadth 5 cm is?",
+          "id": 46,
+          "question": "Which mirror is used in vehicles as rear view mirror? वाहनों में रियर व्यू मिरर के रूप में कौन सा दर्पण उपयोग किया जाता है?",
           "options": [
-            "15 cm²",
-            "30 cm²",
-            "50 cm²",
-            "60 cm²"
+            "Concave mirror",
+            "Plane mirror",
+            "Convex mirror",
+            "Parabolic mirror"
           ],
           "correctAnswerIndex": 2
         },
         {
-          "id": 19,
-          "question": "What is 40% of 250?",
+          "id": 47,
+          "question": "What is the SI unit of energy? ऊर्जा की SI इकाई क्या है?",
           "options": [
-            "80",
-            "90",
-            "100",
-            "120"
+            "Watt",
+            "Newton",
+            "Joule",
+            "Pascal"
           ],
           "correctAnswerIndex": 2
         },
         {
-          "id": 20,
-          "question": "A number divided by 5 gives quotient 6 and remainder 2. The number is?",
+          "id": 48,
+          "question": "Which lens is used to correct myopia (short-sightedness)? निकट दृष्टि दोष को ठीक करने के लिए कौन सा लेंस उपयोग किया जाता है?",
           "options": [
-            "28",
-            "30",
-            "32",
-            "35"
+            "Convex lens",
+            "Concave lens",
+            "Bifocal lens",
+            "Plane lens"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "What is the unit of frequency? आवृत्ति की इकाई क्या है?",
+          "options": [
+            "Decibel",
+            "Hertz",
+            "Newton",
+            "Metre"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 50,
+          "question": "Which force keeps planets in orbit around the sun? कौन सा बल ग्रहों को सूर्य के चारों ओर कक्षा में रखता है?",
+          "options": [
+            "Magnetic force",
+            "Electric force",
+            "Gravitational force",
+            "Nuclear force"
           ],
           "correctAnswerIndex": 2
         }
       ]
     },
     {
-      "courseId": "lu_general_english_test",
-      "courseTitle": "Lucknow University eneral English Test",
+      "courseId": "ddu_dpharma_free_test_2",
+      "courseTitle": "DDU D.Pharma (Bio ) Entrance Test Series - Test 2",
       "questions": [
         {
           "id": 1,
-          "question": "Choose the correct synonym of 'Happy'.",
-          "options": [
-            "Sad",
-            "Joyful",
-            "Angry",
-            "Tired"
-          ],
+          "question": "Which blood group is known as the universal recipient? कौन सा रक्त समूह सार्वभौमिक ग्राही कहलाता है?",
+          "options": ["O+", "AB+", "A+", "B+"],
           "correctAnswerIndex": 1
         },
         {
           "id": 2,
-          "question": "Choose the correct antonym of 'Fast'.",
-          "options": [
-            "Quick",
-            "Rapid",
-            "Slow",
-            "Speedy"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is the largest bone in the human body? मानव शरीर की सबसे बड़ी हड्डी कौन सी है?",
+          "options": ["Femur", "Tibia", "Humerus", "Radius"],
+          "correctAnswerIndex": 0
         },
         {
           "id": 3,
-          "question": "Fill in the blank: She ___ to school every day.",
-          "options": [
-            "go",
-            "goes",
-            "gone",
-            "going"
-          ],
-          "correctAnswerIndex": 1
+          "question": "Which organ purifies blood in the human body? मानव शरीर में रक्त को कौन सा अंग शुद्ध करता है?",
+          "options": ["Heart", "Liver", "Kidney", "Lungs"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 4,
-          "question": "Choose the correctly spelled word.",
-          "options": [
-            "Recieve",
-            "Receive",
-            "Receeve",
-            "Receve"
-          ],
-          "correctAnswerIndex": 1
+          "question": "Which vitamin deficiency causes scurvy? किस विटामिन की कमी से स्कर्वी रोग होता है?",
+          "options": ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 5,
-          "question": "What is the plural of 'Child'?",
-          "options": [
-            "Childs",
-            "Children",
-            "Childrens",
-            "Childes"
-          ],
+          "question": "What is the basic unit of life? जीवन की मूल इकाई क्या है?",
+          "options": ["Tissue", "Cell", "Organ", "Organism"],
           "correctAnswerIndex": 1
         },
         {
           "id": 6,
-          "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
-          "options": [
-            "A",
-            "An",
-            "The",
-            "No article"
-          ],
-          "correctAnswerIndex": 1
+          "question": "Which pigment gives green color to plants? पौधों को हरा रंग कौन सा वर्णक देता है?",
+          "options": ["Hemoglobin", "Melanin", "Chlorophyll", "Carotene"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 7,
-          "question": "Choose the correct tense: I ___ my homework yesterday.",
-          "options": [
-            "do",
-            "did",
-            "done",
-            "doing"
-          ],
-          "correctAnswerIndex": 1
+          "question": "How many pairs of chromosomes are present in humans? मनुष्यों में गुणसूत्रों के कितने जोड़े होते हैं?",
+          "options": ["21", "22", "23", "24"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 8,
-          "question": "Choose the synonym of 'Big'.",
-          "options": [
-            "Tiny",
-            "Large",
-            "Short",
-            "Weak"
-          ],
+          "question": "Which organ produces bile juice? पित्त रस कौन सा अंग बनाता है?",
+          "options": ["Pancreas", "Liver", "Kidney", "Stomach"],
           "correctAnswerIndex": 1
         },
         {
           "id": 9,
-          "question": "Choose the antonym of 'Hot'.",
-          "options": [
-            "Warm",
-            "Boiling",
-            "Cold",
-            "Heat"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is the study of plants called? पौधों के अध्ययन को क्या कहते हैं?",
+          "options": ["Zoology", "Botany", "Ecology", "Genetics"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 10,
-          "question": "Fill in the blank: They ___ playing cricket now.",
-          "options": [
-            "is",
-            "am",
-            "are",
-            "was"
-          ],
+          "question": "Which part of the plant absorbs water from soil? पौधे का कौन सा भाग मिट्टी से जल अवशोषित करता है?",
+          "options": ["Leaf", "Stem", "Root", "Flower"],
           "correctAnswerIndex": 2
         },
         {
           "id": 11,
-          "question": "Choose the correct spelling.",
-          "options": [
-            "Beautifull",
-            "Beautiful",
-            "Beutiful",
-            "Beautifool"
-          ],
+          "question": "What is the chemical symbol of Sodium? सोडियम का रासायनिक संकेत क्या है?",
+          "options": ["So", "Na", "S", "Sd"],
           "correctAnswerIndex": 1
         },
         {
           "id": 12,
-          "question": "What is the opposite of 'Early'?",
-          "options": [
-            "Late",
-            "Soon",
-            "Fast",
-            "Quick"
-          ],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 13,
-          "question": "Choose the correct pronoun: Rahul and ___ are friends.",
-          "options": [
-            "me",
-            "I",
-            "mine",
-            "my"
-          ],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 14,
-          "question": "Fill in the blank: He has been working ___ morning.",
-          "options": [
-            "for",
-            "since",
-            "from",
-            "at"
-          ],
-          "correctAnswerIndex": 1
-        },
-        {
-          "id": 15,
-          "question": "Choose the correct sentence.",
-          "options": [
-            "She do not like tea.",
-            "She does not likes tea.",
-            "She does not like tea.",
-            "She not like tea."
-          ],
+          "question": "Which gas is used in photosynthesis? प्रकाश संश्लेषण में कौन सी गैस उपयोग होती है?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
           "correctAnswerIndex": 2
         },
         {
-          "id": 16,
-          "question": "Choose the synonym of 'Smart'.",
-          "options": [
-            "Intelligent",
-            "Dull",
-            "Lazy",
-            "Weak"
-          ],
+          "id": 13,
+          "question": "What is the atomic number of Oxygen? ऑक्सीजन की परमाणु संख्या क्या है?",
+          "options": ["6", "7", "8", "9"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Which acid is present in lemon? नींबू में कौन सा अम्ल पाया जाता है?",
+          "options": ["Citric Acid", "Lactic Acid", "Acetic Acid", "Formic Acid"],
           "correctAnswerIndex": 0
         },
         {
+          "id": 15,
+          "question": "What is the chemical formula of methane? मीथेन का रासायनिक सूत्र क्या है?",
+          "options": ["CH₄", "C₂H₆", "CO₂", "CH₃OH"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 16,
+          "question": "Which metal is used in electric wires? विद्युत तारों में कौन सी धातु उपयोग की जाती है?",
+          "options": ["Iron", "Copper", "Lead", "Zinc"],
+          "correctAnswerIndex": 1
+        },
+        {
           "id": 17,
-          "question": "Choose the antonym of 'Rich'.",
-          "options": [
-            "Wealthy",
-            "Poor",
-            "Strong",
-            "Healthy"
-          ],
+          "question": "What is the valency of Oxygen? ऑक्सीजन की संयोजकता कितनी होती है?",
+          "options": ["1", "2", "3", "4"],
           "correctAnswerIndex": 1
         },
         {
           "id": 18,
-          "question": "Fill in the blank: We ___ dinner at 9 PM yesterday.",
-          "options": [
-            "have",
-            "had",
-            "has",
-            "having"
-          ],
-          "correctAnswerIndex": 1
+          "question": "Which gas turns lime water milky? कौन सी गैस चूने के पानी को दूधिया बनाती है?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 19,
-          "question": "Choose the correct preposition: The book is ___ the table.",
-          "options": [
-            "on",
-            "at",
-            "under",
-            "into"
-          ],
-          "correctAnswerIndex": 0
+          "question": "What is the SI unit of temperature? तापमान की SI इकाई क्या है?",
+          "options": ["Celsius", "Kelvin", "Fahrenheit", "Joule"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 20,
-          "question": "Identify the noun in the sentence: 'Riya sings beautifully.'",
-          "options": [
-            "Riya",
-            "sings",
-            "beautifully",
-            "none"
-          ],
-          "correctAnswerIndex": 0
+          "question": "Which instrument is used to measure atmospheric pressure? वायुमंडलीय दाब मापने के लिए किस यंत्र का उपयोग किया जाता है?",
+          "options": ["Thermometer", "Barometer", "Ammeter", "Voltmeter"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 21,
-          "question": "Choose the correct spelling.",
-          "options": [
-            "Enviroment",
-            "Environment",
-            "Envirnment",
-            "Enviornment"
-          ],
+          "question": "What is the SI unit of power? शक्ति की SI इकाई क्या है?",
+          "options": ["Joule", "Watt", "Newton", "Volt"],
           "correctAnswerIndex": 1
         },
         {
           "id": 22,
-          "question": "Choose the correct form: If I ___ rich, I would help the poor.",
-          "options": [
-            "am",
-            "was",
-            "were",
-            "be"
-          ],
-          "correctAnswerIndex": 2
+          "question": "Which color has the longest wavelength in visible spectrum? दृश्य स्पेक्ट्रम में किस रंग की तरंगदैर्ध्य सबसे अधिक होती है?",
+          "options": ["Blue", "Green", "Yellow", "Red"],
+          "correctAnswerIndex": 3
         },
         {
           "id": 23,
-          "question": "Choose the synonym of 'Brave'.",
-          "options": [
-            "Coward",
-            "Fearful",
-            "Courageous",
-            "Weak"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 24,
-          "question": "Choose the antonym of 'Open'.",
-          "options": [
-            "Start",
-            "Close",
-            "Wide",
-            "Free"
-          ],
+          "question": "Which device converts electrical energy into mechanical energy? कौन सा उपकरण विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलता है?",
+          "options": ["Generator", "Motor", "Transformer", "Battery"],
           "correctAnswerIndex": 1
         },
         {
+          "id": 24,
+          "question": "What is the SI unit of resistance? प्रतिरोध की SI इकाई क्या है?",
+          "options": ["Volt", "Ampere", "Ohm", "Watt"],
+          "correctAnswerIndex": 2
+        },
+        {
           "id": 25,
-          "question": "Fill in the blank: She is good ___ mathematics.",
-          "options": [
-            "in",
-            "at",
-            "on",
-            "for"
-          ],
+          "question": "Which type of energy is stored in a stretched rubber band? खींचे हुए रबर बैंड में कौन सी ऊर्जा संचित होती है?",
+          "options": ["Heat Energy", "Potential Energy", "Light Energy", "Sound Energy"],
           "correctAnswerIndex": 1
         },
         {
           "id": 26,
-          "question": "Choose the correct sentence.",
-          "options": [
-            "He can sings well.",
-            "He can sing well.",
-            "He can sung well.",
-            "He can singing well."
-          ],
+          "question": "Which planet is known as the Red Planet? लाल ग्रह किसे कहा जाता है?",
+          "options": ["Venus", "Mars", "Jupiter", "Mercury"],
           "correctAnswerIndex": 1
         },
         {
           "id": 27,
-          "question": "What is the past tense of 'Write'?",
-          "options": [
-            "Written",
-            "Wrote",
-            "Writes",
-            "Writing"
-          ],
-          "correctAnswerIndex": 1
+          "question": "Which is the nearest star to Earth? पृथ्वी के सबसे निकट तारा कौन सा है?",
+          "options": ["Sirius", "Polaris", "Sun", "Alpha Centauri"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 28,
-          "question": "Choose the correct conjunction: I was tired, ___ I continued working.",
-          "options": [
-            "but",
-            "because",
-            "or",
-            "so"
-          ],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 29,
-          "question": "Choose the correctly punctuated sentence.",
-          "options": [
-            "What is your name.",
-            "What is your name?",
-            "What is your name!",
-            "What is your name,"
-          ],
+          "question": "How many planets are there in the Solar System? सौरमंडल में कितने ग्रह हैं?",
+          "options": ["7", "8", "9", "10"],
           "correctAnswerIndex": 1
         },
         {
+          "id": 29,
+          "question": "Which layer protects Earth from ultraviolet rays? कौन सी परत पृथ्वी को पराबैंगनी किरणों से बचाती है?",
+          "options": ["Troposphere", "Mesosphere", "Ozone Layer", "Ionosphere"],
+          "correctAnswerIndex": 2
+        },
+        {
           "id": 30,
-          "question": "Choose the correct passive voice: 'The teacher teaches English.'",
-          "options": [
-            "English is taught by the teacher.",
-            "English taught by the teacher.",
-            "English was taught by the teacher.",
-            "Teacher teaches English."
-          ],
+          "question": "What is the largest planet in the Solar System? सौरमंडल का सबसे बड़ा ग्रह कौन सा है?",
+          "options": ["Earth", "Saturn", "Jupiter", "Neptune"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Who invented the telephone? टेलीफोन का आविष्कार किसने किया था?",
+          "options": ["Newton", "Alexander Graham Bell", "Edison", "Marconi"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 32,
+          "question": "Who is known as the Father of Biology? जीवविज्ञान का जनक किसे कहा जाता है?",
+          "options": ["Darwin", "Aristotle", "Mendel", "Pasteur"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "Which scientist discovered gravity? गुरुत्वाकर्षण की खोज किस वैज्ञानिक ने की थी?",
+          "options": ["Einstein", "Galileo", "Newton", "Faraday"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "What is the SI unit of work? कार्य की SI इकाई क्या है?",
+          "options": ["Joule", "Watt", "Newton", "Pascal"],
           "correctAnswerIndex": 0
+        },
+        {
+          "id": 35,
+          "question": "Which blood vessel carries blood away from the heart? कौन सी रक्त वाहिका हृदय से रक्त ले जाती है?",
+          "options": ["Vein", "Artery", "Capillary", "Venule"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 36,
+          "question": "What is the hardest natural substance? सबसे कठोर प्राकृतिक पदार्थ कौन सा है?",
+          "options": ["Gold", "Iron", "Diamond", "Quartz"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "Which organ helps in respiration in fish? मछलियों में श्वसन के लिए कौन सा अंग होता है?",
+          "options": ["Lungs", "Skin", "Gills", "Trachea"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 38,
+          "question": "What is the boiling point of water at sea level? समुद्र तल पर पानी का क्वथनांक कितना होता है?",
+          "options": ["90°C", "95°C", "100°C", "110°C"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "Which vitamin is also called Retinol? किस विटामिन को रेटिनॉल भी कहा जाता है?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 40,
+          "question": "Which gas is filled in electric bulbs? विद्युत बल्बों में कौन सी गैस भरी जाती है?",
+          "options": ["Hydrogen", "Argon", "Oxygen", "Nitrogen"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 41,
+          "question": "What is the unit of electric power consumption? विद्युत ऊर्जा खपत की व्यावहारिक इकाई क्या है?",
+          "options": ["Joule", "Watt", "Kilowatt-hour", "Volt"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 42,
+          "question": "Which organ stores urine? मूत्र को कौन सा अंग संग्रहित करता है?",
+          "options": ["Kidney", "Ureter", "Urinary Bladder", "Liver"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 43,
+          "question": "Which disease is caused by deficiency of iodine? आयोडीन की कमी से कौन सा रोग होता है?",
+          "options": ["Rickets", "Goitre", "Scurvy", "Night Blindness"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 44,
+          "question": "What is the largest planet satellite in the Solar System? सौरमंडल का सबसे बड़ा उपग्रह कौन सा है?",
+          "options": ["Titan", "Europa", "Ganymede", "Moon"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 45,
+          "question": "Which vitamin deficiency causes night blindness? रतौंधी किस विटामिन की कमी से होती है?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin K"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 46,
+          "question": "What is the study of heredity called? आनुवंशिकता के अध्ययन को क्या कहते हैं?",
+          "options": ["Ecology", "Genetics", "Physiology", "Anatomy"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 47,
+          "question": "Which part of the eye controls the amount of light entering? आंख का कौन सा भाग प्रकाश की मात्रा को नियंत्रित करता है?",
+          "options": ["Retina", "Cornea", "Iris", "Lens"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 48,
+          "question": "What is the freezing point of water? पानी का हिमांक कितना होता है?",
+          "options": ["0°C", "10°C", "32°C", "-10°C"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 49,
+          "question": "Which organelle is responsible for protein synthesis? प्रोटीन संश्लेषण के लिए कौन सा कोशिकांग उत्तरदायी है?",
+          "options": ["Golgi Body", "Ribosome", "Lysosome", "Vacuole"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 50,
+          "question": "Which branch of science deals with the study of fungi? कवकों के अध्ययन को क्या कहते हैं?",
+          "options": ["Botany", "Microbiology", "Mycology", "Ecology"],
+          "correctAnswerIndex": 2
         }
       ]
     },
     {
-      "courseId": "lu_bca_computer_awareness_test",
-      "courseTitle": "Lucknow University BCA Computer Awareness Test",
+      "courseId": "Maths_all_",
+      "courseTitle": "Important Maths For All",
       "questions": [
         {
           "id": 1,
-          "question": "What does CPU stand for?",
-          "options": [
-            "Central Process Unit",
-            "Central Processing Unit",
-            "Computer Processing Unit",
-            "Control Processing Unit"
-          ],
-          "correctAnswerIndex": 1
+          "question": "What is the value of √144? √144 का मान क्या है?",
+          "options": ["10", "11", "12", "13"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 2,
-          "question": "Which device is used to input data into a computer?",
-          "options": [
-            "Monitor",
-            "Printer",
-            "Keyboard",
-            "Speaker"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is 15% of 200? 200 का 15% क्या है?",
+          "options": ["25", "30", "35", "40"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 3,
-          "question": "Which of the following is an output device?",
-          "options": [
-            "Mouse",
-            "Scanner",
-            "Keyboard",
-            "Monitor"
-          ],
-          "correctAnswerIndex": 3
+          "question": "If a = 3 and b = 4, what is the value of a² + b²? यदि a = 3 और b = 4 हो, तो a² + b² का मान क्या होगा?",
+          "options": ["20", "25", "30", "16"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 4,
-          "question": "What is the brain of the computer?",
-          "options": [
-            "RAM",
-            "CPU",
-            "Hard Disk",
-            "Monitor"
-          ],
-          "correctAnswerIndex": 1
+          "question": "What is the LCM of 4 and 6? 4 और 6 का LCM क्या है?",
+          "options": ["8", "10", "12", "24"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 5,
-          "question": "Which memory is temporary in nature?",
-          "options": [
-            "ROM",
-            "RAM",
-            "Hard Disk",
-            "DVD"
-          ],
-          "correctAnswerIndex": 1
+          "question": "What is the HCF of 12 and 18? 12 और 18 का HCF क्या है?",
+          "options": ["3", "4", "6", "9"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 6,
-          "question": "What does WWW stand for?",
-          "options": [
-            "World Wide Web",
-            "World Web Wide",
-            "Wide World Web",
-            "Web World Wide"
-          ],
-          "correctAnswerIndex": 0
+          "question": "A train travels 120 km in 2 hours. What is its speed? एक ट्रेन 2 घंटे में 120 किमी चलती है। उसकी गति क्या है?",
+          "options": ["50 km/h", "55 km/h", "60 km/h", "65 km/h"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 7,
-          "question": "Which software is used for typing documents?",
-          "options": [
-            "MS Word",
-            "MS Paint",
-            "VLC Media Player",
-            "Photoshop"
-          ],
-          "correctAnswerIndex": 0
+          "question": "What is the area of a rectangle with length 8 cm and breadth 5 cm? 8 सेमी लंबाई और 5 सेमी चौड़ाई वाले आयत का क्षेत्रफल क्या है?",
+          "options": ["30 cm²", "35 cm²", "40 cm²", "45 cm²"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 8,
-          "question": "Which key is used to delete characters to the left of the cursor?",
-          "options": [
-            "Shift",
-            "Delete",
-            "Backspace",
-            "Ctrl"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is the perimeter of a square with side 7 cm? 7 सेमी भुजा वाले वर्ग का परिमाप क्या है?",
+          "options": ["21 cm", "28 cm", "35 cm", "49 cm"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 9,
-          "question": "Which of the following is a programming language?",
-          "options": [
-            "Python",
-            "Windows",
-            "Google",
-            "Linux"
-          ],
-          "correctAnswerIndex": 0
+          "question": "If the simple interest on ₹1000 at 5% per annum for 2 years is? ₹1000 पर 5% वार्षिक दर से 2 वर्ष का साधारण ब्याज क्या होगा?",
+          "options": ["₹50", "₹100", "₹150", "₹200"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 10,
-          "question": "Which company developed Windows OS?",
-          "options": [
-            "Apple",
-            "Google",
-            "Microsoft",
-            "IBM"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is the value of 2³ × 2²? 2³ × 2² का मान क्या है?",
+          "options": ["16", "32", "64", "128"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 11,
-          "question": "What is the full form of USB?",
-          "options": [
-            "Universal Serial Bus",
-            "United Serial Bus",
-            "Universal System Bus",
-            "Unique Serial Bus"
-          ],
-          "correctAnswerIndex": 0
+          "question": "A number is increased by 20% and then decreased by 20%. What is the net change? एक संख्या को 20% बढ़ाकर फिर 20% घटाया जाता है। शुद्ध परिवर्तन क्या है?",
+          "options": ["0%", "2% increase", "4% decrease", "4% increase"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 12,
-          "question": "Which device prints documents on paper?",
-          "options": [
-            "Monitor",
-            "Printer",
-            "Scanner",
-            "Speaker"
-          ],
+          "question": "What is the sum of angles in a triangle? त्रिभुज के कोणों का योग कितना होता है?",
+          "options": ["90°", "180°", "270°", "360°"],
           "correctAnswerIndex": 1
         },
         {
           "id": 13,
-          "question": "Which storage device has the highest capacity?",
-          "options": [
-            "CD",
-            "DVD",
-            "Blu-ray Disc",
-            "Floppy Disk"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is the value of sin 90°? sin 90° का मान क्या है?",
+          "options": ["0", "1/2", "√3/2", "1"],
+          "correctAnswerIndex": 3
         },
         {
           "id": 14,
-          "question": "Which of the following is an operating system?",
-          "options": [
-            "Windows",
-            "Python",
-            "HTML",
-            "Java"
-          ],
-          "correctAnswerIndex": 0
+          "question": "What is the value of cos 0°? cos 0° का मान क्या है?",
+          "options": ["0", "1/2", "1", "√3/2"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 15,
-          "question": "Binary numbers use which two digits?",
-          "options": [
-            "1 and 2",
-            "0 and 1",
-            "0 and 9",
-            "2 and 3"
-          ],
+          "question": "If 3x + 6 = 15, what is the value of x? यदि 3x + 6 = 15 है, तो x का मान क्या है?",
+          "options": ["2", "3", "4", "5"],
           "correctAnswerIndex": 1
         },
         {
           "id": 16,
-          "question": "Which part of the computer stores files permanently?",
-          "options": [
-            "RAM",
-            "Cache",
-            "Hard Disk",
-            "Register"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 17,
-          "question": "Which shortcut key is used to copy text?",
-          "options": [
-            "Ctrl + X",
-            "Ctrl + V",
-            "Ctrl + C",
-            "Ctrl + Z"
-          ],
-          "correctAnswerIndex": 2
-        },
-        {
-          "id": 18,
-          "question": "Which shortcut key is used to paste text?",
-          "options": [
-            "Ctrl + V",
-            "Ctrl + C",
-            "Ctrl + X",
-            "Ctrl + P"
-          ],
-          "correctAnswerIndex": 0
-        },
-        {
-          "id": 19,
-          "question": "Which of the following is used to browse the internet?",
-          "options": [
-            "MS Excel",
-            "Google Chrome",
-            "MS Paint",
-            "Notepad"
-          ],
+          "question": "What is the area of a circle with radius 7 cm? (π = 22/7) 7 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल क्या है?",
+          "options": ["144 cm²", "154 cm²", "164 cm²", "174 cm²"],
           "correctAnswerIndex": 1
         },
         {
+          "id": 17,
+          "question": "What is the average of 10, 20, 30, 40 and 50? 10, 20, 30, 40 और 50 का औसत क्या है?",
+          "options": ["25", "30", "35", "40"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 18,
+          "question": "A shopkeeper buys an item for ₹200 and sells it for ₹250. What is the profit percentage? एक दुकानदार ₹200 में सामान खरीदकर ₹250 में बेचता है। लाभ प्रतिशत क्या है?",
+          "options": ["20%", "25%", "30%", "50%"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 19,
+          "question": "What is the value of tan 45°? tan 45° का मान क्या है?",
+          "options": ["0", "1/√3", "1", "√3"],
+          "correctAnswerIndex": 2
+        },
+        {
           "id": 20,
-          "question": "What is the full form of HTML?",
-          "options": [
-            "Hyper Text Markup Language",
-            "High Text Markup Language",
-            "Hyper Tool Markup Language",
-            "Home Text Markup Language"
-          ],
-          "correctAnswerIndex": 0
+          "question": "What is the cube of 5? 5 का घन क्या है?",
+          "options": ["25", "75", "100", "125"],
+          "correctAnswerIndex": 3
         },
         {
           "id": 21,
-          "question": "Which of the following is not an input device?",
-          "options": [
-            "Mouse",
-            "Keyboard",
-            "Scanner",
-            "Projector"
-          ],
-          "correctAnswerIndex": 3
+          "question": "What is the median of 3, 5, 7, 9, 11? 3, 5, 7, 9, 11 का माध्यिका क्या है?",
+          "options": ["5", "6", "7", "9"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 22,
-          "question": "Which file extension is used for MS Word files?",
-          "options": [
-            ".jpg",
-            ".mp3",
-            ".docx",
-            ".png"
-          ],
+          "question": "If the ratio of two numbers is 3:5 and their sum is 64, what is the larger number? यदि दो संख्याओं का अनुपात 3:5 है और उनका योग 64 है, तो बड़ी संख्या क्या है?",
+          "options": ["24", "32", "40", "48"],
           "correctAnswerIndex": 2
         },
         {
           "id": 23,
-          "question": "Which key is used to refresh a webpage?",
-          "options": [
-            "F1",
-            "F5",
-            "F10",
-            "F12"
-          ],
-          "correctAnswerIndex": 1
+          "question": "What is the volume of a cube with side 4 cm? 4 सेमी भुजा वाले घन का आयतन क्या है?",
+          "options": ["16 cm³", "32 cm³", "48 cm³", "64 cm³"],
+          "correctAnswerIndex": 3
         },
         {
           "id": 24,
-          "question": "What does ALU stand for?",
-          "options": [
-            "Arithmetic Logic Unit",
-            "Advanced Logic Unit",
-            "Arithmetic Local Unit",
-            "Automatic Logic Unit"
-          ],
-          "correctAnswerIndex": 0
+          "question": "What is 25% of 400? 400 का 25% क्या है?",
+          "options": ["80", "90", "100", "110"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 25,
-          "question": "Which generation of computers used vacuum tubes?",
-          "options": [
-            "First Generation",
-            "Second Generation",
-            "Third Generation",
-            "Fourth Generation"
-          ],
+          "question": "What is the prime factorization of 36? 36 का अभाज्य गुणनखंड क्या है?",
+          "options": ["2² × 3²", "2³ × 3", "2 × 3³", "4 × 9"],
           "correctAnswerIndex": 0
         },
         {
           "id": 26,
-          "question": "Which of the following is an antivirus software?",
-          "options": [
-            "Photoshop",
-            "Quick Heal",
-            "MS Word",
-            "Chrome"
-          ],
+          "question": "Two pipes can fill a tank in 6 hours and 8 hours respectively. How long will they take together? दो पाइप एक टंकी को क्रमशः 6 घंटे और 8 घंटे में भर सकते हैं। दोनों मिलकर कितने समय में भरेंगे?",
+          "options": ["3 hours", "3.43 hours", "4 hours", "4.5 hours"],
           "correctAnswerIndex": 1
         },
         {
           "id": 27,
-          "question": "Which network covers the largest geographical area?",
-          "options": [
-            "LAN",
-            "MAN",
-            "WAN",
-            "PAN"
-          ],
-          "correctAnswerIndex": 2
+          "question": "What is the value of √(25 × 16)? √(25 × 16) का मान क्या है?",
+          "options": ["15", "20", "25", "30"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 28,
-          "question": "What is the full form of PDF?",
-          "options": [
-            "Portable Document Format",
-            "Public Document File",
-            "Portable Data File",
-            "Printed Document Format"
-          ],
-          "correctAnswerIndex": 0
+          "question": "If a car covers 180 km in 3 hours, how far will it travel in 5 hours? यदि एक कार 3 घंटे में 180 किमी चलती है, तो 5 घंटे में कितनी दूर जाएगी?",
+          "options": ["250 km", "280 km", "300 km", "320 km"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 29,
-          "question": "Which of the following is used for calculations in computers?",
-          "options": [
-            "ALU",
-            "CU",
-            "RAM",
-            "ROM"
-          ],
-          "correctAnswerIndex": 0
+          "question": "What is the value of (a + b)² when a = 2 and b = 3? जब a = 2 और b = 3 हो तो (a + b)² का मान क्या है?",
+          "options": ["10", "20", "25", "30"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 30,
-          "question": "Which of the following is a search engine?",
-          "options": [
-            "Google",
-            "Windows",
-            "Linux",
-            "Python"
-          ],
-          "correctAnswerIndex": 0
+          "question": "A sum of ₹5000 is invested at 10% compound interest for 2 years. What is the amount? ₹5000 को 10% चक्रवृद्धि ब्याज पर 2 वर्ष के लिए निवेश किया जाता है। राशि क्या होगी?",
+          "options": ["₹5900", "₹6000", "₹6050", "₹6100"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "What is the value of log₁₀ 1000? log₁₀ 1000 का मान क्या है?",
+          "options": ["1", "2", "3", "4"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "What is the mode of 2, 3, 3, 4, 5, 3, 6? 2, 3, 3, 4, 5, 3, 6 का बहुलक क्या है?",
+          "options": ["2", "3", "4", "6"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 33,
+          "question": "What is the sum of the first 10 natural numbers? पहले 10 प्राकृतिक संख्याओं का योग क्या है?",
+          "options": ["45", "50", "55", "60"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "What is the value of 0! (0 factorial)? 0! (0 का क्रमगुणित) का मान क्या है?",
+          "options": ["0", "1", "2", "Undefined"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 35,
+          "question": "What is the slope of a horizontal line? क्षैतिज रेखा की ढाल क्या होती है?",
+          "options": ["1", "-1", "0", "Undefined"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "What is the value of sin²θ + cos²θ? sin²θ + cos²θ का मान क्या है?",
+          "options": ["0", "1/2", "1", "2"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 37,
+          "question": "If 5x - 10 = 20, what is x? यदि 5x - 10 = 20 है, तो x का मान क्या है?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 38,
+          "question": "What is the circumference of a circle with radius 7 cm? (π = 22/7) 7 सेमी त्रिज्या वाले वृत्त की परिधि क्या है?",
+          "options": ["38 cm", "42 cm", "44 cm", "48 cm"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "What is the value of 12! / 10!? 12! / 10! का मान क्या है?",
+          "options": ["110", "120", "130", "132"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 40,
+          "question": "In how many ways can 3 students be arranged in a row? 3 छात्रों को एक पंक्ति में कितने तरीकों से व्यवस्थित किया जा सकता है?",
+          "options": ["3", "6", "9", "12"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 41,
+          "question": "What is the probability of getting a head when a coin is tossed? सिक्का उछालने पर चित आने की प्रायिकता क्या है?",
+          "options": ["1/4", "1/3", "1/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 42,
+          "question": "What is the probability of getting a number greater than 4 on a dice? पासे पर 4 से बड़ी संख्या आने की प्रायिकता क्या है?",
+          "options": ["1/6", "1/3", "1/2", "2/3"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "What is the value of d/dx (x²)? d/dx (x²) का मान क्या है?",
+          "options": ["x", "2x", "x²", "2x²"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 44,
+          "question": "What is the integral of 2x dx? 2x dx का समाकल क्या है?",
+          "options": ["x + C", "x² + C", "2x² + C", "x²/2 + C"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 45,
+          "question": "What is the value of d/dx (sin x)? d/dx (sin x) का मान क्या है?",
+          "options": ["-sin x", "cos x", "-cos x", "tan x"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 46,
+          "question": "If a set A = {1, 2, 3} and B = {2, 3, 4}, what is A ∩ B? यदि A = {1, 2, 3} और B = {2, 3, 4} हो, तो A ∩ B क्या है?",
+          "options": ["{1, 2, 3, 4}", "{1, 4}", "{2, 3}", "{1, 2, 3, 4, 5}"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 47,
+          "question": "What is A ∪ B if A = {1, 2} and B = {3, 4}? यदि A = {1, 2} और B = {3, 4} हो, तो A ∪ B क्या है?",
+          "options": ["{1, 2}", "{3, 4}", "{1, 2, 3, 4}", "{}"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 48,
+          "question": "What is the next term in the series 2, 4, 8, 16, __? श्रृंखला 2, 4, 8, 16, __ में अगला पद क्या है?",
+          "options": ["24", "28", "32", "36"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 49,
+          "question": "What is the 10th term of an AP with first term 2 and common difference 3? उस AP का 10वाँ पद क्या है जिसका पहला पद 2 और सार्वअंतर 3 है?",
+          "options": ["25", "27", "29", "32"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 50,
+          "question": "What is the sum of first 5 terms of GP with first term 1 and common ratio 2? पहले पद 1 और सार्वअनुपात 2 वाले GP के पहले 5 पदों का योग क्या है?",
+          "options": ["15", "25", "31", "63"],
+          "correctAnswerIndex": 2
         }
       ]
     },
     {
-      "courseId": "GK_imp",
-      "courseTitle": "GK Important",
+      "courseId": "ddu_dpharma_PCM_mix_series_1",
+      "courseTitle": "DDU D.Pharma Entrance Maths Test Series 1",
       "questions": [
         {
           "id": 1,
-          "question": "भारत का राष्ट्रीय पशु कौन है?",
-          "options": ["शेर", "हाथी", "बाघ", "चीता"],
+          "question": "What is the value of √169? √169 का मान क्या है?",
+          "options": ["11", "12", "13", "14"],
           "correctAnswerIndex": 2
         },
         {
           "id": 2,
-          "question": "भारत का राष्ट्रीय पक्षी कौन है?",
-          "options": ["तोता", "मोर", "कबूतर", "हंस"],
-          "correctAnswerIndex": 1
+          "question": "What is the SI unit of pressure? दबाव की SI इकाई क्या है?",
+          "options": ["Newton", "Joule", "Pascal", "Watt"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 3,
-          "question": "भारत की राष्ट्रीय नदी कौन सी है?",
-          "options": ["यमुना", "गंगा", "गोदावरी", "नर्मदा"],
-          "correctAnswerIndex": 1
+          "question": "What is the chemical symbol of Sodium? सोडियम का रासायनिक प्रतीक क्या है?",
+          "options": ["So", "Sd", "Na", "Sn"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 4,
-          "question": "भारतीय संविधान कब लागू हुआ था?",
-          "options": ["15 अगस्त 1947", "26 जनवरी 1950", "26 नवंबर 1949", "2 अक्टूबर 1950"],
-          "correctAnswerIndex": 1
+          "question": "If 4x - 8 = 16, what is x? यदि 4x - 8 = 16 है, तो x का मान क्या है?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 5,
-          "question": "भारत का राष्ट्रीय वृक्ष कौन सा है?",
-          "options": ["नीम", "बरगद", "पीपल", "आम"],
-          "correctAnswerIndex": 1
+          "question": "What is the speed of light in vacuum? निर्वात में प्रकाश की गति कितनी है?",
+          "options": ["3×10⁶ m/s", "3×10⁷ m/s", "3×10⁸ m/s", "3×10⁹ m/s"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 6,
-          "question": "भारत का राष्ट्रीय फूल कौन सा है?",
-          "options": ["गुलाब", "कमल", "गेंदा", "चमेली"],
-          "correctAnswerIndex": 1
+          "question": "Which acid is present in lemon? नींबू में कौन सा अम्ल पाया जाता है?",
+          "options": ["Acetic Acid", "Lactic Acid", "Citric Acid", "Tartaric Acid"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 7,
-          "question": "भारत का राष्ट्रीय गान किसने लिखा था?",
-          "options": ["बंकिम चंद्र चट्टोपाध्याय", "महात्मा गांधी", "रवीन्द्रनाथ टैगोर", "सुभाष चंद्र बोस"],
+          "question": "What is 30% of 500? 500 का 30% क्या है?",
+          "options": ["100", "120", "150", "180"],
           "correctAnswerIndex": 2
         },
         {
           "id": 8,
-          "question": "विश्व का सबसे ऊँचा पर्वत कौन सा है?",
-          "options": ["K2", "कंचनजंगा", "माउंट एवरेस्ट", "नंगा पर्वत"],
+          "question": "What is the unit of electric resistance? विद्युत प्रतिरोध की इकाई क्या है?",
+          "options": ["Ampere", "Volt", "Ohm", "Watt"],
           "correctAnswerIndex": 2
         },
         {
           "id": 9,
-          "question": "सूर्य के सबसे निकट कौन सा ग्रह है?",
-          "options": ["शुक्र", "पृथ्वी", "बुध", "मंगल"],
+          "question": "What is the atomic number of Oxygen? ऑक्सीजन की परमाणु संख्या क्या है?",
+          "options": ["6", "7", "8", "9"],
           "correctAnswerIndex": 2
         },
         {
           "id": 10,
-          "question": "भारत की राजधानी क्या है?",
-          "options": ["मुंबई", "कोलकाता", "नई दिल्ली", "चेन्नई"],
-          "correctAnswerIndex": 2
+          "question": "What is the LCM of 6 and 9? 6 और 9 का LCM क्या है?",
+          "options": ["12", "18", "24", "36"],
+          "correctAnswerIndex": 1
         },
         {
           "id": 11,
-          "question": "भारत में कुल कितने राज्य हैं?",
-          "options": ["26", "27", "28", "29"],
+          "question": "Newton's Second Law: Force = ? न्यूटन का द्वितीय नियम: बल = ?",
+          "options": ["mass / acceleration", "mass + acceleration", "mass × acceleration", "mass - acceleration"],
           "correctAnswerIndex": 2
         },
         {
           "id": 12,
-          "question": "भारतीय संविधान के निर्माता किसे कहा जाता है?",
-          "options": ["महात्मा गांधी", "डॉ. बी.आर. अंबेडकर", "जवाहरलाल नेहरू", "सरदार पटेल"],
-          "correctAnswerIndex": 1
+          "question": "What is the chemical formula of Sulphuric Acid? सल्फ्यूरिक अम्ल का रासायनिक सूत्र क्या है?",
+          "options": ["HCl", "HNO₃", "H₂SO₄", "H₂CO₃"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 13,
-          "question": "भारत छोड़ो आंदोलन कब शुरू हुआ था?",
-          "options": ["1942", "1930", "1919", "1947"],
-          "correctAnswerIndex": 0
+          "question": "What is the area of a circle with radius 14 cm? (π = 22/7) 14 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल क्या है?",
+          "options": ["516 cm²", "576 cm²", "616 cm²", "636 cm²"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 14,
-          "question": "ताजमहल किस शहर में स्थित है?",
-          "options": ["दिल्ली", "जयपुर", "आगरा", "लखनऊ"],
+          "question": "Which mirror is used by dentists? दाँतों के डॉक्टर कौन सा दर्पण उपयोग करते हैं?",
+          "options": ["Convex mirror", "Plane mirror", "Concave mirror", "Parabolic mirror"],
           "correctAnswerIndex": 2
         },
         {
           "id": 15,
-          "question": "भारत का सर्वोच्च नागरिक सम्मान कौन सा है?",
-          "options": ["पद्म श्री", "पद्म भूषण", "पद्म विभूषण", "भारत रत्न"],
+          "question": "What is the valency of Carbon? कार्बन की संयोजकता क्या है?",
+          "options": ["1", "2", "3", "4"],
           "correctAnswerIndex": 3
         },
         {
           "id": 16,
-          "question": "कंप्यूटर का जनक किसे कहा जाता है?",
-          "options": ["चार्ल्स बैबेज", "एलन ट्यूरिंग", "बिल गेट्स", "स्टीव जॉब्स"],
-          "correctAnswerIndex": 0
+          "question": "What is the value of sin 60°? sin 60° का मान क्या है?",
+          "options": ["1/2", "1/√2", "√3/2", "1"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 17,
-          "question": "मानव शरीर में रक्त को शुद्ध करने का कार्य कौन सा अंग करता है?",
-          "options": ["हृदय", "फेफड़ा", "यकृत", "गुर्दा"],
-          "correctAnswerIndex": 3
+          "question": "Which gas is produced when zinc reacts with dilute HCl? जब जिंक तनु HCl के साथ क्रिया करता है तो कौन सी गैस निकलती है?",
+          "options": ["Oxygen", "Chlorine", "Hydrogen", "Nitrogen"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 18,
-          "question": "ओलंपिक खेलों का आयोजन कितने वर्षों के अंतराल पर होता है?",
-          "options": ["2 वर्ष", "3 वर्ष", "4 वर्ष", "5 वर्ष"],
+          "question": "A train covers 300 km in 4 hours. What is its speed? एक ट्रेन 4 घंटे में 300 किमी तय करती है। उसकी गति क्या है?",
+          "options": ["65 km/h", "70 km/h", "75 km/h", "80 km/h"],
           "correctAnswerIndex": 2
         },
         {
           "id": 19,
-          "question": "भारत का राष्ट्रीय खेल पारंपरिक रूप से किसे माना जाता है?",
-          "options": ["क्रिकेट", "हॉकी", "कबड्डी", "फुटबॉल"],
-          "correctAnswerIndex": 1
+          "question": "What is the SI unit of work? कार्य की SI इकाई क्या है?",
+          "options": ["Watt", "Newton", "Joule", "Pascal"],
+          "correctAnswerIndex": 2
         },
         {
           "id": 20,
-          "question": "जलियांवाला बाग हत्याकांड किस वर्ष हुआ था?",
-          "options": ["1917", "1918", "1919", "1920"],
+          "question": "What is the pH of a neutral solution? उदासीन विलयन का pH कितना होता है?",
+          "options": ["0", "5", "7", "14"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is the HCF of 16 and 40? 16 और 40 का HCF क्या है?",
+          "options": ["4", "6", "8", "10"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 22,
+          "question": "What is the frequency of AC supply in India? भारत में AC आपूर्ति की आवृत्ति क्या है?",
+          "options": ["25 Hz", "50 Hz", "60 Hz", "100 Hz"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 23,
+          "question": "What is the chemical name of Washing Soda? वाशिंग सोडा का रासायनिक नाम क्या है?",
+          "options": ["Sodium Bicarbonate", "Sodium Chloride", "Sodium Carbonate", "Sodium Hydroxide"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "What is the volume of a cube with side 5 cm? 5 सेमी भुजा वाले घन का आयतन क्या है?",
+          "options": ["100 cm³", "115 cm³", "125 cm³", "150 cm³"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "What is the phenomenon of bending of light called? प्रकाश के मुड़ने की घटना को क्या कहते हैं?",
+          "options": ["Reflection", "Refraction", "Dispersion", "Diffraction"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 26,
+          "question": "What is the molecular formula of Glucose? ग्लूकोज का आणविक सूत्र क्या है?",
+          "options": ["C₆H₁₂O₅", "C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₆H₆O₆"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "What is the value of log₁₀ 100? log₁₀ 100 का मान क्या है?",
+          "options": ["1", "2", "10", "100"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "Which type of wave is sound? ध्वनि किस प्रकार की तरंग है?",
+          "options": ["Transverse wave", "Electromagnetic wave", "Longitudinal wave", "Radio wave"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "What is the chemical formula of Nitric Acid? नाइट्रिक अम्ल का रासायनिक सूत्र क्या है?",
+          "options": ["HCl", "H₂SO₄", "HNO₃", "H₃PO₄"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Simple interest on ₹4000 at 5% per annum for 3 years? ₹4000 पर 5% वार्षिक दर से 3 वर्ष का साधारण ब्याज क्या होगा?",
+          "options": ["₹400", "₹500", "₹600", "₹700"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Which law gives the relationship between voltage, current and resistance? वोल्टेज, धारा और प्रतिरोध के बीच संबंध कौन सा नियम देता है?",
+          "options": ["Newton's Law", "Faraday's Law", "Ohm's Law", "Boyle's Law"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "What is the atomic mass of Hydrogen? हाइड्रोजन का परमाणु द्रव्यमान कितना है?",
+          "options": ["1", "2", "4", "8"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 33,
+          "question": "What is the value of d/dx (x⁴)? d/dx (x⁴) का मान क्या है?",
+          "options": ["x³", "2x³", "4x³", "4x⁴"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "Which gas is responsible for global warming? ग्लोबल वार्मिंग के लिए कौन सी गैस जिम्मेदार है?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "What is the probability of getting a tail when a coin is tossed? सिक्का उछालने पर पट आने की प्रायिकता क्या है?",
+          "options": ["1/4", "1/3", "1/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "What is the unit of frequency? आवृत्ति की इकाई क्या है?",
+          "options": ["Decibel", "Hertz", "Newton", "Watt"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 37,
+          "question": "What is the chemical formula of Ammonia? अमोनिया का रासायनिक सूत्र क्या है?",
+          "options": ["NO₂", "NH₃", "N₂O", "NaCl"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "What is the 8th term of AP: 5, 10, 15, 20, ...? AP: 5, 10, 15, 20, ... का 8वाँ पद क्या है?",
+          "options": ["35", "40", "45", "50"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 39,
+          "question": "Which property of matter does Archimedes' principle relate to? आर्किमिडीज का सिद्धांत पदार्थ के किस गुण से संबंधित है?",
+          "options": ["Mass", "Buoyancy", "Friction", "Inertia"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "What is the number of electrons in the outermost shell of Noble gases (except He)? नोबल गैसों (He को छोड़कर) की बाह्यतम कक्षा में इलेक्ट्रॉनों की संख्या कितनी होती है?",
+          "options": ["2", "6", "8", "10"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "What is the value of ⁶C₃? ⁶C₃ का मान क्या है?",
+          "options": ["15", "18", "20", "24"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 42,
+          "question": "What happens to resistance when temperature increases in a conductor? चालक में तापमान बढ़ने पर प्रतिरोध पर क्या प्रभाव पड़ता है?",
+          "options": ["Decreases", "Remains same", "Increases", "Becomes zero"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 43,
+          "question": "What is the chemical formula of Ozone? ओज़ोन का रासायनिक सूत्र क्या है?",
+          "options": ["O", "O₂", "O₃", "O₄"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 44,
+          "question": "A work is done by A in 12 days and B in 6 days. How many days together? A एक काम 12 दिन में और B 6 दिन में करता है। दोनों मिलकर कितने दिन में करेंगे?",
+          "options": ["2 days", "3 days", "4 days", "6 days"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 45,
+          "question": "What is the phenomenon when white light splits into seven colours? जब श्वेत प्रकाश सात रंगों में बँटता है तो उसे क्या कहते हैं?",
+          "options": ["Reflection", "Refraction", "Dispersion", "Diffraction"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 46,
+          "question": "What is the oxidation state of Oxygen in most compounds? अधिकांश यौगिकों में ऑक्सीजन की ऑक्सीकरण अवस्था क्या होती है?",
+          "options": ["+1", "+2", "-1", "-2"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 47,
+          "question": "What is the distance between points (1,2) and (4,6)? बिंदुओं (1,2) और (4,6) के बीच की दूरी क्या है?",
+          "options": ["3", "4", "5", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 48,
+          "question": "Which force acts between two charged particles? दो आवेशित कणों के बीच कौन सा बल कार्य करता है?",
+          "options": ["Gravitational force", "Magnetic force", "Electrostatic force", "Nuclear force"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 49,
+          "question": "What is the product of (a+b)(a-b)? (a+b)(a-b) का गुणनफल क्या है?",
+          "options": ["a² + b²", "a² - b²", "a² + 2ab - b²", "2ab"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 50,
+          "question": "Which element is called the king of chemicals? किस तत्व को रसायनों का राजा कहा जाता है?",
+          "options": ["HCl", "HNO₃", "H₂SO₄", "NaOH"],
+          "correctAnswerIndex": 2
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_dpharma_PCM_mix_series_2",
+      "courseTitle": "DDU D.Pharma Entrance Test Series 2",
+      "questions": [
+        {
+          "id": 1,
+          "question": "If 3x + 7 = 22, what is x? यदि 3x + 7 = 22 है, तो x क्या है?",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "What is the chemical formula of water? पानी का रासायनिक सूत्र क्या है?",
+          "options": ["HO", "H₂O", "H₂O₂", "HO₂"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "What is the value of cos 0°? cos 0° का मान क्या है?",
+          "options": ["0", "1/2", "√3/2", "1"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 4,
+          "question": "The unit of electric current is? विद्युत धारा की इकाई क्या है?",
+          "options": ["Volt", "Watt", "Ampere", "Ohm"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is the chemical symbol of Iron? लोहे का रासायनिक प्रतीक क्या है?",
+          "options": ["Ir", "I", "Fe", "Fr"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "What is the square root of 225? 225 का वर्गमूल क्या है?",
+          "options": ["13", "14", "15", "16"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "Which gas do plants absorb during photosynthesis? प्रकाश संश्लेषण में पौधे कौन सी गैस अवशोषित करते हैं?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "What is 15% of 200? 200 का 15% क्या है?",
+          "options": ["25", "30", "35", "40"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Newton's First Law is also called? न्यूटन का प्रथम नियम क्या कहलाता है?",
+          "options": ["Law of Motion", "Law of Inertia", "Law of Gravitation", "Law of Energy"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 10,
+          "question": "What is the molecular formula of common salt? सामान्य नमक का आणविक सूत्र क्या है?",
+          "options": ["KCl", "MgCl", "NaCl", "CaCl₂"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "What is the perimeter of a rectangle with length 8 cm and breadth 5 cm? 8 सेमी लंबाई और 5 सेमी चौड़ाई वाले आयत का परिमाप क्या है?",
+          "options": ["24 cm", "26 cm", "28 cm", "30 cm"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "What is the boiling point of water at standard pressure? मानक दाब पर पानी का क्वथनांक क्या है?",
+          "options": ["90°C", "95°C", "100°C", "110°C"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Which metal is liquid at room temperature? कौन सी धातु कमरे के तापमान पर तरल होती है?",
+          "options": ["Aluminium", "Sodium", "Mercury", "Lead"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "If a+b=10 and a−b=4, what is a? यदि a+b=10 और a−b=4, तो a क्या है?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "The SI unit of temperature is? तापमान की SI इकाई क्या है?",
+          "options": ["Celsius", "Fahrenheit", "Kelvin", "Rankine"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "What is the chemical name of Baking Soda? बेकिंग सोडा का रासायनिक नाम क्या है?",
+          "options": ["Sodium Chloride", "Sodium Carbonate", "Sodium Bicarbonate", "Sodium Hydroxide"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "What is d/dx (sin x)? d/dx (sin x) का मान क्या है?",
+          "options": ["sin x", "−cos x", "cos x", "tan x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Sound travels fastest in which medium? ध्वनि किस माध्यम में सबसे तेज चलती है?",
+          "options": ["Air", "Water", "Vacuum", "Steel"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 19,
+          "question": "What is the atomic number of Carbon? कार्बन की परमाणु संख्या क्या है?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "A shopkeeper sells an item for ₹480 at 20% profit. What is the cost price? एक दुकानदार 20% लाभ पर ₹480 में बेचता है। लागत मूल्य क्या है?",
+          "options": ["₹360", "₹380", "₹400", "₹420"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is the formula for kinetic energy? गतिज ऊर्जा का सूत्र क्या है?",
+          "options": ["mgh", "½mv²", "mv", "F×d"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Which acid is found in vinegar? सिरके में कौन सा अम्ल पाया जाता है?",
+          "options": ["Citric acid", "Lactic acid", "Acetic acid", "Oxalic acid"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "What is the value of tan 45°? tan 45° का मान क्या है?",
+          "options": ["0", "1/√2", "1", "√3"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "How many electrons does Chlorine (Cl) have? क्लोरीन में कितने इलेक्ट्रॉन होते हैं?",
+          "options": ["15", "16", "17", "18"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "What is the LCM of 4, 6, and 12? 4, 6 और 12 का LCM क्या है?",
+          "options": ["12", "18", "24", "36"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 26,
+          "question": "The process of rusting involves which gas? जंग लगने की प्रक्रिया में कौन सी गैस शामिल होती है?",
+          "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "What is the value of ⁵P₂? ⁵P₂ का मान क्या है?",
+          "options": ["10", "15", "20", "25"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which type of lens is used to correct myopia? निकट दृष्टि दोष को ठीक करने के लिए कौन सा लेंस प्रयोग होता है?",
+          "options": ["Convex", "Concave", "Bifocal", "Plano-convex"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "What is the chemical formula of Carbon Dioxide? कार्बन डाइऑक्साइड का रासायनिक सूत्र क्या है?",
+          "options": ["CO", "CO₂", "C₂O", "C₂O₂"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "A sum of ₹5000 at 10% compound interest annually for 2 years. What is the amount? ₹5000 पर 10% वार्षिक चक्रवृद्धि ब्याज से 2 वर्ष बाद राशि क्या होगी?",
+          "options": ["₹5900", "₹6000", "₹6050", "₹6100"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "What is the work done if force is 10 N and displacement is 5 m? यदि बल 10 N और विस्थापन 5 m है तो कार्य क्या होगा?",
+          "options": ["2 J", "15 J", "50 J", "100 J"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "Which element has the highest electronegativity? किस तत्व की विद्युतऋणात्मकता सबसे अधिक है?",
+          "options": ["Oxygen", "Chlorine", "Nitrogen", "Fluorine"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 33,
+          "question": "What is the sum of angles of a triangle? त्रिभुज के कोणों का योग क्या है?",
+          "options": ["90°", "180°", "270°", "360°"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 34,
+          "question": "A car travels at 60 km/h. How far does it travel in 2.5 hours? एक कार 60 km/h की गति से चलती है। 2.5 घंटे में कितनी दूरी तय करेगी?",
+          "options": ["120 km", "130 km", "140 km", "150 km"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 35,
+          "question": "What is the SI unit of Power? शक्ति की SI इकाई क्या है?",
+          "options": ["Joule", "Newton", "Watt", "Pascal"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "Which acid is present in milk? दूध में कौन सा अम्ल पाया जाता है?",
+          "options": ["Calcium hydroxide", "Lactic acid", "Casein", "None, it is neutral"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 37,
+          "question": "What is the value of sin²θ + cos²θ? sin²θ + cos²θ का मान क्या है?",
+          "options": ["0", "½", "1", "2"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 38,
+          "question": "Ohm's Law: V = ? ओम का नियम: V = ?",
+          "options": ["I/R", "I+R", "I×R", "I−R"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "What is the chemical formula of Hydrochloric Acid? हाइड्रोक्लोरिक अम्ल का रासायनिक सूत्र क्या है?",
+          "options": ["H₂S", "HNO₃", "HCl", "H₂SO₄"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "If the ratio of boys to girls is 3:2 and there are 30 boys, how many girls? यदि लड़के और लड़कियों का अनुपात 3:2 है और 30 लड़के हैं, तो लड़कियाँ कितनी हैं?",
+          "options": ["15", "18", "20", "25"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "What is the power of a lens measured in? लेंस की क्षमता किसमें मापी जाती है?",
+          "options": ["Meter", "Dioptre", "Newton", "Watt"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 42,
+          "question": "What is the charge on an electron? इलेक्ट्रॉन पर आवेश क्या होता है?",
+          "options": ["+1.6×10⁻¹⁹ C", "−1.6×10⁻¹⁹ C", "0", "1.6×10⁻²³ C"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "What is the HCF of 36 and 48? 36 और 48 का HCF क्या है?",
+          "options": ["6", "9", "12", "18"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 44,
+          "question": "The chemical formula of Calcium Carbonate is? कैल्शियम कार्बोनेट का रासायनिक सूत्र क्या है?",
+          "options": ["CaCl₂", "CaO", "CaCO₃", "Ca(OH)₂"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 45,
+          "question": "What is the value of ∫x dx? ∫x dx का मान क्या है?",
+          "options": ["x²", "x²/2 + C", "2x + C", "x/2"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 46,
+          "question": "Which phenomenon explains the blue colour of sky? आकाश के नीले रंग की व्याख्या कौन सी घटना करती है?",
+          "options": ["Reflection", "Refraction", "Scattering", "Diffraction"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 47,
+          "question": "What is the number of moles in 18g of water? 18g पानी में कितने मोल होते हैं?",
+          "options": ["0.5", "1", "1.5", "2"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 48,
+          "question": "What is the diagonal of a square with side 7 cm? 7 सेमी भुजा वाले वर्ग का विकर्ण क्या है?",
+          "options": ["7 cm", "7√2 cm", "14 cm", "7√3 cm"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "Which law describes the relationship between pressure and volume of a gas at constant temperature? स्थिर तापमान पर गैस के दाब और आयतन का संबंध कौन सा नियम बताता है?",
+          "options": ["Charles' Law", "Avogadro's Law", "Boyle's Law", "Gay-Lussac's Law"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 50,
+          "question": "What is the probability of getting a number greater than 4 when rolling a die? पासे को फेंकने पर 4 से बड़ा अंक आने की प्रायिकता क्या है?",
+          "options": ["1/6", "1/3", "1/2", "2/3"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 51,
+          "question": "What is 30% of 500? 500 का 30% क्या है? [Series 1 — Q7]",
+          "options": ["100", "120", "150", "180"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 52,
+          "question": "What is the LCM of 6 and 9? 6 और 9 का LCM क्या है? [Series 1 — Q10]",
+          "options": ["12", "18", "24", "36"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 53,
+          "question": "What is the area of a circle with radius 14 cm? (π = 22/7) 14 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल क्या है? [Series 1 — Q13]",
+          "options": ["516 cm²", "576 cm²", "616 cm²", "636 cm²"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 54,
+          "question": "A train covers 300 km in 4 hours. What is its speed? एक ट्रेन 4 घंटे में 300 किमी तय करती है। उसकी गति क्या है? [Series 1 — Q18]",
+          "options": ["65 km/h", "70 km/h", "75 km/h", "80 km/h"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 55,
+          "question": "What is the HCF of 16 and 40? 16 और 40 का HCF क्या है? [Series 1 — Q21]",
+          "options": ["4", "6", "8", "10"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 56,
+          "question": "What is the molecular formula of Glucose? ग्लूकोज का आणविक सूत्र क्या है? [Series 1 — Q26]",
+          "options": ["C₆H₁₂O₅", "C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₆H₆O₆"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 57,
+          "question": "Simple interest on ₹4000 at 5% per annum for 3 years? ₹4000 पर 5% वार्षिक दर से 3 वर्ष का साधारण ब्याज क्या होगा? [Series 1 — Q30]",
+          "options": ["₹400", "₹500", "₹600", "₹700"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 58,
+          "question": "What is the probability of getting a tail when a coin is tossed? सिक्का उछालने पर पट आने की प्रायिकता क्या है? [Series 1 — Q35]",
+          "options": ["1/4", "1/3", "1/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 59,
+          "question": "A work is done by A in 12 days and B in 6 days. How many days together? A एक काम 12 दिन में और B 6 दिन में करता है। दोनों मिलकर कितने दिन में करेंगे? [Series 1 — Q44]",
+          "options": ["2 days", "3 days", "4 days", "6 days"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 60,
+          "question": "What is the distance between points (1,2) and (4,6)? बिंदुओं (1,2) और (4,6) के बीच की दूरी क्या है? [Series 1 — Q47]",
+          "options": ["3", "4", "5", "7"],
+          "correctAnswerIndex": 2
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_bpharma_PCM_mix_series_1",
+      "courseTitle": "DDU B.Pharma Entrance Maths Test Series 1",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the value of √169? √169 का मान क्या है?",
+          "options": ["11", "12", "13", "14"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "What is the SI unit of pressure? दबाव की SI इकाई क्या है?",
+          "options": ["Newton", "Joule", "Pascal", "Watt"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 3,
+          "question": "What is the chemical symbol of Sodium? सोडियम का रासायनिक प्रतीक क्या है?",
+          "options": ["So", "Sd", "Na", "Sn"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 4,
+          "question": "If 4x - 8 = 16, what is x? यदि 4x - 8 = 16 है, तो x का मान क्या है?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is the speed of light in vacuum? निर्वात में प्रकाश की गति कितनी है?",
+          "options": ["3×10⁶ m/s", "3×10⁷ m/s", "3×10⁸ m/s", "3×10⁹ m/s"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "Which acid is present in lemon? नींबू में कौन सा अम्ल पाया जाता है?",
+          "options": ["Acetic Acid", "Lactic Acid", "Citric Acid", "Tartaric Acid"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "What is 30% of 500? 500 का 30% क्या है?",
+          "options": ["100", "120", "150", "180"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "What is the unit of electric resistance? विद्युत प्रतिरोध की इकाई क्या है?",
+          "options": ["Ampere", "Volt", "Ohm", "Watt"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 9,
+          "question": "What is the atomic number of Oxygen? ऑक्सीजन की परमाणु संख्या क्या है?",
+          "options": ["6", "7", "8", "9"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 10,
+          "question": "What is the LCM of 6 and 9? 6 और 9 का LCM क्या है?",
+          "options": ["12", "18", "24", "36"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 11,
+          "question": "Newton's Second Law: Force = ? न्यूटन का द्वितीय नियम: बल = ?",
+          "options": ["mass / acceleration", "mass + acceleration", "mass × acceleration", "mass - acceleration"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 12,
+          "question": "What is the chemical formula of Sulphuric Acid? सल्फ्यूरिक अम्ल का रासायनिक सूत्र क्या है?",
+          "options": ["HCl", "HNO₃", "H₂SO₄", "H₂CO₃"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "What is the area of a circle with radius 14 cm? (π = 22/7) 14 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल क्या है?",
+          "options": ["516 cm²", "576 cm²", "616 cm²", "636 cm²"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "Which mirror is used by dentists? दाँतों के डॉक्टर कौन सा दर्पण उपयोग करते हैं?",
+          "options": ["Convex mirror", "Plane mirror", "Concave mirror", "Parabolic mirror"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "What is the valency of Carbon? कार्बन की संयोजकता क्या है?",
+          "options": ["1", "2", "3", "4"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 16,
+          "question": "What is the value of sin 60°? sin 60° का मान क्या है?",
+          "options": ["1/2", "1/√2", "√3/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "Which gas is produced when zinc reacts with dilute HCl? जब जिंक तनु HCl के साथ क्रिया करता है तो कौन सी गैस निकलती है?",
+          "options": ["Oxygen", "Chlorine", "Hydrogen", "Nitrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "A train covers 300 km in 4 hours. What is its speed? एक ट्रेन 4 घंटे में 300 किमी तय करती है। उसकी गति क्या है?",
+          "options": ["65 km/h", "70 km/h", "75 km/h", "80 km/h"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 19,
+          "question": "What is the SI unit of work? कार्य की SI इकाई क्या है?",
+          "options": ["Watt", "Newton", "Joule", "Pascal"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "What is the pH of a neutral solution? उदासीन विलयन का pH कितना होता है?",
+          "options": ["0", "5", "7", "14"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is the HCF of 16 and 40? 16 और 40 का HCF क्या है?",
+          "options": ["4", "6", "8", "10"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 22,
+          "question": "What is the frequency of AC supply in India? भारत में AC आपूर्ति की आवृत्ति क्या है?",
+          "options": ["25 Hz", "50 Hz", "60 Hz", "100 Hz"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 23,
+          "question": "What is the chemical name of Washing Soda? वाशिंग सोडा का रासायनिक नाम क्या है?",
+          "options": ["Sodium Bicarbonate", "Sodium Chloride", "Sodium Carbonate", "Sodium Hydroxide"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "What is the volume of a cube with side 5 cm? 5 सेमी भुजा वाले घन का आयतन क्या है?",
+          "options": ["100 cm³", "115 cm³", "125 cm³", "150 cm³"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "What is the phenomenon of bending of light called? प्रकाश के मुड़ने की घटना को क्या कहते हैं?",
+          "options": ["Reflection", "Refraction", "Dispersion", "Diffraction"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 26,
+          "question": "What is the molecular formula of Glucose? ग्लूकोज का आणविक सूत्र क्या है?",
+          "options": ["C₆H₁₂O₅", "C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₆H₆O₆"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "What is the value of log₁₀ 100? log₁₀ 100 का मान क्या है?",
+          "options": ["1", "2", "10", "100"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 28,
+          "question": "Which type of wave is sound? ध्वनि किस प्रकार की तरंग है?",
+          "options": ["Transverse wave", "Electromagnetic wave", "Longitudinal wave", "Radio wave"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 29,
+          "question": "What is the chemical formula of Nitric Acid? नाइट्रिक अम्ल का रासायनिक सूत्र क्या है?",
+          "options": ["HCl", "H₂SO₄", "HNO₃", "H₃PO₄"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 30,
+          "question": "Simple interest on ₹4000 at 5% per annum for 3 years? ₹4000 पर 5% वार्षिक दर से 3 वर्ष का साधारण ब्याज क्या होगा?",
+          "options": ["₹400", "₹500", "₹600", "₹700"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "Which law gives the relationship between voltage, current and resistance? वोल्टेज, धारा और प्रतिरोध के बीच संबंध कौन सा नियम देता है?",
+          "options": ["Newton's Law", "Faraday's Law", "Ohm's Law", "Boyle's Law"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "What is the atomic mass of Hydrogen? हाइड्रोजन का परमाणु द्रव्यमान कितना है?",
+          "options": ["1", "2", "4", "8"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 33,
+          "question": "What is the value of d/dx (x⁴)? d/dx (x⁴) का मान क्या है?",
+          "options": ["x³", "2x³", "4x³", "4x⁴"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 34,
+          "question": "Which gas is responsible for global warming? ग्लोबल वार्मिंग के लिए कौन सी गैस जिम्मेदार है?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 35,
+          "question": "What is the probability of getting a tail when a coin is tossed? सिक्का उछालने पर पट आने की प्रायिकता क्या है?",
+          "options": ["1/4", "1/3", "1/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "What is the unit of frequency? आवृत्ति की इकाई क्या है?",
+          "options": ["Decibel", "Hertz", "Newton", "Watt"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 37,
+          "question": "What is the chemical formula of Ammonia? अमोनिया का रासायनिक सूत्र क्या है?",
+          "options": ["NO₂", "NH₃", "N₂O", "NaCl"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 38,
+          "question": "What is the 8th term of AP: 5, 10, 15, 20, ...? AP: 5, 10, 15, 20, ... का 8वाँ पद क्या है?",
+          "options": ["35", "40", "45", "50"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 39,
+          "question": "Which property of matter does Archimedes' principle relate to? आर्किमिडीज का सिद्धांत पदार्थ के किस गुण से संबंधित है?",
+          "options": ["Mass", "Buoyancy", "Friction", "Inertia"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 40,
+          "question": "What is the number of electrons in the outermost shell of Noble gases (except He)? नोबल गैसों (He को छोड़कर) की बाह्यतम कक्षा में इलेक्ट्रॉनों की संख्या कितनी होती है?",
+          "options": ["2", "6", "8", "10"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "What is the value of ⁶C₃? ⁶C₃ का मान क्या है?",
+          "options": ["15", "18", "20", "24"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 42,
+          "question": "What happens to resistance when temperature increases in a conductor? चालक में तापमान बढ़ने पर प्रतिरोध पर क्या प्रभाव पड़ता है?",
+          "options": ["Decreases", "Remains same", "Increases", "Becomes zero"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 43,
+          "question": "What is the chemical formula of Ozone? ओज़ोन का रासायनिक सूत्र क्या है?",
+          "options": ["O", "O₂", "O₃", "O₄"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 44,
+          "question": "A work is done by A in 12 days and B in 6 days. How many days together? A एक काम 12 दिन में और B 6 दिन में करता है। दोनों मिलकर कितने दिन में करेंगे?",
+          "options": ["2 days", "3 days", "4 days", "6 days"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 45,
+          "question": "What is the phenomenon when white light splits into seven colours? जब श्वेत प्रकाश सात रंगों में बँटता है तो उसे क्या कहते हैं?",
+          "options": ["Reflection", "Refraction", "Dispersion", "Diffraction"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 46,
+          "question": "What is the oxidation state of Oxygen in most compounds? अधिकांश यौगिकों में ऑक्सीजन की ऑक्सीकरण अवस्था क्या होती है?",
+          "options": ["+1", "+2", "-1", "-2"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 47,
+          "question": "What is the distance between points (1,2) and (4,6)? बिंदुओं (1,2) और (4,6) के बीच की दूरी क्या है?",
+          "options": ["3", "4", "5", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 48,
+          "question": "Which force acts between two charged particles? दो आवेशित कणों के बीच कौन सा बल कार्य करता है?",
+          "options": ["Gravitational force", "Magnetic force", "Electrostatic force", "Nuclear force"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 49,
+          "question": "What is the product of (a+b)(a-b)? (a+b)(a-b) का गुणनफल क्या है?",
+          "options": ["a² + b²", "a² - b²", "a² + 2ab - b²", "2ab"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 50,
+          "question": "Which element is called the king of chemicals? किस तत्व को रसायनों का राजा कहा जाता है?",
+          "options": ["HCl", "HNO₃", "H₂SO₄", "NaOH"],
+          "correctAnswerIndex": 2
+        }
+      ]
+    },
+    {
+      "courseId": "ddu_Bpharma_PCM_mix_series_2",
+      "courseTitle": "DDU B.Pharma Entrance Test Series 2",
+      "questions": [
+        {
+          "id": 1,
+          "question": "If 3x + 7 = 22, what is x? यदि 3x + 7 = 22 है, तो x क्या है?",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 2,
+          "question": "What is the chemical formula of water? पानी का रासायनिक सूत्र क्या है?",
+          "options": ["HO", "H₂O", "H₂O₂", "HO₂"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 3,
+          "question": "What is the value of cos 0°? cos 0° का मान क्या है?",
+          "options": ["0", "1/2", "√3/2", "1"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 4,
+          "question": "The unit of electric current is? विद्युत धारा की इकाई क्या है?",
+          "options": ["Volt", "Watt", "Ampere", "Ohm"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 5,
+          "question": "What is the chemical symbol of Iron? लोहे का रासायनिक प्रतीक क्या है?",
+          "options": ["Ir", "I", "Fe", "Fr"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 6,
+          "question": "What is the square root of 225? 225 का वर्गमूल क्या है?",
+          "options": ["13", "14", "15", "16"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 7,
+          "question": "Which gas do plants absorb during photosynthesis? प्रकाश संश्लेषण में पौधे कौन सी गैस अवशोषित करते हैं?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 8,
+          "question": "What is 15% of 200? 200 का 15% क्या है?",
+          "options": ["25", "30", "35", "40"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 9,
+          "question": "Newton's First Law is also called? न्यूटन का प्रथम नियम क्या कहलाता है?",
+          "options": ["Law of Motion", "Law of Inertia", "Law of Gravitation", "Law of Energy"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 10,
+          "question": "What is the molecular formula of common salt? सामान्य नमक का आणविक सूत्र क्या है?",
+          "options": ["KCl", "MgCl", "NaCl", "CaCl₂"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 11,
+          "question": "What is the perimeter of a rectangle with length 8 cm and breadth 5 cm? 8 सेमी लंबाई और 5 सेमी चौड़ाई वाले आयत का परिमाप क्या है?",
+          "options": ["24 cm", "26 cm", "28 cm", "30 cm"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 12,
+          "question": "What is the boiling point of water at standard pressure? मानक दाब पर पानी का क्वथनांक क्या है?",
+          "options": ["90°C", "95°C", "100°C", "110°C"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 13,
+          "question": "Which metal is liquid at room temperature? कौन सी धातु कमरे के तापमान पर तरल होती है?",
+          "options": ["Aluminium", "Sodium", "Mercury", "Lead"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 14,
+          "question": "If a+b=10 and a−b=4, what is a? यदि a+b=10 और a−b=4, तो a क्या है?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 15,
+          "question": "The SI unit of temperature is? तापमान की SI इकाई क्या है?",
+          "options": ["Celsius", "Fahrenheit", "Kelvin", "Rankine"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 16,
+          "question": "What is the chemical name of Baking Soda? बेकिंग सोडा का रासायनिक नाम क्या है?",
+          "options": ["Sodium Chloride", "Sodium Carbonate", "Sodium Bicarbonate", "Sodium Hydroxide"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 17,
+          "question": "What is d/dx (sin x)? d/dx (sin x) का मान क्या है?",
+          "options": ["sin x", "−cos x", "cos x", "tan x"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 18,
+          "question": "Sound travels fastest in which medium? ध्वनि किस माध्यम में सबसे तेज चलती है?",
+          "options": ["Air", "Water", "Vacuum", "Steel"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 19,
+          "question": "What is the atomic number of Carbon? कार्बन की परमाणु संख्या क्या है?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 20,
+          "question": "A shopkeeper sells an item for ₹480 at 20% profit. What is the cost price? एक दुकानदार 20% लाभ पर ₹480 में बेचता है। लागत मूल्य क्या है?",
+          "options": ["₹360", "₹380", "₹400", "₹420"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 21,
+          "question": "What is the formula for kinetic energy? गतिज ऊर्जा का सूत्र क्या है?",
+          "options": ["mgh", "½mv²", "mv", "F×d"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 22,
+          "question": "Which acid is found in vinegar? सिरके में कौन सा अम्ल पाया जाता है?",
+          "options": ["Citric acid", "Lactic acid", "Acetic acid", "Oxalic acid"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 23,
+          "question": "What is the value of tan 45°? tan 45° का मान क्या है?",
+          "options": ["0", "1/√2", "1", "√3"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 24,
+          "question": "How many electrons does Chlorine (Cl) have? क्लोरीन में कितने इलेक्ट्रॉन होते हैं?",
+          "options": ["15", "16", "17", "18"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 25,
+          "question": "What is the LCM of 4, 6, and 12? 4, 6 और 12 का LCM क्या है?",
+          "options": ["12", "18", "24", "36"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "id": 26,
+          "question": "The process of rusting involves which gas? जंग लगने की प्रक्रिया में कौन सी गैस शामिल होती है?",
+          "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 27,
+          "question": "What is the value of ⁵P₂? ⁵P₂ का मान क्या है?",
+          "options": ["10", "15", "20", "25"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 28,
+          "question": "Which type of lens is used to correct myopia? निकट दृष्टि दोष को ठीक करने के लिए कौन सा लेंस प्रयोग होता है?",
+          "options": ["Convex", "Concave", "Bifocal", "Plano-convex"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 29,
+          "question": "What is the chemical formula of Carbon Dioxide? कार्बन डाइऑक्साइड का रासायनिक सूत्र क्या है?",
+          "options": ["CO", "CO₂", "C₂O", "C₂O₂"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 30,
+          "question": "A sum of ₹5000 at 10% compound interest annually for 2 years. What is the amount? ₹5000 पर 10% वार्षिक चक्रवृद्धि ब्याज से 2 वर्ष बाद राशि क्या होगी?",
+          "options": ["₹5900", "₹6000", "₹6050", "₹6100"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 31,
+          "question": "What is the work done if force is 10 N and displacement is 5 m? यदि बल 10 N और विस्थापन 5 m है तो कार्य क्या होगा?",
+          "options": ["2 J", "15 J", "50 J", "100 J"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 32,
+          "question": "Which element has the highest electronegativity? किस तत्व की विद्युतऋणात्मकता सबसे अधिक है?",
+          "options": ["Oxygen", "Chlorine", "Nitrogen", "Fluorine"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 33,
+          "question": "What is the sum of angles of a triangle? त्रिभुज के कोणों का योग क्या है?",
+          "options": ["90°", "180°", "270°", "360°"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 34,
+          "question": "A car travels at 60 km/h. How far does it travel in 2.5 hours? एक कार 60 km/h की गति से चलती है। 2.5 घंटे में कितनी दूरी तय करेगी?",
+          "options": ["120 km", "130 km", "140 km", "150 km"],
+          "correctAnswerIndex": 3
+        },
+        {
+          "id": 35,
+          "question": "What is the SI unit of Power? शक्ति की SI इकाई क्या है?",
+          "options": ["Joule", "Newton", "Watt", "Pascal"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 36,
+          "question": "Which acid is present in milk? दूध में कौन सा अम्ल पाया जाता है?",
+          "options": ["Calcium hydroxide", "Lactic acid", "Casein", "None, it is neutral"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 37,
+          "question": "What is the value of sin²θ + cos²θ? sin²θ + cos²θ का मान क्या है?",
+          "options": ["0", "½", "1", "2"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 38,
+          "question": "Ohm's Law: V = ? ओम का नियम: V = ?",
+          "options": ["I/R", "I+R", "I×R", "I−R"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 39,
+          "question": "What is the chemical formula of Hydrochloric Acid? हाइड्रोक्लोरिक अम्ल का रासायनिक सूत्र क्या है?",
+          "options": ["H₂S", "HNO₃", "HCl", "H₂SO₄"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 40,
+          "question": "If the ratio of boys to girls is 3:2 and there are 30 boys, how many girls? यदि लड़के और लड़कियों का अनुपात 3:2 है और 30 लड़के हैं, तो लड़कियाँ कितनी हैं?",
+          "options": ["15", "18", "20", "25"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 41,
+          "question": "What is the power of a lens measured in? लेंस की क्षमता किसमें मापी जाती है?",
+          "options": ["Meter", "Dioptre", "Newton", "Watt"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 42,
+          "question": "What is the charge on an electron? इलेक्ट्रॉन पर आवेश क्या होता है?",
+          "options": ["+1.6×10⁻¹⁹ C", "−1.6×10⁻¹⁹ C", "0", "1.6×10⁻²³ C"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 43,
+          "question": "What is the HCF of 36 and 48? 36 और 48 का HCF क्या है?",
+          "options": ["6", "9", "12", "18"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 44,
+          "question": "The chemical formula of Calcium Carbonate is? कैल्शियम कार्बोनेट का रासायनिक सूत्र क्या है?",
+          "options": ["CaCl₂", "CaO", "CaCO₃", "Ca(OH)₂"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 45,
+          "question": "What is the value of ∫x dx? ∫x dx का मान क्या है?",
+          "options": ["x²", "x²/2 + C", "2x + C", "x/2"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 46,
+          "question": "Which phenomenon explains the blue colour of sky? आकाश के नीले रंग की व्याख्या कौन सी घटना करती है?",
+          "options": ["Reflection", "Refraction", "Scattering", "Diffraction"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 47,
+          "question": "What is the number of moles in 18g of water? 18g पानी में कितने मोल होते हैं?",
+          "options": ["0.5", "1", "1.5", "2"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 48,
+          "question": "What is the diagonal of a square with side 7 cm? 7 सेमी भुजा वाले वर्ग का विकर्ण क्या है?",
+          "options": ["7 cm", "7√2 cm", "14 cm", "7√3 cm"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 49,
+          "question": "Which law describes the relationship between pressure and volume of a gas at constant temperature? स्थिर तापमान पर गैस के दाब और आयतन का संबंध कौन सा नियम बताता है?",
+          "options": ["Charles' Law", "Avogadro's Law", "Boyle's Law", "Gay-Lussac's Law"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 50,
+          "question": "What is the probability of getting a number greater than 4 when rolling a die? पासे को फेंकने पर 4 से बड़ा अंक आने की प्रायिकता क्या है?",
+          "options": ["1/6", "1/3", "1/2", "2/3"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 51,
+          "question": "What is 30% of 500? 500 का 30% क्या है? [Series 1 — Q7]",
+          "options": ["100", "120", "150", "180"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 52,
+          "question": "What is the LCM of 6 and 9? 6 और 9 का LCM क्या है? [Series 1 — Q10]",
+          "options": ["12", "18", "24", "36"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 53,
+          "question": "What is the area of a circle with radius 14 cm? (π = 22/7) 14 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल क्या है? [Series 1 — Q13]",
+          "options": ["516 cm²", "576 cm²", "616 cm²", "636 cm²"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 54,
+          "question": "A train covers 300 km in 4 hours. What is its speed? एक ट्रेन 4 घंटे में 300 किमी तय करती है। उसकी गति क्या है? [Series 1 — Q18]",
+          "options": ["65 km/h", "70 km/h", "75 km/h", "80 km/h"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 55,
+          "question": "What is the HCF of 16 and 40? 16 और 40 का HCF क्या है? [Series 1 — Q21]",
+          "options": ["4", "6", "8", "10"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 56,
+          "question": "What is the molecular formula of Glucose? ग्लूकोज का आणविक सूत्र क्या है? [Series 1 — Q26]",
+          "options": ["C₆H₁₂O₅", "C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₆H₆O₆"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "id": 57,
+          "question": "Simple interest on ₹4000 at 5% per annum for 3 years? ₹4000 पर 5% वार्षिक दर से 3 वर्ष का साधारण ब्याज क्या होगा? [Series 1 — Q30]",
+          "options": ["₹400", "₹500", "₹600", "₹700"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 58,
+          "question": "What is the probability of getting a tail when a coin is tossed? सिक्का उछालने पर पट आने की प्रायिकता क्या है? [Series 1 — Q35]",
+          "options": ["1/4", "1/3", "1/2", "1"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 59,
+          "question": "A work is done by A in 12 days and B in 6 days. How many days together? A एक काम 12 दिन में और B 6 दिन में करता है। दोनों मिलकर कितने दिन में करेंगे? [Series 1 — Q44]",
+          "options": ["2 days", "3 days", "4 days", "6 days"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "id": 60,
+          "question": "What is the distance between points (1,2) and (4,6)? बिंदुओं (1,2) और (4,6) के बीच की दूरी क्या है? [Series 1 — Q47]",
+          "options": ["3", "4", "5", "7"],
           "correctAnswerIndex": 2
         }
       ]
