@@ -36,6 +36,14 @@ class MockViewModel @Inject constructor(
 
 ) : ViewModel() {
 
+    // Subject Filter
+    private val _selectedTag = mutableStateOf<String?>(null)
+    val selectedTag: State<String?> = _selectedTag
+
+    // Store available Tag
+    private val _allTags = mutableStateOf<List<String>>(emptyList())
+    val allTags: State<List<String>> = _allTags
+
     // --- Subject Selection States ---
     private val _subjects = mutableStateOf<List<Subject>>(emptyList())
     val subjects: State<List<Subject>> = _subjects
@@ -122,6 +130,9 @@ class MockViewModel @Inject constructor(
 
             // store original list
             allSubjects = subjects
+
+            // store all tag
+            _allTags.value =  listOf("All") + subjects.flatMap { it.tags }.distinct().sorted()
 
             // show all initially
             _subjects.value = subjects
@@ -261,27 +272,41 @@ class MockViewModel @Inject constructor(
     fun onSearchQueryChanged(query: String) {
 
         _searchQuery.value = query
-
-        _subjects.value =
-            if (query.isBlank()) {
-
-                allSubjects
-
-            } else {
-
-                allSubjects.filter { subject ->
-
-                    subject.subjectTitle.contains(
-                        query,
-                        ignoreCase = true
-                    )
-                }
-            }
+        applyFilters()
     }
 
     override fun onCleared() {
         super.onCleared()
         timerJob?.cancel()
         Log.d("MockViewModel", "ViewModel cleared")
+    }
+
+    fun selectTag(tag: String) {
+
+        if (tag == "All") {
+            _selectedTag.value = null
+            _subjects.value = allSubjects
+            return
+        }
+
+        _selectedTag.value = tag
+        applyFilters()
+    }
+    private fun applyFilters() {
+
+        val query = _searchQuery.value
+        val tag = _selectedTag.value
+
+        _subjects.value = allSubjects.filter { subject ->
+
+                val searchMatch = query.isBlank() || subject.subjectTitle.contains(
+                                query,
+                                ignoreCase = true)
+
+                val tagMatch = tag == null || subject.tags.any{
+                                it.equals(tag,ignoreCase = true)
+                            }
+                searchMatch && tagMatch
+            }
     }
 }

@@ -4,6 +4,7 @@ import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -37,6 +38,8 @@ fun MockSubjectSelectionScreen(
     val searchQuery by viewModel.searchQuery
     val hasMockAccess by viewModel.hasMockAccess.collectAsState(initial = false)  // ← collect premium state
     val context = LocalContext.current
+    val allTags by viewModel.allTags
+    val selectedTag by viewModel.selectedTag
 
     LaunchedEffect(Unit) {
         viewModel.loadAllSubjects()
@@ -46,7 +49,7 @@ fun MockSubjectSelectionScreen(
         modifier = Modifier
             .fillMaxSize()
             .statusBarsPadding()
-            .padding(24.dp)
+            .padding(start = 24.dp, end = 24.dp, bottom = 24.dp, top = 0.dp)
     ) {
 
         // --- Header ---
@@ -68,7 +71,7 @@ fun MockSubjectSelectionScreen(
             )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(2.dp))
 
         Text(
             text = "Select a subject to begin",
@@ -76,7 +79,7 @@ fun MockSubjectSelectionScreen(
             color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
 
         OutlinedTextField(
@@ -113,7 +116,24 @@ fun MockSubjectSelectionScreen(
             )
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        LazyRow(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            items(allTags) { tag ->
+                val isSelected =
+                    if (tag == "All")
+                        selectedTag == null
+                    else
+                        selectedTag == tag
+                FilterChip(
+                    selected = isSelected,
+                    onClick = {viewModel.selectTag(tag) },
+                    label = { Text(tag.uppercase()) }
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(12.dp))
 
         when (screenState) {
 
@@ -225,7 +245,6 @@ fun MockSubjectSelectionScreen(
                                             modifier = Modifier.size(20.dp)
                                         )
                                     }
-
                                 }
                             }
                         }

@@ -5,6 +5,7 @@ data class Subject (
     val subjectId: String = " ",
     val subjectTitle: String = " ",
     val examDurationMinutes: Int = 60,
+    val tags: List<String> = emptyList(),
     val questions: List<Question> = emptyList()
 )
 
