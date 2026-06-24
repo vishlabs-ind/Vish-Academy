@@ -122,9 +122,7 @@ class MockViewModel @Inject constructor(
 
             val subjects = localRepository.getAllSubjects()
 
-            if (subjects.isEmpty()) {
-                _subjectLoadState.value =
-                    MockScreenState.Error("No subjects found")
+            if (subjects.isEmpty()) { _subjectLoadState.value = MockScreenState.Error("No subjects found")
                 return@launch
             }
 
@@ -132,11 +130,10 @@ class MockViewModel @Inject constructor(
             allSubjects = subjects
 
             // store all tag
-            _allTags.value =  listOf("All") + subjects.flatMap { it.tags }.distinct().sorted()
+            _allTags.value =  listOf("All") + subjects.flatMap { it.tags }.map{it.trim().lowercase()}.distinct().sorted()
 
             // show all initially
             _subjects.value = subjects
-
             _subjectLoadState.value = MockScreenState.Success
 
             Log.d("MockViewModel", "✅ Loaded ${subjects.size} subjects")
